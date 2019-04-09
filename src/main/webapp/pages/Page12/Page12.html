@@ -1,4 +1,4 @@
-<wm-page data-ng-controller="Page12PageController" pagetitle="Page 12" name="page1"> 
+<wm-page pagetitle="Page 12" name="page1"> 
     <wm-header content="header" name="header1"></wm-header> 
     <wm-top-nav content="topnav" name="top_nav1"></wm-top-nav> 
     <wm-content name="content1"> 
@@ -17,8 +17,8 @@
                     <wm-table-column binding="employee.nationalIdnumber" caption="National Idnumber" generator="assigned" pcdisplay="true" mobiledisplay="true" type="string" related-entity-name="Employee" readonly="true"></wm-table-column> 
                     <wm-table-column binding="employee.loginId" caption="Login Id" generator="assigned" pcdisplay="true" mobiledisplay="true" type="string" related-entity-name="Employee" readonly="true"></wm-table-column> 
                     <wm-table-action key="addNewRow" display-name="New" iconclass="wi wi-plus" show="true" class="btn-primary" action="addNewRow()" position="footer" shortcutkey=""></wm-table-action> 
-                    <wm-table-row-action key="updaterow" display-name="" title="Edit" iconclass="wi wi-pencil" show="true" class="btn-transparent" action="editRow()"></wm-table-row-action> 
-                    <wm-table-row-action key="deleterow" display-name="" title="Delete" iconclass="wi wi-trash" show="true" class="btn-transparent" action="deleteRow()"></wm-table-row-action> 
+                    <wm-table-row-action key="updaterow" display-name="" title="Edit" iconclass="wi wi-pencil" show="true" class="btn-transparent" action="editRow($event)"></wm-table-row-action> 
+                    <wm-table-row-action key="deleterow" display-name="" title="Delete" iconclass="wi wi-trash" show="true" class="btn-transparent" action="deleteRow($event)"></wm-table-row-action> 
                 </wm-table> 
                 <wm-liveform novalidate="false" errormessage="" title="Employeedepartmenthistory Info" formlayout="dialog" iconclass="wi wi-edit" dataset="bind:Variables.AdventureWorks2014EmployeeDepartmentHistoryData.dataSet" captionalign="left" captionposition="top" name="liveform2"> 
                     <wm-layoutgrid columns="1" name="layoutgrid2"> 
@@ -54,7 +54,7 @@
                         </wm-gridrow> 
                     </wm-layoutgrid> 
                     <wm-form-action key="cancel" class="form-cancel btn-secondary" iconclass="wi wi-cancel" action="cancel()" display-name="Cancel" show="true" type="button" update-mode="true"></wm-form-action> 
-                    <wm-form-action key="save" class="form-save btn-success" iconclass="wi wi-save" display-name="Save" show="true" type="submit" update-mode="true"></wm-form-action> 
+                    <wm-form-action key="save" class="form-save btn-success" iconclass="wi wi-save" display-name="Save" show="true" type="submit" update-mode="true" action=""></wm-form-action> 
                 </wm-liveform> 
             </wm-livetable> 
         </wm-page-content> 

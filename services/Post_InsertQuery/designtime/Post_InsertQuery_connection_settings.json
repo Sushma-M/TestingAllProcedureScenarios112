@@ -25,7 +25,6 @@
     }
   },
   "redirectEnabled" : true,
-  "proxy" : null,
   "contentType" : "application/json",
   "multiParamInfoList" : null,
   "authDetails" : "{type=BASIC}"

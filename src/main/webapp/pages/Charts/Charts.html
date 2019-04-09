@@ -1,10 +1,10 @@
-<wm-page data-ng-controller="ChartsPageController" pagetitle="Charts" name="page1"> 
+<wm-page pagetitle="Charts" name="page1"> 
     <wm-header content="header" name="header1"></wm-header> 
     <wm-top-nav content="topnav" name="top_nav1"></wm-top-nav> 
     <wm-content name="content1"> 
         <wm-left-panel columnwidth="2" content="leftnav" name="left_panel1"></wm-left-panel> 
         <wm-page-content columnwidth="10" name="page_content1"> 
-            <wm-select class="select-locale" dataset="bind:Variables.supportedLocale.dataSet" on-change="changeAppLocale($scope)" placeholder="Select Language" name="select1"></wm-select> 
+            <wm-select class="select-locale" dataset="bind:Variables.supportedLocale.dataSet" on-change="App.changeLocale(newVal);App.reload()" placeholder="Select Language" name="select1"></wm-select> 
             <wm-tabs name="tabs1"> 
                 <wm-tabpane name="tabpane1" title="CHARTS WITHOUT GROUPBY &amp; AGGREAGTION"> 
                     <wm-layoutgrid name="layoutgrid1" columns="3"> 

@@ -1,0 +1,7 @@
+{
+  "id" : "AutoWire_Procedure1000NullTitles",
+  "type" : "JavaService",
+  "packageNames" : [ "com.testingallprocedurescenarios.autowire_procedure1000nulltitles" ],
+  "serviceClassNames" : [ "com.testingallprocedurescenarios.autowire_procedure1000nulltitles.AutoWire_Procedure1000NullTitles" ],
+  "title" : "AutoWire_Procedure1000NullTitles"
+}

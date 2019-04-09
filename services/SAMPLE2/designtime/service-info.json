@@ -1,0 +1,6 @@
+{
+  "id" : "SAMPLE2",
+  "type" : "DataService",
+  "packageNames" : [ "com.testingallprocedurescenarios.sample2" ],
+  "title" : "SAMPLE2"
+}

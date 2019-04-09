@@ -6,7 +6,8 @@
     "x-WM-API_ID" : "6dc82bed-899f-4dab-a00e-760856e90e66",
     "x-WM-USE_PROXY_FOR_WEB" : true,
     "x-WM-SERVICE_ID" : "wavemakeronline",
-    "x-WM-USE_PROXY_FOR_MOBILE" : true
+    "x-WM-USE_PROXY_FOR_MOBILE" : true,
+    "x-WM-USE_WITH_CREDENTIALS" : false
   },
   "host" : "www.wavemakeronline.com",
   "basePath" : "",

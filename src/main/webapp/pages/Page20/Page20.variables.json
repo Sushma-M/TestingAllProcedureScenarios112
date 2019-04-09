@@ -6,7 +6,7 @@
     "category" : "wm.ServiceVariable",
     "dataBinding" : [ {
       "target" : "RequestBody",
-      "value" : "{\n\t\"empId\": 11,\n\t\"firstname\": \"tesrg\",\n\t\"lastname\": \"gtbhtgdhb\",\n\t\"street\": \"rtgsdtrg\",\n\t\"city\": \"rtgts\",\n\t\"state\": \"\",\n\t\"zip\": \"67588\",\n\t\"birthdate\": \"2015-10-10\",\n\t\"picurl\": null,\n\t\"jobTitle\": \"tgtsgb\",\n\t\"deptId\": 1,\n\t\"username\": \"trhdh\",\n\t\"password\": \"trsg\",\n\t\"role\": \"ffrgv\",\n\t\"managerId\": 1,\n\t\"tenantId\": 1,\n\t\"department\": null,\n\t\"employeeByManagerId\": null,\n\t\"employeesForManagerId\": [],\n\t\"vacations\": []\n}",
+      "value" : "{\t\"empId\": 11,\t\"firstname\": \"tesrg\",\t\"lastname\": \"gtbhtgdhb\",\t\"street\": \"rtgsdtrg\",\t\"city\": \"rtgts\",\t\"state\": \"\",\t\"zip\": \"67588\",\t\"birthdate\": \"2015-10-10\",\t\"picurl\": null,\t\"jobTitle\": \"tgtsgb\",\t\"deptId\": 1,\t\"username\": \"trhdh\",\t\"password\": \"trsg\",\t\"role\": \"ffrgv\",\t\"managerId\": 1,\t\"tenantId\": 1,\t\"department\": null,\t\"employeeByManagerId\": null,\t\"employeesForManagerId\": [],\t\"vacations\": []}",
       "type" : "java.lang.String"
     } ],
     "type" : "CreateEmployeeAPI_OtherProject.RootResponse",
@@ -361,7 +361,7 @@
       "type" : "java.lang.String"
     }, {
       "target" : "RequestBody",
-      "value" : "{\n\"TEXTCOL\": \"TSHCTR\",\n\"DATETIMECOL\": \"2016-11-16T01:01:01.000\",\n\"TIMECOL\": \"13:00:09\",\n\"INTCOL\": 547647,\n\"DOUBLECOL\": 57487,\n\"TIMESTAMPCOL\": \"2016-11-28T01:01:01.000\",\n\"BOOLEANCOL\": false,\n\"LONGCOL\": 674946,\n\"FLOATCOL\": 658.768,\n\"BYTECOL\": 67,\n\"CLOBCOL\": \"UBJYDT\",\n\"ASSIGNEDID\": 30,\t\t\t\n\"CHARCOL\": \"G\",\n\"STRINGCOL\": \"HCTHGST\",\n\"DATECOL\": \"2016-11-28\",\n\"BIGDECCOL\": 6965.9659,\n\"SHORTCOL\": 7876,\n\"BIGINTCOL\": 65963\n}",
+      "value" : "{\"TEXTCOL\": \"TSHCTR\",\"DATETIMECOL\": \"2016-11-16T01:01:01.000\",\"TIMECOL\": \"13:00:09\",\"INTCOL\": 547647,\"DOUBLECOL\": 57487,\"TIMESTAMPCOL\": \"2016-11-28T01:01:01.000\",\"BOOLEANCOL\": false,\"LONGCOL\": 674946,\"FLOATCOL\": 658.768,\"BYTECOL\": 67,\"CLOBCOL\": \"UBJYDT\",\"ASSIGNEDID\": 30,\t\t\t\"CHARCOL\": \"G\",\"STRINGCOL\": \"HCTHGST\",\"DATECOL\": \"2016-11-28\",\"BIGDECCOL\": 6965.9659,\"SHORTCOL\": 7876,\"BIGINTCOL\": 65963}",
       "type" : "java.lang.String"
     } ],
     "type" : "Post_InsertQuery.RootResponse",

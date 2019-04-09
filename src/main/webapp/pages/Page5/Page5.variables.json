@@ -12,7 +12,7 @@
     "saveInPhonegap" : false,
     "maxResults" : 5,
     "designMaxResults" : 10,
-    "onError" : "AdventureWorks2014PersonDataonError($event, $scope)",
+    "onError" : "AdventureWorks2014PersonDataonError(variable, data, options)",
     "inFlightBehavior" : "executeLast",
     "startUpdate" : true,
     "autoUpdate" : true,

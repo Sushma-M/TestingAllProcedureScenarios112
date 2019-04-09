@@ -1,0 +1,6 @@
+{
+  "id" : "AdventureWorks2014",
+  "type" : "DataService",
+  "packageNames" : [ "com.testingallprocedurescenarios.adventureworks2014" ],
+  "title" : "AdventureWorks2014"
+}

@@ -1,4 +1,4 @@
-<wm-partial data-ng-controller="PartialPage1PageController" name="partial1"> 
+<wm-partial name="partial1"> 
     <wm-tabs name="tabs1"> 
         <wm-tabpane name="tabpane1"> 
             <wm-table title="User List" dataset="bind:Variables.HrdbUserData.dataSet" navigation="Pager" name="grid1" filtermode="multicolumn" exportformat="EXCEL,CSV" nodatamessage="bind:appLocale.MESSAGE_NO_DATA" loadingdatamsg="bind:appLocale.MESSAGE_LOADING"> 
@@ -42,12 +42,12 @@
                 <wm-table-column binding="timestampCol" caption="Timestamp Col" type="timestamp" generator="assigned" edit-widget-type="timestamp" show="true" filterwidget="text" readonly="false" required="true"></wm-table-column> 
                 <wm-table-column binding="booleanCol" caption="Boolean Col" type="boolean" generator="assigned" edit-widget-type="checkbox" show="true" readonly="false"></wm-table-column> 
                 <wm-table-column binding="blobCol" caption="Blob Col" type="blob" generator="assigned" edit-widget-type="upload" searchable="false" show="true" filterwidget="text" readonly="false"> 
-                    <a ng-if="columnValue != null" class="col-md-9" target="_blank" data-ng-href="{{contentBaseUrl + row[primaryKey] + '/content/'+ colDef.field}}"><i class="wm-icon wm-icon24 wi wi-file"></i></a> 
+                    <a class="col-md-9" target="_blank" [attr.data-ng-href]="contentBaseUrl + row[primaryKey] + '/content/'+ colDef?.field" show="bind:row.getProperty('blobCol') != null"><i class="wm-icon wm-icon24 wi wi-file"></i></a> 
                 </wm-table-column> 
                 <wm-table-column binding="rowOperations" caption="Actions" type="custom" width="120px" readonly="true" sortable="false" searchable="false" show="true"></wm-table-column> 
                 <wm-table-action key="addNewRow" display-name="New" show="true" class="btn-primary" iconclass="wi wi-plus" title="New" action="addNewRow()" shortcutkey="" disabled="false"></wm-table-action> 
-                <wm-table-row-action key="updaterow" display-name="" show="true" class="btn-transparent" iconclass="wi wi-pencil" title="Edit" action="editRow()" disabled="false"></wm-table-row-action> 
-                <wm-table-row-action key="deleterow" display-name="" show="true" class="btn-transparent" iconclass="wi wi-trash" title="Delete" action="deleteRow()" disabled="false"></wm-table-row-action> 
+                <wm-table-row-action key="updaterow" display-name="" show="true" class="btn-transparent" iconclass="wi wi-pencil" title="Edit" action="editRow($event)" disabled="false"></wm-table-row-action> 
+                <wm-table-row-action key="deleterow" display-name="" show="true" class="btn-transparent" iconclass="wi wi-trash" title="Delete" action="deleteRow($event)" disabled="false"></wm-table-row-action> 
             </wm-table> 
         </wm-tabpane> 
     </wm-tabs> 

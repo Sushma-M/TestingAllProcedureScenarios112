@@ -1,4 +1,4 @@
-<wm-page data-ng-controller="Page5PageController" pagetitle="Page 5" name="page1"> 
+<wm-page pagetitle="Page 5" name="page1"> 
     <wm-header content="header" name="header1"></wm-header> 
     <wm-top-nav content="topnav" name="top_nav1"></wm-top-nav> 
     <wm-content name="content1"> 
@@ -40,8 +40,8 @@
                     <wm-table-column binding="businessEntityByPerson1BusinessEntityId.modifiedDate" caption="Modified Date" type="datetime" generator="assigned" readonly="true" edit-widget-type="datetime" show="true" related-entity-name="BusinessEntity"></wm-table-column> 
                     <wm-table-column binding="rowOperations" caption="Actions" type="custom" width="120px" readonly="true" edit-widget-type="text" sortable="false" searchable="false" show="true"></wm-table-column> 
                     <wm-table-action key="addNewRow" display-name="New" show="bind:Variables.loggedInUser.dataSet.roles=='admin'" class="btn-primary" iconclass="wi wi-plus" title="New" action="addNewRow()" shortcutkey="" disabled="false"></wm-table-action> 
-                    <wm-table-row-action key="updaterow" display-name="" show="bind:Variables.loggedInUser.dataSet.roles=='admin'" class="btn-transparent" iconclass="wi wi-pencil" title="Edit" action="editRow()" disabled="false"></wm-table-row-action> 
-                    <wm-table-row-action key="deleterow" display-name="" show="bind:Variables.loggedInUser.dataSet.roles=='user'" class="btn-transparent" iconclass="wi wi-trash" title="Delete" action="deleteRow()" disabled="false"></wm-table-row-action> 
+                    <wm-table-row-action key="updaterow" display-name="" show="bind:Variables.loggedInUser.dataSet.roles=='admin'" class="btn-transparent" iconclass="wi wi-pencil" title="Edit" action="editRow($event)" disabled="false"></wm-table-row-action> 
+                    <wm-table-row-action key="deleterow" display-name="" show="bind:Variables.loggedInUser.dataSet.roles=='user'" class="btn-transparent" iconclass="wi wi-trash" title="Delete" action="deleteRow($event)" disabled="false"></wm-table-row-action> 
                 </wm-table> 
                 <wm-liveform novalidate="false" errormessage="" title="Person Info" formlayout="dialog" iconclass="wi wi-edit" dataset="bind:Variables.AdventureWorks2014PersonData.dataSet" captionalign="left" captionposition="top" name="liveform1"> 
                     <wm-layoutgrid columns="3" name="layoutgrid1"> 
@@ -99,13 +99,11 @@
                         </wm-gridrow> 
                     </wm-layoutgrid> 
                     <wm-form-action key="cancel" class="form-cancel btn-secondary" iconclass="wi wi-cancel" action="cancel()" display-name="Cancel" show="true" type="button" update-mode="true"></wm-form-action> 
-                    <wm-form-action key="save" class="form-save btn-success" iconclass="wi wi-save" display-name="Save" show="true" type="submit" update-mode="true"></wm-form-action> 
+                    <wm-form-action key="save" class="form-save btn-success" iconclass="wi wi-save" display-name="Save" show="true" type="submit" update-mode="true" action=""></wm-form-action> 
                 </wm-liveform> 
             </wm-livetable> 
         </wm-page-content> 
     </wm-content> 
-    <wm-footer content="footer" name="footer1"></wm-footer> 
-    <wm-view name="notificationAlertDialogView" class="dialog-view"> 
-        <wm-alertdialog name="notificationalertdialog" controller="NotificationDialogController" notificationdialog="alert" message="{{notification.text}}" title="{{notification.title}}" oktext="{{notification.okButtonText}}" alerttype="{{notification.alerttype}}" on-ok="variableOnOk()" on-close="variableOnClose()"></wm-alertdialog> 
-    </wm-view> 
+    <wm-footer content="footer" name="footer1"></wm-footer>  
+    <wm-alertdialog name="notificationalertdialog" controller="NotificationDialogController" notificationdialog="alert" message="bind:(notification.text)" title="bind:(notification.title)" oktext="bind:(notification.okButtonText)" alerttype="bind:(notification.alerttype)" on-ok="notification.onOk()" on-close="notification.onClose()"></wm-alertdialog>  
 </wm-page>

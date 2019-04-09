@@ -1,4 +1,4 @@
-<wm-partial data-ng-controller="Chart2Chart2PageController" name="partial1"> 
+<wm-partial name="partial1"> 
     <wm-chart type="Pie" title="Pie Chart" height="250px" iconclass="wi wi-pie-chart" name="chart1" dataset="bind:Variables.HRDB_EmpData.dataSet" xaxisdatakey="city" yaxisdatakey="empId" aggregation="count" aggregationcolumn="empId" groupby="city" orderby="city:asc"></wm-chart> 
     <wm-table title="" dataset="bind:Widgets.chart1.selecteditem" navigation="Basic" name="grid2"> 
         <wm-table-column binding="empId" caption="Emp Id" generator="identity" pcdisplay="true" mobiledisplay="true" type="integer" primary-key="true" readonly="true"></wm-table-column> 

@@ -15,7 +15,7 @@
     "isList" : false,
     "maxResults" : 20,
     "designMaxResults" : 10,
-    "onBeforeUpdate" : "AutoWire_Procedure1000NullTitlesProcedureAutowiringonBeforeUpdate($event, $scope)",
+    "onBeforeUpdate" : "AutoWire_Procedure1000NullTitlesProcedureAutowiringonBeforeUpdate(variable, inputData)",
     "startUpdate" : true,
     "autoUpdate" : true,
     "inFlightBehavior" : "executeLast",

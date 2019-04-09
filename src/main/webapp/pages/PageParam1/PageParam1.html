@@ -1,4 +1,4 @@
-<wm-page data-ng-controller="PageParam1PageController" pagetitle="Page Param 1" name="page1"> 
+<wm-page pagetitle="Page Param 1" name="page1"> 
     <wm-header content="header" name="header1"></wm-header> 
     <wm-top-nav content="topnav" name="top_nav1"></wm-top-nav> 
     <wm-content name="content1"> 
@@ -6,7 +6,7 @@
         <wm-page-content columnwidth="10" name="page_content1"> 
             <wm-tabs name="tabs1"> 
                 <wm-tabpane name="tabpane1"> 
-                    <wm-table title="Department List" dataset="bind:Variables.HrdbDepartmentData.dataSet" navigation="Basic" name="grid1" on-select="Variables.TabNavigation1.invoke()"> 
+                    <wm-table title="Department List" dataset="bind:Variables.HrdbDepartmentData.dataSet" navigation="Basic" name="grid1" on-rowselect="Actions.TabNavigation1.invoke()"> 
                         <wm-table-column binding="deptId" caption="Dept Id" generator="identity" pcdisplay="true" mobiledisplay="true" type="integer" primary-key="true" readonly="true"></wm-table-column> 
                         <wm-table-column binding="name" caption="Name" generator="assigned" pcdisplay="true" mobiledisplay="true" type="string"></wm-table-column> 
                         <wm-table-column binding="budget" caption="Budget" generator="assigned" pcdisplay="true" mobiledisplay="true" type="integer"></wm-table-column> 
@@ -100,7 +100,7 @@
                         </wm-layoutgrid> 
                         <wm-form-field name="pkId" displayname="Pk Id" show="false" primary-key="true" generator="identity" key="pkId" type="integer" readonly="true" required="true" step="0" widget="number" inputtype="number" placeholder="Enter value"></wm-form-field> 
                         <wm-form-action key="reset" display-name="Reset" show="true" class="form-reset btn-secondary" iconclass="wi wi-refresh" title="Reset" action="reset()" disabled="false" type="button" update-mode="true"></wm-form-action> 
-                        <wm-form-action key="save" display-name="Save" show="true" class="form-save btn-success" iconclass="wi wi-save" title="Save" disabled="false" type="submit" update-mode="true"></wm-form-action> 
+                        <wm-form-action key="save" display-name="Save" show="true" class="form-save btn-success" iconclass="wi wi-save" title="Save" disabled="false" type="submit" update-mode="true" action=""></wm-form-action> 
                         <wm-form-action key="cancel" class="form-cancel btn-secondary" iconclass="wi wi-cancel" action="cancel()" display-name="Cancel" show="true" type="button" update-mode="true" shortcutkey=""></wm-form-action> 
                         <wm-form-action key="delete" class="form-delete btn-secondary" iconclass="wi wi-trash" action="delete()" display-name="Delete" show="true" type="button" update-mode="false" shortcutkey=""></wm-form-action> 
                         <wm-form-action key="edit" class="form-update btn-secondary" iconclass="wi wi-pencil" action="edit()" display-name="Edit" show="true" type="button" update-mode="false" shortcutkey=""></wm-form-action> 

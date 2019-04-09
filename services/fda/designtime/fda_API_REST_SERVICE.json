@@ -6,7 +6,8 @@
     "x-WM-API_ID" : "b1d15a6f-eb24-42e9-9555-271b80338223",
     "x-WM-USE_PROXY_FOR_WEB" : true,
     "x-WM-SERVICE_ID" : "fda",
-    "x-WM-USE_PROXY_FOR_MOBILE" : true
+    "x-WM-USE_PROXY_FOR_MOBILE" : true,
+    "x-WM-USE_WITH_CREDENTIALS" : false
   },
   "host" : "api.fda.gov",
   "basePath" : "",

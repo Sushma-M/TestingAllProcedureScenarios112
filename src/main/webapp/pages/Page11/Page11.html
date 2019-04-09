@@ -1,4 +1,4 @@
-<wm-page data-ng-controller="Page11PageController" pagetitle="Page 11" name="page1"> 
+<wm-page pagetitle="Page 11" name="page1"> 
     <wm-header content="header" name="header1"></wm-header> 
     <wm-top-nav content="topnav" name="top_nav1"></wm-top-nav> 
     <wm-content name="content1"> 
@@ -33,7 +33,7 @@
                     </wm-gridrow> 
                 </wm-layoutgrid> 
                 <wm-form-action key="reset" class="form-reset btn-secondary" iconclass="wi wi-refresh" action="reset()" display-name="Reset" show="true" type="button" update-mode="true"></wm-form-action> 
-                <wm-form-action key="save" class="form-save btn-success" iconclass="wi wi-save" display-name="Save" show="true" type="submit" update-mode="true"></wm-form-action> 
+                <wm-form-action key="save" class="form-save btn-success" iconclass="wi wi-save" display-name="Save" show="true" type="submit" update-mode="true" action=""></wm-form-action> 
             </wm-liveform> 
             <wm-liveform novalidate="false" errormessage="" title="Tc_one2one Info" iconclass="wi wi-edit" defaultmode="Edit" dataset="bind:Variables.Db123__TcOne2oneData.dataSet" captionalign="left" captionposition="top" name="liveform2"> 
                 <wm-layoutgrid columns="1" name="layoutgrid2"> 
@@ -64,7 +64,7 @@
                     </wm-gridrow> 
                 </wm-layoutgrid> 
                 <wm-form-action key="reset" class="form-reset btn-secondary" iconclass="wi wi-refresh" action="reset()" display-name="Reset" show="true" type="button" update-mode="true"></wm-form-action> 
-                <wm-form-action key="save" class="form-save btn-success" iconclass="wi wi-save" display-name="Save" show="true" type="submit" update-mode="true"></wm-form-action> 
+                <wm-form-action key="save" class="form-save btn-success" iconclass="wi wi-save" display-name="Save" show="true" type="submit" update-mode="true" action=""></wm-form-action> 
             </wm-liveform> 
             <wm-button class="btn-default" caption="Button" type="button" margin="unset 0.5em" name="button1" on-click="Variables.Db123__TpOne2oneData.listRecords()"></wm-button> 
         </wm-page-content> 

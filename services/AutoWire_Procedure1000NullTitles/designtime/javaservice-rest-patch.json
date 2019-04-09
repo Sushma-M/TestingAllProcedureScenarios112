@@ -1,0 +1,17 @@
+{
+  "description" : null,
+  "methods" : {
+    "procedureAutowiring" : [ {
+      "url" : {
+        "value" : "/procedureAutowiring",
+        "modified" : false
+      },
+      "method" : {
+        "value" : "GET",
+        "modified" : false
+      },
+      "accessSpecifier" : "APP_ONLY",
+      "parameters" : { }
+    } ]
+  }
+}

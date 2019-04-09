@@ -1,4 +1,4 @@
-<wm-page data-ng-controller="FormDataPageController" pagetitle="Form Data" name="page1"> 
+<wm-page pagetitle="Form Data" name="page1"> 
     <wm-header content="header" name="header1"></wm-header> 
     <wm-top-nav content="topnav" name="top_nav1"></wm-top-nav> 
     <wm-content name="content1"> 
@@ -29,7 +29,7 @@
                 </wm-layoutgrid> 
                 <wm-form-field name="userId" displayname="User Id" show="false" primary-key="true" generator="identity" key="userId" type="integer" readonly="true" required="true" step="0" widget="number" inputtype="number" placeholder="Enter value"></wm-form-field> 
                 <wm-form-action key="reset" display-name="Reset" show="true" class="form-reset btn-secondary" iconclass="wi wi-refresh" title="Reset" action="reset()" disabled="false" type="button" update-mode="true"></wm-form-action> 
-                <wm-form-action key="save" display-name="Save" show="true" class="form-save btn-success" iconclass="wi wi-save" title="Save" action="saveAction($event)" disabled="false" type="submit" update-mode="true"></wm-form-action> 
+                <wm-form-action key="save" display-name="Save" show="true" class="form-save btn-success" iconclass="wi wi-save" title="Save" action="liveform1_saveAction($event)" disabled="false" type="submit" update-mode="true"></wm-form-action> 
                 <wm-form-action key="cancel" display-name="Cancel" show="true" class="form-cancel btn-secondary" iconclass="wi wi-cancel" title="Cancel" action="cancel()" shortcutkey="" disabled="false" type="button" update-mode="true"></wm-form-action> 
                 <wm-form-action key="delete" display-name="Delete" show="true" class="form-delete btn-secondary" iconclass="wi wi-trash" title="Delete" action="delete()" shortcutkey="" disabled="false" type="button" update-mode="false"></wm-form-action> 
                 <wm-form-action key="edit" display-name="Edit" show="true" class="form-update btn-secondary" iconclass="wi wi-pencil" title="Edit" action="edit()" shortcutkey="" disabled="false" type="button" update-mode="false"></wm-form-action> 

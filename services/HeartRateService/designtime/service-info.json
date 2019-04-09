@@ -1,0 +1,5 @@
+{
+  "id" : "HeartRateService",
+  "type" : "WebSocketService",
+  "title" : "HeartRateService"
+}

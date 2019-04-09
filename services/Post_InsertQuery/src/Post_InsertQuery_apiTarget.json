@@ -3,7 +3,7 @@
     "description" : "Rest service swagger documentation",
     "name" : "RestServiceVirtualController"
   } ],
-  "basePath" : "${rest.Post_InsertQuery.basepath}",
+  "basePath" : "${Post_InsertQuery.basepath}",
   "paths" : {
     "/TestingAllProcedureScenarios/services/db123__/queryExecutor/queries/SV_InsertQuery" : {
       "x-WM-BASE_PATH" : "/TestingAllProcedureScenarios/services/db123__/queryExecutor/queries/SV_InsertQuery",
@@ -38,11 +38,11 @@
         "operationId" : "Post_InsertQuery_RestServiceVirtualController-invoke"
       },
       "x-WM-RELATIVE_PATH" : "",
-      "x-WM-COMPLETE_PATH" : "${rest.Post_InsertQuery.scheme}://${rest.Post_InsertQuery.host}${rest.Post_InsertQuery.basepath}/TestingAllProcedureScenarios/services/db123__/queryExecutor/queries/SV_InsertQuery"
+      "x-WM-COMPLETE_PATH" : "${Post_InsertQuery.scheme}://${Post_InsertQuery.host}${Post_InsertQuery.basepath}/TestingAllProcedureScenarios/services/db123__/queryExecutor/queries/SV_InsertQuery"
     }
   },
-  "host" : "${rest.Post_InsertQuery.host}",
-  "schemes" : [ "${rest.Post_InsertQuery.scheme}" ],
+  "host" : "${Post_InsertQuery.host}",
+  "schemes" : [ "${Post_InsertQuery.scheme}" ],
   "swagger" : "2.0",
   "definitions" : {
     "RootResponse" : {

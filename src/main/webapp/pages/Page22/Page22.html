@@ -1,4 +1,4 @@
-<wm-page data-ng-controller="Page22PageController" pagetitle="Page 22" name="page1"> 
+<wm-page pagetitle="Page 22" name="page1"> 
     <wm-header content="header" name="header1"></wm-header> 
     <wm-top-nav content="topnav" name="top_nav1"></wm-top-nav> 
     <wm-content name="content1"> 
@@ -14,8 +14,8 @@
                         <wm-table-column binding="tenantId" caption="Tenant Id" type="integer" generator="assigned" edit-widget-type="number" show="true" readonly="false"></wm-table-column> 
                         <wm-table-column binding="rowOperations" caption="Actions" type="custom" width="120px" readonly="true" sortable="false" searchable="false" show="true"></wm-table-column> 
                         <wm-table-action key="addNewRow" display-name="New" show="true" class="btn-primary" iconclass="wi wi-plus" title="New" action="addNewRow()" shortcutkey="" disabled="false"></wm-table-action> 
-                        <wm-table-row-action key="updaterow" display-name="" show="true" class="btn-transparent" iconclass="wi wi-pencil" title="Edit" action="editRow()" disabled="false"></wm-table-row-action> 
-                        <wm-table-row-action key="deleterow" display-name="" show="true" class="btn-transparent" iconclass="wi wi-trash" title="Delete" action="deleteRow()" disabled="false"></wm-table-row-action> 
+                        <wm-table-row-action key="updaterow" display-name="" show="true" class="btn-transparent" iconclass="wi wi-pencil" title="Edit" action="editRow($event)" disabled="false"></wm-table-row-action> 
+                        <wm-table-row-action key="deleterow" display-name="" show="true" class="btn-transparent" iconclass="wi wi-trash" title="Delete" action="deleteRow($event)" disabled="false"></wm-table-row-action> 
                     </wm-table> 
                 </wm-tabpane> 
                 <wm-tabpane name="tabpane2"> 
@@ -26,8 +26,8 @@
                         <wm-table-column binding="column5" caption="Column5" type="string" generator="assigned" edit-widget-type="text" show="true" readonly="false"></wm-table-column> 
                         <wm-table-column binding="rowOperations" caption="Actions" type="custom" width="120px" readonly="true" sortable="false" searchable="false" show="true"></wm-table-column> 
                         <wm-table-action key="addNewRow" display-name="New" show="true" class="btn-primary" iconclass="wi wi-plus" title="New" action="addNewRow()" shortcutkey="" disabled="false"></wm-table-action> 
-                        <wm-table-row-action key="updaterow" display-name="" show="true" class="btn-transparent" iconclass="wi wi-pencil" title="Edit" action="editRow()" disabled="false"></wm-table-row-action> 
-                        <wm-table-row-action key="deleterow" display-name="" show="true" class="btn-transparent" iconclass="wi wi-trash" title="Delete" action="deleteRow()" disabled="false"></wm-table-row-action> 
+                        <wm-table-row-action key="updaterow" display-name="" show="true" class="btn-transparent" iconclass="wi wi-pencil" title="Edit" action="editRow($event)" disabled="false"></wm-table-row-action> 
+                        <wm-table-row-action key="deleterow" display-name="" show="true" class="btn-transparent" iconclass="wi wi-trash" title="Delete" action="deleteRow($event)" disabled="false"></wm-table-row-action> 
                     </wm-table> 
                 </wm-tabpane> 
                 <wm-tabpane name="tabpane3"> 
@@ -42,8 +42,8 @@
                             <wm-table-column binding="projact.acendate" caption="Projact Acendate" generator="assigned" pcdisplay="true" mobiledisplay="true" type="date" related-entity-name="Projact" readonly="true"></wm-table-column> 
                             <wm-table-column binding="projact.projno" caption="Projact Projno" generator="assigned" pcdisplay="true" mobiledisplay="true" type="string" primary-key="true" related-entity-name="Projact"></wm-table-column> 
                             <wm-table-action key="addNewRow" display-name="New" iconclass="wi wi-plus" show="true" class="btn-primary" action="addNewRow()" position="footer" shortcutkey=""></wm-table-action> 
-                            <wm-table-row-action key="updaterow" display-name="" title="Edit" iconclass="wi wi-pencil" show="true" class="btn-transparent" action="editRow()"></wm-table-row-action> 
-                            <wm-table-row-action key="deleterow" display-name="" title="Delete" iconclass="wi wi-trash" show="true" class="btn-transparent" action="deleteRow()"></wm-table-row-action> 
+                            <wm-table-row-action key="updaterow" display-name="" title="Edit" iconclass="wi wi-pencil" show="true" class="btn-transparent" action="editRow($event)"></wm-table-row-action> 
+                            <wm-table-row-action key="deleterow" display-name="" title="Delete" iconclass="wi wi-trash" show="true" class="btn-transparent" action="deleteRow($event)"></wm-table-row-action> 
                         </wm-table> 
                         <wm-liveform novalidate="false" errormessage="" title="Empprojact Info" formlayout="dialog" iconclass="wi wi-edit" dataset="bind:Variables.SAMPLE2EmpprojactData.dataSet" captionalign="left" captionposition="top" name="liveform2"> 
                             <wm-layoutgrid columns="2" name="layoutgrid2"> 
@@ -65,7 +65,7 @@
                                 </wm-gridrow> 
                             </wm-layoutgrid> 
                             <wm-form-action key="cancel" class="form-cancel btn-secondary" iconclass="wi wi-cancel" action="cancel()" display-name="Cancel" show="true" type="button" update-mode="true"></wm-form-action> 
-                            <wm-form-action key="save" class="form-save btn-success" iconclass="wi wi-save" display-name="Save" show="true" type="submit" update-mode="true"></wm-form-action> 
+                            <wm-form-action key="save" class="form-save btn-success" iconclass="wi wi-save" display-name="Save" show="true" type="submit" update-mode="true" action=""></wm-form-action> 
                         </wm-liveform> 
                     </wm-livetable> 
                     <wm-livetable formlayout="dialog" name="livegrid1"> 
@@ -83,8 +83,8 @@
                             <wm-table-column binding="project.respemp" caption="Project Respemp" generator="assigned" pcdisplay="true" mobiledisplay="true" type="string" related-entity-name="Project" readonly="true"></wm-table-column> 
                             <wm-table-column binding="project.majproj" caption="Project Majproj" generator="assigned" pcdisplay="true" mobiledisplay="true" type="string" related-entity-name="Project" readonly="true"></wm-table-column> 
                             <wm-table-action key="addNewRow" display-name="New" iconclass="wi wi-plus" show="true" class="btn-primary" action="addNewRow()" position="footer" shortcutkey=""></wm-table-action> 
-                            <wm-table-row-action key="updaterow" display-name="" title="Edit" iconclass="wi wi-pencil" show="true" class="btn-transparent" action="editRow()"></wm-table-row-action> 
-                            <wm-table-row-action key="deleterow" display-name="" title="Delete" iconclass="wi wi-trash" show="true" class="btn-transparent" action="deleteRow()"></wm-table-row-action> 
+                            <wm-table-row-action key="updaterow" display-name="" title="Edit" iconclass="wi wi-pencil" show="true" class="btn-transparent" action="editRow($event)"></wm-table-row-action> 
+                            <wm-table-row-action key="deleterow" display-name="" title="Delete" iconclass="wi wi-trash" show="true" class="btn-transparent" action="deleteRow($event)"></wm-table-row-action> 
                         </wm-table> 
                         <wm-liveform novalidate="false" errormessage="" title="Projact Info" formlayout="dialog" iconclass="wi wi-edit" dataset="bind:Variables.SAMPLE2ProjactData.dataSet" captionalign="left" captionposition="top" name="liveform1"> 
                             <wm-layoutgrid columns="2" name="layoutgrid1"> 
@@ -111,7 +111,7 @@
                                 </wm-gridrow> 
                             </wm-layoutgrid> 
                             <wm-form-action key="cancel" class="form-cancel btn-secondary" iconclass="wi wi-cancel" action="cancel()" display-name="Cancel" show="true" type="button" update-mode="true"></wm-form-action> 
-                            <wm-form-action key="save" class="form-save btn-success" iconclass="wi wi-save" display-name="Save" show="true" type="submit" update-mode="true"></wm-form-action> 
+                            <wm-form-action key="save" class="form-save btn-success" iconclass="wi wi-save" display-name="Save" show="true" type="submit" update-mode="true" action=""></wm-form-action> 
                         </wm-liveform> 
                     </wm-livetable> 
                 </wm-tabpane> 

@@ -1,0 +1,6 @@
+{
+  "id" : "School_DB",
+  "type" : "DataService",
+  "packageNames" : [ "com.testingallprocedurescenarios.school_db" ],
+  "title" : "School_DB"
+}

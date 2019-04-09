@@ -3,7 +3,7 @@
     "description" : "Rest service swagger documentation",
     "name" : "RestServiceVirtualController"
   } ],
-  "basePath" : "${rest.fda.basepath}",
+  "basePath" : "${fda.basepath}",
   "paths" : {
     "/event.json" : {
       "x-WM-BASE_PATH" : "/event.json",
@@ -42,11 +42,11 @@
         "operationId" : "fda_RestServiceVirtualController-invoke"
       },
       "x-WM-RELATIVE_PATH" : "",
-      "x-WM-COMPLETE_PATH" : "${rest.fda.scheme}://${rest.fda.host}${rest.fda.basepath}/event.json"
+      "x-WM-COMPLETE_PATH" : "${fda.scheme}://${fda.host}${fda.basepath}/event.json"
     }
   },
-  "host" : "${rest.fda.host}",
-  "schemes" : [ "${rest.fda.scheme}" ],
+  "host" : "${fda.host}",
+  "schemes" : [ "${fda.scheme}" ],
   "swagger" : "2.0",
   "definitions" : {
     "RootResponse" : {

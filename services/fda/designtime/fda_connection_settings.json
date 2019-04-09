@@ -33,7 +33,6 @@
     }
   },
   "redirectEnabled" : true,
-  "proxy" : null,
   "contentType" : "text/xml",
   "multiParamInfoList" : null,
   "authDetails" : null

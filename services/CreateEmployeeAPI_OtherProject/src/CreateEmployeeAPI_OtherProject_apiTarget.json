@@ -3,7 +3,7 @@
     "description" : "Rest service swagger documentation",
     "name" : "RestServiceVirtualController"
   } ],
-  "basePath" : "${rest.CreateEmployeeAPI_OtherProject.basepath}",
+  "basePath" : "${CreateEmployeeAPI_OtherProject.basepath}",
   "paths" : {
     "/TestingDifferentScenario_s/services/hrdb/Employee" : {
       "x-WM-BASE_PATH" : "/TestingDifferentScenario_s/services/hrdb/Employee",
@@ -35,11 +35,11 @@
         "operationId" : "CreateEmployeeAPI_OtherProject_RestServiceVirtualController-invoke"
       },
       "x-WM-RELATIVE_PATH" : "",
-      "x-WM-COMPLETE_PATH" : "${rest.CreateEmployeeAPI_OtherProject.scheme}://${rest.CreateEmployeeAPI_OtherProject.host}${rest.CreateEmployeeAPI_OtherProject.basepath}/TestingDifferentScenario_s/services/hrdb/Employee"
+      "x-WM-COMPLETE_PATH" : "${CreateEmployeeAPI_OtherProject.scheme}://${CreateEmployeeAPI_OtherProject.host}${CreateEmployeeAPI_OtherProject.basepath}/TestingDifferentScenario_s/services/hrdb/Employee"
     }
   },
-  "host" : "${rest.CreateEmployeeAPI_OtherProject.host}",
-  "schemes" : [ "${rest.CreateEmployeeAPI_OtherProject.scheme}" ],
+  "host" : "${CreateEmployeeAPI_OtherProject.host}",
+  "schemes" : [ "${CreateEmployeeAPI_OtherProject.scheme}" ],
   "swagger" : "2.0",
   "definitions" : {
     "RootResponse" : {

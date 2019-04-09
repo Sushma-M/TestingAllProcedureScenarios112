@@ -1,4 +1,4 @@
-<wm-page data-ng-controller="Page14PageController" pagetitle="Page 14" name="page1"> 
+<wm-page pagetitle="Page 14" name="page1"> 
     <wm-header content="header" name="header1"></wm-header> 
     <wm-top-nav content="topnav" name="top_nav1"></wm-top-nav> 
     <wm-content name="content1"> 
@@ -45,12 +45,12 @@
                                     <wm-filter-field name="bigdecCol" field="bigdecCol" displayname="Bigdec Col" widget="number" is-range="false" type="big_decimal" is-primary-key="false" generator="assigned" show="true" inputtype="number" key="bigdecCol" placeholder="Enter value"></wm-filter-field> 
                                 </wm-gridcolumn> 
                                 <wm-gridcolumn columnwidth="6" name="gridcolumn10"> 
-                                    <wm-filter-field name="stringCol" field="stringCol" displayname="String Col" widget="autocomplete" is-range="false" type="string" is-primary-key="false" generator="assigned" show="true" key="stringCol" placeholder="Enter value" matchMode="startignorecase" dataset="bind:Variables.DbscenariosAllTypesData.dataSet" searchkey="stringCol" displaylabel="stringCol" displayimagesrc="blobCol" datafield="stringCol"></wm-filter-field> 
+                                    <wm-filter-field name="stringCol" field="stringCol" displayname="String Col" widget="autocomplete" is-range="false" type="string" is-primary-key="false" generator="assigned" show="true" key="stringCol" placeholder="Enter value" matchmode="startignorecase" dataset="bind:Variables.DbscenariosAllTypesData.dataSet" searchkey="stringCol" displaylabel="stringCol" displayimagesrc="blobCol" datafield="stringCol"></wm-filter-field> 
                                 </wm-gridcolumn> 
                             </wm-gridrow> 
                             <wm-gridrow name="gridrow6"> 
                                 <wm-gridcolumn columnwidth="6" name="gridcolumn11"> 
-                                    <wm-filter-field name="charCol" field="charCol" displayname="Char Col" widget="text" is-range="false" type="string" is-primary-key="false" generator="assigned" show="true" inputtype="text" key="charCol" placeholder="Enter value" matchMode="startignorecase"></wm-filter-field> 
+                                    <wm-filter-field name="charCol" field="charCol" displayname="Char Col" widget="text" is-range="false" type="string" is-primary-key="false" generator="assigned" show="true" inputtype="text" key="charCol" placeholder="Enter value" matchmode="startignorecase"></wm-filter-field> 
                                 </wm-gridcolumn> 
                                 <wm-gridcolumn columnwidth="6" name="gridcolumn12"> 
                                     <wm-filter-field name="clobCol" field="clobCol" displayname="Clob Col" widget="text" is-range="false" type="clob" is-primary-key="false" generator="assigned" show="true" inputtype="text" key="clobCol" placeholder="Enter value"></wm-filter-field> 
@@ -111,8 +111,8 @@
                             <wm-table-column binding="booleanCol" caption="Boolean Col" generator="assigned" pcdisplay="true" mobiledisplay="true" type="boolean"></wm-table-column> 
                             <wm-table-column binding="blobCol" caption="Blob Col" generator="assigned" pcdisplay="true" mobiledisplay="true" type="blob"></wm-table-column> 
                             <wm-table-action key="addNewRow" display-name="New" iconclass="wi wi-plus" show="true" class="btn-primary" action="addNewRow()" position="footer" shortcutkey=""></wm-table-action> 
-                            <wm-table-row-action key="updaterow" display-name="" title="Edit" iconclass="wi wi-pencil" show="true" class="btn-transparent" action="editRow()"></wm-table-row-action> 
-                            <wm-table-row-action key="deleterow" display-name="" title="Delete" iconclass="wi wi-trash" show="true" class="btn-transparent" action="deleteRow()"></wm-table-row-action> 
+                            <wm-table-row-action key="updaterow" display-name="" title="Edit" iconclass="wi wi-pencil" show="true" class="btn-transparent" action="editRow($event)"></wm-table-row-action> 
+                            <wm-table-row-action key="deleterow" display-name="" title="Delete" iconclass="wi wi-trash" show="true" class="btn-transparent" action="deleteRow($event)"></wm-table-row-action> 
                         </wm-table> 
                         <wm-liveform novalidate="false" errormessage="" title="" formlayout="inline" iconclass="wi wi-edit" dataset="bind:Widgets.livefilter1.result" captionalign="left" captionposition="top" name="liveform1"> 
                             <wm-layoutgrid columns="3" name="layoutgrid2"> 
@@ -185,12 +185,12 @@
                             </wm-layoutgrid> 
                             <wm-form-field name="pkId" displayname="Pk Id" required="true" show="false" generator="identity" primary-key="true" key="pkId" type="integer" is-related="false" step="0" pc-display="true" mobile-display="true" widget="number"></wm-form-field> 
                             <wm-form-action key="cancel" class="form-cancel btn-secondary" iconclass="wi wi-cancel" action="cancel()" display-name="Cancel" show="true" type="button" update-mode="true"></wm-form-action> 
-                            <wm-form-action key="save" class="form-save btn-success" iconclass="wi wi-save" display-name="Save" show="true" type="submit" update-mode="true"></wm-form-action> 
+                            <wm-form-action key="save" class="form-save btn-success" iconclass="wi wi-save" display-name="Save" show="true" type="submit" update-mode="true" action=""></wm-form-action> 
                         </wm-liveform> 
                     </wm-livetable> 
                 </wm-tabpane> 
                 <wm-tabpane name="tabpane2" title="MYSQL SEARCH" tabindex="1"> 
-                    <wm-search name="search1" dataset="bind:Variables.DbscenariosAllTypesData.dataSet" searchkey="floatCol" displaylabel="floatCol" displayimagesrc="blobCol" datafield="floatCol"></wm-search> 
+                    <wm-search name="search1" dataset="bind:Variables.DbscenariosAllTypesData.dataSet" searchkey="floatCol" displaylabel="floatCol" displayimagesrc="blobCol" datafield="floatCol" matchmode="start"></wm-search> 
                     <wm-table editmode="inline" title="All types List" dataset="bind:Variables.DbscenariosAllTypesData1.dataSet" navigation="Basic" name="grid2"> 
                         <wm-table-column binding="pkId" caption="Pk Id" generator="identity" pcdisplay="true" mobiledisplay="true" type="integer" primary-key="true" readonly="true"></wm-table-column> 
                         <wm-table-column binding="byteCol" caption="Byte Col" generator="assigned" pcdisplay="true" mobiledisplay="true" type="short"></wm-table-column> 
@@ -212,8 +212,8 @@
                         <wm-table-column binding="booleanCol" caption="Boolean Col" generator="assigned" pcdisplay="true" mobiledisplay="true" type="boolean"></wm-table-column> 
                         <wm-table-column binding="blobCol" caption="Blob Col" generator="assigned" pcdisplay="true" mobiledisplay="true" type="blob"></wm-table-column> 
                         <wm-table-action key="addNewRow" display-name="New" iconclass="wi wi-plus" show="true" class="btn-primary" action="addNewRow()" position="footer" shortcutkey=""></wm-table-action> 
-                        <wm-table-row-action key="updaterow" display-name="" title="Edit" iconclass="wi wi-pencil" show="true" class="btn-transparent" action="editRow()"></wm-table-row-action> 
-                        <wm-table-row-action key="deleterow" display-name="" title="Delete" iconclass="wi wi-trash" show="true" class="btn-transparent" action="deleteRow()"></wm-table-row-action> 
+                        <wm-table-row-action key="updaterow" display-name="" title="Edit" iconclass="wi wi-pencil" show="true" class="btn-transparent" action="editRow($event)"></wm-table-row-action> 
+                        <wm-table-row-action key="deleterow" display-name="" title="Delete" iconclass="wi wi-trash" show="true" class="btn-transparent" action="deleteRow($event)"></wm-table-row-action> 
                     </wm-table> 
                 </wm-tabpane> 
                 <wm-tabpane name="tabpane3" title="Grid Selected Item(Multisearch Issue)"> 
@@ -221,7 +221,7 @@
                         <wm-table-column binding="pkId" caption="Pk Id" type="integer" primary-key="true" generator="identity" readonly="true" edit-widget-type="number" show="true"></wm-table-column> 
                         <wm-table-column binding="byteCol" caption="Byte Col" type="short" generator="assigned" edit-widget-type="number" show="true" readonly="false"></wm-table-column> 
                         <wm-table-column binding="shortCol" caption="Short Col" type="short" widget-type="label" generator="assigned" edit-widget-type="number" show="true" filterwidget="autocomplete" readonly="false"> 
-                            <wm-label caption="{{row.getProperty('shortCol')}}" class="" data-ng-class=""></wm-label> 
+                            <wm-label caption="bind:(row.getProperty('shortCol'))" class="" data-ng-class=""></wm-label> 
                         </wm-table-column> 
                         <wm-table-column binding="intCol" caption="Int Col" type="integer" generator="assigned" edit-widget-type="number" show="true" readonly="false"></wm-table-column> 
                         <wm-table-column binding="longCol" caption="Long Col" type="big_integer" generator="assigned" edit-widget-type="number" show="true" readonly="false"></wm-table-column> 
@@ -239,16 +239,16 @@
                         <wm-table-column binding="timestampCol" caption="Timestamp Col" type="timestamp" generator="assigned" edit-widget-type="timestamp" show="true" filterwidget="text" readonly="false" required="true"></wm-table-column> 
                         <wm-table-column binding="booleanCol" caption="Boolean Col" type="boolean" generator="assigned" edit-widget-type="checkbox" show="true" readonly="false"></wm-table-column> 
                         <wm-table-column binding="blobCol" caption="Blob Col" type="blob" generator="assigned" edit-widget-type="upload" searchable="false" show="true" filterwidget="text" readonly="false"> 
-                            <a ng-if="columnValue != null" class="col-md-9" target="_blank" data-ng-href="{{contentBaseUrl + row[primaryKey] + '/content/'+ colDef.field}}"><i class="wm-icon wm-icon24 wi wi-file"></i></a> 
+                            <a class="col-md-9" target="_blank" [attr.data-ng-href]="contentBaseUrl + row[primaryKey] + '/content/'+ colDef?.field" show="bind:row.getProperty('blobCol') != null"><i class="wm-icon wm-icon24 wi wi-file"></i></a> 
                         </wm-table-column> 
                         <wm-table-column binding="rowOperations" caption="Actions" type="custom" width="120px" readonly="true" sortable="false" searchable="false" show="true"></wm-table-column> 
                         <wm-table-action key="addNewRow" display-name="New" show="true" class="btn-primary" iconclass="wi wi-plus" title="New" action="addNewRow()" shortcutkey="" disabled="false"></wm-table-action> 
-                        <wm-table-row-action key="updaterow" display-name="" show="true" class="btn-transparent" iconclass="wi wi-pencil" title="Edit" action="editRow()" disabled="false"></wm-table-row-action> 
-                        <wm-table-row-action key="deleterow" display-name="" show="true" class="btn-transparent" iconclass="wi wi-trash" title="Delete" action="deleteRow()" disabled="false"></wm-table-row-action> 
+                        <wm-table-row-action key="updaterow" display-name="" show="true" class="btn-transparent" iconclass="wi wi-pencil" title="Edit" action="editRow($event)" disabled="false"></wm-table-row-action> 
+                        <wm-table-row-action key="deleterow" display-name="" show="true" class="btn-transparent" iconclass="wi wi-trash" title="Delete" action="deleteRow($event)" disabled="false"></wm-table-row-action> 
                     </wm-table> 
                     <wm-table title="" dataset="bind:Widgets.grid3.selecteditem" navigation="Basic" name="grid4" filtermode="multicolumn"> 
                         <wm-table-column binding="pkId" caption="Pk Id" type="integer" primary-key="true" generator="identity" readonly="true" edit-widget-type="number" show="true"></wm-table-column> 
-                        <wm-table-column binding="byteCol" caption="Byte Col" type="short" generator="assigned" edit-widget-type="number" show="true" filterwidget="autocomplete" readonly="false" on-click="byteColOnClick($event, $scope, rowData)"></wm-table-column> 
+                        <wm-table-column binding="byteCol" caption="Byte Col" type="short" generator="assigned" edit-widget-type="number" show="true" filterwidget="autocomplete" readonly="false" on-click="byteColOnClick($event, widget, row)"></wm-table-column> 
                         <wm-table-column binding="shortCol" caption="Short Col" type="short" generator="assigned" edit-widget-type="number" show="true" filterwidget="select" readonly="false"></wm-table-column> 
                         <wm-table-column binding="intCol" caption="Int Col" type="integer" generator="assigned" edit-widget-type="number" show="true" readonly="false"></wm-table-column> 
                         <wm-table-column binding="longCol" caption="Long Col" type="big_integer" generator="assigned" edit-widget-type="number" show="true" readonly="false"></wm-table-column> 
@@ -258,7 +258,7 @@
                         <wm-table-column binding="bigintCol" caption="Bigint Col" type="big_integer" generator="assigned" edit-widget-type="number" show="true" readonly="false"></wm-table-column> 
                         <wm-table-column binding="charCol" caption="Char Col" type="string" generator="assigned" edit-widget-type="text" show="true" filterwidget="autocomplete" readonly="false"></wm-table-column> 
                         <wm-table-column binding="stringCol" caption="String Col" type="string" widget-type="label" generator="assigned" edit-widget-type="text" show="true" filterwidget="autocomplete" readonly="false"> 
-                            <wm-label caption="{{row.getProperty('stringCol')}}" class="" data-ng-class=""></wm-label> 
+                            <wm-label caption="bind:(row.getProperty('stringCol'))" class="" data-ng-class=""></wm-label> 
                         </wm-table-column> 
                         <wm-table-column binding="textCol" caption="Text Col" type="clob" generator="assigned" edit-widget-type="text" searchable="false" show="true" readonly="false"></wm-table-column> 
                         <wm-table-column binding="clobCol" caption="Clob Col" type="clob" generator="assigned" edit-widget-type="text" searchable="false" show="true" readonly="false"></wm-table-column> 
@@ -268,7 +268,7 @@
                         <wm-table-column binding="timestampCol" caption="Timestamp Col" type="timestamp" generator="assigned" edit-widget-type="timestamp" show="true" filterwidget="text" readonly="false"></wm-table-column> 
                         <wm-table-column binding="booleanCol" caption="Boolean Col" type="boolean" generator="assigned" edit-widget-type="checkbox" show="true" readonly="false"></wm-table-column> 
                         <wm-table-column binding="blobCol" caption="Blob Col" type="blob" generator="assigned" edit-widget-type="upload" searchable="false" show="true" filterwidget="text" readonly="false"> 
-                            <a ng-if="columnValue != null" class="col-md-9" target="_blank" data-ng-href="{{contentBaseUrl + row[primaryKey] + '/content/'+ colDef.field}}"><i class="wm-icon wm-icon24 wi wi-file"></i></a> 
+                            <a class="col-md-9" target="_blank" [attr.data-ng-href]="contentBaseUrl + row[primaryKey] + '/content/'+ colDef?.field" show="bind:row.getProperty('blobCol') != null"><i class="wm-icon wm-icon24 wi wi-file"></i></a> 
                         </wm-table-column> 
                     </wm-table> 
                 </wm-tabpane> 
@@ -314,10 +314,10 @@
                         <wm-layoutgrid columns="2" name="layoutgrid4"> 
                             <wm-gridrow name="gridrow26"> 
                                 <wm-gridcolumn columnwidth="6" name="gridcolumn50"> 
-                                    <wm-filter-field name="testConducted" field="testConducted" displayname="Test Conducted" widget="text" lookup-type="TestConducted" lookup-field="academicYear" is-related="true" related-entity-name="TestConducted" is-range="false" type="string" is-primary-key="true" generator="assigned" show="true" inputtype="text" key="testConducted" placeholder="Enter value" matchMode="startignorecase"></wm-filter-field> 
+                                    <wm-filter-field name="testConducted" field="testConducted" displayname="Test Conducted" widget="text" lookup-type="TestConducted" lookup-field="academicYear" is-related="true" related-entity-name="TestConducted" is-range="false" type="string" is-primary-key="true" generator="assigned" show="true" inputtype="text" key="testConducted" placeholder="Enter value" matchmode="startignorecase"></wm-filter-field> 
                                 </wm-gridcolumn> 
                                 <wm-gridcolumn columnwidth="6" name="gridcolumn51"> 
-                                    <wm-filter-field name="studentDetails" field="studentDetails" displayname="Student Details" widget="autocomplete" lookup-type="StudentDetails" lookup-field="studentName" is-related="true" related-entity-name="StudentDetails" is-range="false" type="string" is-primary-key="true" generator="assigned" show="true" key="studentDetails" placeholder="Enter value" matchMode="startignorecase" datafield="key" searchkey="value" displaylabel="value"></wm-filter-field> 
+                                    <wm-filter-field name="studentDetails" field="studentDetails" displayname="Student Details" widget="autocomplete" lookup-type="StudentDetails" lookup-field="studentName" is-related="true" related-entity-name="StudentDetails" is-range="false" type="string" is-primary-key="true" generator="assigned" show="true" key="studentDetails" placeholder="Enter value" matchmode="startignorecase" datafield="key" searchkey="value" displaylabel="value"></wm-filter-field> 
                                 </wm-gridcolumn> 
                             </wm-gridrow> 
                             <wm-gridrow name="gridrow27"> 
@@ -350,7 +350,7 @@
                         <wm-table-column binding="studentDetails.address" caption="Details Address" type="string" generator="assigned" readonly="true" edit-widget-type="text" show="true" related-entity-name="StudentDetails"></wm-table-column> 
                         <wm-table-column binding="studentDetails.joiningDate" caption="Joining Date" type="date" generator="assigned" readonly="true" edit-widget-type="date" show="true" related-entity-name="StudentDetails"></wm-table-column> 
                         <wm-table-column binding="studentDetails.profilePic" caption="Profile Pic" type="blob" generator="assigned" readonly="true" edit-widget-type="upload" searchable="false" show="true" related-entity-name="StudentDetails"> 
-                            <a ng-if="columnValue != null" class="col-md-9" target="_blank" data-ng-href="{{contentBaseUrl + row[primaryKey] + '/content/'+ colDef.field}}"><i class="wm-icon wm-icon24 wi wi-file"></i></a> 
+                            <a class="col-md-9" target="_blank" [attr.data-ng-href]="contentBaseUrl + row[primaryKey] + '/content/'+ colDef?.field" show="bind:row.getProperty('studentDetails.profilePic') != null"><i class="wm-icon wm-icon24 wi wi-file"></i></a> 
                         </wm-table-column> 
                         <wm-table-column binding="studentDetails.status" caption="Details Status" type="string" generator="assigned" readonly="true" edit-widget-type="text" show="true" related-entity-name="StudentDetails"></wm-table-column> 
                         <wm-table-column binding="studentDetails.contactNumber" caption="Contact Number" type="string" generator="assigned" readonly="true" edit-widget-type="text" show="true" related-entity-name="StudentDetails"></wm-table-column> 

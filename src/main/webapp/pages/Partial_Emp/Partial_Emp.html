@@ -1,4 +1,4 @@
-<wm-partial data-ng-controller="Partial_EmpPageController" name="partial1"> 
+<wm-partial name="partial1"> 
     <wm-table title="Employee List" dataset="bind:Variables.HrdbEmployeeData.dataSet" navigation="Basic" name="grid1"> 
         <wm-table-column binding="empId" caption="Emp Id" generator="identity" pcdisplay="true" mobiledisplay="true" type="integer" primary-key="true" readonly="true"></wm-table-column> 
         <wm-table-column binding="firstname" caption="Firstname" generator="assigned" pcdisplay="true" mobiledisplay="true" type="string"></wm-table-column> 
@@ -61,6 +61,6 @@
         </wm-layoutgrid> 
         <wm-form-field name="deptId" displayname="Dept Id" required="true" show="false" generator="identity" primary-key="true" key="deptId" type="integer" is-related="false" step="0" pc-display="true" mobile-display="true" widget="number"></wm-form-field> 
         <wm-form-action key="reset" class="form-reset btn-secondary" iconclass="wi wi-refresh" action="reset()" display-name="Reset" show="true" type="button" update-mode="true"></wm-form-action> 
-        <wm-form-action key="save" class="form-save btn-success" iconclass="wi wi-save" display-name="Save" show="true" type="submit" update-mode="true"></wm-form-action> 
+        <wm-form-action key="save" class="form-save btn-success" iconclass="wi wi-save" display-name="Save" show="true" type="submit" update-mode="true" action=""></wm-form-action> 
     </wm-liveform> 
 </wm-partial>
