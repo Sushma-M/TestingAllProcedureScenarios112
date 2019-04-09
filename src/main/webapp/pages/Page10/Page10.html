@@ -1,0 +1,31 @@
+<wm-page data-ng-controller="Page10PageController" pagetitle="Page 10" name="page1"> 
+    <wm-header content="header" name="header1"></wm-header> 
+    <wm-top-nav content="topnav" name="top_nav1"></wm-top-nav> 
+    <wm-content name="content1"> 
+        <wm-left-panel columnwidth="2" content="leftnav" name="left_panel1"></wm-left-panel> 
+        <wm-page-content columnwidth="10" name="page_content1"> 
+            <wm-tabs name="tabs1"> 
+                <wm-tabpane name="tabpane1"> 
+                    <wm-table editmode="inline" title="Results List" dataset="bind:Variables.School_DBResultsData.dataSet" navigation="Basic" name="grid1" filtermode="multicolumn"> 
+                        <wm-table-column binding="testConductedId" caption="Test Conducted Id" type="integer" primary-key="true" generator="assigned" edit-widget-type="number" show="true" readonly="false" required="true"></wm-table-column> 
+                        <wm-table-column binding="studentId" caption="Student Id" type="integer" primary-key="true" generator="assigned" edit-widget-type="number" show="true" readonly="false" required="true"></wm-table-column> 
+                        <wm-table-column binding="academicYear" caption="Academic Year" type="string" primary-key="true" generator="assigned" edit-widget-type="text" show="true" readonly="false" required="true"></wm-table-column> 
+                        <wm-table-column binding="standardId" caption="Standard Id" type="integer" primary-key="true" generator="assigned" edit-widget-type="number" show="true" readonly="false" required="true"></wm-table-column> 
+                        <wm-table-column binding="marksSecured" caption="Marks Secured" type="short" generator="assigned" edit-widget-type="number" show="true" readonly="false"></wm-table-column> 
+                        <wm-table-column binding="gradeId" caption="Grade Id" type="integer" generator="assigned" edit-widget-type="number" show="true" readonly="false"></wm-table-column> 
+                        <wm-table-column binding="presence" caption="Presence" type="boolean" widget-type="checkbox" generator="assigned" edit-widget-type="checkbox" show="true" readonly="false"> 
+                            <wm-checkbox scopedatavalue="row['presence']" disabled="{{colDef.readonly || !isGridEditMode}}" class="" data-ng-class="" show="{{row['presence']!== null}}"></wm-checkbox> 
+                        </wm-table-column> 
+                        <wm-table-column binding="rowOperations" caption="Actions" type="custom" width="120px" readonly="true" edit-widget-type="text" sortable="false" searchable="false" show="true"></wm-table-column> 
+                        <wm-table-action key="addNewRow" display-name="New" show="true" class="btn-primary" iconclass="wi wi-plus" title="New" action="addNewRow()" shortcutkey="" disabled="false"></wm-table-action> 
+                        <wm-table-row-action key="updaterow" display-name="" show="true" class="btn-transparent" iconclass="wi wi-pencil" title="Edit" action="editRow()" disabled="false"></wm-table-row-action> 
+                        <wm-table-row-action key="deleterow" display-name="" show="true" class="btn-transparent" iconclass="wi wi-trash" title="Delete" action="deleteRow()" disabled="false"></wm-table-row-action> 
+                    </wm-table> 
+                </wm-tabpane> 
+                <wm-tabpane name="tabpane2"></wm-tabpane> 
+                <wm-tabpane name="tabpane3"></wm-tabpane> 
+            </wm-tabs> 
+        </wm-page-content> 
+    </wm-content> 
+    <wm-footer content="footer" name="footer1"></wm-footer> 
+</wm-page>

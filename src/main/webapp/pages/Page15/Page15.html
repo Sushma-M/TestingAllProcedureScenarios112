@@ -1,0 +1,63 @@
+<wm-page data-ng-controller="Page15PageController" pagetitle="Page 15" name="page1"> 
+    <wm-header content="header" name="header1"></wm-header> 
+    <wm-top-nav content="topnav" name="top_nav1"></wm-top-nav> 
+    <wm-content name="content1"> 
+        <wm-left-panel columnwidth="2" content="leftnav" name="left_panel1"></wm-left-panel> 
+        <wm-page-content columnwidth="10" name="page_content1"> 
+            <wm-tabs name="tabs1"> 
+                <wm-tabpane name="tabpane1"> 
+                    <wm-chart type="Pie" title="Pie Chart" height="250px" iconclass="wi wi-pie-chart" name="chart1" dataset="bind:Variables.HrdbDeptData.dataSet" aggregation="average" aggregationcolumn="budget" groupby="deptCode" xaxisdatakey="deptCode" yaxisdatakey="budget" offsettop="20" offsetleft="0"></wm-chart> 
+                </wm-tabpane> 
+                <wm-tabpane name="tabpane2"> 
+                    <wm-chart type="Cumulative Line" title="Cumulative Line Chart" height="250px" iconclass="wi wi-line-chart" name="chart2" dataset="bind:Variables.HrdbDeptData.dataSet" xaxisdatakey="deptCode" yaxisdatakey="q1" interpolation="cardinal"></wm-chart> 
+                </wm-tabpane> 
+                <wm-tabpane name="tabpane3"> 
+                    <wm-chart type="Cumulative Line" title="Cumulative Line Chart" height="250px" iconclass="wi wi-line-chart" name="chart3" dataset="bind:Variables.HrdbDeptData.dataSet" xaxisdatakey="deptCode" yaxisdatakey="q1"></wm-chart> 
+                </wm-tabpane> 
+                <wm-tabpane name="tabpane4"> 
+                    <wm-table editmode="inline" title="Shortseqt_serverdef List" dataset="bind:Variables.Db123__ShortseqtServerdefData.dataSet" navigation="Basic" name="grid1"> 
+                        <wm-table-column binding="shortid" caption="Shortid" generator="sequence" pcdisplay="true" mobiledisplay="true" type="integer" primary-key="true" readonly="true"></wm-table-column> 
+                        <wm-table-column binding="username" caption="Username" generator="assigned" pcdisplay="true" mobiledisplay="true" type="string" required="true"></wm-table-column> 
+                        <wm-table-column binding="id" caption="Id" generator="assigned" pcdisplay="true" mobiledisplay="true" type="short" required="true"></wm-table-column> 
+                        <wm-table-column binding="curDate" caption="Cur Date" generator="assigned" pcdisplay="true" mobiledisplay="true" type="date" required="true"></wm-table-column> 
+                        <wm-table-column binding="curTime" caption="Cur Time" generator="assigned" pcdisplay="true" mobiledisplay="true" type="time" required="true"></wm-table-column> 
+                        <wm-table-column binding="charCol" caption="Char Col" generator="assigned" pcdisplay="true" mobiledisplay="true" type="string"></wm-table-column> 
+                        <wm-table-column binding="currentDateInsert" caption="Current Date Insert" generator="assigned" pcdisplay="true" mobiledisplay="true" type="date"></wm-table-column> 
+                        <wm-table-column binding="currentTimeInsert" caption="Current Time Insert" generator="assigned" pcdisplay="true" mobiledisplay="true" type="time"></wm-table-column> 
+                        <wm-table-action key="addNewRow" display-name="New" iconclass="wi wi-plus" show="true" class="btn-primary" action="addNewRow()" position="footer" shortcutkey=""></wm-table-action> 
+                        <wm-table-row-action key="updaterow" display-name="" title="Edit" iconclass="wi wi-pencil" show="true" class="btn-transparent" action="editRow()"></wm-table-row-action> 
+                        <wm-table-row-action key="deleterow" display-name="" title="Delete" iconclass="wi wi-trash" show="true" class="btn-transparent" action="deleteRow()"></wm-table-row-action> 
+                    </wm-table> 
+                </wm-tabpane> 
+                <wm-tabpane name="tabpane5"> 
+                    <wm-livetable formlayout="dialog" name="livegrid1"> 
+                        <wm-table gridfirstrowselect="true" editmode="dialog" title="Table6 List" dataset="bind:Variables.DbscenariosTable6Data.dataSet" navigation="Basic" name="grid2"> 
+                            <wm-table-column binding="id" caption="Id" generator="identity" pcdisplay="true" mobiledisplay="true" type="integer" primary-key="true" readonly="true"></wm-table-column> 
+                            <wm-table-column binding="column3" caption="Column3" generator="assigned" pcdisplay="true" mobiledisplay="true" type="string"></wm-table-column> 
+                            <wm-table-column binding="column2" caption="Column2" generator="assigned" pcdisplay="true" mobiledisplay="true" type="date"></wm-table-column> 
+                            <wm-table-action key="addNewRow" display-name="New" iconclass="wi wi-plus" show="true" class="btn-primary" action="addNewRow()" position="footer" shortcutkey=""></wm-table-action> 
+                            <wm-table-row-action key="updaterow" display-name="" title="Edit" iconclass="wi wi-pencil" show="true" class="btn-transparent" action="editRow()"></wm-table-row-action> 
+                            <wm-table-row-action key="deleterow" display-name="" title="Delete" iconclass="wi wi-trash" show="true" class="btn-transparent" action="deleteRow()"></wm-table-row-action> 
+                        </wm-table> 
+                        <wm-liveform novalidate="false" errormessage="" title="Table6 Info" formlayout="dialog" iconclass="wi wi-edit" dataset="bind:Variables.DbscenariosTable6Data.dataSet" captionalign="left" captionposition="top" name="liveform1"> 
+                            <wm-layoutgrid columns="2" name="layoutgrid1"> 
+                                <wm-gridrow name="gridrow1"> 
+                                    <wm-gridcolumn columnwidth="6" name="gridcolumn1"> 
+                                        <wm-form-field name="column3" displayname="Column3" required="false" show="true" generator="assigned" primary-key="false" key="column3" type="string" is-related="false" maxchars="255" pc-display="true" mobile-display="true" widget="text"></wm-form-field> 
+                                    </wm-gridcolumn> 
+                                    <wm-gridcolumn columnwidth="6" name="gridcolumn2"> 
+                                        <wm-form-field name="column2" displayname="Column2" required="false" show="true" generator="assigned" primary-key="false" key="column2" type="date" is-related="false" pc-display="true" mobile-display="true" widget="date"></wm-form-field> 
+                                    </wm-gridcolumn> 
+                                </wm-gridrow> 
+                            </wm-layoutgrid> 
+                            <wm-form-field name="id" displayname="Id" required="true" show="false" generator="identity" primary-key="true" key="id" type="integer" is-related="false" step="0" pc-display="true" mobile-display="true" widget="number"></wm-form-field> 
+                            <wm-form-action key="cancel" class="form-cancel btn-secondary" iconclass="wi wi-cancel" action="cancel()" display-name="Cancel" show="true" type="button" update-mode="true"></wm-form-action> 
+                            <wm-form-action key="save" class="form-save btn-success" iconclass="wi wi-save" display-name="Save" show="true" type="submit" update-mode="true"></wm-form-action> 
+                        </wm-liveform> 
+                    </wm-livetable> 
+                </wm-tabpane> 
+            </wm-tabs> 
+        </wm-page-content> 
+    </wm-content> 
+    <wm-footer content="footer" name="footer1"></wm-footer> 
+</wm-page>

@@ -1,0 +1,41 @@
+<wm-page data-ng-controller="FormDataPageController" pagetitle="Form Data" name="page1"> 
+    <wm-header content="header" name="header1"></wm-header> 
+    <wm-top-nav content="topnav" name="top_nav1"></wm-top-nav> 
+    <wm-content name="content1"> 
+        <wm-left-panel columnwidth="2" content="leftnav" name="left_panel1"></wm-left-panel> 
+        <wm-page-content columnwidth="10" name="page_content1"> 
+            <wm-liveform novalidate="false" errormessage="" title="User Info" iconclass="wi wi-edit" defaultmode="Edit" dataset="bind:Variables.InsertUser.dataSet" captionalign="left" captionposition="left" name="liveform1"> 
+                <wm-layoutgrid columns="1" name="layoutgrid1"> 
+                    <wm-gridrow name="gridrow1"> 
+                        <wm-gridcolumn columnwidth="12" name="gridcolumn1"> 
+                            <wm-form-field name="username" displayname="Username" show="true" primary-key="false" generator="assigned" key="username" type="string" readonly="false" required="false" widget="text" maxchars="20" inputtype="text" placeholder="Enter value"></wm-form-field> 
+                        </wm-gridcolumn> 
+                    </wm-gridrow> 
+                    <wm-gridrow name="gridrow2"> 
+                        <wm-gridcolumn columnwidth="12" name="gridcolumn2"> 
+                            <wm-form-field name="password" displayname="Password" show="true" primary-key="false" generator="assigned" key="password" type="string" readonly="false" required="false" widget="text" maxchars="20" inputtype="text" placeholder="Enter value"></wm-form-field> 
+                        </wm-gridcolumn> 
+                    </wm-gridrow> 
+                    <wm-gridrow name="gridrow3"> 
+                        <wm-gridcolumn columnwidth="12" name="gridcolumn3"> 
+                            <wm-form-field name="role" displayname="Role" show="true" primary-key="false" generator="assigned" key="role" type="string" readonly="false" required="false" widget="text" maxchars="20" inputtype="text" placeholder="Enter value"></wm-form-field> 
+                        </wm-gridcolumn> 
+                    </wm-gridrow> 
+                    <wm-gridrow name="gridrow4"> 
+                        <wm-gridcolumn columnwidth="12" name="gridcolumn4"> 
+                            <wm-form-field name="tenantId" displayname="Tenant Id" show="true" primary-key="false" generator="assigned" key="tenantId" type="integer" readonly="false" required="false" step="0" widget="number" inputtype="number" placeholder="Enter value"></wm-form-field> 
+                        </wm-gridcolumn> 
+                    </wm-gridrow> 
+                </wm-layoutgrid> 
+                <wm-form-field name="userId" displayname="User Id" show="false" primary-key="true" generator="identity" key="userId" type="integer" readonly="true" required="true" step="0" widget="number" inputtype="number" placeholder="Enter value"></wm-form-field> 
+                <wm-form-action key="reset" display-name="Reset" show="true" class="form-reset btn-secondary" iconclass="wi wi-refresh" title="Reset" action="reset()" disabled="false" type="button" update-mode="true"></wm-form-action> 
+                <wm-form-action key="save" display-name="Save" show="true" class="form-save btn-success" iconclass="wi wi-save" title="Save" action="saveAction($event)" disabled="false" type="submit" update-mode="true"></wm-form-action> 
+                <wm-form-action key="cancel" display-name="Cancel" show="true" class="form-cancel btn-secondary" iconclass="wi wi-cancel" title="Cancel" action="cancel()" shortcutkey="" disabled="false" type="button" update-mode="true"></wm-form-action> 
+                <wm-form-action key="delete" display-name="Delete" show="true" class="form-delete btn-secondary" iconclass="wi wi-trash" title="Delete" action="delete()" shortcutkey="" disabled="false" type="button" update-mode="false"></wm-form-action> 
+                <wm-form-action key="edit" display-name="Edit" show="true" class="form-update btn-secondary" iconclass="wi wi-pencil" title="Edit" action="edit()" shortcutkey="" disabled="false" type="button" update-mode="false"></wm-form-action> 
+                <wm-form-action key="new" display-name="New" show="true" class="form-new btn-success" iconclass="wi wi-plus" title="New" action="new()" shortcutkey="" disabled="false" type="button" update-mode="false"></wm-form-action> 
+            </wm-liveform> 
+        </wm-page-content> 
+    </wm-content> 
+    <wm-footer content="footer" name="footer1"></wm-footer> 
+</wm-page>

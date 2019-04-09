@@ -1,0 +1,220 @@
+{
+  "tags" : [ {
+    "description" : "Rest service swagger documentation",
+    "name" : "RestServiceVirtualController"
+  } ],
+  "basePath" : "${rest.CreateEmployeeAPI_OtherProject.basepath}",
+  "paths" : {
+    "/TestingDifferentScenario_s/services/hrdb/Employee" : {
+      "x-WM-BASE_PATH" : "/TestingDifferentScenario_s/services/hrdb/Employee",
+      "x-WM-TAG" : "RestServiceVirtualController",
+      "post" : {
+        "tags" : [ "RestServiceVirtualController" ],
+        "x-WM-METHOD_NAME" : "invoke",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "schema" : {
+            "$ref" : "#/definitions/RootRequest"
+          },
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.Object",
+          "description" : "RequestBody",
+          "name" : "RequestBody",
+          "required" : false,
+          "in" : "body"
+        } ],
+        "consumes" : [ "application/json" ],
+        "responses" : {
+          "200" : {
+            "schema" : {
+              "$ref" : "#/definitions/RootResponse"
+            },
+            "description" : "Success"
+          }
+        },
+        "operationId" : "CreateEmployeeAPI_OtherProject_RestServiceVirtualController-invoke"
+      },
+      "x-WM-RELATIVE_PATH" : "",
+      "x-WM-COMPLETE_PATH" : "${rest.CreateEmployeeAPI_OtherProject.scheme}://${rest.CreateEmployeeAPI_OtherProject.host}${rest.CreateEmployeeAPI_OtherProject.basepath}/TestingDifferentScenario_s/services/hrdb/Employee"
+    }
+  },
+  "host" : "${rest.CreateEmployeeAPI_OtherProject.host}",
+  "schemes" : [ "${rest.CreateEmployeeAPI_OtherProject.scheme}" ],
+  "swagger" : "2.0",
+  "definitions" : {
+    "RootResponse" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "CreateEmployeeAPI_OtherProject.RootResponse",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ],
+      "properties" : {
+        "tenantId" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "zip" : {
+          "type" : "string"
+        },
+        "department" : {
+          "type" : "string"
+        },
+        "employeeByManagerId" : {
+          "type" : "string"
+        },
+        "street" : {
+          "type" : "string"
+        },
+        "empId" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "state" : {
+          "type" : "string"
+        },
+        "lastname" : {
+          "type" : "string"
+        },
+        "picurl" : {
+          "type" : "string"
+        },
+        "vacations" : {
+          "x-WM-IS_LIST" : true,
+          "items" : {
+            "$ref" : "#/definitions/java.lang.Object"
+          },
+          "uniqueItems" : false,
+          "type" : "array"
+        },
+        "firstname" : {
+          "type" : "string"
+        },
+        "password" : {
+          "type" : "string"
+        },
+        "city" : {
+          "type" : "string"
+        },
+        "username" : {
+          "type" : "string"
+        },
+        "managerId" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "birthdate" : {
+          "type" : "string"
+        },
+        "employeesForManagerId" : {
+          "x-WM-IS_LIST" : true,
+          "items" : {
+            "$ref" : "#/definitions/java.lang.Object"
+          },
+          "uniqueItems" : false,
+          "type" : "array"
+        },
+        "role" : {
+          "type" : "string"
+        },
+        "deptId" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "jobTitle" : {
+          "type" : "string"
+        }
+      },
+      "required" : [ "birthdate", "city", "department", "deptId", "empId", "employeeByManagerId", "employeesForManagerId", "firstname", "jobTitle", "lastname", "managerId", "password", "picurl", "role", "state", "street", "tenantId", "username", "vacations", "zip" ]
+    },
+    "RootRequest" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "CreateEmployeeAPI_OtherProject.RootRequest",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ],
+      "properties" : {
+        "tenantId" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "zip" : {
+          "type" : "string"
+        },
+        "department" : {
+          "type" : "string"
+        },
+        "employeeByManagerId" : {
+          "type" : "string"
+        },
+        "street" : {
+          "type" : "string"
+        },
+        "empId" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "state" : {
+          "type" : "string"
+        },
+        "lastname" : {
+          "type" : "string"
+        },
+        "picurl" : {
+          "type" : "string"
+        },
+        "vacations" : {
+          "x-WM-IS_LIST" : true,
+          "items" : {
+            "$ref" : "#/definitions/java.lang.Object"
+          },
+          "uniqueItems" : false,
+          "type" : "array"
+        },
+        "firstname" : {
+          "type" : "string"
+        },
+        "password" : {
+          "type" : "string"
+        },
+        "city" : {
+          "type" : "string"
+        },
+        "username" : {
+          "type" : "string"
+        },
+        "managerId" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "birthdate" : {
+          "type" : "string"
+        },
+        "employeesForManagerId" : {
+          "x-WM-IS_LIST" : true,
+          "items" : {
+            "$ref" : "#/definitions/java.lang.Object"
+          },
+          "uniqueItems" : false,
+          "type" : "array"
+        },
+        "role" : {
+          "type" : "string"
+        },
+        "deptId" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "jobTitle" : {
+          "type" : "string"
+        }
+      },
+      "required" : [ "birthdate", "city", "department", "deptId", "empId", "employeeByManagerId", "employeesForManagerId", "firstname", "jobTitle", "lastname", "managerId", "password", "picurl", "role", "state", "street", "tenantId", "username", "vacations", "zip" ]
+    },
+    "java.lang.Object" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "CreateEmployeeAPI_OtherProject.java.lang.Object",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ]
+    }
+  },
+  "info" : {
+    "x-WM-SERVICE_TYPE" : "RestService",
+    "x-WM-API_ID" : "6dc82bed-899f-4dab-a00e-760856e90e66",
+    "x-WM-USE_PROXY_FOR_WEB" : true,
+    "x-WM-SERVICE_ID" : "wavemakeronline",
+    "x-WM-USE_PROXY_FOR_MOBILE" : true,
+    "version" : "2.0"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "endpointAddress" : "https://api.fda.gov/drug/event.json",
+  "method" : "GET",
+  "requestBody" : "",
+  "headers" : { },
+  "queryParams" : {
+    "count" : "patient.reaction.reactionmeddrapt.exact",
+    "search" : "patient.drug.openfda.pharm_class_epc:\"nonsteroidal+anti-inflammatory+drug\""
+  },
+  "sampleHttpResponseDetails" : {
+    "responseBody" : "{\"meta\":{\"disclaimer\":\"Do not rely on openFDA to make decisions regarding medical care. While we make every effort to ensure that data is accurate, you should assume all results are unvalidated. We may limit or otherwise restrict your access to the API in line with our Terms of Service.\",\"terms\":\"https://open.fda.gov/terms/\",\"license\":\"https://open.fda.gov/license/\",\"last_updated\":\"2017-03-03\"},\"results\":[{\"term\":\"DRUG INEFFECTIVE\",\"count\":29377},{\"term\":\"NAUSEA\",\"count\":26416},{\"term\":\"DYSPNOEA\",\"count\":22436},{\"term\":\"PAIN\",\"count\":22321},{\"term\":\"FATIGUE\",\"count\":21791},{\"term\":\"DIZZINESS\",\"count\":20389},{\"term\":\"HEADACHE\",\"count\":20009},{\"term\":\"MYOCARDIAL INFARCTION\",\"count\":19394},{\"term\":\"DIARRHOEA\",\"count\":18324},{\"term\":\"VOMITING\",\"count\":16331},{\"term\":\"ASTHENIA\",\"count\":14991},{\"term\":\"ARTHRALGIA\",\"count\":14696},{\"term\":\"FALL\",\"count\":13604},{\"term\":\"PAIN IN EXTREMITY\",\"count\":13349},{\"term\":\"CEREBROVASCULAR ACCIDENT\",\"count\":13081},{\"term\":\"MALAISE\",\"count\":12620},{\"term\":\"CHEST PAIN\",\"count\":12534},{\"term\":\"PRURITUS\",\"count\":12403},{\"term\":\"FLUSHING\",\"count\":12391},{\"term\":\"GASTROINTESTINAL HAEMORRHAGE\",\"count\":11177},{\"term\":\"ANXIETY\",\"count\":11089},{\"term\":\"RASH\",\"count\":11003},{\"term\":\"PYREXIA\",\"count\":11002},{\"term\":\"PNEUMONIA\",\"count\":10504},{\"term\":\"BACK PAIN\",\"count\":10480},{\"term\":\"WEIGHT DECREASED\",\"count\":10434},{\"term\":\"DEPRESSION\",\"count\":10393},{\"term\":\"HYPERTENSION\",\"count\":10319},{\"term\":\"ANAEMIA\",\"count\":10157},{\"term\":\"INSOMNIA\",\"count\":10116},{\"term\":\"OEDEMA PERIPHERAL\",\"count\":9088},{\"term\":\"ABDOMINAL PAIN\",\"count\":8986},{\"term\":\"HYPOTENSION\",\"count\":8859},{\"term\":\"COUGH\",\"count\":8762},{\"term\":\"ABDOMINAL PAIN UPPER\",\"count\":8476},{\"term\":\"FEELING ABNORMAL\",\"count\":8391},{\"term\":\"CARDIAC FAILURE CONGESTIVE\",\"count\":8184},{\"term\":\"PARAESTHESIA\",\"count\":8063},{\"term\":\"RENAL FAILURE ACUTE\",\"count\":7791},{\"term\":\"DEATH\",\"count\":7741},{\"term\":\"CONSTIPATION\",\"count\":7680},{\"term\":\"DRUG INTERACTION\",\"count\":7649},{\"term\":\"MYALGIA\",\"count\":7601},{\"term\":\"DRUG HYPERSENSITIVITY\",\"count\":7566},{\"term\":\"GAIT DISTURBANCE\",\"count\":7229},{\"term\":\"MUSCLE SPASMS\",\"count\":7157},{\"term\":\"BLOOD GLUCOSE INCREASED\",\"count\":7130},{\"term\":\"SOMNOLENCE\",\"count\":7035},{\"term\":\"CONDITION AGGRAVATED\",\"count\":6969},{\"term\":\"OFF LABEL USE\",\"count\":6953},{\"term\":\"WEIGHT INCREASED\",\"count\":6881},{\"term\":\"DECREASED APPETITE\",\"count\":6817},{\"term\":\"CONFUSIONAL STATE\",\"count\":6816},{\"term\":\"DEHYDRATION\",\"count\":6585},{\"term\":\"ERYTHEMA\",\"count\":6546},{\"term\":\"HYPOAESTHESIA\",\"count\":6526},{\"term\":\"ATRIAL FIBRILLATION\",\"count\":6353},{\"term\":\"URINARY TRACT INFECTION\",\"count\":6327},{\"term\":\"BLOOD PRESSURE INCREASED\",\"count\":6271},{\"term\":\"RENAL FAILURE\",\"count\":6126},{\"term\":\"PULMONARY EMBOLISM\",\"count\":6113},{\"term\":\"HAEMOGLOBIN DECREASED\",\"count\":6077},{\"term\":\"TREMOR\",\"count\":6000},{\"term\":\"HYPERHIDROSIS\",\"count\":5978},{\"term\":\"INJECTION SITE PAIN\",\"count\":5889},{\"term\":\"ABDOMINAL DISCOMFORT\",\"count\":5817},{\"term\":\"CORONARY ARTERY DISEASE\",\"count\":5692},{\"term\":\"LOSS OF CONSCIOUSNESS\",\"count\":5576},{\"term\":\"DEEP VEIN THROMBOSIS\",\"count\":5450},{\"term\":\"INJURY\",\"count\":5325},{\"term\":\"VISION BLURRED\",\"count\":5217},{\"term\":\"HYPERSENSITIVITY\",\"count\":5178},{\"term\":\"SYNCOPE\",\"count\":5166},{\"term\":\"DYSPEPSIA\",\"count\":5156},{\"term\":\"URTICARIA\",\"count\":5118},{\"term\":\"DRUG DOSE OMISSION\",\"count\":5117},{\"term\":\"MUSCULAR WEAKNESS\",\"count\":5096},{\"term\":\"PALPITATIONS\",\"count\":4877},{\"term\":\"CONTUSION\",\"count\":4836},{\"term\":\"NASOPHARYNGITIS\",\"count\":4714},{\"term\":\"HAEMORRHAGE\",\"count\":4622},{\"term\":\"GASTROOESOPHAGEAL REFLUX DISEASE\",\"count\":4544},{\"term\":\"FEELING HOT\",\"count\":4543},{\"term\":\"ARTHRITIS\",\"count\":4491},{\"term\":\"OVERDOSE\",\"count\":4314},{\"term\":\"CHILLS\",\"count\":4308},{\"term\":\"CHEST DISCOMFORT\",\"count\":4300},{\"term\":\"JOINT SWELLING\",\"count\":4261},{\"term\":\"ACUTE MYOCARDIAL INFARCTION\",\"count\":4134},{\"term\":\"PRODUCT QUALITY ISSUE\",\"count\":4048},{\"term\":\"EPISTAXIS\",\"count\":4030},{\"term\":\"SINUSITIS\",\"count\":4027},{\"term\":\"DIABETES MELLITUS\",\"count\":4010},{\"term\":\"HEART RATE INCREASED\",\"count\":3991},{\"term\":\"CARDIAC DISORDER\",\"count\":3970},{\"term\":\"INCORRECT DOSE ADMINISTERED\",\"count\":3960},{\"term\":\"CARDIAC ARREST\",\"count\":3921},{\"term\":\"SEPSIS\",\"count\":3903},{\"term\":\"BLOOD CREATININE INCREASED\",\"count\":3860},{\"term\":\"CONVULSION\",\"count\":3778}]}",
+    "convertedResponse" : null,
+    "statusCode" : 200,
+    "headers" : {
+      "Access-Control-Allow-Headers" : [ "X-Requested-With" ],
+      "Access-Control-Allow-Origin" : [ "*" ],
+      "Age" : [ "0" ],
+      "Cache-Control" : [ "public, max-age=3600" ],
+      "Content-Security-Policy" : [ "default-src 'none'" ],
+      "Content-Type" : [ "application/json; charset=utf-8" ],
+      "Date" : [ "Wed, 08 Mar 2017 08:32:54 GMT" ],
+      "ETag" : [ "W/\"1b24-V30qKqeHGNeAxYBQvU97Iw\"" ],
+      "Server" : [ "openresty" ],
+      "Strict-Transport-Security" : [ "max-age=31536000;" ],
+      "Vary" : [ "Accept-Encoding", "Accept-Encoding", "Accept-Encoding" ],
+      "Via" : [ "http/1.1 api-umbrella (ApacheTrafficServer [cMsSfW])" ],
+      "X-Cache" : [ "MISS" ],
+      "X-Content-Type-Options" : [ "nosniff" ],
+      "X-Frame-Options" : [ "deny" ],
+      "X-XSS-Protection" : [ "1; mode=block" ],
+      "transfer-encoding" : [ "chunked" ],
+      "Connection" : [ "keep-alive" ]
+    }
+  },
+  "redirectEnabled" : true,
+  "proxy" : null,
+  "contentType" : "text/xml",
+  "multiParamInfoList" : null,
+  "authDetails" : null
+}

@@ -1,0 +1,20 @@
+<wm-page data-ng-controller="ProcedureAutoWirePageController" pagetitle="Procedure Auto Wire" name="page1"> 
+    <wm-header content="header" name="header1"></wm-header> 
+    <wm-top-nav content="topnav" name="top_nav1"></wm-top-nav> 
+    <wm-content name="content1"> 
+        <wm-left-panel columnwidth="2" content="leftnav" name="left_panel1"></wm-left-panel> 
+        <wm-page-content columnwidth="10" name="page_content1"> 
+            <wm-table title="" dataset="bind:Variables.AutoWire_Procedure1000NullTitlesProcedureAutowiring.dataSet.content" navigation="Classic" name="grid1" filtermode="multicolumn" showrecordcount="true" pagesize="10"> 
+                <wm-table-column binding="businessEntityId" caption="Business Entity Id" type="string" edit-widget-type="text" show="true" readonly="false"></wm-table-column> 
+                <wm-table-column binding="firstName" caption="First Name" type="string" edit-widget-type="text" show="true" filterwidget="autocomplete" readonly="false"></wm-table-column> 
+                <wm-table-column binding="nameStyle" caption="Name Style" type="string" edit-widget-type="text" show="true" readonly="false"></wm-table-column> 
+                <wm-table-column binding="title" caption="Title" type="string" edit-widget-type="text" show="true" readonly="false"></wm-table-column> 
+                <wm-table-column binding="personType" caption="Person Type" type="string" edit-widget-type="text" show="true" filterwidget="select" readonly="false"></wm-table-column> 
+                <wm-table-column binding="additionalContactInfo" caption="Additional Contact Info" type="string" edit-widget-type="text" show="true" readonly="false"></wm-table-column> 
+                <wm-table-column binding="rowguid" caption="Rowguid" type="string" edit-widget-type="text" show="true" readonly="false"></wm-table-column> 
+                <wm-table-column binding="emailPromotion" caption="Email Promotion" type="string" edit-widget-type="text" show="true" readonly="false"></wm-table-column> 
+            </wm-table> 
+        </wm-page-content> 
+    </wm-content> 
+    <wm-footer content="footer" name="footer1"></wm-footer> 
+</wm-page>

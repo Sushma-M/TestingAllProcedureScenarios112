@@ -1,0 +1,63 @@
+{
+  "Procedure_GetByHireDate" : {
+    "procedureString" : "EXEC HumanResources.getEmployeeByHireDate @empHireDate= ?",
+    "parameters" : [ {
+      "name" : "empHireDate",
+      "type" : "date",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "2009-01-13",
+      "required" : true,
+      "parameterType" : "IN"
+    } ]
+  },
+  "Procedure_1000NullTitles" : {
+    "procedureString" : "EXEC Person.get1000NullTitles",
+    "parameters" : [ ]
+  },
+  "Procedure_getDeptDetails" : {
+    "procedureString" : "EXEC HumanResources.getDeparmentInfoOut @deptid= ?,@Name= ?",
+    "parameters" : [ {
+      "name" : "deptid",
+      "type" : "integer",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "2",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "Name",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : null,
+      "required" : true,
+      "parameterType" : "OUT"
+    } ]
+  },
+  "Porcedure_DeptNameUsingID" : {
+    "procedureString" : "EXEC HumanResources.getDeparmentInfoOut @deptid= ?,@Name= ?",
+    "parameters" : [ {
+      "name" : "deptid",
+      "type" : "integer",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "1",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "Name",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : null,
+      "required" : true,
+      "parameterType" : "OUT"
+    } ]
+  }
+}

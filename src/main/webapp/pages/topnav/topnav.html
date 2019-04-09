@@ -1,0 +1,29 @@
+<wm-partial data-ng-controller="topnavPageController" name="topnav" type="topnav"> 
+    <wm-navbar name="navbar1"> 
+        <wm-nav name="leftTopLinks" type="navbar" class="navbar-left"> 
+            <wm-nav-item name="list_home"> 
+                <wm-anchor caption="Home" name="homeLink" iconclass="wi wi-home" on-click="Variables.goToPage_Main.invoke()"></wm-anchor> 
+            </wm-nav-item> 
+            <wm-nav-item name="list_services"> 
+                <wm-anchor caption="Procedure AutoWire" name="orderLink" iconclass="wi wi-list" on-click="Variables.goToPage_ProcedureAutoWire.invoke()"></wm-anchor> 
+            </wm-nav-item> 
+            <wm-nav-item name="nav_item5"> 
+                <wm-anchor name="anchor5" iconclass="wi wi-file" caption="Livecharts" on-click="Variables.goToPage_Charts.invoke()"></wm-anchor> 
+            </wm-nav-item> 
+            <wm-nav-item name="nav_item6"> 
+                <wm-anchor name="anchor6" iconclass="wi wi-file" on-click="Variables.goToPage_Query_Charts.invoke()" caption="SQL_QUERYCHARTS"></wm-anchor> 
+            </wm-nav-item> 
+            <wm-nav-item name="nav_item7"> 
+                <wm-anchor name="anchor7" iconclass="wi wi-file" on-click="Variables.goToPage_HQL_QueryCharts.invoke()" caption="HQL_QUERYCHARTS"></wm-anchor> 
+            </wm-nav-item> 
+            <wm-nav-item name="nav_item8"> 
+                <wm-anchor name="anchor8" iconclass="wi wi-file" caption="REST_SERVICECHARTS" on-click="Variables.goToPage_Rest_Charts.invoke()"></wm-anchor> 
+            </wm-nav-item> 
+        </wm-nav> 
+        <wm-nav name="rightTopLinks" type="navbar" class="navbar-right"> 
+            <wm-nav-item name="list_logout"> 
+                <wm-anchor caption="Logout" name="logoutLink" iconclass="wi wi-sign-out" on-click="Actions.logoutAction.invoke()"></wm-anchor> 
+            </wm-nav-item> 
+        </wm-nav> 
+    </wm-navbar> 
+</wm-partial>

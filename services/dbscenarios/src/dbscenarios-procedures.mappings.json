@@ -1,0 +1,512 @@
+{
+  "Procedure_GetByCurrentDate" : {
+    "procedureString" : "CALL getByCurrentDate(?)",
+    "parameters" : [ {
+      "name" : "datecol",
+      "type" : "date",
+      "list" : false,
+      "variableType" : "SERVER",
+      "variableName" : "DATE",
+      "testValue" : "2017-03-07",
+      "required" : true,
+      "parameterType" : "IN"
+    } ]
+  },
+  "SV_CurrentDate" : {
+    "procedureString" : "CALL getByCurrentDate(?)",
+    "parameters" : [ {
+      "name" : "datecol",
+      "type" : "date",
+      "list" : false,
+      "variableType" : "SERVER",
+      "variableName" : "DATE",
+      "testValue" : "2017-03-07",
+      "required" : true,
+      "parameterType" : "IN"
+    } ]
+  },
+  "Procedure_InsertQuery" : {
+    "procedureString" : "CALL PROC_INSERT(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",
+    "parameters" : [ {
+      "name" : "BYTECOL",
+      "type" : "byte",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "7",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "SHORTCOL",
+      "type" : "short",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "8797",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "INTCOL",
+      "type" : "integer",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "979",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "LONGCOL",
+      "type" : "long",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "789",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "FLOATCOL",
+      "type" : "float",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "7897.9",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "DOUBLECOL",
+      "type" : "double",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "87987.789",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "BIGDECCOL",
+      "type" : "big_decimal",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "789.78989",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "BIGINTCOL",
+      "type" : "big_integer",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "879",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "CHARCOL",
+      "type" : "character",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "f",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "STRINGCOL",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "gdfgsd",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "CLOBCOL",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "gdfsgdf",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "TEXTCOL",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "dfgdf",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "DATECOL",
+      "type" : "date",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "2017-03-20",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "TIMECOL",
+      "type" : "time",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "12:21:12",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "DATETIMECOL",
+      "type" : "datetime",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "2017-03-20T12:20:59",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "TIMESTAMPCOL",
+      "type" : "timestamp",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : 1489992657000,
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "BOOLEANCOL",
+      "type" : "boolean",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : true,
+      "required" : true,
+      "parameterType" : "IN"
+    } ]
+  },
+  "Procedure_CurrentDatetime" : {
+    "procedureString" : "CALL PROC_IN_DATETIME(?)",
+    "parameters" : [ {
+      "name" : "DATETIMECOL",
+      "type" : "datetime",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "2017-03-06T18:16:02",
+      "required" : true,
+      "parameterType" : "IN"
+    } ]
+  },
+  "Procedure_Insert" : {
+    "procedureString" : "CALL PROC_INSERT(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",
+    "parameters" : [ {
+      "name" : "BYTECOL",
+      "type" : "byte",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "28",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "SHORTCOL",
+      "type" : "short",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "214",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "INTCOL",
+      "type" : "integer",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "2424",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "LONGCOL",
+      "type" : "long",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "2415",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "FLOATCOL",
+      "type" : "float",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "222.1241",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "DOUBLECOL",
+      "type" : "double",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "215.2451",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "BIGDECCOL",
+      "type" : "big_decimal",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "242421.2525",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "BIGINTCOL",
+      "type" : "big_integer",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "12454245",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "CHARCOL",
+      "type" : "character",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "r",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "STRINGCOL",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "sadfas",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "CLOBCOL",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "fsdfasdf",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "TEXTCOL",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "dsafsdfasd",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "DATECOL",
+      "type" : "date",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "2017-03-06",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "TIMECOL",
+      "type" : "time",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "18:03:52",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "DATETIMECOL",
+      "type" : "datetime",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "2017-03-06T18:04:25",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "TIMESTAMPCOL",
+      "type" : "timestamp",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : 1488803663000,
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "BOOLEANCOL",
+      "type" : "boolean",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : true,
+      "required" : true,
+      "parameterType" : "IN"
+    } ]
+  },
+  "Procedure_InsertRequiredFalse" : {
+    "procedureString" : "CALL PROC_INSERT(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",
+    "parameters" : [ {
+      "name" : "BYTECOL",
+      "type" : "byte",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "12",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "SHORTCOL",
+      "type" : "short",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "1214",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "INTCOL",
+      "type" : "integer",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "425",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "LONGCOL",
+      "type" : "long",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "245241",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "FLOATCOL",
+      "type" : "float",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "245.5442",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "DOUBLECOL",
+      "type" : "double",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "4215.425",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "BIGDECCOL",
+      "type" : "big_decimal",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "214541.2415",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "BIGINTCOL",
+      "type" : "big_integer",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "242145",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "CHARCOL",
+      "type" : "character",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "v",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "STRINGCOL",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "dsfsadf",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "CLOBCOL",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "adsfdsf",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "TEXTCOL",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "dasfdsf",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "DATECOL",
+      "type" : "date",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "2017-03-06",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "TIMECOL",
+      "type" : "time",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "18:08:18",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "DATETIMECOL",
+      "type" : "datetime",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "2017-03-06T18:08:18",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "TIMESTAMPCOL",
+      "type" : "timestamp",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : 1488803898000,
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "BOOLEANCOL",
+      "type" : "boolean",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : true,
+      "required" : false,
+      "parameterType" : "IN"
+    } ]
+  }
+}

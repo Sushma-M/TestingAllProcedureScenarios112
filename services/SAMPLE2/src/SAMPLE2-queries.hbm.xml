@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <sql-query name="SV_GetAllTypes">
+        <![CDATA[
+        select * from DB2ADMIN1.DB2ALLTYPES1
+        ]]>
+    </sql-query>
+
+    <sql-query name="SV_GetAllTypes__count">
+        <![CDATA[
+        select count(*) from (select * from DB2ADMIN1.DB2ALLTYPES1) wmTempTable
+        ]]>
+    </sql-query>
+</hibernate-mapping>

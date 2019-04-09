@@ -1,0 +1,46 @@
+<wm-page data-ng-controller="MainPageController" name="mainpage" pagetitle="Main"> 
+    <wm-header content="header" name="header" height="auto"></wm-header> 
+    <wm-top-nav content="topnav" name="top_nav1"></wm-top-nav> 
+    <wm-content name="content"> 
+        <wm-left-panel columnwidth="2" content="leftnav" name="left_panel1"></wm-left-panel> 
+        <wm-page-content columnwidth="10" name="mainContent" padding="unset 15px"> 
+            <wm-composite name="composite1"> 
+                <wm-label class="col-md-3 control-label" name="label1" caption="Select Dept ID"></wm-label> 
+                <wm-container class="col-md-9" name="container1"> 
+                    <wm-checkboxset height="auto" name="checkboxset1" dataset="bind:Variables.SV_DeptData.dataSet" datafield="deptId" displayexpression="bind:$[name]+' '+$[deptId]"></wm-checkboxset> 
+                </wm-container> 
+            </wm-composite> 
+            <wm-table title="" dataset="bind:Variables.HrdbExecuteSV_ListEmpData.dataSet" navigation="Basic" name="grid1" radioselect="false" multiselect="true" exportformat="EXCEL,CSV"> 
+                <wm-table-column binding="tenantId" caption="Tenant Id" type="string" edit-widget-type="text" show="true" readonly="false"></wm-table-column> 
+                <wm-table-column binding="zip" caption="Zip" type="string" edit-widget-type="text" show="true" readonly="false"></wm-table-column> 
+                <wm-table-column binding="street" caption="Street" type="string" edit-widget-type="text" show="true" readonly="false"></wm-table-column> 
+                <wm-table-column binding="empId" caption="Emp Id" type="string" edit-widget-type="text" show="true" readonly="false"></wm-table-column> 
+                <wm-table-column binding="state" caption="State" type="string" edit-widget-type="text" show="true" readonly="false"></wm-table-column> 
+                <wm-table-column binding="picurl" caption="Picurl" type="string" edit-widget-type="text" show="true" readonly="false"></wm-table-column> 
+                <wm-table-column binding="lastname" caption="Lastname" type="string" edit-widget-type="text" show="true" readonly="false"></wm-table-column> 
+                <wm-table-column binding="firstname" caption="Firstname" type="string" edit-widget-type="text" show="true" readonly="false"></wm-table-column> 
+                <wm-table-column binding="password" caption="Password" type="string" edit-widget-type="text" show="true" readonly="false"></wm-table-column> 
+                <wm-table-column binding="city" caption="City" type="string" edit-widget-type="text" show="true" readonly="false"></wm-table-column> 
+                <wm-table-column binding="username" caption="Username" type="string" edit-widget-type="text" show="true" readonly="false"></wm-table-column> 
+                <wm-table-column binding="managerId" caption="Manager Id" type="string" edit-widget-type="text" show="true" readonly="false"></wm-table-column> 
+                <wm-table-column binding="birthdate" caption="Birthdate" type="string" edit-widget-type="text" show="true" readonly="false"></wm-table-column> 
+                <wm-table-column binding="role" caption="Role" type="string" edit-widget-type="text" show="true" readonly="false"></wm-table-column> 
+                <wm-table-column binding="deptId" caption="Dept Id" type="string" edit-widget-type="text" show="true" readonly="false"></wm-table-column> 
+                <wm-table-column binding="jobTitle" caption="Job Title" type="string" edit-widget-type="text" show="true" readonly="false"></wm-table-column> 
+            </wm-table> 
+            <wm-composite name="composite2"> 
+                <wm-label class="col-md-3 control-label" name="label2" caption="Select EmpId"></wm-label> 
+                <wm-container class="col-md-9" name="container2"> 
+                    <wm-checkboxset height="auto" name="checkboxset2" dataset="bind:Widgets.grid1.selecteditem" datafield="empId" displayfield="empId" usekeys="false"></wm-checkboxset> 
+                </wm-container> 
+            </wm-composite> 
+            <wm-table title="" dataset="bind:Variables.HrdbExecuteHQL_WithoutAlias.dataSet" navigation="Classic" name="grid2" exportformat="EXCEL,CSV"> 
+                <wm-table-column binding="col1" caption="Col1" type="string" edit-widget-type="text" show="true" readonly="false"></wm-table-column> 
+                <wm-table-column binding="col0" caption="Col0" type="string" edit-widget-type="text" show="true" readonly="false"></wm-table-column> 
+                <wm-table-column binding="col3" caption="Col3" type="string" edit-widget-type="text" show="true" readonly="false"></wm-table-column> 
+                <wm-table-column binding="col2" caption="Col2" type="string" edit-widget-type="text" show="true" readonly="false"></wm-table-column> 
+            </wm-table> 
+        </wm-page-content> 
+    </wm-content> 
+    <wm-footer name="footer" content="footer"></wm-footer> 
+</wm-page>

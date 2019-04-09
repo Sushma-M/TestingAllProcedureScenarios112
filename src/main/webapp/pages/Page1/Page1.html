@@ -1,0 +1,122 @@
+<wm-page data-ng-controller="Page1PageController" pagetitle="Page 1" name="page1"> 
+    <wm-header content="header" name="header1"></wm-header> 
+    <wm-top-nav content="topnav" name="top_nav1"></wm-top-nav> 
+    <wm-content name="content1"> 
+        <wm-left-panel columnwidth="2" content="leftnav" name="left_panel1"></wm-left-panel> 
+        <wm-page-content columnwidth="10" name="page_content1"> 
+            <wm-tabs name="tabs1"> 
+                <wm-tabpane name="tabpane1" title="With Alias Names" badgevalue="HQL" badgetype="primary"> 
+                    <wm-button class="btn-default" caption="Navigate to TabPane2" type="button" margin="unset 0.5em" name="button1" on-click="Variables.NavigateToTabPane2.invoke()"></wm-button> 
+                    <wm-table title="bind:'Count of Department:'+Variables.HQL_CountQuery.dataSet[$i].col0" dataset="bind:Variables.HrdbExecuteHQL_VacationDataWithAliasNames.dataSet" navigation="Basic" name="grid1" exportformat="EXCEL,CSV"> 
+                        <wm-table-column binding="empid" caption="Empid" type="string" edit-widget-type="text" show="true" readonly="false"></wm-table-column> 
+                        <wm-table-column binding="startdate" caption="Startdate" type="string" edit-widget-type="text" show="true" readonly="false"></wm-table-column> 
+                        <wm-table-column binding="status" caption="Status" type="string" edit-widget-type="text" show="true" readonly="false"></wm-table-column> 
+                        <wm-table-column binding="enddate" caption="Enddate" type="string" edit-widget-type="text" show="true" readonly="false"></wm-table-column> 
+                    </wm-table> 
+                </wm-tabpane> 
+                <wm-tabpane name="tabpane2" title="Procedure data"> 
+                    <wm-composite name="composite1"> 
+                        <wm-label class="col-md-3 control-label" name="label1" caption="B_ADDRESS"></wm-label> 
+                        <wm-container class="col-md-9" name="container1"> 
+                            <wm-text name="text1" type="number"></wm-text> 
+                        </wm-container> 
+                    </wm-composite> 
+                    <wm-composite name="composite2"> 
+                        <wm-label class="col-md-3 control-label" name="label2" caption="B_COUNT"></wm-label> 
+                        <wm-container class="col-md-9" name="container2"> 
+                            <wm-text name="text2" type="number"></wm-text> 
+                        </wm-container> 
+                    </wm-composite> 
+                    <wm-button class="btn-default" caption="Procedure Invoke" type="button" margin="unset 0.5em" name="button2" on-click="Variables.Procedure_CreateEmptyBlock.invoke()"></wm-button> 
+                    <wm-label padding="unset 0.5em" name="label3" caption="bind:&quot;Count Value: &quot;+Variables.Procedure_CreateEmptyBlock.dataSet.baddr" fontsize="1.4" fontunit="em"></wm-label> 
+                </wm-tabpane> 
+                <wm-tabpane name="tabpane3" title="Update Query Using ISLIST"> 
+                    <wm-table editmode="inline" title="Live Variable User List" dataset="bind:Variables.HrdbUserData.dataSet" navigation="Basic" name="grid2" radioselect="false" multiselect="true"> 
+                        <wm-table-column binding="userId" caption="User Id" type="integer" primary-key="true" generator="identity" readonly="true" edit-widget-type="number" show="true"></wm-table-column> 
+                        <wm-table-column binding="username" caption="Username" type="string" generator="assigned" edit-widget-type="text" show="true" readonly="false"></wm-table-column> 
+                        <wm-table-column binding="password" caption="Password" type="string" generator="assigned" edit-widget-type="text" show="true" readonly="false"></wm-table-column> 
+                        <wm-table-column binding="role" caption="Role" type="string" generator="assigned" edit-widget-type="text" show="true" readonly="false"></wm-table-column> 
+                        <wm-table-column binding="tenantId" caption="Tenant Id" type="integer" generator="assigned" edit-widget-type="number" show="true" readonly="false"></wm-table-column> 
+                        <wm-table-column binding="rowOperations" caption="Actions" type="custom" width="120px" readonly="true" sortable="false" searchable="false" show="true"></wm-table-column> 
+                        <wm-table-action key="addNewRow" display-name="New" show="true" class="btn-primary" iconclass="wi wi-plus" title="New" action="addNewRow()" shortcutkey="" disabled="false"></wm-table-action> 
+                        <wm-table-row-action key="updaterow" display-name="" show="true" class="btn-transparent" iconclass="wi wi-pencil" title="Edit" action="editRow()" disabled="false"></wm-table-row-action> 
+                        <wm-table-row-action key="deleterow" display-name="" show="true" class="btn-transparent" iconclass="wi wi-trash" title="Delete" action="deleteRow()" disabled="false"></wm-table-row-action> 
+                    </wm-table> 
+                    <wm-form errormessage="" captionposition="left" title="Update Query Using IsList" enctype="application/x-www-form-urlencoded" method="put" dataset="bind:Variables.HrdbExecuteUpdateQueryUsingIsList.dataSet" captionalign="left" name="form1" subheading="Custom Form"> 
+                        <wm-layoutgrid columns="1" name="layoutgrid1"> 
+                            <wm-gridrow name="gridrow1"> 
+                                <wm-gridcolumn columnwidth="12" name="gridcolumn1"> 
+                                    <wm-form-field name="PASSWORD" readonly="false" displayname="Password" key="PASSWORD" type="string" show="true" widget="text" inputtype="text" placeholder="Enter value"></wm-form-field> 
+                                </wm-gridcolumn> 
+                            </wm-gridrow> 
+                            <wm-gridrow name="gridrow2"> 
+                                <wm-gridcolumn columnwidth="12" name="gridcolumn2"> 
+                                    <wm-form-field name="USER_ID" readonly="false" displayname="User Id" key="USER_ID" type="integer" show="true" widget="number" inputtype="number" placeholder="Enter value"></wm-form-field> 
+                                </wm-gridcolumn> 
+                            </wm-gridrow> 
+                            <wm-gridrow name="gridrow3"> 
+                                <wm-gridcolumn columnwidth="12" name="gridcolumn3"> 
+                                    <wm-form-field name="USERNAME" readonly="false" displayname="Username" key="USERNAME" type="string" show="true" widget="text" inputtype="text" placeholder="Enter value"></wm-form-field> 
+                                </wm-gridcolumn> 
+                            </wm-gridrow> 
+                        </wm-layoutgrid> 
+                        <wm-buttongroup horizontalalign="right" class="form-action col-md-12" name="buttongroup1"> 
+                            <wm-button caption="Reset" type="reset" class="btn-secondary" name="button3"></wm-button> 
+                            <wm-button caption="Cancel" type="button" class="btn-warning" name="button4"></wm-button> 
+                            <wm-button caption="Save" type="submit" class="btn-primary" name="button5"></wm-button> 
+                        </wm-buttongroup> 
+                    </wm-form> 
+                </wm-tabpane> 
+                <wm-tabpane name="tabpane4" title="Update Query Using List"> 
+                    <wm-composite name="composite3"> 
+                        <wm-label class="col-md-3 control-label" name="label4"></wm-label> 
+                        <wm-container class="col-md-9" name="container3"> 
+                            <wm-checkboxset height="auto" name="checkboxset1" dataset="bind:Variables.HrdbUserData.dataSet" datafield="userId" displayexpression="bind:$[data[$i].userId]+' '+$[data[$i].username]"></wm-checkboxset> 
+                        </wm-container> 
+                    </wm-composite> 
+                    <wm-composite name="composite4"> 
+                        <wm-label class="col-md-3 control-label" name="label5"></wm-label> 
+                        <wm-container class="col-md-9" name="container4"> 
+                            <wm-text name="text3"></wm-text> 
+                        </wm-container> 
+                    </wm-composite> 
+                    <wm-composite name="composite5"> 
+                        <wm-label class="col-md-3 control-label" name="label6"></wm-label> 
+                        <wm-container class="col-md-9" name="container5"> 
+                            <wm-text name="text4"></wm-text> 
+                        </wm-container> 
+                    </wm-composite> 
+                    <wm-button class="btn-default" caption="Button" type="button" margin="unset 0.5em" name="button6" on-click="Variables.UpdateQuery.invoke()"></wm-button> 
+                </wm-tabpane> 
+                <wm-tabpane name="tabpane5"> 
+                    <wm-composite name="composite6"> 
+                        <wm-label class="col-md-3 control-label" name="label7"></wm-label> 
+                        <wm-container class="col-md-9" name="container6"> 
+                            <wm-checkboxset height="auto" name="checkboxset2" dataset="bind:Variables.HrdbUserData.dataSet" datafield="userId" displayfield="userId"></wm-checkboxset> 
+                        </wm-container> 
+                    </wm-composite> 
+                    <wm-form errormessage="" captionposition="top" title="Form" enctype="application/x-www-form-urlencoded" method="put" dataset="bind:Variables.HrdbExecuteSV_UpdateUserIsList.dataSet" captionalign="left" name="form2"> 
+                        <wm-layoutgrid columns="1" name="layoutgrid2"> 
+                            <wm-gridrow name="gridrow4"> 
+                                <wm-gridcolumn columnwidth="12" name="gridcolumn4"> 
+                                    <wm-form-field name="PASSWORD" readonly="false" displayname="Password" key="PASSWORD" type="string" show="true" widget="text" inputtype="text" placeholder="Enter value"></wm-form-field> 
+                                </wm-gridcolumn> 
+                            </wm-gridrow> 
+                            <wm-gridrow name="gridrow5"> 
+                                <wm-gridcolumn columnwidth="12" name="gridcolumn5"> 
+                                    <wm-form-field name="UNAME" readonly="false" displayname="Uname" key="UNAME" type="string" show="true" widget="text" inputtype="text" placeholder="Enter value"></wm-form-field> 
+                                </wm-gridcolumn> 
+                            </wm-gridrow> 
+                        </wm-layoutgrid> 
+                        <wm-buttongroup horizontalalign="right" class="form-action col-md-12" name="buttongroup2"> 
+                            <wm-button caption="Reset" type="reset" class="btn-secondary" name="button7"></wm-button> 
+                            <wm-button caption="Cancel" type="button" class="btn-warning" name="button8"></wm-button> 
+                            <wm-button caption="Save" type="submit" class="btn-primary" name="button9"></wm-button> 
+                        </wm-buttongroup> 
+                    </wm-form> 
+                </wm-tabpane> 
+            </wm-tabs> 
+        </wm-page-content> 
+    </wm-content> 
+    <wm-footer content="footer" name="footer1"></wm-footer> 
+</wm-page>

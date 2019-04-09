@@ -1,0 +1,27 @@
+{
+  "endpointAddress" : "https://www.wavemakeronline.com/run-8r4sy6c58m/TestingDifferentScenario_s/services/hrdb/Employee",
+  "method" : "POST",
+  "requestBody" : "{\n\t\"empId\": 11,\n\t\"firstname\": \"tesrg\",\n\t\"lastname\": \"gtbhtgdhb\",\n\t\"street\": \"rtgsdtrg\",\n\t\"city\": \"rtgts\",\n\t\"state\": \"\",\n\t\"zip\": \"67588\",\n\t\"birthdate\": \"2015-10-10\",\n\t\"picurl\": null,\n\t\"jobTitle\": \"tgtsgb\",\n\t\"deptId\": 1,\n\t\"username\": \"trhdh\",\n\t\"password\": \"trsg\",\n\t\"role\": \"ffrgv\",\n\t\"managerId\": 1,\n\t\"tenantId\": 1,\n\t\"department\": null,\n\t\"employeeByManagerId\": null,\n\t\"employeesForManagerId\": [],\n\t\"vacations\": []\n}",
+  "headers" : { },
+  "queryParams" : { },
+  "sampleHttpResponseDetails" : {
+    "responseBody" : "{\"empId\":38,\"firstname\":\"tesrg\",\"lastname\":\"gtbhtgdhb\",\"street\":\"rtgsdtrg\",\"city\":\"rtgts\",\"state\":\"\",\"zip\":\"67588\",\"birthdate\":\"2015-10-10\",\"picurl\":null,\"jobTitle\":\"tgtsgb\",\"deptId\":1,\"username\":\"trhdh\",\"password\":\"trsg\",\"role\":\"ffrgv\",\"managerId\":1,\"tenantId\":1,\"department\":null,\"employeeByManagerId\":null,\"employeesForManagerId\":[],\"vacations\":[]}",
+    "convertedResponse" : null,
+    "statusCode" : 200,
+    "headers" : {
+      "Server" : [ "Apache-Coyote/1.1" ],
+      "X-XSS-Protection" : [ "1" ],
+      "mode" : [ "block" ],
+      "Content-Type" : [ "application/json;charset=UTF-8" ],
+      "Transfer-Encoding" : [ "chunked" ],
+      "Vary" : [ "Accept-Encoding" ],
+      "Date" : [ "Thu, 16 Mar 2017 06:44:21 GMT" ],
+      "Connection" : [ "keep-alive" ]
+    }
+  },
+  "redirectEnabled" : true,
+  "proxy" : null,
+  "contentType" : "application/json",
+  "multiParamInfoList" : null,
+  "authDetails" : null
+}

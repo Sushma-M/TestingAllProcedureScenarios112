@@ -1,0 +1,24 @@
+<wm-partial data-ng-controller="PopOverPartialPagePageController" type="popover" name="partial1"> 
+    <wm-composite name="composite2"> 
+        <wm-label class="col-md-3 control-label" name="label2" caption="Give Person Type"></wm-label> 
+        <wm-container class="col-md-9" name="container2"> 
+            <wm-text name="text1" placeholder="Enter EM/ GC/ IN/ SC/ SP/ VC"></wm-text> 
+        </wm-container> 
+    </wm-composite> 
+    <wm-table title="" dataset="bind:Variables.AdventureWorks2014ExecuteSV_GetPersonByPersonType.dataSet" navigation="Basic" name="grid1"> 
+        <wm-table-column binding="middleName" caption="Middle Name" pcdisplay="true" mobiledisplay="true"></wm-table-column> 
+        <wm-table-column binding="lastName" caption="Last Name" pcdisplay="true" mobiledisplay="true"></wm-table-column> 
+        <wm-table-column binding="nameStyle" caption="Name Style" pcdisplay="true" mobiledisplay="true"></wm-table-column> 
+        <wm-table-column binding="additionalContactInfo" caption="Additional Contact Info" pcdisplay="true" mobiledisplay="true"></wm-table-column> 
+        <wm-table-column binding="rowguid" caption="Rowguid" pcdisplay="true" mobiledisplay="true"></wm-table-column> 
+        <wm-table-column binding="emailPromotion" caption="Email Promotion" pcdisplay="true" mobiledisplay="true"></wm-table-column> 
+        <wm-table-column binding="businessEntityId" caption="Business Entity Id" pcdisplay="true" mobiledisplay="true"></wm-table-column> 
+        <wm-table-column binding="suffix" caption="Suffix" pcdisplay="true" mobiledisplay="true"></wm-table-column> 
+        <wm-table-column binding="modifiedDate" caption="Modified Date" pcdisplay="true" mobiledisplay="true"></wm-table-column> 
+        <wm-table-column binding="person1BusinessEntityId" caption="Person1 Business Entity Id" pcdisplay="true" mobiledisplay="true"></wm-table-column> 
+        <wm-table-column binding="title" caption="Title" pcdisplay="true" mobiledisplay="true"></wm-table-column> 
+        <wm-table-column binding="demographics" caption="Demographics" pcdisplay="true" mobiledisplay="true"></wm-table-column> 
+        <wm-table-column binding="firstName" caption="First Name" pcdisplay="true" mobiledisplay="true"></wm-table-column> 
+        <wm-table-column binding="personType" caption="Person Type" pcdisplay="true" mobiledisplay="true"></wm-table-column> 
+    </wm-table> 
+</wm-partial>

@@ -1,0 +1,66 @@
+<wm-partial data-ng-controller="Partial_EmpPageController" name="partial1"> 
+    <wm-table title="Employee List" dataset="bind:Variables.HrdbEmployeeData.dataSet" navigation="Basic" name="grid1"> 
+        <wm-table-column binding="empId" caption="Emp Id" generator="identity" pcdisplay="true" mobiledisplay="true" type="integer" primary-key="true" readonly="true"></wm-table-column> 
+        <wm-table-column binding="firstname" caption="Firstname" generator="assigned" pcdisplay="true" mobiledisplay="true" type="string"></wm-table-column> 
+        <wm-table-column binding="lastname" caption="Lastname" generator="assigned" pcdisplay="true" mobiledisplay="true" type="string"></wm-table-column> 
+        <wm-table-column binding="street" caption="Street" generator="assigned" pcdisplay="true" mobiledisplay="true" type="string"></wm-table-column> 
+        <wm-table-column binding="city" caption="City" generator="assigned" pcdisplay="true" mobiledisplay="true" type="string"></wm-table-column> 
+        <wm-table-column binding="state" caption="State" generator="assigned" pcdisplay="true" mobiledisplay="true" type="string"></wm-table-column> 
+        <wm-table-column binding="zip" caption="Zip" generator="assigned" pcdisplay="true" mobiledisplay="true" type="string"></wm-table-column> 
+        <wm-table-column binding="birthdate" caption="Birthdate" generator="assigned" pcdisplay="true" mobiledisplay="true" type="date"></wm-table-column> 
+        <wm-table-column binding="picurl" caption="Picurl" generator="assigned" pcdisplay="true" mobiledisplay="true" type="string"></wm-table-column> 
+        <wm-table-column binding="jobTitle" caption="Job Title" generator="assigned" pcdisplay="true" mobiledisplay="true" type="string"></wm-table-column> 
+    </wm-table> 
+    <wm-liveform novalidate="false" errormessage="" title="Department Info" iconclass="wi wi-edit" defaultmode="Edit" dataset="bind:Variables.HrdbDepartmentData.dataSet" captionalign="left" captionposition="top" name="liveform1"> 
+        <wm-layoutgrid columns="1" name="layoutgrid1"> 
+            <wm-gridrow name="gridrow1"> 
+                <wm-gridcolumn columnwidth="12" name="gridcolumn1"> 
+                    <wm-form-field name="name" displayname="Name" required="false" show="true" generator="assigned" primary-key="false" key="name" type="string" is-related="false" maxchars="255" pc-display="true" mobile-display="true" widget="text"></wm-form-field> 
+                </wm-gridcolumn> 
+            </wm-gridrow> 
+            <wm-gridrow name="gridrow2"> 
+                <wm-gridcolumn columnwidth="12" name="gridcolumn2"> 
+                    <wm-form-field name="budget" displayname="Budget" required="false" show="true" generator="assigned" primary-key="false" key="budget" type="integer" is-related="false" step="0" pc-display="true" mobile-display="true" widget="number"></wm-form-field> 
+                </wm-gridcolumn> 
+            </wm-gridrow> 
+            <wm-gridrow name="gridrow3"> 
+                <wm-gridcolumn columnwidth="12" name="gridcolumn3"> 
+                    <wm-form-field name="q1" displayname="Q1" required="false" show="true" generator="assigned" primary-key="false" key="q1" type="integer" is-related="false" step="0" pc-display="true" mobile-display="true" widget="number"></wm-form-field> 
+                </wm-gridcolumn> 
+            </wm-gridrow> 
+            <wm-gridrow name="gridrow4"> 
+                <wm-gridcolumn columnwidth="12" name="gridcolumn4"> 
+                    <wm-form-field name="q2" displayname="Q2" required="false" show="true" generator="assigned" primary-key="false" key="q2" type="integer" is-related="false" step="0" pc-display="true" mobile-display="true" widget="number"></wm-form-field> 
+                </wm-gridcolumn> 
+            </wm-gridrow> 
+            <wm-gridrow name="gridrow5"> 
+                <wm-gridcolumn columnwidth="12" name="gridcolumn5"> 
+                    <wm-form-field name="q3" displayname="Q3" required="false" show="true" generator="assigned" primary-key="false" key="q3" type="integer" is-related="false" step="0" pc-display="true" mobile-display="true" widget="number"></wm-form-field> 
+                </wm-gridcolumn> 
+            </wm-gridrow> 
+            <wm-gridrow name="gridrow6"> 
+                <wm-gridcolumn columnwidth="12" name="gridcolumn6"> 
+                    <wm-form-field name="q4" displayname="Q4" required="false" show="true" generator="assigned" primary-key="false" key="q4" type="integer" is-related="false" step="0" pc-display="true" mobile-display="true" widget="number"></wm-form-field> 
+                </wm-gridcolumn> 
+            </wm-gridrow> 
+            <wm-gridrow name="gridrow7"> 
+                <wm-gridcolumn columnwidth="12" name="gridcolumn7"> 
+                    <wm-form-field name="deptCode" displayname="Dept Code" required="false" show="true" generator="assigned" primary-key="false" key="deptCode" type="string" is-related="false" maxchars="20" pc-display="true" mobile-display="true" widget="text"></wm-form-field> 
+                </wm-gridcolumn> 
+            </wm-gridrow> 
+            <wm-gridrow name="gridrow8"> 
+                <wm-gridcolumn columnwidth="12" name="gridcolumn8"> 
+                    <wm-form-field name="location" displayname="Location" required="false" show="true" generator="assigned" primary-key="false" key="location" type="string" is-related="false" maxchars="255" pc-display="true" mobile-display="true" widget="text"></wm-form-field> 
+                </wm-gridcolumn> 
+            </wm-gridrow> 
+            <wm-gridrow name="gridrow9"> 
+                <wm-gridcolumn columnwidth="12" name="gridcolumn9"> 
+                    <wm-form-field name="tenantId" displayname="Tenant Id" required="false" show="true" generator="assigned" primary-key="false" key="tenantId" type="integer" is-related="false" step="0" pc-display="true" mobile-display="true" widget="number"></wm-form-field> 
+                </wm-gridcolumn> 
+            </wm-gridrow> 
+        </wm-layoutgrid> 
+        <wm-form-field name="deptId" displayname="Dept Id" required="true" show="false" generator="identity" primary-key="true" key="deptId" type="integer" is-related="false" step="0" pc-display="true" mobile-display="true" widget="number"></wm-form-field> 
+        <wm-form-action key="reset" class="form-reset btn-secondary" iconclass="wi wi-refresh" action="reset()" display-name="Reset" show="true" type="button" update-mode="true"></wm-form-action> 
+        <wm-form-action key="save" class="form-save btn-success" iconclass="wi wi-save" display-name="Save" show="true" type="submit" update-mode="true"></wm-form-action> 
+    </wm-liveform> 
+</wm-partial>

@@ -1,0 +1,157 @@
+{
+  "username" : "db2admin1",
+  "password" : "7b6a43524a2429176262472d4d5278700d662158",
+  "url" : "jdbc:db2://52.12.107.45:50004/SAMPLE2",
+  "driverClass" : "com.ibm.db2.jcc.DB2Driver",
+  "dialect" : "org.hibernate.dialect.DB2Dialect",
+  "serviceId" : "SAMPLE2",
+  "packageName" : "com.testingallprocedurescenarios.sample2",
+  "dbType" : "DB2",
+  "host" : "52.12.107.45",
+  "dbName" : "SAMPLE2",
+  "port" : "50004",
+  "schemaName" : "DB2ADMIN1",
+  "tableFilter" : [ {
+    "table" : "ACT",
+    "schema" : "DB2ADMIN1"
+  }, {
+    "table" : "CATALOG",
+    "schema" : "DB2ADMIN1"
+  }, {
+    "table" : "CL_SCHED",
+    "schema" : "DB2ADMIN1"
+  }, {
+    "table" : "CUSTOMER",
+    "schema" : "DB2ADMIN1"
+  }, {
+    "table" : "DB2ALLTYPES1",
+    "schema" : "DB2ADMIN1"
+  }, {
+    "table" : "DEPARTMENT",
+    "schema" : "DB2ADMIN1"
+  }, {
+    "table" : "EMP_PHOTO",
+    "schema" : "DB2ADMIN1"
+  }, {
+    "table" : "EMP_RESUME",
+    "schema" : "DB2ADMIN1"
+  }, {
+    "table" : "EMPLOYEE",
+    "schema" : "DB2ADMIN1"
+  }, {
+    "table" : "EMPMDC",
+    "schema" : "DB2ADMIN1"
+  }, {
+    "table" : "EMPPROJACT",
+    "schema" : "DB2ADMIN1"
+  }, {
+    "table" : "IN_TRAY",
+    "schema" : "DB2ADMIN1"
+  }, {
+    "table" : "INVENTORY",
+    "schema" : "DB2ADMIN1"
+  }, {
+    "table" : "ORG",
+    "schema" : "DB2ADMIN1"
+  }, {
+    "table" : "PRODUCT",
+    "schema" : "DB2ADMIN1"
+  }, {
+    "table" : "PRODUCTSUPPLIER",
+    "schema" : "DB2ADMIN1"
+  }, {
+    "table" : "PROJACT",
+    "schema" : "DB2ADMIN1"
+  }, {
+    "table" : "PROJECT",
+    "schema" : "DB2ADMIN1"
+  }, {
+    "table" : "PURCHASEORDER",
+    "schema" : "DB2ADMIN1"
+  }, {
+    "table" : "SALES",
+    "schema" : "DB2ADMIN1"
+  }, {
+    "table" : "STAFF",
+    "schema" : "DB2ADMIN1"
+  }, {
+    "table" : "STAFFG",
+    "schema" : "DB2ADMIN1"
+  }, {
+    "table" : "SUPPLIERS",
+    "schema" : "DB2ADMIN1"
+  }, {
+    "table" : "VACT",
+    "schema" : "DB2ADMIN1"
+  }, {
+    "table" : "VASTRDE1",
+    "schema" : "DB2ADMIN1"
+  }, {
+    "table" : "VASTRDE2",
+    "schema" : "DB2ADMIN1"
+  }, {
+    "table" : "VDEPMG1",
+    "schema" : "DB2ADMIN1"
+  }, {
+    "table" : "VDEPT",
+    "schema" : "DB2ADMIN1"
+  }, {
+    "table" : "VEMP",
+    "schema" : "DB2ADMIN1"
+  }, {
+    "table" : "VEMPDPT1",
+    "schema" : "DB2ADMIN1"
+  }, {
+    "table" : "VEMPLP",
+    "schema" : "DB2ADMIN1"
+  }, {
+    "table" : "VEMPPROJACT",
+    "schema" : "DB2ADMIN1"
+  }, {
+    "table" : "VFORPLA",
+    "schema" : "DB2ADMIN1"
+  }, {
+    "table" : "VHDEPT",
+    "schema" : "DB2ADMIN1"
+  }, {
+    "table" : "VPHONE",
+    "schema" : "DB2ADMIN1"
+  }, {
+    "table" : "VPROJ",
+    "schema" : "DB2ADMIN1"
+  }, {
+    "table" : "VPROJACT",
+    "schema" : "DB2ADMIN1"
+  }, {
+    "table" : "VPROJRE1",
+    "schema" : "DB2ADMIN1"
+  }, {
+    "table" : "VPSTRDE1",
+    "schema" : "DB2ADMIN1"
+  }, {
+    "table" : "VPSTRDE2",
+    "schema" : "DB2ADMIN1"
+  }, {
+    "table" : "VSTAFAC1",
+    "schema" : "DB2ADMIN1"
+  }, {
+    "table" : "VSTAFAC2",
+    "schema" : "DB2ADMIN1"
+  } ],
+  "schemaFilter" : [ "DB2ADMIN1" ],
+  "impersonateUser" : false,
+  "activeDirectoryDomain" : null,
+  "hbm2ddl" : "none",
+  "maxPageSize" : 100,
+  "minPoolSize" : 2,
+  "maxPoolSize" : 4,
+  "transactionTimeout" : 30,
+  "dataSourceType" : "WM_MANAGED_DATASOURCE",
+  "jndiName" : "",
+  "reloadInfo" : {
+    "reload" : false,
+    "reason" : null,
+    "message" : null
+  },
+  "readOnly" : true
+}

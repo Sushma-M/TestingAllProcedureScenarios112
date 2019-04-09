@@ -1,0 +1,26 @@
+{
+  "AutoWire_Procedure1000NullTitlesProcedureAutowiring" : {
+    "_id" : "wm-AutoWire_Procedure1000NullTitlesProcedureAutowiring-wm.ServiceVariable-1488869227535",
+    "name" : "AutoWire_Procedure1000NullTitlesProcedureAutowiring",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ ],
+    "type" : "com.testingallprocedurescenarios.adventureworks2014.models.procedure.Procedure1000nullTitlesResponse",
+    "service" : "AutoWire_Procedure1000NullTitles",
+    "operation" : "procedureAutowiring",
+    "operationId" : "AutoWire_Procedure1000NullTitlesController_procedureAutowiring",
+    "operationType" : "get",
+    "serviceType" : "JavaService",
+    "dataSet" : [ ],
+    "isList" : false,
+    "maxResults" : 20,
+    "designMaxResults" : 10,
+    "startUpdate" : true,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "isDefault" : true,
+    "controller" : "AutoWire_Procedure1000NullTitles"
+  }
+}

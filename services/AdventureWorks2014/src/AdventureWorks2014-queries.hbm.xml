@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <sql-query name="SV_GetPersonByPersonType">
+        <![CDATA[
+        select * from Person.Person where PersonType =:PersonType
+        ]]>
+    <query-param name="PersonType" type="java.lang.String"/>
+    </sql-query>
+
+    <sql-query name="SV_GetPersonByPersonType__count">
+        <![CDATA[
+        select count(*) from (select * from Person.Person where PersonType =:PersonType) wmTempTable
+        ]]>
+    <query-param name="PersonType" type="java.lang.String"/>
+    </sql-query>
+
+    <sql-query name="SV_PersonSingleRecord">
+        <![CDATA[
+        select * from Person.Person
+        ]]>
+    </sql-query>
+
+    <sql-query name="SV_PersonSingleRecord__count">
+        <![CDATA[
+        select count(*) from (select * from Person.Person) wmTempTable
+        ]]>
+    </sql-query>
+</hibernate-mapping>

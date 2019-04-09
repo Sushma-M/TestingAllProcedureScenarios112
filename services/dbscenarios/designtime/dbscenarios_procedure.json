@@ -1,0 +1,1084 @@
+{
+  "Procedure_CurrentDatetime" : {
+    "name" : "Procedure_CurrentDatetime",
+    "description" : "CurrentDatetime",
+    "version" : "V2",
+    "procedureString" : "CALL PROC_IN_DATETIME(:DATETIMECOL)",
+    "parameters" : [ {
+      "name" : "DATETIMECOL",
+      "type" : "datetime",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "testValue" : "2017-03-06T18:16:02",
+      "required" : true,
+      "parameterType" : "IN"
+    } ],
+    "request" : {
+      "wrapped" : false,
+      "typeRef" : null,
+      "method" : "GET"
+    },
+    "response" : {
+      "typeRef" : "com.testingallprocedurescenarios.dbscenarios.models.procedure.ProcedureCurrentDatetimeResponse",
+      "returns" : "CUSTOM",
+      "responseType" : "SINGLE",
+      "properties" : [ {
+        "name" : "content",
+        "fieldName" : "content",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "CUSTOM",
+          "typeRef" : "com.testingallprocedurescenarios.dbscenarios.models.procedure.ProcedureCurrentDatetimeResponseContent",
+          "list" : true,
+          "properties" : [ {
+            "name" : "PK ID",
+            "fieldName" : "pkId",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.Integer",
+              "list" : false
+            }
+          }, {
+            "name" : "BYTE COL",
+            "fieldName" : "byteCol",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.Short",
+              "list" : false
+            }
+          }, {
+            "name" : "SHORT COL",
+            "fieldName" : "shortCol",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.Short",
+              "list" : false
+            }
+          }, {
+            "name" : "INT COL",
+            "fieldName" : "intCol",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.Integer",
+              "list" : false
+            }
+          }, {
+            "name" : "LONG COL",
+            "fieldName" : "longCol",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.math.BigInteger",
+              "list" : false
+            }
+          }, {
+            "name" : "FLOAT COL",
+            "fieldName" : "floatCol",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.Float",
+              "list" : false
+            }
+          }, {
+            "name" : "DOUBLE COL",
+            "fieldName" : "doubleCol",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.Double",
+              "list" : false
+            }
+          }, {
+            "name" : "BIGDEC COL",
+            "fieldName" : "bigdecCol",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.math.BigDecimal",
+              "list" : false
+            }
+          }, {
+            "name" : "BIGINT COL",
+            "fieldName" : "bigintCol",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.math.BigInteger",
+              "list" : false
+            }
+          }, {
+            "name" : "CHAR COL",
+            "fieldName" : "charCol",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "STRING COL",
+            "fieldName" : "stringCol",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "TEXT COL",
+            "fieldName" : "textCol",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "CLOB COL",
+            "fieldName" : "clobCol",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "DATE COL",
+            "fieldName" : "dateCol",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.sql.Date",
+              "list" : false
+            }
+          }, {
+            "name" : "TIME COL",
+            "fieldName" : "timeCol",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.sql.Time",
+              "list" : false
+            }
+          }, {
+            "name" : "DATETIME COL",
+            "fieldName" : "datetimeCol",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.time.LocalDateTime",
+              "list" : false
+            }
+          }, {
+            "name" : "TIMESTAMP COL",
+            "fieldName" : "timestampCol",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.sql.Timestamp",
+              "list" : false
+            }
+          }, {
+            "name" : "BOOLEAN COL",
+            "fieldName" : "booleanCol",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.Boolean",
+              "list" : false
+            }
+          }, {
+            "name" : "BLOB COL",
+            "fieldName" : "blobCol",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "byte[]",
+              "list" : false
+            }
+          } ]
+        }
+      } ]
+    }
+  },
+  "Procedure_GetByCurrentDate" : {
+    "name" : "Procedure_GetByCurrentDate",
+    "description" : "Get Data by Current Date",
+    "version" : "V2",
+    "procedureString" : "CALL getByCurrentDate(:datecol)",
+    "parameters" : [ {
+      "name" : "datecol",
+      "type" : "date",
+      "list" : false,
+      "variableType" : "SERVER",
+      "variableName" : "DATE",
+      "testValue" : "2017-03-07",
+      "required" : true,
+      "parameterType" : "IN"
+    } ],
+    "request" : {
+      "wrapped" : false,
+      "typeRef" : null,
+      "method" : "GET"
+    },
+    "response" : {
+      "typeRef" : "com.testingallprocedurescenarios.dbscenarios.models.procedure.ProcedureGetByCurrentDateResponse",
+      "returns" : "CUSTOM",
+      "responseType" : "SINGLE",
+      "properties" : [ {
+        "name" : "content",
+        "fieldName" : "content",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "CUSTOM",
+          "typeRef" : "com.testingallprocedurescenarios.dbscenarios.models.procedure.ProcedureGetByCurrentDateResponseContent",
+          "list" : true,
+          "properties" : [ {
+            "name" : "PK ID",
+            "fieldName" : "pkId",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.Integer",
+              "list" : false
+            }
+          }, {
+            "name" : "BYTE COL",
+            "fieldName" : "byteCol",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.Short",
+              "list" : false
+            }
+          }, {
+            "name" : "SHORT COL",
+            "fieldName" : "shortCol",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.Short",
+              "list" : false
+            }
+          }, {
+            "name" : "INT COL",
+            "fieldName" : "intCol",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.Integer",
+              "list" : false
+            }
+          }, {
+            "name" : "LONG COL",
+            "fieldName" : "longCol",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.math.BigInteger",
+              "list" : false
+            }
+          }, {
+            "name" : "FLOAT COL",
+            "fieldName" : "floatCol",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.Float",
+              "list" : false
+            }
+          }, {
+            "name" : "DOUBLE COL",
+            "fieldName" : "doubleCol",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.Double",
+              "list" : false
+            }
+          }, {
+            "name" : "BIGDEC COL",
+            "fieldName" : "bigdecCol",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.math.BigDecimal",
+              "list" : false
+            }
+          }, {
+            "name" : "BIGINT COL",
+            "fieldName" : "bigintCol",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.math.BigInteger",
+              "list" : false
+            }
+          }, {
+            "name" : "CHAR COL",
+            "fieldName" : "charCol",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "STRING COL",
+            "fieldName" : "stringCol",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "TEXT COL",
+            "fieldName" : "textCol",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "CLOB COL",
+            "fieldName" : "clobCol",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "DATE COL",
+            "fieldName" : "dateCol",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.sql.Date",
+              "list" : false
+            }
+          }, {
+            "name" : "TIME COL",
+            "fieldName" : "timeCol",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.sql.Time",
+              "list" : false
+            }
+          }, {
+            "name" : "DATETIME COL",
+            "fieldName" : "datetimeCol",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.time.LocalDateTime",
+              "list" : false
+            }
+          }, {
+            "name" : "TIMESTAMP COL",
+            "fieldName" : "timestampCol",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.sql.Timestamp",
+              "list" : false
+            }
+          }, {
+            "name" : "BOOLEAN COL",
+            "fieldName" : "booleanCol",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.Boolean",
+              "list" : false
+            }
+          }, {
+            "name" : "BLOB COL",
+            "fieldName" : "blobCol",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "byte[]",
+              "list" : false
+            }
+          } ]
+        }
+      } ]
+    }
+  },
+  "Procedure_Insert" : {
+    "name" : "Procedure_Insert",
+    "description" : "Insert Procedure",
+    "version" : "V2",
+    "procedureString" : "CALL PROC_INSERT(:BYTECOL,:SHORTCOL,:INTCOL,:LONGCOL,:FLOATCOL,:DOUBLECOL,:BIGDECCOL,:BIGINTCOL,:CHARCOL,:STRINGCOL,:CLOBCOL,:TEXTCOL,:DATECOL,:TIMECOL,:DATETIMECOL,:TIMESTAMPCOL,:BOOLEANCOL)",
+    "parameters" : [ {
+      "name" : "BYTECOL",
+      "type" : "byte",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "testValue" : "28",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "SHORTCOL",
+      "type" : "short",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "testValue" : "214",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "INTCOL",
+      "type" : "integer",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "testValue" : "2424",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "LONGCOL",
+      "type" : "long",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "testValue" : "2415",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "FLOATCOL",
+      "type" : "float",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "testValue" : "222.1241",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "DOUBLECOL",
+      "type" : "double",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "testValue" : "215.2451",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "BIGDECCOL",
+      "type" : "big_decimal",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "testValue" : "242421.2525",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "BIGINTCOL",
+      "type" : "big_integer",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "testValue" : "12454245",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "CHARCOL",
+      "type" : "character",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "testValue" : "r",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "STRINGCOL",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "testValue" : "sadfas",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "CLOBCOL",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "testValue" : "fsdfasdf",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "TEXTCOL",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "testValue" : "dsafsdfasd",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "DATECOL",
+      "type" : "date",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "testValue" : "2017-03-06",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "TIMECOL",
+      "type" : "time",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "testValue" : "18:03:52",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "DATETIMECOL",
+      "type" : "datetime",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "testValue" : "2017-03-06T18:04:25",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "TIMESTAMPCOL",
+      "type" : "timestamp",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "testValue" : 1488803663000,
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "BOOLEANCOL",
+      "type" : "boolean",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "testValue" : true,
+      "required" : true,
+      "parameterType" : "IN"
+    } ],
+    "request" : {
+      "wrapped" : false,
+      "typeRef" : null,
+      "method" : "GET"
+    },
+    "response" : {
+      "typeRef" : "java.lang.Void",
+      "returns" : "PRIMITIVE",
+      "responseType" : "SINGLE"
+    }
+  },
+  "Procedure_InsertQuery" : {
+    "name" : "Procedure_InsertQuery",
+    "description" : "Procedure with insert query",
+    "version" : "V2",
+    "procedureString" : "CALL PROC_INSERT(:BYTECOL,:SHORTCOL,:INTCOL,:LONGCOL,:FLOATCOL,:DOUBLECOL,:BIGDECCOL,:BIGINTCOL,:CHARCOL,:STRINGCOL,:CLOBCOL,:TEXTCOL,:DATECOL,:TIMECOL,:DATETIMECOL,:TIMESTAMPCOL,:BOOLEANCOL)",
+    "parameters" : [ {
+      "name" : "BYTECOL",
+      "type" : "byte",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "testValue" : "7",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "SHORTCOL",
+      "type" : "short",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "testValue" : "8797",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "INTCOL",
+      "type" : "integer",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "testValue" : "979",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "LONGCOL",
+      "type" : "long",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "testValue" : "789",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "FLOATCOL",
+      "type" : "float",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "testValue" : "7897.9",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "DOUBLECOL",
+      "type" : "double",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "testValue" : "87987.789",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "BIGDECCOL",
+      "type" : "big_decimal",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "testValue" : "789.78989",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "BIGINTCOL",
+      "type" : "big_integer",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "testValue" : "879",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "CHARCOL",
+      "type" : "character",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "testValue" : "f",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "STRINGCOL",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "testValue" : "gdfgsd",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "CLOBCOL",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "testValue" : "gdfsgdf",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "TEXTCOL",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "testValue" : "dfgdf",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "DATECOL",
+      "type" : "date",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "testValue" : "2017-03-20",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "TIMECOL",
+      "type" : "time",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "testValue" : "12:21:12",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "DATETIMECOL",
+      "type" : "datetime",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "testValue" : "2017-03-20T12:20:59",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "TIMESTAMPCOL",
+      "type" : "timestamp",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "testValue" : 1489992657000,
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "BOOLEANCOL",
+      "type" : "boolean",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "testValue" : true,
+      "required" : true,
+      "parameterType" : "IN"
+    } ],
+    "request" : {
+      "wrapped" : false,
+      "typeRef" : null,
+      "method" : "GET"
+    },
+    "response" : {
+      "typeRef" : "java.lang.Void",
+      "returns" : "PRIMITIVE",
+      "responseType" : "SINGLE"
+    }
+  },
+  "Procedure_InsertRequiredFalse" : {
+    "name" : "Procedure_InsertRequiredFalse",
+    "description" : "Insert procedure Required False",
+    "version" : "V2",
+    "procedureString" : "CALL PROC_INSERT(:BYTECOL,:SHORTCOL,:INTCOL,:LONGCOL,:FLOATCOL,:DOUBLECOL,:BIGDECCOL,:BIGINTCOL,:CHARCOL,:STRINGCOL,:CLOBCOL,:TEXTCOL,:DATECOL,:TIMECOL,:DATETIMECOL,:TIMESTAMPCOL,:BOOLEANCOL)",
+    "parameters" : [ {
+      "name" : "BYTECOL",
+      "type" : "byte",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "testValue" : "12",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "SHORTCOL",
+      "type" : "short",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "testValue" : "1214",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "INTCOL",
+      "type" : "integer",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "testValue" : "425",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "LONGCOL",
+      "type" : "long",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "testValue" : "245241",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "FLOATCOL",
+      "type" : "float",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "testValue" : "245.5442",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "DOUBLECOL",
+      "type" : "double",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "testValue" : "4215.425",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "BIGDECCOL",
+      "type" : "big_decimal",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "testValue" : "214541.2415",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "BIGINTCOL",
+      "type" : "big_integer",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "testValue" : "242145",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "CHARCOL",
+      "type" : "character",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "testValue" : "v",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "STRINGCOL",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "testValue" : "dsfsadf",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "CLOBCOL",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "testValue" : "adsfdsf",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "TEXTCOL",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "testValue" : "dasfdsf",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "DATECOL",
+      "type" : "date",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "testValue" : "2017-03-06",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "TIMECOL",
+      "type" : "time",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "testValue" : "18:08:18",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "DATETIMECOL",
+      "type" : "datetime",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "testValue" : "2017-03-06T18:08:18",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "TIMESTAMPCOL",
+      "type" : "timestamp",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "testValue" : 1488803898000,
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "BOOLEANCOL",
+      "type" : "boolean",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "testValue" : true,
+      "required" : false,
+      "parameterType" : "IN"
+    } ],
+    "request" : {
+      "wrapped" : false,
+      "typeRef" : null,
+      "method" : "GET"
+    },
+    "response" : {
+      "typeRef" : "java.lang.Void",
+      "returns" : "PRIMITIVE",
+      "responseType" : "SINGLE"
+    }
+  },
+  "SV_CurrentDate" : {
+    "name" : "SV_CurrentDate",
+    "description" : "Current Date",
+    "version" : "V2",
+    "procedureString" : "CALL getByCurrentDate(:datecol)",
+    "parameters" : [ {
+      "name" : "datecol",
+      "type" : "date",
+      "list" : false,
+      "variableType" : "SERVER",
+      "variableName" : "DATE",
+      "testValue" : "2017-03-07",
+      "required" : true,
+      "parameterType" : "IN"
+    } ],
+    "request" : {
+      "wrapped" : false,
+      "typeRef" : null,
+      "method" : "GET"
+    },
+    "response" : {
+      "typeRef" : "com.testingallprocedurescenarios.dbscenarios.models.procedure.SvCurrentDateResponse",
+      "returns" : "CUSTOM",
+      "responseType" : "SINGLE",
+      "properties" : [ {
+        "name" : "content",
+        "fieldName" : "content",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "CUSTOM",
+          "typeRef" : "com.testingallprocedurescenarios.dbscenarios.models.procedure.SvCurrentDateResponseContent",
+          "list" : true,
+          "properties" : [ {
+            "name" : "PK ID",
+            "fieldName" : "pkId",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.Integer",
+              "list" : false
+            }
+          }, {
+            "name" : "BYTE COL",
+            "fieldName" : "byteCol",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.Short",
+              "list" : false
+            }
+          }, {
+            "name" : "SHORT COL",
+            "fieldName" : "shortCol",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.Short",
+              "list" : false
+            }
+          }, {
+            "name" : "INT COL",
+            "fieldName" : "intCol",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.Integer",
+              "list" : false
+            }
+          }, {
+            "name" : "LONG COL",
+            "fieldName" : "longCol",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.math.BigInteger",
+              "list" : false
+            }
+          }, {
+            "name" : "FLOAT COL",
+            "fieldName" : "floatCol",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.Float",
+              "list" : false
+            }
+          }, {
+            "name" : "DOUBLE COL",
+            "fieldName" : "doubleCol",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.Double",
+              "list" : false
+            }
+          }, {
+            "name" : "BIGDEC COL",
+            "fieldName" : "bigdecCol",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.math.BigDecimal",
+              "list" : false
+            }
+          }, {
+            "name" : "BIGINT COL",
+            "fieldName" : "bigintCol",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.math.BigInteger",
+              "list" : false
+            }
+          }, {
+            "name" : "CHAR COL",
+            "fieldName" : "charCol",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "STRING COL",
+            "fieldName" : "stringCol",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "TEXT COL",
+            "fieldName" : "textCol",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "CLOB COL",
+            "fieldName" : "clobCol",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "DATE COL",
+            "fieldName" : "dateCol",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.sql.Date",
+              "list" : false
+            }
+          }, {
+            "name" : "TIME COL",
+            "fieldName" : "timeCol",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.sql.Time",
+              "list" : false
+            }
+          }, {
+            "name" : "DATETIME COL",
+            "fieldName" : "datetimeCol",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.time.LocalDateTime",
+              "list" : false
+            }
+          }, {
+            "name" : "TIMESTAMP COL",
+            "fieldName" : "timestampCol",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.sql.Timestamp",
+              "list" : false
+            }
+          }, {
+            "name" : "BOOLEAN COL",
+            "fieldName" : "booleanCol",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.Boolean",
+              "list" : false
+            }
+          }, {
+            "name" : "BLOB COL",
+            "fieldName" : "blobCol",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "byte[]",
+              "list" : false
+            }
+          } ]
+        }
+      } ]
+    }
+  }
+}

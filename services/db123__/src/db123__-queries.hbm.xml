@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <sql-query name="SV_InsertQuery">
+        <![CDATA[
+        insert into [DEFAULT VALUES]([ASSIGNED ID],[BYTE COL],[SHORT COL],[INT COL],[FLOAT COL],[LONG COL],[DOUBLE COL],[BIGINT COL],[BIGDEC COL],[CHAR COL],[STRING COL],[TEXT COL],[CLOB COL],[DATE COL],[TIME COL],[BOOLEAN COL],[DATETIME COL],[TIMESTAMP COL]) values(:ASSIGNEDID,:BYTECOL,:SHORTCOL,:INTCOL,:FLOATCOL,:LONGCOL,:DOUBLECOL,:BIGINTCOL,:BIGDECCOL,:CHARCOL,:STRINGCOL,:TEXTCOL,:CLOBCOL,:DATECOL,:TIMECOL,:BOOLEANCOL,:DATETIMECOL,:TIMESTAMPCOL)
+        ]]>
+    <query-param name="ASSIGNEDID" type="java.lang.Integer"/>
+    <query-param name="BYTECOL" type="java.lang.Byte"/>
+    <query-param name="SHORTCOL" type="java.lang.Short"/>
+    <query-param name="INTCOL" type="java.lang.Integer"/>
+    <query-param name="FLOATCOL" type="java.lang.Float"/>
+    <query-param name="LONGCOL" type="java.lang.Long"/>
+    <query-param name="DOUBLECOL" type="java.lang.Double"/>
+    <query-param name="BIGINTCOL" type="java.math.BigInteger"/>
+    <query-param name="BIGDECCOL" type="java.math.BigDecimal"/>
+    <query-param name="CHARCOL" type="java.lang.Character"/>
+    <query-param name="STRINGCOL" type="java.lang.String"/>
+    <query-param name="TEXTCOL" type="java.lang.String"/>
+    <query-param name="CLOBCOL" type="java.lang.String"/>
+    <query-param name="DATECOL" type="java.sql.Date"/>
+    <query-param name="TIMECOL" type="java.sql.Time"/>
+    <query-param name="BOOLEANCOL" type="java.lang.Boolean"/>
+    <query-param name="DATETIMECOL" type="java.time.LocalDateTime"/>
+    <query-param name="TIMESTAMPCOL" type="java.sql.Timestamp"/>
+    </sql-query>
+
+    <query name="HQL_GetAllTypes">
+        <![CDATA[
+        select assignedId AS ASSIGNEDID,byteCol AS BYTECOL,shortCol AS SHORTCOL, longCol AS LONGCOL,doubleCol as DOUBLECOL,bigintCol AS BIGINTCOL,floatCol AS FLOATCOL,bigdecCol AS BIGDECCOL,charCol AS CHARCOL,stringCol AS STRINGCOL, textCol AS TEXTCOL,clobCol AS CLOBCOL,dateCol AS DATECOL,timeCol AS TIMECOL,datetimeCol AS DATETIMECOL,timestampCol AS TIMESTAMPCOL,booleanCol AS BOOLEANCOL,blobCol AS BLOBCOL from DefaultValues
+        ]]>
+    </query>
+
+    <query name="HQL_GetAllTypes__count">
+        <![CDATA[
+        select count(*)  from DefaultValues
+        ]]>
+    </query>
+
+    <sql-query name="SV_LoggedinId">
+        <![CDATA[
+        select * from [DEFAULT VALUES] where [ASSIGNED ID]=:SERVER__USER_ID__userid
+        ]]>
+    <query-param name="SERVER__USER_ID__userid" type="java.lang.Integer"/>
+    </sql-query>
+
+    <sql-query name="SV_LoggedinId__count">
+        <![CDATA[
+        select count(*) from (select * from [DEFAULT VALUES] where [ASSIGNED ID]=:SERVER__USER_ID__userid) wmTempTable
+        ]]>
+    <query-param name="SERVER__USER_ID__userid" type="java.lang.Integer"/>
+    </sql-query>
+</hibernate-mapping>

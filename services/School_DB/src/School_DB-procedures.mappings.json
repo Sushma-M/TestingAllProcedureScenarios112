@@ -1,0 +1,97 @@
+{
+  "Scenario3" : {
+    "procedureString" : "CALL scenario3_Without_INOUT_CURSOR(?)",
+    "parameters" : [ {
+      "name" : "var",
+      "type" : "integer",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "1",
+      "required" : true,
+      "parameterType" : "IN"
+    } ]
+  },
+  "Procedure_Boolean" : {
+    "procedureString" : "CALL booleanProcedure(?)",
+    "parameters" : [ {
+      "name" : "present",
+      "type" : "boolean",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : false,
+      "required" : true,
+      "parameterType" : "IN"
+    } ]
+  },
+  "Scenario2" : {
+    "procedureString" : "CALL SCENARIO2_WITH_INOUT_WITHOUT_CURSOR(?)",
+    "parameters" : [ {
+      "name" : "academicyear",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "2015-2016",
+      "required" : true,
+      "parameterType" : "IN_OUT"
+    } ]
+  },
+  "Scenario1" : {
+    "procedureString" : "CALL SCENARIO1_WITHOUT_INOUT_CURSOR(?)",
+    "parameters" : [ {
+      "name" : "ACADEMICYEAR",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "2015-2016",
+      "required" : true,
+      "parameterType" : "IN"
+    } ]
+  },
+  "Scenario7" : {
+    "procedureString" : "CALL scenario7_withINOUT(?)",
+    "parameters" : [ {
+      "name" : "var",
+      "type" : "integer",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "1",
+      "required" : true,
+      "parameterType" : "IN_OUT"
+    } ]
+  },
+  "Scenario6" : {
+    "procedureString" : "CALL SCENARIO6_TWO_CURSORS()",
+    "parameters" : [ ]
+  },
+  "Scenario5" : {
+    "procedureString" : "CALL SCENARIO5_WITH_CURSOR_SELECTQuery(?)",
+    "parameters" : [ {
+      "name" : "academicyear",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "2015-2016",
+      "required" : true,
+      "parameterType" : "IN"
+    } ]
+  },
+  "Scenario4" : {
+    "procedureString" : "CALL scenario4_withINOUT(?)",
+    "parameters" : [ {
+      "name" : "academicYear",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "2015-2016",
+      "required" : true,
+      "parameterType" : "IN_OUT"
+    } ]
+  }
+}

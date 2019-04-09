@@ -1,0 +1,450 @@
+{
+  "appNotification" : {
+    "_id" : "wm-appErrorHandler-wm.NotificationVariable-1454664620943",
+    "name" : "appNotification",
+    "owner" : "App",
+    "category" : "wm.NotificationVariable",
+    "dataBinding" : [ {
+      "target" : "class",
+      "value" : "Error",
+      "type" : "list"
+    }, {
+      "target" : "toasterPosition",
+      "value" : "bottom right",
+      "type" : "list"
+    } ],
+    "operation" : "toast"
+  },
+  "goToPage_Chart2Chart" : {
+    "_id" : "wm-goToPage_Chart2Chart-wm.NavigationVariable-1489580427410",
+    "name" : "goToPage_Chart2Chart",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "Chart2Chart",
+    "dataSet" : [ ],
+    "pageTransitions" : "none"
+  },
+  "goToPage_Charts" : {
+    "_id" : "wm-goToPage_Charts-wm.NavigationVariable-1489558742037",
+    "name" : "goToPage_Charts",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "Charts",
+    "dataSet" : [ ],
+    "pageTransitions" : "none"
+  },
+  "goToPage_FormData" : {
+    "_id" : "wm-goToPage_FormData-wm.NavigationVariable-1489384233910",
+    "name" : "goToPage_FormData",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "FormData",
+    "dataSet" : [ ],
+    "pageTransitions" : "none"
+  },
+  "goToPage_HQL_QueryCharts" : {
+    "_id" : "wm-goToPage_HQL_QueryCharts-wm.NavigationVariable-1489580651505",
+    "name" : "goToPage_HQL_QueryCharts",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "HQL_QueryCharts",
+    "dataSet" : [ ],
+    "pageTransitions" : "none"
+  },
+  "goToPage_Live_ChartOutputToAnotherChart" : {
+    "_id" : "wm-goToPage_Live_ChartOutputToAnotherChart-wm.NavigationVariable-1489992923377",
+    "name" : "goToPage_Live_ChartOutputToAnotherChart",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "Live_ChartOutputToAnotherChart",
+    "dataSet" : [ ],
+    "pageTransitions" : "none"
+  },
+  "goToPage_Main" : {
+    "_id" : "wm-wm.NavigationVariable1389180517517",
+    "name" : "goToPage_Main",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "operation" : "gotoPage",
+    "pageName" : "Main"
+  },
+  "goToPage_Page1" : {
+    "_id" : "wm-goToPage_Page1-wm.NavigationVariable-1488791820279",
+    "name" : "goToPage_Page1",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "Page1",
+    "dataSet" : [ ],
+    "pageTransitions" : "none"
+  },
+  "goToPage_Page10" : {
+    "_id" : "wm-goToPage_Page10-wm.NavigationVariable-1489125418368",
+    "name" : "goToPage_Page10",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "Page10",
+    "dataSet" : [ ],
+    "pageTransitions" : "none"
+  },
+  "goToPage_Page11" : {
+    "_id" : "wm-goToPage_Page11-wm.NavigationVariable-1488870387208",
+    "name" : "goToPage_Page11",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "Page11",
+    "dataSet" : [ ],
+    "pageTransitions" : "none"
+  },
+  "goToPage_Page12" : {
+    "_id" : "wm-goToPage_Page12-wm.NavigationVariable-1490001018775",
+    "name" : "goToPage_Page12",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "Page12",
+    "dataSet" : [ ],
+    "pageTransitions" : "none"
+  },
+  "goToPage_Page14" : {
+    "_id" : "wm-goToPage_Page14-wm.NavigationVariable-1489125769150",
+    "name" : "goToPage_Page14",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "Page14",
+    "dataSet" : [ ],
+    "pageTransitions" : "none"
+  },
+  "goToPage_Page15" : {
+    "_id" : "wm-goToPage_Page15-wm.NavigationVariable-1489393927951",
+    "name" : "goToPage_Page15",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "Page15",
+    "dataSet" : [ ],
+    "pageTransitions" : "none"
+  },
+  "goToPage_Page17" : {
+    "_id" : "wm-goToPage_Page17-wm.NavigationVariable-1489395596924",
+    "name" : "goToPage_Page17",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "Page17",
+    "dataSet" : [ ],
+    "pageTransitions" : "none"
+  },
+  "goToPage_Page18" : {
+    "_id" : "wm-goToPage_Page18-wm.NavigationVariable-1489480030942",
+    "name" : "goToPage_Page18",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "Page18",
+    "dataSet" : [ ],
+    "pageTransitions" : "none"
+  },
+  "goToPage_Page2" : {
+    "_id" : "wm-goToPage_Page2-wm.NavigationVariable-1488793491471",
+    "name" : "goToPage_Page2",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "Page2",
+    "dataSet" : [ ],
+    "pageTransitions" : "none"
+  },
+  "goToPage_Page20" : {
+    "_id" : "wm-goToPage_Page20-wm.NavigationVariable-1489485339826",
+    "name" : "goToPage_Page20",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "Page20",
+    "dataSet" : [ ],
+    "pageTransitions" : "none"
+  },
+  "goToPage_Page21" : {
+    "_id" : "wm-goToPage_Page21-wm.NavigationVariable-1489552018846",
+    "name" : "goToPage_Page21",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "Page21",
+    "dataSet" : [ ],
+    "pageTransitions" : "none"
+  },
+  "goToPage_Page22" : {
+    "_id" : "wm-goToPage_Page22-wm.NavigationVariable-1489648007528",
+    "name" : "goToPage_Page22",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "Page22",
+    "dataSet" : [ ],
+    "pageTransitions" : "none"
+  },
+  "goToPage_Page4" : {
+    "_id" : "wm-goToPage_Page4-wm.NavigationVariable-1488803751624",
+    "name" : "goToPage_Page4",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "Page4",
+    "dataSet" : [ ],
+    "pageTransitions" : "none"
+  },
+  "goToPage_Page5" : {
+    "_id" : "wm-goToPage_Page5-wm.NavigationVariable-1488877665103",
+    "name" : "goToPage_Page5",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "Page5",
+    "dataSet" : [ ],
+    "pageTransitions" : "none"
+  },
+  "goToPage_Page7" : {
+    "_id" : "wm-goToPage_Page7-wm.NavigationVariable-1488950320595",
+    "name" : "goToPage_Page7",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "Page7",
+    "dataSet" : [ ],
+    "pageTransitions" : "none"
+  },
+  "goToPage_Page8" : {
+    "_id" : "wm-goToPage_Page8-wm.NavigationVariable-1488952543625",
+    "name" : "goToPage_Page8",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "Page8",
+    "dataSet" : [ ],
+    "pageTransitions" : "none"
+  },
+  "goToPage_Pagedialogs" : {
+    "_id" : "wm-goToPage_Pagedialogs-wm.NavigationVariable-1488886346821",
+    "name" : "goToPage_Pagedialogs",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "Pagedialogs",
+    "dataSet" : [ ],
+    "pageTransitions" : "none"
+  },
+  "goToPage_PageParam1" : {
+    "_id" : "wm-goToPage_PageParam1-wm.NavigationVariable-1489655551079",
+    "name" : "goToPage_PageParam1",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "PageParam1",
+    "dataSet" : [ ],
+    "pageTransitions" : "none"
+  },
+  "goToPage_PageParam2" : {
+    "_id" : "wm-goToPage_PageParam2-wm.NavigationVariable-1489991888269",
+    "name" : "goToPage_PageParam2",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "PageParam2",
+    "dataSet" : [ ],
+    "pageTransitions" : "none"
+  },
+  "goToPage_PageParams" : {
+    "_id" : "wm-goToPage_PageParams-wm.NavigationVariable-1489991671855",
+    "name" : "goToPage_PageParams",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ {
+      "target" : "pageName",
+      "value" : "PageParams",
+      "type" : "string"
+    } ],
+    "operation" : "gotoPage",
+    "pageName" : "PageParams",
+    "dataSet" : [ {
+      "type" : "integer",
+      "target" : "deptId",
+      "value" : "bind:Widgets.chart1.selecteditem.deptId"
+    } ],
+    "pageTransitions" : "none"
+  },
+  "goToPage_ProcedureAutoWire" : {
+    "_id" : "wm-goToPage_ProcedureAutoWire-wm.NavigationVariable-1488869164114",
+    "name" : "goToPage_ProcedureAutoWire",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "ProcedureAutoWire",
+    "dataSet" : [ ],
+    "pageTransitions" : "none"
+  },
+  "goToPage_Query_Charts" : {
+    "_id" : "wm-goToPage_Query_Charts-wm.NavigationVariable-1489558754150",
+    "name" : "goToPage_Query_Charts",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "Query_Charts",
+    "dataSet" : [ ],
+    "pageTransitions" : "none"
+  },
+  "goToPage_Rest_Charts" : {
+    "_id" : "wm-goToPage_Rest_Charts-wm.NavigationVariable-1489558814115",
+    "name" : "goToPage_Rest_Charts",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "Rest_Charts",
+    "dataSet" : [ ],
+    "pageTransitions" : "none"
+  },
+  "goToPage_WebSocket_Charts" : {
+    "_id" : "wm-goToPage_WebSocket_Charts-wm.NavigationVariable-1489558826921",
+    "name" : "goToPage_WebSocket_Charts",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "WebSocket_Charts",
+    "dataSet" : [ ],
+    "pageTransitions" : "none"
+  },
+  "loggedInUser" : {
+    "_id" : "wm-loggedInUser-wm.Variable-1488868416643",
+    "name" : "loggedInUser",
+    "owner" : "App",
+    "category" : "wm.Variable",
+    "dataBinding" : [ ],
+    "dataSet" : {
+      "name" : "",
+      "id" : "",
+      "tenantId" : "",
+      "isAuthenticated" : false,
+      "isSecurityEnabled" : true,
+      "roles" : [ ]
+    },
+    "type" : "string",
+    "isList" : false,
+    "saveInPhonegap" : false
+  },
+  "loginAction" : {
+    "_id" : "wm-loginVariable-wm.LoginVariable-1488868416642",
+    "name" : "loginAction",
+    "owner" : "App",
+    "category" : "wm.LoginVariable",
+    "dataBinding" : [ {
+      "target" : "username",
+      "value" : "bind:Widgets.usernametext.datavalue",
+      "type" : "string"
+    }, {
+      "target" : "password",
+      "value" : "bind:Widgets.passwordtext.datavalue",
+      "type" : "string"
+    }, {
+      "target" : "rememberme",
+      "value" : "bind:Widgets.remembermecheck.datavalue",
+      "type" : "boolean"
+    } ],
+    "dataSet" : {
+      "username" : "",
+      "password" : "",
+      "rememberme" : false
+    },
+    "type" : "string",
+    "saveInPhonegap" : false,
+    "onError" : "loginVariableonError($event, $s)",
+    "startUpdate" : false,
+    "autoUpdate" : false,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "useDefaultSuccessHandler" : true
+  },
+  "logoutAction" : {
+    "_id" : "wm-logoutVariable-wm.LogoutVariable-1488868416643",
+    "name" : "logoutAction",
+    "owner" : "App",
+    "category" : "wm.LogoutVariable",
+    "type" : "string",
+    "saveInPhonegap" : false,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "redirectTo" : "Login",
+    "useDefaultSuccessHandler" : true
+  },
+  "staticVariable1" : {
+    "_id" : "wm-staticVariable1-wm.Variable-1489140460528",
+    "name" : "staticVariable1",
+    "owner" : "App",
+    "category" : "wm.Variable",
+    "dataBinding" : [ ],
+    "dataSet" : {
+      "tenantId" : "",
+      "username" : "",
+      "userId" : "",
+      "role" : "",
+      "password" : ""
+    },
+    "type" : "com.hrdb.User",
+    "isList" : false,
+    "saveInPhonegap" : false
+  },
+  "supportedLocale" : {
+    "_id" : "wm-wm.Variable1402640443182",
+    "name" : "supportedLocale",
+    "owner" : "App",
+    "category" : "wm.Variable",
+    "dataBinding" : [ ],
+    "dataSet" : {
+      "en" : "English",
+      "hi-in" : "हिंदी (भारत)",
+      "te-in" : "తెలుగు (భారత దేశం)",
+      "ja-jp" : "日本語（日本）",
+      "hi" : "हिंदी",
+      "te" : "తెలుగు"
+    },
+    "type" : "string",
+    "isList" : false,
+    "saveInPhonegap" : false
+  }
+}

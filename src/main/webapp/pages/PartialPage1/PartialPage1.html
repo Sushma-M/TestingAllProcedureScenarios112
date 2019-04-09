@@ -1,0 +1,54 @@
+<wm-partial data-ng-controller="PartialPage1PageController" name="partial1"> 
+    <wm-tabs name="tabs1"> 
+        <wm-tabpane name="tabpane1"> 
+            <wm-table title="User List" dataset="bind:Variables.HrdbUserData.dataSet" navigation="Pager" name="grid1" filtermode="multicolumn" exportformat="EXCEL,CSV" nodatamessage="bind:appLocale.MESSAGE_NO_DATA" loadingdatamsg="bind:appLocale.MESSAGE_LOADING"> 
+                <wm-table-column binding="userId" caption="User Id" type="integer" primary-key="true" generator="identity" readonly="true" edit-widget-type="number" show="true"></wm-table-column> 
+                <wm-table-column binding="username" caption="Username" type="string" generator="assigned" edit-widget-type="text" show="true" readonly="false"></wm-table-column> 
+                <wm-table-column binding="password" caption="Password" type="string" generator="assigned" edit-widget-type="text" show="true" readonly="false"></wm-table-column> 
+                <wm-table-column binding="role" caption="Role" type="string" generator="assigned" edit-widget-type="text" show="true" readonly="false"></wm-table-column> 
+                <wm-table-column binding="tenantId" caption="Tenant Id" type="integer" generator="assigned" edit-widget-type="number" show="true" readonly="false"></wm-table-column> 
+            </wm-table> 
+        </wm-tabpane> 
+        <wm-tabpane name="tabpane2"> 
+            <wm-table title="" dataset="bind:Variables.AutoWire_Procedure1000NullTitlesProcedureAutowiring.dataSet.content" navigation="Classic" name="grid2" filtermode="multicolumn" showrecordcount="true" nodatamessage="bind:appLocale.MESSAGE_NO_DATA" loadingdatamsg="bind:appLocale.MESSAGE_LOADING"> 
+                <wm-table-column binding="title" caption="Title" type="string" edit-widget-type="text" show="true" readonly="false"></wm-table-column> 
+                <wm-table-column binding="nameStyle" caption="Name Style" type="string" edit-widget-type="text" show="true" readonly="false"></wm-table-column> 
+                <wm-table-column binding="additionalContactInfo" caption="Additional Contact Info" type="string" edit-widget-type="text" show="true" readonly="false"></wm-table-column> 
+                <wm-table-column binding="rowguid" caption="Rowguid" type="string" edit-widget-type="text" show="true" readonly="false"></wm-table-column> 
+                <wm-table-column binding="emailPromotion" caption="Email Promotion" type="string" edit-widget-type="text" show="true" readonly="false"></wm-table-column> 
+                <wm-table-column binding="businessEntityId" caption="Business Entity Id" type="string" edit-widget-type="text" show="true" readonly="false"></wm-table-column> 
+                <wm-table-column binding="personType" caption="Person Type" type="string" edit-widget-type="text" show="true" readonly="false"></wm-table-column> 
+                <wm-table-column binding="firstName" caption="First Name" type="string" edit-widget-type="text" show="true" readonly="false"></wm-table-column> 
+            </wm-table> 
+        </wm-tabpane> 
+        <wm-tabpane name="tabpane3"> 
+            <wm-table editmode="inline" title="All types List" dataset="bind:Variables.DbscenariosAllTypesData.dataSet" navigation="Pager" name="grid3" filtermode="multicolumn" exportformat="EXCEL,CSV" nodatamessage="bind:appLocale.MESSAGE_NO_DATA" loadingdatamsg="bind:appLocale.MESSAGE_LOADING"> 
+                <wm-table-column binding="pkId" caption="Pk Id" type="integer" primary-key="true" generator="identity" readonly="true" edit-widget-type="number" show="true"></wm-table-column> 
+                <wm-table-column binding="byteCol" caption="Byte Col" type="short" generator="assigned" edit-widget-type="number" show="true" readonly="false"></wm-table-column> 
+                <wm-table-column binding="shortCol" caption="Short Col" type="short" generator="assigned" edit-widget-type="number" show="true" readonly="false"></wm-table-column> 
+                <wm-table-column binding="intCol" caption="Int Col" type="integer" generator="assigned" edit-widget-type="number" show="true" readonly="false"></wm-table-column> 
+                <wm-table-column binding="longCol" caption="Long Col" type="big_integer" generator="assigned" edit-widget-type="number" show="true" readonly="false"></wm-table-column> 
+                <wm-table-column binding="floatCol" caption="Float Col" type="float" generator="assigned" edit-widget-type="number" show="true" readonly="false"></wm-table-column> 
+                <wm-table-column binding="doubleCol" caption="Double Col" type="double" generator="assigned" edit-widget-type="number" show="true" readonly="false"></wm-table-column> 
+                <wm-table-column binding="bigdecCol" caption="Bigdec Col" type="big_decimal" generator="assigned" edit-widget-type="number" show="true" readonly="false"></wm-table-column> 
+                <wm-table-column binding="bigintCol" caption="Bigint Col" type="big_integer" generator="assigned" edit-widget-type="number" show="true" readonly="false"></wm-table-column> 
+                <wm-table-column binding="charCol" caption="Char Col" type="string" generator="assigned" edit-widget-type="text" show="true" readonly="false"></wm-table-column> 
+                <wm-table-column binding="stringCol" caption="String Col" type="string" generator="assigned" edit-widget-type="text" show="true" readonly="false"></wm-table-column> 
+                <wm-table-column binding="textCol" caption="Text Col" type="clob" generator="assigned" edit-widget-type="text" searchable="false" show="true" readonly="false"></wm-table-column> 
+                <wm-table-column binding="clobCol" caption="Clob Col" type="clob" generator="assigned" edit-widget-type="text" searchable="false" show="true" readonly="false"></wm-table-column> 
+                <wm-table-column binding="dateCol" caption="Date Col" type="date" generator="assigned" datepattern="yyyy, MMM dd" formatpattern="toDate" edit-widget-type="date" show="true" readonly="false"></wm-table-column> 
+                <wm-table-column binding="timeCol" caption="Time Col" type="time" generator="assigned" edit-widget-type="time" show="true" readonly="false"></wm-table-column> 
+                <wm-table-column binding="datetimeCol" caption="Datetime Col" type="datetime" generator="assigned" edit-widget-type="datetime" show="true" readonly="false"></wm-table-column> 
+                <wm-table-column binding="timestampCol" caption="Timestamp Col" type="timestamp" generator="assigned" edit-widget-type="timestamp" show="true" filterwidget="text" readonly="false" required="true"></wm-table-column> 
+                <wm-table-column binding="booleanCol" caption="Boolean Col" type="boolean" generator="assigned" edit-widget-type="checkbox" show="true" readonly="false"></wm-table-column> 
+                <wm-table-column binding="blobCol" caption="Blob Col" type="blob" generator="assigned" edit-widget-type="upload" searchable="false" show="true" filterwidget="text" readonly="false"> 
+                    <a ng-if="columnValue != null" class="col-md-9" target="_blank" data-ng-href="{{contentBaseUrl + row[primaryKey] + '/content/'+ colDef.field}}"><i class="wm-icon wm-icon24 wi wi-file"></i></a> 
+                </wm-table-column> 
+                <wm-table-column binding="rowOperations" caption="Actions" type="custom" width="120px" readonly="true" sortable="false" searchable="false" show="true"></wm-table-column> 
+                <wm-table-action key="addNewRow" display-name="New" show="true" class="btn-primary" iconclass="wi wi-plus" title="New" action="addNewRow()" shortcutkey="" disabled="false"></wm-table-action> 
+                <wm-table-row-action key="updaterow" display-name="" show="true" class="btn-transparent" iconclass="wi wi-pencil" title="Edit" action="editRow()" disabled="false"></wm-table-row-action> 
+                <wm-table-row-action key="deleterow" display-name="" show="true" class="btn-transparent" iconclass="wi wi-trash" title="Delete" action="deleteRow()" disabled="false"></wm-table-row-action> 
+            </wm-table> 
+        </wm-tabpane> 
+    </wm-tabs> 
+</wm-partial>

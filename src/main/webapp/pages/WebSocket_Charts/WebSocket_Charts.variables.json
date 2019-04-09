@@ -1,0 +1,18 @@
+{
+  "WS_HeartrateService" : {
+    "_id" : "wm-WS_HeartrateService-wm.WebSocketVariable-1489579103835",
+    "name" : "WS_HeartrateService",
+    "owner" : "Page",
+    "category" : "wm.WebSocketVariable",
+    "dataBinding" : [ ],
+    "service" : "HeartRateService",
+    "operationId" : "HeartRateService_WebSocketServiceVirtualController-invoke",
+    "dataSet" : [ ],
+    "type" : "HeartRateService.RootResponse",
+    "isDefault" : false,
+    "isList" : false,
+    "startUpdate" : true,
+    "dataUpdateStrategy" : "append",
+    "dataLimit" : 25
+  }
+}

@@ -1,0 +1,368 @@
+{
+  "Porcedure_DeptNameUsingID" : {
+    "name" : "Porcedure_DeptNameUsingID",
+    "description" : "Fetching Dept Name using DeptId",
+    "version" : "V2",
+    "procedureString" : "EXEC HumanResources.getDeparmentInfoOut @deptid= :deptid,@Name= :Name",
+    "parameters" : [ {
+      "name" : "deptid",
+      "type" : "integer",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "testValue" : "1",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "Name",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "testValue" : null,
+      "required" : true,
+      "parameterType" : "OUT"
+    } ],
+    "request" : {
+      "wrapped" : false,
+      "typeRef" : null,
+      "method" : "GET"
+    },
+    "response" : {
+      "typeRef" : "com.testingallprocedurescenarios.adventureworks2014.models.procedure.PorcedureDeptNameUsingIdResponse",
+      "returns" : "CUSTOM",
+      "responseType" : "SINGLE",
+      "properties" : [ {
+        "name" : "Name",
+        "fieldName" : "name",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.String",
+          "list" : false
+        }
+      } ]
+    }
+  },
+  "Procedure_1000NullTitles" : {
+    "name" : "Procedure_1000NullTitles",
+    "description" : "1000 Null titles",
+    "version" : "V2",
+    "procedureString" : "EXEC Person.get1000NullTitles",
+    "parameters" : [ ],
+    "request" : {
+      "wrapped" : false,
+      "typeRef" : null,
+      "method" : "GET"
+    },
+    "response" : {
+      "typeRef" : "com.testingallprocedurescenarios.adventureworks2014.models.procedure.Procedure1000nullTitlesResponse",
+      "returns" : "CUSTOM",
+      "responseType" : "SINGLE",
+      "properties" : [ {
+        "name" : "content",
+        "fieldName" : "content",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "CUSTOM",
+          "typeRef" : "com.testingallprocedurescenarios.adventureworks2014.models.procedure.Procedure1000nullTitlesResponseContent",
+          "list" : true,
+          "properties" : [ {
+            "name" : "BusinessEntityID",
+            "fieldName" : "businessEntityId",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.Integer",
+              "list" : false
+            }
+          }, {
+            "name" : "PersonType",
+            "fieldName" : "personType",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "NameStyle",
+            "fieldName" : "nameStyle",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.Boolean",
+              "list" : false
+            }
+          }, {
+            "name" : "FirstName",
+            "fieldName" : "firstName",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "Title",
+            "fieldName" : "title",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "EmailPromotion",
+            "fieldName" : "emailPromotion",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.Integer",
+              "list" : false
+            }
+          }, {
+            "name" : "AdditionalContactInfo",
+            "fieldName" : "additionalContactInfo",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "rowguid",
+            "fieldName" : "rowguid",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          } ]
+        }
+      } ]
+    }
+  },
+  "Procedure_GetByHireDate" : {
+    "name" : "Procedure_GetByHireDate",
+    "description" : "Get By Hire Date",
+    "version" : "V2",
+    "procedureString" : "EXEC HumanResources.getEmployeeByHireDate @empHireDate= :empHireDate",
+    "parameters" : [ {
+      "name" : "empHireDate",
+      "type" : "date",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "testValue" : "2009-01-13",
+      "required" : true,
+      "parameterType" : "IN"
+    } ],
+    "request" : {
+      "wrapped" : false,
+      "typeRef" : null,
+      "method" : "GET"
+    },
+    "response" : {
+      "typeRef" : "com.testingallprocedurescenarios.adventureworks2014.models.procedure.ProcedureGetByHireDateResponse",
+      "returns" : "CUSTOM",
+      "responseType" : "SINGLE",
+      "properties" : [ {
+        "name" : "content",
+        "fieldName" : "content",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "CUSTOM",
+          "typeRef" : "com.testingallprocedurescenarios.adventureworks2014.models.procedure.ProcedureGetByHireDateResponseContent",
+          "list" : true,
+          "properties" : [ {
+            "name" : "BusinessEntityID",
+            "fieldName" : "businessEntityId",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.Integer",
+              "list" : false
+            }
+          }, {
+            "name" : "NationalIDNumber",
+            "fieldName" : "nationalIdnumber",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "LoginID",
+            "fieldName" : "loginId",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "OrganizationNode",
+            "fieldName" : "organizationNode",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "byte[]",
+              "list" : false
+            }
+          }, {
+            "name" : "OrganizationLevel",
+            "fieldName" : "organizationLevel",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.Short",
+              "list" : false
+            }
+          }, {
+            "name" : "JobTitle",
+            "fieldName" : "jobTitle",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "BirthDate",
+            "fieldName" : "birthDate",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.sql.Date",
+              "list" : false
+            }
+          }, {
+            "name" : "MaritalStatus",
+            "fieldName" : "maritalStatus",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "Gender",
+            "fieldName" : "gender",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "HireDate",
+            "fieldName" : "hireDate",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.sql.Date",
+              "list" : false
+            }
+          }, {
+            "name" : "SalariedFlag",
+            "fieldName" : "salariedFlag",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.Boolean",
+              "list" : false
+            }
+          }, {
+            "name" : "VacationHours",
+            "fieldName" : "vacationHours",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.Short",
+              "list" : false
+            }
+          }, {
+            "name" : "SickLeaveHours",
+            "fieldName" : "sickLeaveHours",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.Short",
+              "list" : false
+            }
+          }, {
+            "name" : "CurrentFlag",
+            "fieldName" : "currentFlag",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.Boolean",
+              "list" : false
+            }
+          }, {
+            "name" : "rowguid",
+            "fieldName" : "rowguid",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "ModifiedDate",
+            "fieldName" : "modifiedDate",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.time.LocalDateTime",
+              "list" : false
+            }
+          } ]
+        }
+      } ]
+    }
+  },
+  "Procedure_getDeptDetails" : {
+    "name" : "Procedure_getDeptDetails",
+    "description" : "Get Dept Details By DeptId",
+    "version" : "V2",
+    "procedureString" : "EXEC HumanResources.getDeparmentInfoOut @deptid= :deptid,@Name= :Name",
+    "parameters" : [ {
+      "name" : "deptid",
+      "type" : "integer",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "testValue" : "2",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "Name",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "testValue" : null,
+      "required" : true,
+      "parameterType" : "OUT"
+    } ],
+    "request" : {
+      "wrapped" : false,
+      "typeRef" : null,
+      "method" : "GET"
+    },
+    "response" : {
+      "typeRef" : "com.testingallprocedurescenarios.adventureworks2014.models.procedure.ProcedureGetDeptDetailsResponse",
+      "returns" : "CUSTOM",
+      "responseType" : "SINGLE",
+      "properties" : [ {
+        "name" : "Name",
+        "fieldName" : "name",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.String",
+          "list" : false
+        }
+      } ]
+    }
+  }
+}

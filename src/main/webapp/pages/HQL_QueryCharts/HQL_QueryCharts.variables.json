@@ -1,0 +1,25 @@
+{
+  "HQL_EmployeeData" : {
+    "_id" : "wm-HQL_EmployeeData-wm.ServiceVariable-1489580713264",
+    "name" : "HQL_EmployeeData",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ ],
+    "type" : "com.hrdb.Employee",
+    "service" : "hrdb",
+    "operation" : "executeHQL_FromEmp",
+    "operationId" : "QueryExecutionController_executeHQL_FromEmp",
+    "operationType" : "get",
+    "serviceType" : "DataService",
+    "dataSet" : [ ],
+    "isList" : true,
+    "maxResults" : 20,
+    "designMaxResults" : 10,
+    "startUpdate" : true,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "QueryExecution"
+  }
+}

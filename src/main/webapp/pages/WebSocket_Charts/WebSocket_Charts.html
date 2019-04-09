@@ -1,0 +1,36 @@
+<wm-page data-ng-controller="WebSocket_ChartsPageController" pagetitle="Web Socket Charts" name="page1"> 
+    <wm-header content="header" name="header1"></wm-header> 
+    <wm-top-nav content="topnav" name="top_nav1"></wm-top-nav> 
+    <wm-content name="content1"> 
+        <wm-left-panel columnwidth="2" content="leftnav" name="left_panel1"></wm-left-panel> 
+        <wm-page-content columnwidth="10" name="page_content1"> 
+            <wm-tabs name="tabs1"> 
+                <wm-tabpane name="tabpane1" title="Area Chart"> 
+                    <wm-chart type="Area" title="Area Chart" height="250px" iconclass="fa fa-area-chart" name="chart1" dataset="bind:Variables.WS_HeartrateService.dataSet" xaxisdatakey="time" yaxisdatakey="value" xdateformat="%x" formattype="date" subheading="Heart rate Service"></wm-chart> 
+                </wm-tabpane> 
+                <wm-tabpane name="tabpane2" title="Bar Chart"> 
+                    <wm-chart type="Bar" title="Bar Chart" height="250px" iconclass="wi wi-bar-chart" name="chart2" dataset="bind:Variables.WS_HeartrateService.dataSet" xaxisdatakey="time" yaxisdatakey="value" xdateformat="%c" formattype="date" subheading="Heart rate Service"></wm-chart> 
+                </wm-tabpane> 
+                <wm-tabpane name="tabpane3" title="Bubble Chart"> 
+                    <wm-chart type="Bubble" title="Bubble Chart" height="250px" iconclass="wi wi-bubble-chart" name="chart3" dataset="bind:Variables.WS_HeartrateService.dataSet" xaxisdatakey="time" yaxisdatakey="value" subheading="Heart rate Service"></wm-chart> 
+                </wm-tabpane> 
+                <wm-tabpane name="tabpane4" title="Column Chart"> 
+                    <wm-chart type="Column" title="Column Chart" height="250px" iconclass="wi wi-bar-chart" name="chart4" dataset="bind:Variables.WS_HeartrateService.dataSet" xaxisdatakey="time" yaxisdatakey="value" xdateformat="%X" formattype="date" subheading="Heart rate Service"></wm-chart> 
+                </wm-tabpane> 
+                <wm-tabpane name="tabpane5" title="Cumulative Line Chart"> 
+                    <wm-chart type="Cumulative Line" title="Cumulative Line Chart" height="250px" iconclass="wi wi-line-chart" name="chart5" dataset="bind:Variables.WS_HeartrateService.dataSet" xaxisdatakey="time" yaxisdatakey="value" xdateformat="%b" formattype="date" ynumberformat=",r" subheading="Heart rate Service"></wm-chart> 
+                </wm-tabpane> 
+                <wm-tabpane name="tabpane6" title="Donut Chart"> 
+                    <wm-chart type="Donut" title="Donut Chart" height="250px" iconclass="wi wi-donut-large" name="chart6" dataset="bind:Variables.WS_HeartrateService.dataSet" xaxisdatakey="time" yaxisdatakey="value" labeltype="value" subheading="Heart rate Service"></wm-chart> 
+                </wm-tabpane> 
+                <wm-tabpane name="tabpane7" title="Line Chart"> 
+                    <wm-chart type="Line" title="Line Chart" height="250px" iconclass="wi wi-line-chart" name="chart7" dataset="bind:Variables.WS_HeartrateService.dataSet" xaxisdatakey="time" yaxisdatakey="value" xdateformat="%A" formattype="date" subheading="Heart rate Service"></wm-chart> 
+                </wm-tabpane> 
+                <wm-tabpane name="tabpane8" title="Pie Chart"> 
+                    <wm-chart type="Pie" title="Pie Chart" height="250px" iconclass="wi wi-pie-chart" name="chart8" dataset="bind:Variables.WS_HeartrateService.dataSet" xaxisdatakey="time" yaxisdatakey="value" labeltype="key" subheading="Heart rate Service"></wm-chart> 
+                </wm-tabpane> 
+            </wm-tabs> 
+        </wm-page-content> 
+    </wm-content> 
+    <wm-footer content="footer" name="footer1"></wm-footer> 
+</wm-page>

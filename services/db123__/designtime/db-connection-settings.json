@@ -1,0 +1,64 @@
+{
+  "username" : "sa",
+  "password" : "7b6a43524a353f3a664c733d4e537670477c612a43",
+  "url" : "jdbc:sqlserver://52.12.107.45:1433;databaseName=123-@",
+  "driverClass" : "com.microsoft.sqlserver.jdbc.SQLServerDriver",
+  "dialect" : "com.wavemaker.runtime.data.dialect.WMSQLServerDialect",
+  "serviceId" : "db123__",
+  "packageName" : "com.testingallprocedurescenarios.db123__",
+  "dbType" : "SQLServer",
+  "host" : "52.12.107.45",
+  "dbName" : "123-@",
+  "port" : "1433",
+  "schemaName" : "dbo",
+  "tableFilter" : [ {
+    "table" : "ALL EXTERNAL TYPES",
+    "schema" : "dbo"
+  }, {
+    "table" : "DEFAULT VALUES",
+    "schema" : "dbo"
+  }, {
+    "table" : "TABLE WITH ALL TYPES",
+    "schema" : "dbo"
+  }, {
+    "table" : "SHORTSEQT_SERVERDEF",
+    "schema" : "dbo"
+  }, {
+    "table" : "SHORT_USERTABLE",
+    "schema" : "dbo"
+  }, {
+    "table" : "TABLE27",
+    "schema" : "dbo"
+  }, {
+    "table" : "TC_ONE2ONE",
+    "schema" : "dbo"
+  }, {
+    "table" : "TP_ONE2ONE",
+    "schema" : "dbo"
+  }, {
+    "table" : "UNIQUE ID",
+    "schema" : "dbo"
+  }, {
+    "table" : "TABLE10",
+    "schema" : "dbo"
+  }, {
+    "table" : "Text Table",
+    "schema" : "dbo"
+  } ],
+  "schemaFilter" : [ "dbo" ],
+  "impersonateUser" : false,
+  "activeDirectoryDomain" : null,
+  "hbm2ddl" : "none",
+  "maxPageSize" : 100,
+  "minPoolSize" : 2,
+  "maxPoolSize" : 4,
+  "transactionTimeout" : 30,
+  "dataSourceType" : "WM_MANAGED_DATASOURCE",
+  "jndiName" : "",
+  "reloadInfo" : {
+    "reload" : false,
+    "reason" : null,
+    "message" : null
+  },
+  "readOnly" : false
+}

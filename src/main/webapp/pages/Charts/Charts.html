@@ -1,0 +1,83 @@
+<wm-page data-ng-controller="ChartsPageController" pagetitle="Charts" name="page1"> 
+    <wm-header content="header" name="header1"></wm-header> 
+    <wm-top-nav content="topnav" name="top_nav1"></wm-top-nav> 
+    <wm-content name="content1"> 
+        <wm-left-panel columnwidth="2" content="leftnav" name="left_panel1"></wm-left-panel> 
+        <wm-page-content columnwidth="10" name="page_content1"> 
+            <wm-select class="select-locale" dataset="bind:Variables.supportedLocale.dataSet" on-change="changeAppLocale($scope)" placeholder="Select Language" name="select1"></wm-select> 
+            <wm-tabs name="tabs1"> 
+                <wm-tabpane name="tabpane1" title="CHARTS WITHOUT GROUPBY &amp; AGGREAGTION"> 
+                    <wm-layoutgrid name="layoutgrid1" columns="3"> 
+                        <wm-gridrow name="gridrow3"> 
+                            <wm-gridcolumn columnwidth="4" name="gridcolumn5"> 
+                                <wm-chart type="Area" title="Area Chart" height="250px" iconclass="fa fa-area-chart" name="chart1" xaxisdatakey="deptCode" yaxisdatakey="q1,q2,q3,q4" dataset="bind:Variables.HrdbDeptData.dataSet" nodatamessage="bind:appLocale.MESSAGE_NO_DATA" loadingdatamsg="bind:appLocale.MESSAGE_LOADING" interpolation="cardinal" xaxislabel="Department Codes" staggerlabels="true" yaxislabel="Department Quaters" ynumberformat="Thousand" orderby="deptId:desc"></wm-chart> 
+                            </wm-gridcolumn> 
+                            <wm-gridcolumn columnwidth="4" name="gridcolumn6"> 
+                                <wm-chart type="Bar" title="Bar Chart" height="250px" iconclass="wi wi-bar-chart" name="chart2" xaxisdatakey="deptCode" yaxisdatakey="budget" dataset="bind:Variables.HrdbDeptData.dataSet" theme="Annabelle" nodatamessage="bind:appLocale.MESSAGE_NO_DATA" loadingdatamsg="bind:appLocale.MESSAGE_LOADING" xaxislabel="Department Codes" showvalues="true" staggerlabels="true" barspacing="0.3" yaxislabel="Dept Budgets" ynumberformat=",r" orderby="deptId:desc"></wm-chart> 
+                            </wm-gridcolumn> 
+                            <wm-gridcolumn columnwidth="4" name="gridcolumn7"> 
+                                <wm-chart type="Bubble" title="Bubble Chart" height="250px" iconclass="wi wi-bubble-chart" name="chart3" xaxisdatakey="deptId" yaxisdatakey="budget,q1,q2" dataset="bind:Variables.HrdbDeptData.dataSet" bubblesize="deptId" theme="Azure" nodatamessage="bind:appLocale.MESSAGE_NO_DATA" loadingdatamsg="bind:appLocale.MESSAGE_LOADING" staggerlabels="true" xnumberformat="Thousand" ynumberformat="Thousand" shape="circle" orderby="deptId:desc"></wm-chart> 
+                            </wm-gridcolumn> 
+                        </wm-gridrow> 
+                        <wm-gridrow name="gridrow4"> 
+                            <wm-gridcolumn columnwidth="4" name="gridcolumn8"> 
+                                <wm-chart type="Column" title="Column Chart" height="250px" iconclass="wi wi-bar-chart" name="chart4" xaxisdatakey="deptCode" yaxisdatakey="q1,q2,q3,q4" dataset="bind:Variables.HrdbDeptData.dataSet" theme="Flyer" nodatamessage="bind:appLocale.MESSAGE_NO_DATA" loadingdatamsg="bind:appLocale.MESSAGE_LOADING" staggerlabels="true" reducexticks="false" barspacing="0.5" ynumberformat=",r" orderby="q3:desc"></wm-chart> 
+                            </wm-gridcolumn> 
+                            <wm-gridcolumn columnwidth="4" name="gridcolumn9"> 
+                                <wm-chart type="Cumulative Line" title="Cumulative Line Chart" height="250px" iconclass="wi wi-line-chart" name="chart5" xaxisdatakey="deptCode" yaxisdatakey="q1,q2,q3,q4" dataset="bind:Variables.HrdbDeptData.dataSet" nodatamessage="bind:appLocale.MESSAGE_NO_DATA" loadingdatamsg="bind:appLocale.MESSAGE_LOADING" highlightpoints="true" staggerlabels="true" ynumberformat=",r" orderby="deptId:asc"></wm-chart> 
+                            </wm-gridcolumn> 
+                            <wm-gridcolumn columnwidth="4" name="gridcolumn10"> 
+                                <wm-chart type="Donut" title="Donut Chart" height="250px" iconclass="wi wi-donut-large" name="chart6" xaxisdatakey="deptCode" yaxisdatakey="budget" dataset="bind:Variables.HrdbDeptData.dataSet" centerlabel="Dept Data" nodatamessage="bind:appLocale.MESSAGE_NO_DATA" loadingdatamsg="bind:appLocale.MESSAGE_LOADING" donutratio="0.3" labeltype="key" orderby="deptId:asc"></wm-chart> 
+                            </wm-gridcolumn> 
+                        </wm-gridrow> 
+                        <wm-gridrow name="gridrow5"> 
+                            <wm-gridcolumn columnwidth="4" name="gridcolumn11"> 
+                                <wm-chart type="Line" title="Line Chart" height="250px" iconclass="wi wi-line-chart" name="chart7" xaxisdatakey="name" yaxisdatakey="budget" dataset="bind:Variables.HrdbDeptData.dataSet" orderby="budget:asc,name:asc,q1:desc" theme="Mellow" highlightpoints="true" interpolation="cardinal" nodatamessage="bind:appLocale.MESSAGE_NO_DATA" loadingdatamsg="bind:appLocale.MESSAGE_LOADING" staggerlabels="true" ynumberformat=",r"></wm-chart> 
+                            </wm-gridcolumn> 
+                            <wm-gridcolumn columnwidth="4" name="gridcolumn12"> 
+                                <wm-chart type="Pie" title="Pie Chart" height="250px" iconclass="wi wi-pie-chart" name="chart8" xaxisdatakey="deptCode" yaxisdatakey="q1" dataset="bind:Variables.HrdbDeptData.dataSet" orderby="q1:desc" nodatamessage="bind:appLocale.MESSAGE_NO_DATA" loadingdatamsg="bind:appLocale.MESSAGE_LOADING" labeltype="value" ynumberformat=",r" theme="Retro"></wm-chart> 
+                            </wm-gridcolumn> 
+                            <wm-gridcolumn columnwidth="4" name="gridcolumn13"></wm-gridcolumn> 
+                        </wm-gridrow> 
+                    </wm-layoutgrid> 
+                </wm-tabpane> 
+                <wm-tabpane name="tabpane2" title="GROUPBY &amp; AGGREGATION"> 
+                    <wm-layoutgrid columns="3" name="layoutgrid2"> 
+                        <wm-gridrow name="gridrow4_1"> 
+                            <wm-gridcolumn columnwidth="4" name="gridcolumn10_1"> 
+                                <wm-chart type="Area" title="Area Chart" height="250px" iconclass="fa fa-area-chart" xaxisdatakey="deptCode" yaxisdatakey="q1" dataset="bind:Variables.HrdbDeptData1.dataSet" nodatamessage="bind:appLocale.MESSAGE_NO_DATA" loadingdatamsg="bind:appLocale.MESSAGE_LOADING" interpolation="cardinal" xaxislabel="Department Codes" staggerlabels="true" yaxislabel="Department Quaters" ynumberformat="Thousand" name="chart9" aggregation="maximum" aggregationcolumn="q1" groupby="deptCode" orderby="deptCode:desc"></wm-chart> 
+                            </wm-gridcolumn> 
+                            <wm-gridcolumn columnwidth="4" name="gridcolumn11_1"> 
+                                <wm-chart type="Bar" title="Bar Chart" height="250px" iconclass="wi wi-bar-chart" xaxisdatakey="deptCode" yaxisdatakey="budget" dataset="bind:Variables.HrdbDeptData1.dataSet" aggregation="average" aggregationcolumn="budget" groupby="deptCode" theme="Annabelle" nodatamessage="bind:appLocale.MESSAGE_NO_DATA" loadingdatamsg="bind:appLocale.MESSAGE_LOADING" xaxislabel="Department Codes" showvalues="true" staggerlabels="true" barspacing="0.3" yaxislabel="Dept Budgets" ynumberformat=",r" name="chart10" orderby="deptCode:asc,budget:desc"></wm-chart> 
+                            </wm-gridcolumn> 
+                            <wm-gridcolumn columnwidth="4" name="gridcolumn12_1"> 
+                                <wm-chart type="Bubble" title="Bubble Chart" height="250px" iconclass="wi wi-bubble-chart" xaxisdatakey="q1" yaxisdatakey="budget" dataset="bind:Variables.HrdbDeptData1.dataSet" theme="Azure" nodatamessage="bind:appLocale.MESSAGE_NO_DATA" loadingdatamsg="bind:appLocale.MESSAGE_LOADING" staggerlabels="true" xnumberformat="Thousand" ynumberformat="Thousand" name="chart11" aggregation="count" aggregationcolumn="budget" groupby="q1" orderby="budget:desc"></wm-chart> 
+                            </wm-gridcolumn> 
+                        </wm-gridrow> 
+                        <wm-gridrow name="gridrow5_1"> 
+                            <wm-gridcolumn columnwidth="4" name="gridcolumn13_1"> 
+                                <wm-chart type="Column" title="Column Chart" height="250px" iconclass="wi wi-bar-chart" xaxisdatakey="deptCode" yaxisdatakey="q2" dataset="bind:Variables.HrdbDeptData1.dataSet" theme="Flyer" nodatamessage="bind:appLocale.MESSAGE_NO_DATA" loadingdatamsg="bind:appLocale.MESSAGE_LOADING" staggerlabels="true" reducexticks="false" barspacing="0.5" ynumberformat=",r" name="chart12" aggregation="minimum" aggregationcolumn="q2" groupby="deptCode" orderby="deptCode:asc,q2:desc"></wm-chart> 
+                            </wm-gridcolumn> 
+                            <wm-gridcolumn columnwidth="4" name="gridcolumn14"> 
+                                <wm-chart type="Cumulative Line" title="Cumulative Line Chart" height="250px" iconclass="wi wi-line-chart" xaxisdatakey="name" yaxisdatakey="q2" dataset="bind:Variables.HrdbDeptData1.dataSet" nodatamessage="bind:appLocale.MESSAGE_NO_DATA" loadingdatamsg="bind:appLocale.MESSAGE_LOADING" highlightpoints="true" staggerlabels="true" ynumberformat=",r" name="chart13" aggregation="sum" aggregationcolumn="q2" groupby="name" orderby="name:asc"></wm-chart> 
+                            </wm-gridcolumn> 
+                            <wm-gridcolumn columnwidth="4" name="gridcolumn15"> 
+                                <wm-chart type="Donut" title="Donut Chart" height="250px" iconclass="wi wi-donut-large" xaxisdatakey="location" yaxisdatakey="deptCode" dataset="bind:Variables.HrdbDeptData1.dataSet" aggregation="count" aggregationcolumn="deptCode" groupby="location" centerlabel="Dept Data" nodatamessage="bind:appLocale.MESSAGE_NO_DATA" loadingdatamsg="bind:appLocale.MESSAGE_LOADING" donutratio="0.3" labeltype="key" name="chart14" orderby="deptCode:asc,location:asc"></wm-chart> 
+                            </wm-gridcolumn> 
+                        </wm-gridrow> 
+                        <wm-gridrow name="gridrow6"> 
+                            <wm-gridcolumn columnwidth="4" name="gridcolumn16"> 
+                                <wm-chart type="Line" title="Line Chart" height="250px" iconclass="wi wi-line-chart" xaxisdatakey="location" yaxisdatakey="deptId" dataset="bind:Variables.HrdbDeptData1.dataSet" aggregation="sum" aggregationcolumn="deptId" groupby="location" theme="Mellow" highlightpoints="true" interpolation="cardinal" nodatamessage="bind:appLocale.MESSAGE_NO_DATA" loadingdatamsg="bind:appLocale.MESSAGE_LOADING" staggerlabels="true" ynumberformat=",r" name="chart15" orderby="location:asc"></wm-chart> 
+                            </wm-gridcolumn> 
+                            <wm-gridcolumn columnwidth="4" name="gridcolumn17"> 
+                                <wm-chart type="Pie" title="Pie Chart" height="250px" iconclass="wi wi-pie-chart" xaxisdatakey="deptCode" yaxisdatakey="q4" dataset="bind:Variables.HrdbDeptData1.dataSet" aggregation="maximum" aggregationcolumn="q4" groupby="deptCode" nodatamessage="bind:appLocale.MESSAGE_NO_DATA" loadingdatamsg="bind:appLocale.MESSAGE_LOADING" labeltype="value" ynumberformat=",r" theme="Retro" name="chart16" orderby="q4:asc"></wm-chart> 
+                            </wm-gridcolumn> 
+                            <wm-gridcolumn columnwidth="4" name="gridcolumn18"></wm-gridcolumn> 
+                        </wm-gridrow> 
+                    </wm-layoutgrid> 
+                </wm-tabpane> 
+            </wm-tabs> 
+        </wm-page-content> 
+    </wm-content> 
+    <wm-footer content="footer" name="footer1"></wm-footer> 
+</wm-page>

@@ -1,0 +1,181 @@
+{
+  "tags" : [ {
+    "description" : "Rest service swagger documentation",
+    "name" : "RestServiceVirtualController"
+  } ],
+  "basePath" : "${rest.Post_InsertQuery.basepath}",
+  "paths" : {
+    "/TestingAllProcedureScenarios/services/db123__/queryExecutor/queries/SV_InsertQuery" : {
+      "x-WM-BASE_PATH" : "/TestingAllProcedureScenarios/services/db123__/queryExecutor/queries/SV_InsertQuery",
+      "x-WM-TAG" : "RestServiceVirtualController",
+      "post" : {
+        "tags" : [ "RestServiceVirtualController" ],
+        "x-WM-METHOD_NAME" : "invoke",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "produces" : [ "application/json" ],
+        "security" : [ {
+          "basic" : [ ]
+        } ],
+        "parameters" : [ {
+          "schema" : {
+            "$ref" : "#/definitions/RootRequest"
+          },
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.Object",
+          "description" : "RequestBody",
+          "name" : "RequestBody",
+          "required" : false,
+          "in" : "body"
+        } ],
+        "consumes" : [ "application/json" ],
+        "responses" : {
+          "200" : {
+            "schema" : {
+              "$ref" : "#/definitions/RootResponse"
+            },
+            "description" : "Success"
+          }
+        },
+        "operationId" : "Post_InsertQuery_RestServiceVirtualController-invoke"
+      },
+      "x-WM-RELATIVE_PATH" : "",
+      "x-WM-COMPLETE_PATH" : "${rest.Post_InsertQuery.scheme}://${rest.Post_InsertQuery.host}${rest.Post_InsertQuery.basepath}/TestingAllProcedureScenarios/services/db123__/queryExecutor/queries/SV_InsertQuery"
+    }
+  },
+  "host" : "${rest.Post_InsertQuery.host}",
+  "schemes" : [ "${rest.Post_InsertQuery.scheme}" ],
+  "swagger" : "2.0",
+  "definitions" : {
+    "RootResponse" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "Post_InsertQuery.RootResponse",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ],
+      "properties" : {
+        "errors" : {
+          "$ref" : "#/definitions/errors"
+        }
+      },
+      "required" : [ "errors" ]
+    },
+    "RootRequest" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "Post_InsertQuery.RootRequest",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ],
+      "properties" : {
+        "CLOBCOL" : {
+          "type" : "string"
+        },
+        "TEXTCOL" : {
+          "type" : "string"
+        },
+        "INTCOL" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "BOOLEANCOL" : {
+          "type" : "boolean"
+        },
+        "DATECOL" : {
+          "type" : "string"
+        },
+        "TIMESTAMPCOL" : {
+          "type" : "string"
+        },
+        "DATETIMECOL" : {
+          "type" : "string"
+        },
+        "TIMECOL" : {
+          "type" : "string"
+        },
+        "FLOATCOL" : {
+          "format" : "double",
+          "type" : "number"
+        },
+        "STRINGCOL" : {
+          "type" : "string"
+        },
+        "SHORTCOL" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "LONGCOL" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "CHARCOL" : {
+          "type" : "string"
+        },
+        "BIGINTCOL" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "ASSIGNEDID" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "BYTECOL" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "BIGDECCOL" : {
+          "format" : "double",
+          "type" : "number"
+        },
+        "DOUBLECOL" : {
+          "format" : "int32",
+          "type" : "integer"
+        }
+      },
+      "required" : [ "ASSIGNEDID", "BIGDECCOL", "BIGINTCOL", "BOOLEANCOL", "BYTECOL", "CHARCOL", "CLOBCOL", "DATECOL", "DATETIMECOL", "DOUBLECOL", "FLOATCOL", "INTCOL", "LONGCOL", "SHORTCOL", "STRINGCOL", "TEXTCOL", "TIMECOL", "TIMESTAMPCOL" ]
+    },
+    "errors" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "Post_InsertQuery.errors",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ],
+      "properties" : {
+        "error" : {
+          "x-WM-IS_LIST" : true,
+          "items" : {
+            "$ref" : "#/definitions/errorEntryItem"
+          },
+          "uniqueItems" : false,
+          "type" : "array"
+        }
+      },
+      "required" : [ "error" ]
+    },
+    "errorEntryItem" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "Post_InsertQuery.errorEntryItem",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ],
+      "properties" : {
+        "message" : {
+          "type" : "string"
+        },
+        "id" : {
+          "type" : "string"
+        },
+        "parameters" : {
+          "x-WM-IS_LIST" : true,
+          "items" : {
+            "type" : "string"
+          },
+          "uniqueItems" : false,
+          "type" : "array"
+        },
+        "messageKey" : {
+          "type" : "string"
+        }
+      },
+      "required" : [ "id", "message", "messageKey", "parameters" ]
+    }
+  },
+  "securityDefinitions" : {
+    "basic" : {
+      "type" : "basic"
+    }
+  },
+  "info" : {
+    "x-WM-SERVICE_TYPE" : "RestService",
+    "x-WM-API_ID" : "492d4e98-15fa-4e9e-8df6-d3f4b445271f",
+    "x-WM-USE_PROXY_FOR_WEB" : true,
+    "x-WM-SERVICE_ID" : "wavemakeronline",
+    "x-WM-USE_PROXY_FOR_MOBILE" : true,
+    "version" : "2.0"
+  }
+}

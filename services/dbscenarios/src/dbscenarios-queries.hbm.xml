@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <query name="HQL_MysqlAllTypesWithAlias">
+        <![CDATA[
+        select pkId AS PKID,byteCol AS BYTECOL,shortCol AS SHORTCOL,doubleCol AS DOUBLECOL,longCol AS LONGCOL,floatCol AS FLOATCOL,bigintCol AS BIGINTCOL,bigdecCol AS BIGDECCOL,charCol AS CHARCOL,stringCol AS STRINGCOL,textCol AS TEXTCOL,clobCol AS CLOBCOL,dateCol AS DATECOL,timestampCol AS TIMESTAMPCOL,booleanCol AS BOOLEANCOL,blobCol AS BLOBCOL from AllTypes
+        ]]>
+    </query>
+
+    <query name="HQL_MysqlAllTypesWithAlias__count">
+        <![CDATA[
+        select count(*)  from AllTypes
+        ]]>
+    </query>
+
+    <sql-query name="SV_GetBelowPK10">
+        <![CDATA[
+        select * from `ALL TYPES` where `PK ID`<10
+        ]]>
+    </sql-query>
+
+    <sql-query name="SV_GetBelowPK10__count">
+        <![CDATA[
+        select count(*) from (select * from `ALL TYPES` where `PK ID`<10) wmTempTable
+        ]]>
+    </sql-query>
+
+    <sql-query name="SV_GetSingleRecord">
+        <![CDATA[
+        select * from `ALL TYPES` where `PK ID`=:Id
+        ]]>
+    <query-param name="Id" type="java.lang.Integer"/>
+    </sql-query>
+
+    <sql-query name="SV_GetSingleRecord__count">
+        <![CDATA[
+        select count(*) from (select * from `ALL TYPES` where `PK ID`=:Id) wmTempTable
+        ]]>
+    <query-param name="Id" type="java.lang.Integer"/>
+    </sql-query>
+
+    <sql-query name="SV_LoggedinUser">
+        <![CDATA[
+        select * from `ALL TYPES` where `STRING COL`=:SERVER__USER_NAME__stringcol
+        ]]>
+    <query-param name="SERVER__USER_NAME__stringcol" type="java.lang.String"/>
+    </sql-query>
+
+    <sql-query name="SV_LoggedinUser__count">
+        <![CDATA[
+        select count(*) from (select * from `ALL TYPES` where `STRING COL`=:SERVER__USER_NAME__stringcol) wmTempTable
+        ]]>
+    <query-param name="SERVER__USER_NAME__stringcol" type="java.lang.String"/>
+    </sql-query>
+
+    <sql-query name="SV_InsertQueryUsingSystemParams">
+        <![CDATA[
+        insert into `ALL TYPES`(`BYTE COL`,`SHORT COL`,`INT COL`,`FLOAT COL`,`LONG COL`,`DOUBLE COL`,`BIGINT COL`,`BIGDEC COL`,`CHAR COL`,`STRING COL`,`TEXT COL`,`CLOB COL`,`DATE COL`,`TIME COL`,`DATETIME COL`,`TIMESTAMP COL`,`BOOLEAN COL`) values(:BYTECOL,:SERVER__USER_ID__SHORTCOL,:INTCOL,:FLOATCOL,:LONGCOL,:DOUBLECOL,:BIGINTCOL,:BIGDECCOL,:CHARCOL,:SERVER__USER_NAME__STRINGCOL,:TEXTCOL,:CLOBCOL,:SERVER__DATE__DATECOL,:SERVER__TIME__TIMECOL,:SERVER__DATE_TIME__DATETIMECOL,:TIMESTAMPCOL,:BOOLEANCOL)
+        ]]>
+    <query-param name="BYTECOL" type="java.lang.Byte"/>
+    <query-param name="SERVER__USER_ID__SHORTCOL" type="java.lang.Integer"/>
+    <query-param name="INTCOL" type="java.lang.Integer"/>
+    <query-param name="FLOATCOL" type="java.lang.Float"/>
+    <query-param name="LONGCOL" type="java.lang.Long"/>
+    <query-param name="DOUBLECOL" type="java.lang.Double"/>
+    <query-param name="BIGINTCOL" type="java.math.BigInteger"/>
+    <query-param name="BIGDECCOL" type="java.math.BigDecimal"/>
+    <query-param name="CHARCOL" type="java.lang.Character"/>
+    <query-param name="SERVER__USER_NAME__STRINGCOL" type="java.lang.String"/>
+    <query-param name="TEXTCOL" type="java.lang.String"/>
+    <query-param name="CLOBCOL" type="java.lang.String"/>
+    <query-param name="SERVER__DATE__DATECOL" type="java.sql.Date"/>
+    <query-param name="SERVER__TIME__TIMECOL" type="java.sql.Time"/>
+    <query-param name="SERVER__DATE_TIME__DATETIMECOL" type="java.time.LocalDateTime"/>
+    <query-param name="TIMESTAMPCOL" type="java.sql.Timestamp"/>
+    <query-param name="BOOLEANCOL" type="java.lang.Boolean"/>
+    </sql-query>
+
+    <query name="SV_ByteDatetime">
+        <![CDATA[
+        select datetimeCol,byteCol from AllTypes
+        ]]>
+    </query>
+
+    <query name="SV_ByteDatetime__count">
+        <![CDATA[
+        select count(*)  from AllTypes
+        ]]>
+    </query>
+
+    <sql-query name="SV_ALlTypesData1">
+        <![CDATA[
+        select * from `ALL TYPES`
+        ]]>
+    </sql-query>
+
+    <sql-query name="SV_ALlTypesData1__count">
+        <![CDATA[
+        select count(*) from (select * from `ALL TYPES`) wmTempTable
+        ]]>
+    </sql-query>
+
+    <sql-query name="SV_GetByDateCol">
+        <![CDATA[
+        select * from `ALL TYPES` where `DATE COL`=:datecol
+        ]]>
+    <query-param name="datecol" type="java.sql.Date"/>
+    </sql-query>
+
+    <sql-query name="SV_GetByDateCol__count">
+        <![CDATA[
+        select count(*) from (select * from `ALL TYPES` where `DATE COL`=:datecol) wmTempTable
+        ]]>
+    <query-param name="datecol" type="java.sql.Date"/>
+    </sql-query>
+
+    <sql-query name="SV_AllTypesData">
+        <![CDATA[
+        select * from `ALL TYPES`
+        ]]>
+    </sql-query>
+
+    <sql-query name="SV_AllTypesData__count">
+        <![CDATA[
+        select count(*) from (select * from `ALL TYPES`) wmTempTable
+        ]]>
+    </sql-query>
+</hibernate-mapping>

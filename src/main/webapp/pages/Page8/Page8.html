@@ -1,0 +1,37 @@
+<wm-page data-ng-controller="Page8PageController" pagetitle="Page 8" name="page1"> 
+    <wm-header content="header" name="header1"></wm-header> 
+    <wm-top-nav content="topnav" name="top_nav1"></wm-top-nav> 
+    <wm-content name="content1"> 
+        <wm-left-panel columnwidth="2" content="leftnav" name="left_panel1"></wm-left-panel> 
+        <wm-page-content columnwidth="10" name="page_content1"> 
+            <wm-table title="" dataset="bind:Variables.DbscenariosExecuteSV_ByteDatetime.dataSet" navigation="Basic" name="grid1"> 
+                <wm-table-column binding="col1" caption="Col1" pcdisplay="true" mobiledisplay="true"></wm-table-column> 
+                <wm-table-column binding="col0.columnMapper" caption="Col0 Column Mapper" pcdisplay="true" mobiledisplay="true"></wm-table-column> 
+                <wm-table-column binding="col0.sqlTypes" caption="Col0 Sql Types" pcdisplay="true" mobiledisplay="true"></wm-table-column> 
+            </wm-table> 
+            <wm-button class="btn-default" caption="Button" type="button" margin="unset 0.5em" name="button1" on-click="Variables.serviceVariable1.invoke()"></wm-button> 
+            <wm-table title="" dataset="bind:Variables.serviceVariable1.dataSet" navigation="Basic" name="grid3"> 
+                <wm-table-column binding="pkId" caption="Pk Id" pcdisplay="true" mobiledisplay="true"></wm-table-column> 
+                <wm-table-column binding="doubleCol" caption="Double Col" pcdisplay="true" mobiledisplay="true"></wm-table-column> 
+                <wm-table-column binding="intCol" caption="Int Col" pcdisplay="true" mobiledisplay="true"></wm-table-column> 
+                <wm-table-column binding="stringCol" caption="String Col" pcdisplay="true" mobiledisplay="true"></wm-table-column> 
+                <wm-table-column binding="bigintCol" caption="Bigint Col" pcdisplay="true" mobiledisplay="true"></wm-table-column> 
+                <wm-table-column binding="timeCol" caption="Time Col" pcdisplay="true" mobiledisplay="true"></wm-table-column> 
+                <wm-table-column binding="shortCol" caption="Short Col" pcdisplay="true" mobiledisplay="true"></wm-table-column> 
+                <wm-table-column binding="floatCol" caption="Float Col" pcdisplay="true" mobiledisplay="true"></wm-table-column> 
+                <wm-table-column binding="blobCol" caption="Blob Col" pcdisplay="true" mobiledisplay="true"></wm-table-column> 
+                <wm-table-column binding="booleanCol" caption="Boolean Col" pcdisplay="true" mobiledisplay="true"></wm-table-column> 
+                <wm-table-column binding="dateCol" caption="Date Col" pcdisplay="true" mobiledisplay="true"></wm-table-column> 
+                <wm-table-column binding="timestampCol" caption="Timestamp Col" pcdisplay="true" mobiledisplay="true"></wm-table-column> 
+                <wm-table-column binding="bigdecCol" caption="Bigdec Col" pcdisplay="true" mobiledisplay="true"></wm-table-column> 
+                <wm-table-column binding="longCol" caption="Long Col" pcdisplay="true" mobiledisplay="true"></wm-table-column> 
+                <wm-table-column binding="textCol" caption="Text Col" pcdisplay="true" mobiledisplay="true"></wm-table-column> 
+                <wm-table-column binding="datetimeCol" caption="Datetime Col" pcdisplay="true" mobiledisplay="true"></wm-table-column> 
+                <wm-table-column binding="charCol" caption="Char Col" pcdisplay="true" mobiledisplay="true"></wm-table-column> 
+                <wm-table-column binding="clobCol" caption="Clob Col" pcdisplay="true" mobiledisplay="true"></wm-table-column> 
+                <wm-table-column binding="byteCol" caption="Byte Col" pcdisplay="true" mobiledisplay="true"></wm-table-column> 
+            </wm-table> 
+        </wm-page-content> 
+    </wm-content> 
+    <wm-footer content="footer" name="footer1"></wm-footer> 
+</wm-page>

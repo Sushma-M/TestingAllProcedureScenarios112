@@ -1,0 +1,292 @@
+<wm-page data-ng-controller="Page4PageController" pagetitle="Page 4" name="page1"> 
+    <wm-header content="header" name="header1"></wm-header> 
+    <wm-top-nav content="topnav" name="top_nav1"></wm-top-nav> 
+    <wm-content name="content1"> 
+        <wm-left-panel columnwidth="2" content="leftnav" name="left_panel1"></wm-left-panel> 
+        <wm-page-content columnwidth="10" name="page_content1"> 
+            <wm-tabs name="tabs1"> 
+                <wm-tabpane name="tabpane1" title="Procedure Insert" badgevalue="Mysql" badgetype="info"> 
+                    <wm-layoutgrid name="layoutgrid2" columns="4"> 
+                        <wm-gridrow name="gridrow12"> 
+                            <wm-gridcolumn columnwidth="3" name="gridcolumn22"> 
+                                <wm-button class="btn-default" caption="Procedure Required  True" type="button" margin="unset 0.5em" name="button4" on-click="Widgets.dbscenariosexecuteprocedureinsertDialog.open()"></wm-button> 
+                            </wm-gridcolumn> 
+                            <wm-gridcolumn columnwidth="3" name="gridcolumn23"> 
+                                <wm-button class="btn-default" caption="Procedure Required  False" type="button" margin="unset 0.5em" on-click="Widgets.dbscenariosexecuteprocedureinsertrequiredfalseDialog.open()" name="button5"></wm-button> 
+                            </wm-gridcolumn> 
+                            <wm-gridcolumn columnwidth="3" name="gridcolumn24"></wm-gridcolumn> 
+                            <wm-gridcolumn columnwidth="3" name="gridcolumn25"></wm-gridcolumn> 
+                        </wm-gridrow> 
+                    </wm-layoutgrid> 
+                </wm-tabpane> 
+                <wm-tabpane name="tabpane2" title="Mysql All Types With Alias"> 
+                    <wm-table title="Mysql All Types With Alias" dataset="bind:Variables.DbscenariosExecuteHQL_MysqlAllTypesWithAlias.dataSet" navigation="Classic" name="grid1" filtermode="multicolumn"> 
+                        <wm-table-column binding="textcol" caption="Textcol" type="string" edit-widget-type="text" show="true" readonly="false"></wm-table-column> 
+                        <wm-table-column binding="doublecol" caption="Doublecol" type="string" edit-widget-type="text" show="true" readonly="false"></wm-table-column> 
+                        <wm-table-column binding="blobcol" caption="Blobcol" type="string" edit-widget-type="text" show="true" readonly="false"></wm-table-column> 
+                        <wm-table-column binding="timestampcol" caption="Timestampcol" type="string" datepattern="yyyy-MM-dd hh:mm:ss:sss a" formatpattern="toDate" edit-widget-type="text" show="true" readonly="false"></wm-table-column> 
+                        <wm-table-column binding="booleancol" caption="Booleancol" type="string" edit-widget-type="text" show="true" readonly="false"></wm-table-column> 
+                        <wm-table-column binding="longcol" caption="Longcol" type="string" edit-widget-type="text" show="true" readonly="false"></wm-table-column> 
+                        <wm-table-column binding="floatcol" caption="Floatcol" type="string" edit-widget-type="text" show="true" readonly="false"></wm-table-column> 
+                        <wm-table-column binding="bytecol" caption="Bytecol" type="string" edit-widget-type="text" show="true" readonly="false"></wm-table-column> 
+                        <wm-table-column binding="clobcol" caption="Clobcol" type="string" edit-widget-type="text" show="true" readonly="false"></wm-table-column> 
+                        <wm-table-column binding="charcol" caption="Charcol" type="string" edit-widget-type="text" show="true" readonly="false"></wm-table-column> 
+                        <wm-table-column binding="stringcol" caption="Stringcol" type="string" edit-widget-type="text" show="true" readonly="false"></wm-table-column> 
+                        <wm-table-column binding="pkid" caption="Pkid" type="string" edit-widget-type="text" show="true" readonly="false"></wm-table-column> 
+                        <wm-table-column binding="datecol" caption="Datecol" type="string" datepattern="yyyy, MMM dd" formatpattern="toDate" edit-widget-type="text" show="true" filterwidget="date" readonly="false"></wm-table-column> 
+                        <wm-table-column binding="bigdeccol" caption="Bigdeccol" type="string" edit-widget-type="text" show="true" readonly="false"></wm-table-column> 
+                        <wm-table-column binding="bigintcol" caption="Bigintcol" type="string" edit-widget-type="text" show="true" readonly="false"></wm-table-column> 
+                        <wm-table-column binding="shortcol" caption="Shortcol" type="string" edit-widget-type="text" show="true" readonly="false"></wm-table-column> 
+                    </wm-table> 
+                </wm-tabpane> 
+                <wm-tabpane name="tabpane3" title="INSERT QUERY WITH SYSTEM PARAMS"> 
+                    <wm-form errormessage="" captionposition="top" title="Form" enctype="application/x-www-form-urlencoded" method="post" dataset="bind:Variables.DbscenariosExecuteSV_InsertQueryUsingSystemParams.dataSet" captionalign="left" name="form3"> 
+                        <wm-layoutgrid columns="2" name="layoutgrid4"> 
+                            <wm-gridrow name="gridrow20_1"> 
+                                <wm-gridcolumn columnwidth="6" name="gridcolumn39_1"> 
+                                    <wm-form-field readonly="false" name="FLOATCOL" displayname="Floatcol" key="FLOATCOL" type="number" show="true" widget="number"></wm-form-field> 
+                                </wm-gridcolumn> 
+                                <wm-gridcolumn columnwidth="6" name="gridcolumn40_1"> 
+                                    <wm-form-field readonly="false" name="BOOLEANCOL" displayname="Booleancol" key="BOOLEANCOL" type="boolean" show="true" widget="checkbox"></wm-form-field> 
+                                </wm-gridcolumn> 
+                            </wm-gridrow> 
+                            <wm-gridrow name="gridrow21_1"> 
+                                <wm-gridcolumn columnwidth="6" name="gridcolumn41_1"> 
+                                    <wm-form-field readonly="false" name="TEXTCOL" displayname="Textcol" key="TEXTCOL" type="string" show="true" widget="text"></wm-form-field> 
+                                </wm-gridcolumn> 
+                                <wm-gridcolumn columnwidth="6" name="gridcolumn42_1"> 
+                                    <wm-form-field readonly="false" name="LONGCOL" displayname="Longcol" key="LONGCOL" type="integer" show="true" widget="number"></wm-form-field> 
+                                </wm-gridcolumn> 
+                            </wm-gridrow> 
+                            <wm-gridrow name="gridrow22"> 
+                                <wm-gridcolumn columnwidth="6" name="gridcolumn43"> 
+                                    <wm-form-field readonly="false" name="CHARCOL" displayname="Charcol" key="CHARCOL" type="string" show="true" widget="text"></wm-form-field> 
+                                </wm-gridcolumn> 
+                                <wm-gridcolumn columnwidth="6" name="gridcolumn44"> 
+                                    <wm-form-field readonly="false" name="CLOBCOL" displayname="Clobcol" key="CLOBCOL" type="string" show="true" widget="text"></wm-form-field> 
+                                </wm-gridcolumn> 
+                            </wm-gridrow> 
+                            <wm-gridrow name="gridrow23"> 
+                                <wm-gridcolumn columnwidth="6" name="gridcolumn45"> 
+                                    <wm-form-field readonly="false" name="BYTECOL" displayname="Bytecol" key="BYTECOL" type="string" show="true" widget="number"></wm-form-field> 
+                                </wm-gridcolumn> 
+                                <wm-gridcolumn columnwidth="6" name="gridcolumn46"> 
+                                    <wm-form-field readonly="false" name="DOUBLECOL" displayname="Doublecol" key="DOUBLECOL" type="number" show="true" widget="number"></wm-form-field> 
+                                </wm-gridcolumn> 
+                            </wm-gridrow> 
+                            <wm-gridrow name="gridrow24"> 
+                                <wm-gridcolumn columnwidth="6" name="gridcolumn47"> 
+                                    <wm-form-field readonly="false" name="INTCOL" displayname="Intcol" key="INTCOL" type="integer" show="true" widget="number"></wm-form-field> 
+                                </wm-gridcolumn> 
+                                <wm-gridcolumn columnwidth="6" name="gridcolumn48"> 
+                                    <wm-form-field readonly="false" name="TIMESTAMPCOL" displayname="Timestampcol" key="TIMESTAMPCOL" type="string" show="true" widget="timestamp"></wm-form-field> 
+                                </wm-gridcolumn> 
+                            </wm-gridrow> 
+                            <wm-gridrow name="gridrow25"> 
+                                <wm-gridcolumn columnwidth="6" name="gridcolumn49"> 
+                                    <wm-form-field readonly="false" name="BIGINTCOL" displayname="Bigintcol" key="BIGINTCOL" type="integer" show="true" widget="number"></wm-form-field> 
+                                </wm-gridcolumn> 
+                                <wm-gridcolumn columnwidth="6" name="gridcolumn50"> 
+                                    <wm-form-field readonly="false" name="BIGDECCOL" displayname="Bigdeccol" key="BIGDECCOL" type="number" show="true" widget="number"></wm-form-field> 
+                                </wm-gridcolumn> 
+                            </wm-gridrow> 
+                        </wm-layoutgrid> 
+                        <wm-buttongroup horizontalalign="right" class="form-action col-md-12" name="buttongroup3"> 
+                            <wm-button caption="Reset" type="reset" class="btn-secondary" name="button9"></wm-button> 
+                            <wm-button caption="Cancel" type="button" class="btn-warning" name="button10"></wm-button> 
+                            <wm-button caption="Save" type="submit" class="btn-primary" name="button11"></wm-button> 
+                        </wm-buttongroup> 
+                    </wm-form> 
+                </wm-tabpane> 
+                <wm-tabpane name="tabpane4" title="GET DATA BY CURRENT DATE"> 
+                    <wm-table title="" dataset="bind:Variables.DbscenariosExecuteProcedure_GetByCurrentDate.dataSet.content" navigation="Basic" name="grid2"> 
+                        <wm-table-column binding="pkId" caption="Pk Id" type="string" edit-widget-type="text" show="true" readonly="false"></wm-table-column> 
+                        <wm-table-column binding="doubleCol" caption="Double Col" type="string" edit-widget-type="text" show="true" readonly="false"></wm-table-column> 
+                        <wm-table-column binding="intCol" caption="Int Col" type="string" edit-widget-type="text" show="true" readonly="false"></wm-table-column> 
+                        <wm-table-column binding="stringCol" caption="String Col" type="string" edit-widget-type="text" show="true" readonly="false"></wm-table-column> 
+                        <wm-table-column binding="bigintCol" caption="Bigint Col" type="string" edit-widget-type="text" show="true" readonly="false"></wm-table-column> 
+                        <wm-table-column binding="timeCol" caption="Time Col" type="string" edit-widget-type="text" show="true" readonly="false"></wm-table-column> 
+                        <wm-table-column binding="shortCol" caption="Short Col" type="string" edit-widget-type="text" show="true" readonly="false"></wm-table-column> 
+                        <wm-table-column binding="floatCol" caption="Float Col" type="string" edit-widget-type="text" show="true" readonly="false"></wm-table-column> 
+                        <wm-table-column binding="booleanCol" caption="Boolean Col" type="string" edit-widget-type="text" show="true" readonly="false"></wm-table-column> 
+                        <wm-table-column binding="blobCol" caption="Blob Col" type="string" edit-widget-type="text" show="true" readonly="false"></wm-table-column> 
+                        <wm-table-column binding="dateCol" caption="Date Col" type="string" edit-widget-type="text" show="true" readonly="false"></wm-table-column> 
+                        <wm-table-column binding="timestampCol" caption="Timestamp Col" type="string" edit-widget-type="text" show="true" readonly="false"></wm-table-column> 
+                        <wm-table-column binding="longCol" caption="Long Col" type="string" edit-widget-type="text" show="true" readonly="false"></wm-table-column> 
+                        <wm-table-column binding="bigdecCol" caption="Bigdec Col" type="string" edit-widget-type="text" show="true" readonly="false"></wm-table-column> 
+                        <wm-table-column binding="textCol" caption="Text Col" type="string" edit-widget-type="text" show="true" readonly="false"></wm-table-column> 
+                        <wm-table-column binding="datetimeCol" caption="Datetime Col" type="string" edit-widget-type="text" show="true" readonly="false"></wm-table-column> 
+                        <wm-table-column binding="charCol" caption="Char Col" type="string" edit-widget-type="text" show="true" readonly="false"></wm-table-column> 
+                        <wm-table-column binding="clobCol" caption="Clob Col" type="string" edit-widget-type="text" show="true" readonly="false"></wm-table-column> 
+                        <wm-table-column binding="byteCol" caption="Byte Col" type="string" edit-widget-type="text" show="true" readonly="false"></wm-table-column> 
+                    </wm-table> 
+                </wm-tabpane> 
+            </wm-tabs> 
+        </wm-page-content> 
+    </wm-content> 
+    <wm-footer content="footer" name="footer1"></wm-footer> 
+    <wm-view class="dialog-view" name="view1"> 
+        <wm-dialog dialogtype="design-dialog" title="DbscenariosExecuteProcedure_Insert Info" iconclass="wi wi-edit" modal="true" name="dbscenariosexecuteprocedureinsertDialog"> 
+            <wm-form errormessage="" captionposition="top" title="" enctype="application/x-www-form-urlencoded" method="get" dataset="bind:Variables.DbscenariosExecuteProcedure_Insert.dataSet" captionalign="left" name="form1"> 
+                <wm-layoutgrid columns="2" name="layoutgrid1"> 
+                    <wm-gridrow name="gridrow1"> 
+                        <wm-gridcolumn columnwidth="6" name="gridcolumn1"> 
+                            <wm-form-field name="BYTECOL" readonly="false" displayname="Bytecol" key="BYTECOL" type="string" show="true" widget="number" inputtype="number" placeholder="Enter value"></wm-form-field> 
+                        </wm-gridcolumn> 
+                        <wm-gridcolumn columnwidth="6" name="gridcolumn2"> 
+                            <wm-form-field name="SHORTCOL" readonly="false" displayname="Shortcol" key="SHORTCOL" type="integer" show="true" widget="number" inputtype="number" placeholder="Enter value"></wm-form-field> 
+                        </wm-gridcolumn> 
+                    </wm-gridrow> 
+                    <wm-gridrow name="gridrow2"> 
+                        <wm-gridcolumn columnwidth="6" name="gridcolumn3"> 
+                            <wm-form-field name="INTCOL" readonly="false" displayname="Intcol" key="INTCOL" type="integer" show="true" widget="number" inputtype="number" placeholder="Enter value"></wm-form-field> 
+                        </wm-gridcolumn> 
+                        <wm-gridcolumn columnwidth="6" name="gridcolumn4"> 
+                            <wm-form-field name="LONGCOL" readonly="false" displayname="Longcol" key="LONGCOL" type="integer" show="true" widget="number" inputtype="number" placeholder="Enter value"></wm-form-field> 
+                        </wm-gridcolumn> 
+                    </wm-gridrow> 
+                    <wm-gridrow name="gridrow3"> 
+                        <wm-gridcolumn columnwidth="6" name="gridcolumn5"> 
+                            <wm-form-field name="FLOATCOL" readonly="false" displayname="Floatcol" key="FLOATCOL" type="number" show="true" widget="number" inputtype="number" placeholder="Enter value"></wm-form-field> 
+                        </wm-gridcolumn> 
+                        <wm-gridcolumn columnwidth="6" name="gridcolumn6"> 
+                            <wm-form-field name="DOUBLECOL" readonly="false" displayname="Doublecol" key="DOUBLECOL" type="number" show="true" widget="number" inputtype="number" placeholder="Enter value"></wm-form-field> 
+                        </wm-gridcolumn> 
+                    </wm-gridrow> 
+                    <wm-gridrow name="gridrow4"> 
+                        <wm-gridcolumn columnwidth="6" name="gridcolumn7"> 
+                            <wm-form-field name="BIGDECCOL" readonly="false" displayname="Bigdeccol" key="BIGDECCOL" type="number" show="true" widget="number" inputtype="number" placeholder="Enter value"></wm-form-field> 
+                        </wm-gridcolumn> 
+                        <wm-gridcolumn columnwidth="6" name="gridcolumn8"> 
+                            <wm-form-field name="BIGINTCOL" readonly="false" displayname="Bigintcol" key="BIGINTCOL" type="integer" show="true" widget="number" inputtype="number" placeholder="Enter value"></wm-form-field> 
+                        </wm-gridcolumn> 
+                    </wm-gridrow> 
+                    <wm-gridrow name="gridrow5"> 
+                        <wm-gridcolumn columnwidth="6" name="gridcolumn9"> 
+                            <wm-form-field name="CHARCOL" readonly="false" displayname="Charcol" key="CHARCOL" type="string" show="true" widget="text" inputtype="text" placeholder="Enter value"></wm-form-field> 
+                        </wm-gridcolumn> 
+                        <wm-gridcolumn columnwidth="6" name="gridcolumn10"> 
+                            <wm-form-field name="STRINGCOL" readonly="false" displayname="Stringcol" key="STRINGCOL" type="string" show="true" widget="text" inputtype="text" placeholder="Enter value"></wm-form-field> 
+                        </wm-gridcolumn> 
+                    </wm-gridrow> 
+                    <wm-gridrow name="gridrow6"> 
+                        <wm-gridcolumn columnwidth="6" name="gridcolumn11"> 
+                            <wm-form-field name="CLOBCOL" readonly="false" displayname="Clobcol" key="CLOBCOL" type="string" show="true" widget="text" inputtype="text" placeholder="Enter value"></wm-form-field> 
+                        </wm-gridcolumn> 
+                        <wm-gridcolumn columnwidth="6" name="gridcolumn12"> 
+                            <wm-form-field name="TEXTCOL" readonly="false" displayname="Textcol" key="TEXTCOL" type="string" show="true" widget="text" inputtype="text" placeholder="Enter value"></wm-form-field> 
+                        </wm-gridcolumn> 
+                    </wm-gridrow> 
+                    <wm-gridrow name="gridrow7"> 
+                        <wm-gridcolumn columnwidth="6" name="gridcolumn13"> 
+                            <wm-form-field name="DATECOL" readonly="false" displayname="Datecol" key="DATECOL" type="string" show="true" widget="date" placeholder="Select date"></wm-form-field> 
+                        </wm-gridcolumn> 
+                        <wm-gridcolumn columnwidth="6" name="gridcolumn14"> 
+                            <wm-form-field name="TIMECOL" readonly="false" displayname="Timecol" key="TIMECOL" type="string" show="true" widget="time" placeholder="Select time"></wm-form-field> 
+                        </wm-gridcolumn> 
+                    </wm-gridrow> 
+                    <wm-gridrow name="gridrow8"> 
+                        <wm-gridcolumn columnwidth="6" name="gridcolumn15"> 
+                            <wm-form-field name="DATETIMECOL" readonly="false" displayname="Datetimecol" key="DATETIMECOL" type="string" show="true" widget="datetime" placeholder="Select date"></wm-form-field> 
+                        </wm-gridcolumn> 
+                        <wm-gridcolumn columnwidth="6" name="gridcolumn16"> 
+                            <wm-form-field name="TIMESTAMPCOL" readonly="false" displayname="Timestampcol" key="TIMESTAMPCOL" type="string" show="true" widget="timestamp" placeholder="Select date time"></wm-form-field> 
+                        </wm-gridcolumn> 
+                    </wm-gridrow> 
+                    <wm-gridrow name="gridrow9"> 
+                        <wm-gridcolumn columnwidth="6" name="gridcolumn17"> 
+                            <wm-form-field name="BOOLEANCOL" readonly="false" displayname="Booleancol" key="BOOLEANCOL" type="boolean" show="true" widget="checkbox" placeholder=""></wm-form-field> 
+                        </wm-gridcolumn> 
+                    </wm-gridrow> 
+                </wm-layoutgrid> 
+                <wm-buttongroup horizontalalign="right" class="form-action col-md-12" name="buttongroup1"> 
+                    <wm-button caption="Reset" type="reset" class="btn-secondary" name="button1"></wm-button> 
+                    <wm-button caption="Cancel" type="button" class="btn-warning" name="button2"></wm-button> 
+                    <wm-button caption="Save" type="submit" class="btn-primary" name="button3"></wm-button> 
+                </wm-buttongroup> 
+            </wm-form> 
+        </wm-dialog> 
+    </wm-view> 
+    <wm-view class="dialog-view" name="view2"> 
+        <wm-dialog dialogtype="design-dialog" title="DbscenariosExecuteProcedure_InsertRequiredFalse Info" iconclass="wi wi-edit" modal="true" name="dbscenariosexecuteprocedureinsertrequiredfalseDialog"> 
+            <wm-form errormessage="" captionposition="top" title="" enctype="application/x-www-form-urlencoded" method="get" dataset="bind:Variables.DbscenariosExecuteProcedure_InsertRequiredFalse.dataSet" captionalign="left" name="form2"> 
+                <wm-layoutgrid columns="2" name="layoutgrid3"> 
+                    <wm-gridrow name="gridrow13"> 
+                        <wm-gridcolumn columnwidth="6" name="gridcolumn26"> 
+                            <wm-form-field name="BYTECOL" readonly="false" displayname="Bytecol" key="BYTECOL" type="string" show="true" widget="number" inputtype="number" placeholder="Enter value"></wm-form-field> 
+                        </wm-gridcolumn> 
+                        <wm-gridcolumn columnwidth="6" name="gridcolumn27"> 
+                            <wm-form-field name="SHORTCOL" readonly="false" displayname="Shortcol" key="SHORTCOL" type="integer" show="true" widget="number" inputtype="number" placeholder="Enter value"></wm-form-field> 
+                        </wm-gridcolumn> 
+                    </wm-gridrow> 
+                    <wm-gridrow name="gridrow14"> 
+                        <wm-gridcolumn columnwidth="6" name="gridcolumn28"> 
+                            <wm-form-field name="INTCOL" readonly="false" displayname="Intcol" key="INTCOL" type="integer" show="true" widget="number" inputtype="number" placeholder="Enter value"></wm-form-field> 
+                        </wm-gridcolumn> 
+                        <wm-gridcolumn columnwidth="6" name="gridcolumn29"> 
+                            <wm-form-field name="LONGCOL" readonly="false" displayname="Longcol" key="LONGCOL" type="integer" show="true" widget="number" inputtype="number" placeholder="Enter value"></wm-form-field> 
+                        </wm-gridcolumn> 
+                    </wm-gridrow> 
+                    <wm-gridrow name="gridrow15"> 
+                        <wm-gridcolumn columnwidth="6" name="gridcolumn30"> 
+                            <wm-form-field name="FLOATCOL" readonly="false" displayname="Floatcol" key="FLOATCOL" type="number" show="true" widget="number" inputtype="number" placeholder="Enter value"></wm-form-field> 
+                        </wm-gridcolumn> 
+                        <wm-gridcolumn columnwidth="6" name="gridcolumn31"> 
+                            <wm-form-field name="DOUBLECOL" readonly="false" displayname="Doublecol" key="DOUBLECOL" type="number" show="true" widget="number" inputtype="number" placeholder="Enter value"></wm-form-field> 
+                        </wm-gridcolumn> 
+                    </wm-gridrow> 
+                    <wm-gridrow name="gridrow16"> 
+                        <wm-gridcolumn columnwidth="6" name="gridcolumn32"> 
+                            <wm-form-field name="BIGDECCOL" readonly="false" displayname="Bigdeccol" key="BIGDECCOL" type="number" show="true" widget="number" inputtype="number" placeholder="Enter value"></wm-form-field> 
+                        </wm-gridcolumn> 
+                        <wm-gridcolumn columnwidth="6" name="gridcolumn33"> 
+                            <wm-form-field name="BIGINTCOL" readonly="false" displayname="Bigintcol" key="BIGINTCOL" type="integer" show="true" widget="number" inputtype="number" placeholder="Enter value"></wm-form-field> 
+                        </wm-gridcolumn> 
+                    </wm-gridrow> 
+                    <wm-gridrow name="gridrow17"> 
+                        <wm-gridcolumn columnwidth="6" name="gridcolumn34"> 
+                            <wm-form-field name="CHARCOL" readonly="false" displayname="Charcol" key="CHARCOL" type="string" show="true" widget="text" inputtype="text" placeholder="Enter value"></wm-form-field> 
+                        </wm-gridcolumn> 
+                        <wm-gridcolumn columnwidth="6" name="gridcolumn35"> 
+                            <wm-form-field name="STRINGCOL" readonly="false" displayname="Stringcol" key="STRINGCOL" type="string" show="true" widget="text" inputtype="text" placeholder="Enter value"></wm-form-field> 
+                        </wm-gridcolumn> 
+                    </wm-gridrow> 
+                    <wm-gridrow name="gridrow18"> 
+                        <wm-gridcolumn columnwidth="6" name="gridcolumn36"> 
+                            <wm-form-field name="CLOBCOL" readonly="false" displayname="Clobcol" key="CLOBCOL" type="string" show="true" widget="text" inputtype="text" placeholder="Enter value"></wm-form-field> 
+                        </wm-gridcolumn> 
+                        <wm-gridcolumn columnwidth="6" name="gridcolumn37"> 
+                            <wm-form-field name="TEXTCOL" readonly="false" displayname="Textcol" key="TEXTCOL" type="string" show="true" widget="text" inputtype="text" placeholder="Enter value"></wm-form-field> 
+                        </wm-gridcolumn> 
+                    </wm-gridrow> 
+                    <wm-gridrow name="gridrow19"> 
+                        <wm-gridcolumn columnwidth="6" name="gridcolumn38"> 
+                            <wm-form-field name="DATECOL" readonly="false" displayname="Datecol" key="DATECOL" type="string" show="true" widget="date" placeholder="Select date"></wm-form-field> 
+                        </wm-gridcolumn> 
+                        <wm-gridcolumn columnwidth="6" name="gridcolumn39"> 
+                            <wm-form-field name="TIMECOL" readonly="false" displayname="Timecol" key="TIMECOL" type="string" show="true" widget="time" placeholder="Select time"></wm-form-field> 
+                        </wm-gridcolumn> 
+                    </wm-gridrow> 
+                    <wm-gridrow name="gridrow20"> 
+                        <wm-gridcolumn columnwidth="6" name="gridcolumn40"> 
+                            <wm-form-field name="DATETIMECOL" readonly="false" displayname="Datetimecol" key="DATETIMECOL" type="string" show="true" widget="datetime" placeholder="Select date"></wm-form-field> 
+                        </wm-gridcolumn> 
+                        <wm-gridcolumn columnwidth="6" name="gridcolumn41"> 
+                            <wm-form-field name="TIMESTAMPCOL" readonly="false" displayname="Timestampcol" key="TIMESTAMPCOL" type="string" show="true" widget="timestamp" placeholder="Select date time"></wm-form-field> 
+                        </wm-gridcolumn> 
+                    </wm-gridrow> 
+                    <wm-gridrow name="gridrow21"> 
+                        <wm-gridcolumn columnwidth="6" name="gridcolumn42"> 
+                            <wm-form-field name="BOOLEANCOL" readonly="false" displayname="Booleancol" key="BOOLEANCOL" type="boolean" show="true" widget="checkbox" placeholder=""></wm-form-field> 
+                        </wm-gridcolumn> 
+                    </wm-gridrow> 
+                </wm-layoutgrid> 
+                <wm-buttongroup horizontalalign="right" class="form-action col-md-12" name="buttongroup2"> 
+                    <wm-button caption="Reset" type="reset" class="btn-secondary" name="button6"></wm-button> 
+                    <wm-button caption="Cancel" type="button" class="btn-warning" name="button7"></wm-button> 
+                    <wm-button caption="Save" type="submit" class="btn-primary" name="button8"></wm-button> 
+                </wm-buttongroup> 
+            </wm-form> 
+        </wm-dialog> 
+    </wm-view> 
+</wm-page>

@@ -1,0 +1,68 @@
+<wm-page data-ng-controller="Live_ChartOutputToAnotherChartPageController" pagetitle="Live Chart Output To Another Chart" name="page1"> 
+    <wm-header content="header" name="header1"></wm-header> 
+    <wm-top-nav content="topnav" name="top_nav1"></wm-top-nav> 
+    <wm-content name="content1"> 
+        <wm-page-content columnwidth="12" name="page_content1"> 
+            <wm-tabs name="tabs1"> 
+                <wm-tabpane name="tabpane1" title="Live_ChartOutputToAnotherChart"> 
+                    <wm-chart type="Pie" title="Pie Chart" height="250px" iconclass="wi wi-pie-chart" name="chart6" dataset="bind:Variables.HrdbDeptData.dataSet" xaxisdatakey="deptCode" yaxisdatakey="deptId"></wm-chart> 
+                    <wm-chart type="Column" title="Column Chart" height="250px" iconclass="wi wi-bar-chart" name="chart8" dataset="bind:Variables.HrdbEmpData1.dataSet" xaxisdatakey="jobTitle" yaxisdatakey="empId"></wm-chart> 
+                </wm-tabpane> 
+                <wm-tabpane name="tabpane2" title="Query_ChartOutputToAnotherChart"> 
+                    <wm-chart type="Pie" title="Pie Chart" height="250px" iconclass="wi wi-pie-chart" name="chart9" dataset="bind:Variables.SV_HrdbDeptData.dataSet" xaxisdatakey="deptCode" yaxisdatakey="deptId"></wm-chart> 
+                    <wm-chart type="Donut" title="Donut Chart" height="250px" iconclass="wi wi-donut-large" name="chart10" dataset="bind:Variables.SV_EmpDataUsingDeptId.dataSet" xaxisdatakey="jobTitle" yaxisdatakey="empId" labeltype="value"></wm-chart> 
+                </wm-tabpane> 
+                <wm-tabpane name="tabpane3" title="WidgetBinding_ChartOutputToAnotherChart"> 
+                    <wm-chart type="Bar" title="Bar Chart" height="250px" iconclass="wi wi-bar-chart" name="chart4" dataset="bind:Variables.HrdbEmpData.dataSet" xaxisdatakey="department.deptCode" yaxisdatakey="department.q1"></wm-chart> 
+                    <wm-chart type="Donut" title="Donut Chart" height="250px" iconclass="wi wi-donut-large" name="chart5" dataset="bind:Widgets.chart4.selecteditem" xaxisdatakey="jobTitle" yaxisdatakey="empId" labeltype="value"></wm-chart> 
+                </wm-tabpane> 
+                <wm-tabpane name="tabpane4" title="Live_ChartOutputToGrid"> 
+                    <wm-chart type="Pie" title="Pie Chart" height="250px" iconclass="wi wi-pie-chart" name="chart3" dataset="bind:Variables.HrdbDeptData.dataSet" xaxisdatakey="deptCode" yaxisdatakey="q1" aggregation="maximum" aggregationcolumn="q1" groupby="deptCode" labeltype="key"></wm-chart> 
+                    <wm-table title="" dataset="bind:Widgets.chart3.selecteditem" navigation="Basic" name="grid3"> 
+                        <wm-table-column binding="deptId" caption="Dept Id" generator="identity" pcdisplay="true" mobiledisplay="true" type="integer" primary-key="true" readonly="true"></wm-table-column> 
+                        <wm-table-column binding="name" caption="Name" generator="assigned" pcdisplay="true" mobiledisplay="true" type="string"></wm-table-column> 
+                        <wm-table-column binding="budget" caption="Budget" generator="assigned" pcdisplay="true" mobiledisplay="true" type="integer"></wm-table-column> 
+                        <wm-table-column binding="q1" caption="Q1" generator="assigned" pcdisplay="true" mobiledisplay="true" type="integer"></wm-table-column> 
+                        <wm-table-column binding="q2" caption="Q2" generator="assigned" pcdisplay="true" mobiledisplay="true" type="integer"></wm-table-column> 
+                        <wm-table-column binding="q3" caption="Q3" generator="assigned" pcdisplay="true" mobiledisplay="true" type="integer"></wm-table-column> 
+                        <wm-table-column binding="q4" caption="Q4" generator="assigned" pcdisplay="true" mobiledisplay="true" type="integer"></wm-table-column> 
+                        <wm-table-column binding="deptCode" caption="Dept Code" generator="assigned" pcdisplay="true" mobiledisplay="true" type="string"></wm-table-column> 
+                        <wm-table-column binding="location" caption="Location" generator="assigned" pcdisplay="true" mobiledisplay="true" type="string"></wm-table-column> 
+                        <wm-table-column binding="tenantId" caption="Tenant Id" generator="assigned" pcdisplay="true" mobiledisplay="true" type="integer"></wm-table-column> 
+                    </wm-table> 
+                </wm-tabpane> 
+                <wm-tabpane name="tabpane5" title="Query_ChartOutputToGrid"> 
+                    <wm-chart type="Donut" title="Donut Chart" height="250px" iconclass="wi wi-donut-large" name="chart2" dataset="bind:Variables.SV_HrdbDeptData.dataSet" xaxisdatakey="deptCode" yaxisdatakey="q1"></wm-chart> 
+                    <wm-table title="" dataset="bind:Widgets.chart2.selecteditem" navigation="Pager" name="grid2"> 
+                        <wm-table-column binding="tenantId" caption="Tenant Id" pcdisplay="true" mobiledisplay="true"></wm-table-column> 
+                        <wm-table-column binding="budget" caption="Budget" pcdisplay="true" mobiledisplay="true"></wm-table-column> 
+                        <wm-table-column binding="q2" caption="Q2" pcdisplay="true" mobiledisplay="true"></wm-table-column> 
+                        <wm-table-column binding="q1" caption="Q1" pcdisplay="true" mobiledisplay="true"></wm-table-column> 
+                        <wm-table-column binding="location" caption="Location" pcdisplay="true" mobiledisplay="true"></wm-table-column> 
+                        <wm-table-column binding="q4" caption="Q4" pcdisplay="true" mobiledisplay="true"></wm-table-column> 
+                        <wm-table-column binding="name" caption="Name" pcdisplay="true" mobiledisplay="true"></wm-table-column> 
+                        <wm-table-column binding="q3" caption="Q3" pcdisplay="true" mobiledisplay="true"></wm-table-column> 
+                        <wm-table-column binding="deptCode" caption="Dept Code" pcdisplay="true" mobiledisplay="true"></wm-table-column> 
+                        <wm-table-column binding="deptId" caption="Dept Id" pcdisplay="true" mobiledisplay="true"></wm-table-column> 
+                    </wm-table> 
+                </wm-tabpane> 
+                <wm-tabpane name="tabpane6" title="WidgetBinding_ChartOutputToGrid"> 
+                    <wm-chart type="Column" title="Column Chart" height="250px" iconclass="wi wi-bar-chart" name="chart1" dataset="bind:Variables.HrdbDeptData.dataSet" xaxisdatakey="deptCode" yaxisdatakey="q1,q2,q3,q4"></wm-chart> 
+                    <wm-table title="" dataset="bind:Widgets.chart1.selecteditem" navigation="Classic" name="grid1"> 
+                        <wm-table-column binding="deptId" caption="Dept Id" generator="identity" pcdisplay="true" mobiledisplay="true" type="integer" primary-key="true" readonly="true"></wm-table-column> 
+                        <wm-table-column binding="name" caption="Name" generator="assigned" pcdisplay="true" mobiledisplay="true" type="string"></wm-table-column> 
+                        <wm-table-column binding="budget" caption="Budget" generator="assigned" pcdisplay="true" mobiledisplay="true" type="integer"></wm-table-column> 
+                        <wm-table-column binding="q1" caption="Q1" generator="assigned" pcdisplay="true" mobiledisplay="true" type="integer"></wm-table-column> 
+                        <wm-table-column binding="q2" caption="Q2" generator="assigned" pcdisplay="true" mobiledisplay="true" type="integer"></wm-table-column> 
+                        <wm-table-column binding="q3" caption="Q3" generator="assigned" pcdisplay="true" mobiledisplay="true" type="integer"></wm-table-column> 
+                        <wm-table-column binding="q4" caption="Q4" generator="assigned" pcdisplay="true" mobiledisplay="true" type="integer"></wm-table-column> 
+                        <wm-table-column binding="deptCode" caption="Dept Code" generator="assigned" pcdisplay="true" mobiledisplay="true" type="string"></wm-table-column> 
+                        <wm-table-column binding="location" caption="Location" generator="assigned" pcdisplay="true" mobiledisplay="true" type="string"></wm-table-column> 
+                        <wm-table-column binding="tenantId" caption="Tenant Id" generator="assigned" pcdisplay="true" mobiledisplay="true" type="integer"></wm-table-column> 
+                    </wm-table> 
+                </wm-tabpane> 
+            </wm-tabs> 
+        </wm-page-content> 
+    </wm-content> 
+    <wm-footer content="footer" name="footer1"></wm-footer> 
+</wm-page>

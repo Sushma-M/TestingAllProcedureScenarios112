@@ -1,0 +1,63 @@
+<wm-page data-ng-controller="Query_ChartsPageController" pagetitle="Query Charts" name="page1"> 
+    <wm-header content="header" name="header1"></wm-header> 
+    <wm-top-nav content="topnav" name="top_nav1"></wm-top-nav> 
+    <wm-content name="content1"> 
+        <wm-left-panel columnwidth="2" content="leftnav" name="left_panel1"></wm-left-panel> 
+        <wm-page-content columnwidth="10" name="page_content1"> 
+            <wm-layoutgrid name="layoutgrid1" columns="3"> 
+                <wm-gridrow name="gridrow3"> 
+                    <wm-gridcolumn columnwidth="4" name="gridcolumn5"> 
+                        <wm-chart type="Area" title="Area Chart" height="250px" iconclass="fa fa-area-chart" name="chart1" dataset="bind:Variables.Query_AllTypesData.dataSet" xaxisdatakey="stringCol" yaxisdatakey="bigdecCol,bigintCol,byteCol"></wm-chart> 
+                    </wm-gridcolumn> 
+                    <wm-gridcolumn columnwidth="4" name="gridcolumn6"> 
+                        <wm-chart type="Bar" title="Bar Chart" height="250px" iconclass="wi wi-bar-chart" name="chart2" dataset="bind:Variables.Query_AllTypesData.dataSet" xaxisdatakey="stringCol" yaxisdatakey="bigdecCol"></wm-chart> 
+                    </wm-gridcolumn> 
+                    <wm-gridcolumn columnwidth="4" name="gridcolumn7"> 
+                        <wm-chart type="Bubble" title="Bubble Chart" height="250px" iconclass="wi wi-bubble-chart" name="chart3" dataset="bind:Variables.Query_AllTypesData.dataSet" xaxisdatakey="pkId" yaxisdatakey="bigdecCol,bigintCol,intCol"></wm-chart> 
+                    </wm-gridcolumn> 
+                </wm-gridrow> 
+                <wm-gridrow name="gridrow4"> 
+                    <wm-gridcolumn columnwidth="4" name="gridcolumn8"> 
+                        <wm-chart type="Column" title="Column Chart" height="250px" iconclass="wi wi-bar-chart" name="chart4" dataset="bind:Variables.Query_AllTypesData.dataSet" xaxisdatakey="stringCol" yaxisdatakey="bigdecCol,byteCol"></wm-chart> 
+                    </wm-gridcolumn> 
+                    <wm-gridcolumn columnwidth="4" name="gridcolumn9"> 
+                        <wm-chart type="Cumulative Line" title="Cumulative Line Chart" height="250px" iconclass="wi wi-line-chart" name="chart5" dataset="bind:Variables.Query_AllTypesData.dataSet" xaxisdatakey="datetimeCol" yaxisdatakey="byteCol" xdateformat="%c" formattype="date" ynumberformat=".f"></wm-chart> 
+                    </wm-gridcolumn> 
+                    <wm-gridcolumn columnwidth="4" name="gridcolumn10"> 
+                        <wm-chart type="Donut" title="Donut Chart" height="250px" iconclass="wi wi-donut-large" name="chart6" dataset="bind:Variables.Query_AllTypesData.dataSet" xaxisdatakey="charCol" yaxisdatakey="dateCol" nodatamessage="bind:appLocale.MESSAGE_NO_DATA" loadingdatamsg="bind:appLocale.MESSAGE_LOADING" labeltype="key"></wm-chart> 
+                    </wm-gridcolumn> 
+                </wm-gridrow> 
+                <wm-gridrow name="gridrow5"> 
+                    <wm-gridcolumn columnwidth="4" name="gridcolumn11"> 
+                        <wm-chart type="Line" title="Line Chart" height="250px" iconclass="wi wi-line-chart" name="chart7" dataset="bind:Variables.Query_AllTypesData.dataSet" xaxisdatakey="dateCol" yaxisdatakey="byteCol" xdateformat="%c" formattype="date"></wm-chart> 
+                    </wm-gridcolumn> 
+                    <wm-gridcolumn columnwidth="8" name="gridcolumn12"> 
+                        <wm-chart type="Pie" title="Pie Chart" height="250px" iconclass="wi wi-pie-chart" name="chart8" dataset="bind:Variables.Query_AllTypesData.dataSet" xaxisdatakey="stringCol" yaxisdatakey="byteCol" ynumberformat=",r" labeltype="value"></wm-chart> 
+                    </wm-gridcolumn> 
+                </wm-gridrow> 
+            </wm-layoutgrid> 
+            <wm-table title="" dataset="bind:Variables.Query_AllTypesData.dataSet" navigation="Classic" name="grid1"> 
+                <wm-table-column binding="pkId" caption="Pk Id" pcdisplay="true" mobiledisplay="true"></wm-table-column> 
+                <wm-table-column binding="doubleCol" caption="Double Col" pcdisplay="true" mobiledisplay="true"></wm-table-column> 
+                <wm-table-column binding="intCol" caption="Int Col" pcdisplay="true" mobiledisplay="true"></wm-table-column> 
+                <wm-table-column binding="stringCol" caption="String Col" pcdisplay="true" mobiledisplay="true"></wm-table-column> 
+                <wm-table-column binding="bigintCol" caption="Bigint Col" pcdisplay="true" mobiledisplay="true"></wm-table-column> 
+                <wm-table-column binding="timeCol" caption="Time Col" pcdisplay="true" mobiledisplay="true"></wm-table-column> 
+                <wm-table-column binding="shortCol" caption="Short Col" pcdisplay="true" mobiledisplay="true"></wm-table-column> 
+                <wm-table-column binding="floatCol" caption="Float Col" pcdisplay="true" mobiledisplay="true"></wm-table-column> 
+                <wm-table-column binding="booleanCol" caption="Boolean Col" pcdisplay="true" mobiledisplay="true"></wm-table-column> 
+                <wm-table-column binding="blobCol" caption="Blob Col" pcdisplay="true" mobiledisplay="true"></wm-table-column> 
+                <wm-table-column binding="dateCol" caption="Date Col" pcdisplay="true" mobiledisplay="true"></wm-table-column> 
+                <wm-table-column binding="timestampCol" caption="Timestamp Col" pcdisplay="true" mobiledisplay="true"></wm-table-column> 
+                <wm-table-column binding="longCol" caption="Long Col" pcdisplay="true" mobiledisplay="true"></wm-table-column> 
+                <wm-table-column binding="bigdecCol" caption="Bigdec Col" pcdisplay="true" mobiledisplay="true"></wm-table-column> 
+                <wm-table-column binding="textCol" caption="Text Col" pcdisplay="true" mobiledisplay="true"></wm-table-column> 
+                <wm-table-column binding="datetimeCol" caption="Datetime Col" pcdisplay="true" mobiledisplay="true"></wm-table-column> 
+                <wm-table-column binding="charCol" caption="Char Col" pcdisplay="true" mobiledisplay="true"></wm-table-column> 
+                <wm-table-column binding="clobCol" caption="Clob Col" pcdisplay="true" mobiledisplay="true"></wm-table-column> 
+                <wm-table-column binding="byteCol" caption="Byte Col" pcdisplay="true" mobiledisplay="true"></wm-table-column> 
+            </wm-table> 
+        </wm-page-content> 
+    </wm-content> 
+    <wm-footer content="footer" name="footer1"></wm-footer> 
+</wm-page>

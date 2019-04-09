@@ -1,0 +1,43 @@
+<wm-page data-ng-controller="HQL_QueryChartsPageController" pagetitle="Hql Query Charts" name="page1"> 
+    <wm-header content="header" name="header1"></wm-header> 
+    <wm-top-nav content="topnav" name="top_nav1"></wm-top-nav> 
+    <wm-content name="content1"> 
+        <wm-left-panel columnwidth="2" content="leftnav" name="left_panel1"></wm-left-panel> 
+        <wm-page-content columnwidth="10" name="page_content1"> 
+            <wm-layoutgrid name="layoutgrid1" columns="3"> 
+                <wm-gridrow name="gridrow3"> 
+                    <wm-gridcolumn columnwidth="4" name="gridcolumn5"> 
+                        <wm-chart type="Area" title="Area Chart" height="250px" iconclass="fa fa-area-chart" name="chart1" dataset="bind:Variables.HQL_EmployeeData.dataSet" xaxisdatakey="department.deptCode" yaxisdatakey="department.q1,department.q2,department.q3" interpolation="step"></wm-chart> 
+                    </wm-gridcolumn> 
+                    <wm-gridcolumn columnwidth="4" name="gridcolumn6"> 
+                        <wm-chart type="Bar" title="Bar Chart" height="250px" iconclass="wi wi-bar-chart" name="chart2" dataset="bind:Variables.HQL_EmployeeData.dataSet" xaxisdatakey="jobTitle" yaxisdatakey="deptId" showvalues="true"></wm-chart> 
+                    </wm-gridcolumn> 
+                    <wm-gridcolumn columnwidth="4" name="gridcolumn7"> 
+                        <wm-chart type="Bubble" title="Bubble Chart" height="250px" iconclass="wi wi-bubble-chart" name="chart9" dataset="bind:Variables.HQL_EmployeeData.dataSet" xaxisdatakey="deptId" yaxisdatakey="empId"></wm-chart> 
+                    </wm-gridcolumn> 
+                </wm-gridrow> 
+                <wm-gridrow name="gridrow4"> 
+                    <wm-gridcolumn columnwidth="4" name="gridcolumn8"> 
+                        <wm-chart type="Column" title="Column Chart" height="250px" iconclass="wi wi-bar-chart" name="chart4" dataset="bind:Variables.HQL_EmployeeData.dataSet" xaxisdatakey="birthdate" yaxisdatakey="managerId"></wm-chart> 
+                    </wm-gridcolumn> 
+                    <wm-gridcolumn columnwidth="4" name="gridcolumn9"> 
+                        <wm-chart type="Cumulative Line" title="Cumulative Line Chart" height="250px" iconclass="wi wi-line-chart" name="chart5" dataset="bind:Variables.HQL_EmployeeData.dataSet" xaxisdatakey="birthdate" yaxisdatakey="department.deptId" interpolation="step" xdateformat="%b" formattype="date"></wm-chart> 
+                    </wm-gridcolumn> 
+                    <wm-gridcolumn columnwidth="4" name="gridcolumn10"> 
+                        <wm-chart type="Donut" title="Donut Chart" height="250px" iconclass="wi wi-donut-large" name="chart6" dataset="bind:Variables.HQL_EmployeeData.dataSet" xaxisdatakey="jobTitle" yaxisdatakey="tenantId"></wm-chart> 
+                    </wm-gridcolumn> 
+                </wm-gridrow> 
+                <wm-gridrow name="gridrow5"> 
+                    <wm-gridcolumn columnwidth="4" name="gridcolumn11"> 
+                        <wm-chart type="Line" title="Line Chart" height="250px" iconclass="wi wi-line-chart" name="chart7" dataset="bind:Variables.HQL_EmployeeData.dataSet" xaxisdatakey="birthdate" yaxisdatakey="deptId" interpolation="cardinal" xdateformat="%c" formattype="date"></wm-chart> 
+                    </wm-gridcolumn> 
+                    <wm-gridcolumn columnwidth="4" name="gridcolumn12"> 
+                        <wm-chart type="Pie" title="Pie Chart" height="250px" iconclass="wi wi-pie-chart" name="chart8" dataset="bind:Variables.HQL_EmployeeData.dataSet" xaxisdatakey="jobTitle" yaxisdatakey="managerId"></wm-chart> 
+                    </wm-gridcolumn> 
+                    <wm-gridcolumn columnwidth="4" name="gridcolumn13"></wm-gridcolumn> 
+                </wm-gridrow> 
+            </wm-layoutgrid> 
+        </wm-page-content> 
+    </wm-content> 
+    <wm-footer content="footer" name="footer1"></wm-footer> 
+</wm-page>

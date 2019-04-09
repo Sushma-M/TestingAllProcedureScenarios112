@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service xmlns="http://www.activegrid.com/namespaces/ServiceDefinitions/1.0" id="AutoWire_Procedure1000NullTitles" class="com.testingallprocedurescenarios.autowire_procedure1000nulltitles.AutoWire_Procedure1000NullTitles" type="JavaService" springFile="AutoWire_Procedure1000NullTitles.spring.xml">
+    <dataobjects/>
+</service>

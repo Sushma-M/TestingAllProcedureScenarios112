@@ -1,0 +1,220 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "version" : "2.0",
+    "x-WM-SERVICE_TYPE" : "RestService",
+    "x-WM-API_ID" : "6dc82bed-899f-4dab-a00e-760856e90e66",
+    "x-WM-USE_PROXY_FOR_WEB" : true,
+    "x-WM-SERVICE_ID" : "wavemakeronline",
+    "x-WM-USE_PROXY_FOR_MOBILE" : true
+  },
+  "host" : "www.wavemakeronline.com",
+  "basePath" : "/run-8r4sy6c58m",
+  "tags" : [ {
+    "name" : "RestServiceVirtualController",
+    "description" : "Rest service swagger documentation"
+  } ],
+  "schemes" : [ "https" ],
+  "paths" : {
+    "/TestingDifferentScenario_s/services/hrdb/Employee" : {
+      "post" : {
+        "tags" : [ "RestServiceVirtualController" ],
+        "operationId" : "CreateEmployeeAPI_OtherProject_RestServiceVirtualController-invoke",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "RequestBody",
+          "description" : "RequestBody",
+          "required" : false,
+          "schema" : {
+            "$ref" : "#/definitions/RootRequest"
+          },
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.Object"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/RootResponse"
+            }
+          }
+        },
+        "x-WM-METHOD_NAME" : "invoke",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
+      },
+      "x-WM-TAG" : "RestServiceVirtualController",
+      "x-WM-BASE_PATH" : "/TestingDifferentScenario_s/services/hrdb/Employee",
+      "x-WM-COMPLETE_PATH" : "${rest.CreateEmployeeAPI_OtherProject.scheme}://${rest.CreateEmployeeAPI_OtherProject.host}${rest.CreateEmployeeAPI_OtherProject.basepath}/TestingDifferentScenario_s/services/hrdb/Employee",
+      "x-WM-RELATIVE_PATH" : ""
+    }
+  },
+  "definitions" : {
+    "RootRequest" : {
+      "required" : [ "birthdate", "city", "department", "deptId", "empId", "employeeByManagerId", "employeesForManagerId", "firstname", "jobTitle", "lastname", "managerId", "password", "picurl", "role", "state", "street", "tenantId", "username", "vacations", "zip" ],
+      "properties" : {
+        "tenantId" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "zip" : {
+          "type" : "string"
+        },
+        "department" : {
+          "type" : "string"
+        },
+        "employeeByManagerId" : {
+          "type" : "string"
+        },
+        "street" : {
+          "type" : "string"
+        },
+        "empId" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "state" : {
+          "type" : "string"
+        },
+        "lastname" : {
+          "type" : "string"
+        },
+        "picurl" : {
+          "type" : "string"
+        },
+        "vacations" : {
+          "type" : "array",
+          "uniqueItems" : false,
+          "items" : {
+            "$ref" : "#/definitions/java.lang.Object"
+          },
+          "x-WM-IS_LIST" : true
+        },
+        "firstname" : {
+          "type" : "string"
+        },
+        "password" : {
+          "type" : "string"
+        },
+        "city" : {
+          "type" : "string"
+        },
+        "username" : {
+          "type" : "string"
+        },
+        "managerId" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "birthdate" : {
+          "type" : "string"
+        },
+        "role" : {
+          "type" : "string"
+        },
+        "employeesForManagerId" : {
+          "type" : "array",
+          "uniqueItems" : false,
+          "items" : {
+            "$ref" : "#/definitions/java.lang.Object"
+          },
+          "x-WM-IS_LIST" : true
+        },
+        "deptId" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "jobTitle" : {
+          "type" : "string"
+        }
+      },
+      "x-WM-FULLY_QUALIFIED_NAME" : "CreateEmployeeAPI_OtherProject.RootRequest",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ]
+    },
+    "RootResponse" : {
+      "required" : [ "birthdate", "city", "department", "deptId", "empId", "employeeByManagerId", "employeesForManagerId", "firstname", "jobTitle", "lastname", "managerId", "password", "picurl", "role", "state", "street", "tenantId", "username", "vacations", "zip" ],
+      "properties" : {
+        "tenantId" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "zip" : {
+          "type" : "string"
+        },
+        "department" : {
+          "type" : "string"
+        },
+        "employeeByManagerId" : {
+          "type" : "string"
+        },
+        "street" : {
+          "type" : "string"
+        },
+        "empId" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "state" : {
+          "type" : "string"
+        },
+        "lastname" : {
+          "type" : "string"
+        },
+        "picurl" : {
+          "type" : "string"
+        },
+        "vacations" : {
+          "type" : "array",
+          "uniqueItems" : false,
+          "items" : {
+            "$ref" : "#/definitions/java.lang.Object"
+          },
+          "x-WM-IS_LIST" : true
+        },
+        "firstname" : {
+          "type" : "string"
+        },
+        "password" : {
+          "type" : "string"
+        },
+        "city" : {
+          "type" : "string"
+        },
+        "username" : {
+          "type" : "string"
+        },
+        "managerId" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "birthdate" : {
+          "type" : "string"
+        },
+        "role" : {
+          "type" : "string"
+        },
+        "employeesForManagerId" : {
+          "type" : "array",
+          "uniqueItems" : false,
+          "items" : {
+            "$ref" : "#/definitions/java.lang.Object"
+          },
+          "x-WM-IS_LIST" : true
+        },
+        "deptId" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "jobTitle" : {
+          "type" : "string"
+        }
+      },
+      "x-WM-FULLY_QUALIFIED_NAME" : "CreateEmployeeAPI_OtherProject.RootResponse",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ]
+    },
+    "java.lang.Object" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "CreateEmployeeAPI_OtherProject.java.lang.Object",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ]
+    }
+  }
+}

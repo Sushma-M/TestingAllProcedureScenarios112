@@ -1,0 +1,82 @@
+{
+  "username" : "root",
+  "password" : "7b6a43524a2621157e686d791a50777e47367b6a3120",
+  "url" : "jdbc:mysql://ec2-54-87-2-36.compute-1.amazonaws.com:3306/School_DB?useUnicode=yes&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull",
+  "driverClass" : "com.mysql.jdbc.Driver",
+  "dialect" : "com.wavemaker.runtime.data.dialect.MySQLDialect",
+  "serviceId" : "School_DB",
+  "packageName" : "com.testingallprocedurescenarios.school_db",
+  "dbType" : "MySQL",
+  "host" : "ec2-54-87-2-36.compute-1.amazonaws.com",
+  "dbName" : "School_DB",
+  "port" : "3306",
+  "schemaName" : null,
+  "tableFilter" : [ {
+    "table" : "ACADEMICS",
+    "schema" : null
+  }, {
+    "table" : "ACADEMIC_SUBJECTS",
+    "schema" : null
+  }, {
+    "table" : "ACADEMIC_TEST_SUBJECTS",
+    "schema" : null
+  }, {
+    "table" : "ACADEMIC_YEAR",
+    "schema" : null
+  }, {
+    "table" : "EMPLOYEE_DETAILS",
+    "schema" : null
+  }, {
+    "table" : "GRADE_DETAILS",
+    "schema" : null
+  }, {
+    "table" : "RESULTS",
+    "schema" : null
+  }, {
+    "table" : "SCHOOL_EVENTS",
+    "schema" : null
+  }, {
+    "table" : "STANDARD_DETAILS",
+    "schema" : null
+  }, {
+    "table" : "STUDENT_ACADEMICS",
+    "schema" : null
+  }, {
+    "table" : "STUDENT_DETAILS",
+    "schema" : null
+  }, {
+    "table" : "STUDENT_IDENTIFICATION",
+    "schema" : null
+  }, {
+    "table" : "SUBJECT_DETAILS",
+    "schema" : null
+  }, {
+    "table" : "TEST_CONDUCTED",
+    "schema" : null
+  }, {
+    "table" : "TEST_DETAILS",
+    "schema" : null
+  }, {
+    "table" : "USER_LOGIN",
+    "schema" : null
+  }, {
+    "table" : "VIEW_RESULTS",
+    "schema" : null
+  } ],
+  "schemaFilter" : [ ],
+  "impersonateUser" : false,
+  "activeDirectoryDomain" : null,
+  "hbm2ddl" : "none",
+  "maxPageSize" : 100,
+  "minPoolSize" : 2,
+  "maxPoolSize" : 4,
+  "transactionTimeout" : 30,
+  "dataSourceType" : "WM_MANAGED_DATASOURCE",
+  "jndiName" : "",
+  "reloadInfo" : {
+    "reload" : false,
+    "reason" : null,
+    "message" : null
+  },
+  "readOnly" : false
+}

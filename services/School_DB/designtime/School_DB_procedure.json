@@ -1,0 +1,596 @@
+{
+  "Procedure_Boolean" : {
+    "name" : "Procedure_Boolean",
+    "description" : "Boolean Procedure",
+    "version" : "V2",
+    "procedureString" : "CALL booleanProcedure(:present)",
+    "parameters" : [ {
+      "name" : "present",
+      "type" : "boolean",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "testValue" : false,
+      "required" : true,
+      "parameterType" : "IN"
+    } ],
+    "request" : {
+      "wrapped" : false,
+      "typeRef" : null,
+      "method" : "GET"
+    },
+    "response" : {
+      "typeRef" : "com.testingallprocedurescenarios.school_db.models.procedure.ProcedureBooleanResponse",
+      "returns" : "CUSTOM",
+      "responseType" : "SINGLE",
+      "properties" : [ {
+        "name" : "content",
+        "fieldName" : "content",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "CUSTOM",
+          "typeRef" : "com.testingallprocedurescenarios.school_db.models.procedure.ProcedureBooleanResponseContent",
+          "list" : true,
+          "properties" : [ {
+            "name" : "TEST_CONDUCTED_ID",
+            "fieldName" : "testConductedId",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.Integer",
+              "list" : false
+            }
+          }, {
+            "name" : "STUDENT_ID",
+            "fieldName" : "studentId",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.Integer",
+              "list" : false
+            }
+          }, {
+            "name" : "MARKS_SECURED",
+            "fieldName" : "marksSecured",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.Short",
+              "list" : false
+            }
+          }, {
+            "name" : "GRADE_ID",
+            "fieldName" : "gradeId",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.Integer",
+              "list" : false
+            }
+          }, {
+            "name" : "ACADEMIC_YEAR",
+            "fieldName" : "academicYear",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "STANDARD_ID",
+            "fieldName" : "standardId",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.Integer",
+              "list" : false
+            }
+          }, {
+            "name" : "PRESENCE",
+            "fieldName" : "presence",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.Boolean",
+              "list" : false
+            }
+          } ]
+        }
+      } ]
+    }
+  },
+  "Scenario1" : {
+    "name" : "Scenario1",
+    "description" : "Without INOUT But Having Cursor",
+    "version" : "V2",
+    "procedureString" : "CALL SCENARIO1_WITHOUT_INOUT_CURSOR(:ACADEMICYEAR)",
+    "parameters" : [ {
+      "name" : "ACADEMICYEAR",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "testValue" : "2015-2016",
+      "required" : true,
+      "parameterType" : "IN"
+    } ],
+    "request" : {
+      "wrapped" : false,
+      "typeRef" : null,
+      "method" : "GET"
+    },
+    "response" : {
+      "typeRef" : "com.testingallprocedurescenarios.school_db.models.procedure.Scenario1Response",
+      "returns" : "CUSTOM",
+      "responseType" : "SINGLE",
+      "properties" : [ {
+        "name" : "content",
+        "fieldName" : "content",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "CUSTOM",
+          "typeRef" : "com.testingallprocedurescenarios.school_db.models.procedure.Scenario1ResponseContent",
+          "list" : true,
+          "properties" : [ {
+            "name" : "TEST_CONDUCTED_ID",
+            "fieldName" : "testConductedId",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.Integer",
+              "list" : false
+            }
+          }, {
+            "name" : "STUDENT_ID",
+            "fieldName" : "studentId",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.Integer",
+              "list" : false
+            }
+          }, {
+            "name" : "MARKS_SECURED",
+            "fieldName" : "marksSecured",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.Short",
+              "list" : false
+            }
+          }, {
+            "name" : "GRADE_ID",
+            "fieldName" : "gradeId",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.Integer",
+              "list" : false
+            }
+          }, {
+            "name" : "ACADEMIC_YEAR",
+            "fieldName" : "academicYear",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "STANDARD_ID",
+            "fieldName" : "standardId",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.Integer",
+              "list" : false
+            }
+          }, {
+            "name" : "PRESENCE",
+            "fieldName" : "presence",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.Boolean",
+              "list" : false
+            }
+          } ]
+        }
+      } ]
+    }
+  },
+  "Scenario2" : {
+    "name" : "Scenario2",
+    "description" : "With Inout Without Cursor",
+    "version" : "V2",
+    "procedureString" : "CALL SCENARIO2_WITH_INOUT_WITHOUT_CURSOR(:academicyear)",
+    "parameters" : [ {
+      "name" : "academicyear",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "testValue" : "2015-2016",
+      "required" : true,
+      "parameterType" : "IN_OUT"
+    } ],
+    "request" : {
+      "wrapped" : false,
+      "typeRef" : null,
+      "method" : "GET"
+    },
+    "response" : {
+      "typeRef" : "com.testingallprocedurescenarios.school_db.models.procedure.Scenario2Response",
+      "returns" : "CUSTOM",
+      "responseType" : "SINGLE",
+      "properties" : [ {
+        "name" : "content",
+        "fieldName" : "content",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "CUSTOM",
+          "typeRef" : "com.testingallprocedurescenarios.school_db.models.procedure.Scenario2ResponseContent",
+          "list" : true,
+          "properties" : [ {
+            "name" : "TEST_CONDUCTED_ID",
+            "fieldName" : "testConductedId",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.Integer",
+              "list" : false
+            }
+          }, {
+            "name" : "STUDENT_ID",
+            "fieldName" : "studentId",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.Integer",
+              "list" : false
+            }
+          }, {
+            "name" : "MARKS_SECURED",
+            "fieldName" : "marksSecured",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.Short",
+              "list" : false
+            }
+          }, {
+            "name" : "GRADE_ID",
+            "fieldName" : "gradeId",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.Integer",
+              "list" : false
+            }
+          }, {
+            "name" : "ACADEMIC_YEAR",
+            "fieldName" : "academicYear",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "STANDARD_ID",
+            "fieldName" : "standardId",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.Integer",
+              "list" : false
+            }
+          }, {
+            "name" : "PRESENCE",
+            "fieldName" : "presence",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.Boolean",
+              "list" : false
+            }
+          } ]
+        }
+      }, {
+        "name" : "academicyear",
+        "fieldName" : "academicyear",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.String",
+          "list" : false
+        }
+      } ]
+    }
+  },
+  "Scenario3" : {
+    "name" : "Scenario3",
+    "description" : "scenario3_Without_INOUT_CURSOR",
+    "version" : "V2",
+    "procedureString" : "CALL scenario3_Without_INOUT_CURSOR(:var)",
+    "parameters" : [ {
+      "name" : "var",
+      "type" : "integer",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "testValue" : "1",
+      "required" : true,
+      "parameterType" : "IN"
+    } ],
+    "request" : {
+      "wrapped" : false,
+      "typeRef" : null,
+      "method" : "GET"
+    },
+    "response" : {
+      "typeRef" : "com.testingallprocedurescenarios.school_db.models.procedure.Scenario3Response",
+      "returns" : "CUSTOM",
+      "responseType" : "SINGLE",
+      "properties" : [ {
+        "name" : "content",
+        "fieldName" : "content",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "CUSTOM",
+          "typeRef" : "com.testingallprocedurescenarios.school_db.models.procedure.Scenario3ResponseContent",
+          "list" : true,
+          "properties" : [ {
+            "name" : "Inc_Result",
+            "fieldName" : "incResult",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.Integer",
+              "list" : false
+            }
+          } ]
+        }
+      } ]
+    }
+  },
+  "Scenario4" : {
+    "name" : "Scenario4",
+    "description" : "With INOUT",
+    "version" : "V2",
+    "procedureString" : "CALL scenario4_withINOUT(:academicYear)",
+    "parameters" : [ {
+      "name" : "academicYear",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "testValue" : "2015-2016",
+      "required" : true,
+      "parameterType" : "IN_OUT"
+    } ],
+    "request" : {
+      "wrapped" : false,
+      "typeRef" : null,
+      "method" : "GET"
+    },
+    "response" : {
+      "typeRef" : "com.testingallprocedurescenarios.school_db.models.procedure.Scenario4Response",
+      "returns" : "CUSTOM",
+      "responseType" : "SINGLE",
+      "properties" : [ {
+        "name" : "content",
+        "fieldName" : "content",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "CUSTOM",
+          "typeRef" : "com.testingallprocedurescenarios.school_db.models.procedure.Scenario4ResponseContent",
+          "list" : true,
+          "properties" : [ {
+            "name" : "ACADEMIC_YEAR",
+            "fieldName" : "academicYear",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          } ]
+        }
+      }, {
+        "name" : "academicYear",
+        "fieldName" : "academicYear",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.String",
+          "list" : false
+        }
+      } ]
+    }
+  },
+  "Scenario5" : {
+    "name" : "Scenario5",
+    "description" : "SCENARIO5_WITH_CURSOR_SELECTQuery",
+    "version" : "V2",
+    "procedureString" : "CALL SCENARIO5_WITH_CURSOR_SELECTQuery(:academicyear)",
+    "parameters" : [ {
+      "name" : "academicyear",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "testValue" : "2015-2016",
+      "required" : true,
+      "parameterType" : "IN"
+    } ],
+    "request" : {
+      "wrapped" : false,
+      "typeRef" : null,
+      "method" : "GET"
+    },
+    "response" : {
+      "typeRef" : "com.testingallprocedurescenarios.school_db.models.procedure.Scenario5Response",
+      "returns" : "CUSTOM",
+      "responseType" : "SINGLE",
+      "properties" : [ {
+        "name" : "content",
+        "fieldName" : "content",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "CUSTOM",
+          "typeRef" : "com.testingallprocedurescenarios.school_db.models.procedure.Scenario5ResponseContent",
+          "list" : true,
+          "properties" : [ {
+            "name" : "TESTCONDUCTEDID",
+            "fieldName" : "testconductedid",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.Integer",
+              "list" : false
+            }
+          }, {
+            "name" : "STUDENTID",
+            "fieldName" : "studentid",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.Integer",
+              "list" : false
+            }
+          }, {
+            "name" : "MARKSSECURED",
+            "fieldName" : "markssecured",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.Short",
+              "list" : false
+            }
+          }, {
+            "name" : "STANDARDID",
+            "fieldName" : "standardid",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.Integer",
+              "list" : false
+            }
+          }, {
+            "name" : "GRADEID",
+            "fieldName" : "gradeid",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.Integer",
+              "list" : false
+            }
+          } ]
+        }
+      } ]
+    }
+  },
+  "Scenario6" : {
+    "name" : "Scenario6",
+    "description" : "Two Cursors",
+    "version" : "V2",
+    "procedureString" : "CALL SCENARIO6_TWO_CURSORS()",
+    "parameters" : [ ],
+    "request" : {
+      "wrapped" : false,
+      "typeRef" : null,
+      "method" : "GET"
+    },
+    "response" : {
+      "typeRef" : "com.testingallprocedurescenarios.school_db.models.procedure.Scenario6Response",
+      "returns" : "CUSTOM",
+      "responseType" : "SINGLE",
+      "properties" : [ {
+        "name" : "content",
+        "fieldName" : "content",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "CUSTOM",
+          "typeRef" : "com.testingallprocedurescenarios.school_db.models.procedure.Scenario6ResponseContent",
+          "list" : true,
+          "properties" : [ {
+            "name" : "testConductedId",
+            "fieldName" : "testConductedId",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.Integer",
+              "list" : false
+            }
+          }, {
+            "name" : "studentId",
+            "fieldName" : "studentId",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.Integer",
+              "list" : false
+            }
+          }, {
+            "name" : "marksSecured",
+            "fieldName" : "marksSecured",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.Short",
+              "list" : false
+            }
+          }, {
+            "name" : "standardId",
+            "fieldName" : "standardId",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.Integer",
+              "list" : false
+            }
+          }, {
+            "name" : "gradeId",
+            "fieldName" : "gradeId",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.Integer",
+              "list" : false
+            }
+          } ]
+        }
+      } ]
+    }
+  },
+  "Scenario7" : {
+    "name" : "Scenario7",
+    "description" : "WITH INOUT",
+    "version" : "V2",
+    "procedureString" : "CALL scenario7_withINOUT(:var)",
+    "parameters" : [ {
+      "name" : "var",
+      "type" : "integer",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "testValue" : "1",
+      "required" : true,
+      "parameterType" : "IN_OUT"
+    } ],
+    "request" : {
+      "wrapped" : false,
+      "typeRef" : null,
+      "method" : "GET"
+    },
+    "response" : {
+      "typeRef" : "com.testingallprocedurescenarios.school_db.models.procedure.Scenario7Response",
+      "returns" : "CUSTOM",
+      "responseType" : "SINGLE",
+      "properties" : [ {
+        "name" : "var",
+        "fieldName" : "var",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.Integer",
+          "list" : false
+        }
+      } ]
+    }
+  }
+}

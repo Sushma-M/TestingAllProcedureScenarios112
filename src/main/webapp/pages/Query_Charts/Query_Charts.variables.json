@@ -1,0 +1,25 @@
+{
+  "Query_AllTypesData" : {
+    "_id" : "wm-Query_DeptData-wm.ServiceVariable-1489567304219",
+    "name" : "Query_AllTypesData",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ ],
+    "type" : "com.testingallprocedurescenarios.dbscenarios.models.query.SvAllTypesDataResponse",
+    "service" : "dbscenarios",
+    "operation" : "executeSV_AllTypesData",
+    "operationId" : "QueryExecutionController_executeSV_AllTypesData",
+    "operationType" : "get",
+    "serviceType" : "DataService",
+    "dataSet" : [ ],
+    "isList" : true,
+    "maxResults" : 20,
+    "designMaxResults" : 10,
+    "startUpdate" : true,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "QueryExecution"
+  }
+}

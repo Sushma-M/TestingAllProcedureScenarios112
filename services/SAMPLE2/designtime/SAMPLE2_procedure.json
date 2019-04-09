@@ -1,0 +1,231 @@
+{
+  "Procedure_BonusIncrements" : {
+    "name" : "Procedure_BonusIncrements",
+    "description" : "Bonus Increments",
+    "version" : "V2",
+    "procedureString" : "CALL DB2ADMIN1.BONUS_INCREASE(:P_BONUSFACTOR,:P_BONUSMAXSUMFORDEPT,:P_DEPTSWITHOUTNEWBONUSES,:P_COUNTDEPTSVIEWED,:P_COUNTDEPTSBONUSCHANGED,:P_ERRORMSG)",
+    "parameters" : [ {
+      "name" : "P_BONUSFACTOR",
+      "type" : "integer",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "testValue" : "2",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "P_BONUSMAXSUMFORDEPT",
+      "type" : "integer",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "testValue" : "8",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "P_DEPTSWITHOUTNEWBONUSES",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "testValue" : null,
+      "required" : true,
+      "parameterType" : "OUT"
+    }, {
+      "name" : "P_COUNTDEPTSVIEWED",
+      "type" : "integer",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "testValue" : null,
+      "required" : true,
+      "parameterType" : "OUT"
+    }, {
+      "name" : "P_COUNTDEPTSBONUSCHANGED",
+      "type" : "integer",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "testValue" : null,
+      "required" : true,
+      "parameterType" : "OUT"
+    }, {
+      "name" : "P_ERRORMSG",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "testValue" : null,
+      "required" : true,
+      "parameterType" : "OUT"
+    } ],
+    "request" : {
+      "wrapped" : false,
+      "typeRef" : null,
+      "method" : "GET"
+    },
+    "response" : {
+      "typeRef" : "com.testingallprocedurescenarios.sample2.models.procedure.ProcedureBonusIncrementsResponse",
+      "returns" : "CUSTOM",
+      "responseType" : "SINGLE",
+      "properties" : [ {
+        "name" : "content",
+        "fieldName" : "content",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "CUSTOM",
+          "typeRef" : "com.testingallprocedurescenarios.sample2.models.procedure.ProcedureBonusIncrementsResponseContent",
+          "list" : true,
+          "properties" : [ {
+            "name" : "WORKDEPT",
+            "fieldName" : "workdept",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "EMPNO",
+            "fieldName" : "empno",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "BONUS",
+            "fieldName" : "bonus",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.Float",
+              "list" : false
+            }
+          } ]
+        }
+      }, {
+        "name" : "P_DEPTSWITHOUTNEWBONUSES",
+        "fieldName" : "pdeptswithoutnewbonuses",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.String",
+          "list" : false
+        }
+      }, {
+        "name" : "P_COUNTDEPTSVIEWED",
+        "fieldName" : "pcountdeptsviewed",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.Integer",
+          "list" : false
+        }
+      }, {
+        "name" : "P_COUNTDEPTSBONUSCHANGED",
+        "fieldName" : "pcountdeptsbonuschanged",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.Integer",
+          "list" : false
+        }
+      }, {
+        "name" : "P_ERRORMSG",
+        "fieldName" : "perrormsg",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.String",
+          "list" : false
+        }
+      } ]
+    }
+  },
+  "Procedure_GetDeptDetailsById" : {
+    "name" : "Procedure_GetDeptDetailsById",
+    "description" : "Get Dept Details By deptId",
+    "version" : "V2",
+    "procedureString" : "CALL DB2ADMIN1.GETDEPT_EMPS(:DEPTID)",
+    "parameters" : [ {
+      "name" : "DEPTID",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "testValue" : "A00",
+      "required" : true,
+      "parameterType" : "IN"
+    } ],
+    "request" : {
+      "wrapped" : false,
+      "typeRef" : null,
+      "method" : "GET"
+    },
+    "response" : {
+      "typeRef" : "com.testingallprocedurescenarios.sample2.models.procedure.ProcedureGetDeptDetailsByIdResponse",
+      "returns" : "CUSTOM",
+      "responseType" : "SINGLE",
+      "properties" : [ {
+        "name" : "content",
+        "fieldName" : "content",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "CUSTOM",
+          "typeRef" : "com.testingallprocedurescenarios.sample2.models.procedure.ProcedureGetDeptDetailsByIdResponseContent",
+          "list" : true,
+          "properties" : [ {
+            "name" : "EMPNO",
+            "fieldName" : "empno",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "FIRSTNME",
+            "fieldName" : "firstnme",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "WORKDEPT",
+            "fieldName" : "workdept",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "JOB",
+            "fieldName" : "job",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "HIREDATE",
+            "fieldName" : "hiredate",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.sql.Date",
+              "list" : false
+            }
+          }, {
+            "name" : "SALARY",
+            "fieldName" : "salary",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.Float",
+              "list" : false
+            }
+          } ]
+        }
+      } ]
+    }
+  }
+}

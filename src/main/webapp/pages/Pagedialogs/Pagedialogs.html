@@ -1,0 +1,29 @@
+<wm-page data-ng-controller="PagedialogsPageController" pagetitle="Pagedialogs" name="page1"> 
+    <wm-header content="header" name="header1"></wm-header> 
+    <wm-top-nav content="topnav" name="top_nav1"></wm-top-nav> 
+    <wm-content name="content1"> 
+        <wm-left-panel columnwidth="2" content="leftnav" name="left_panel1"></wm-left-panel> 
+        <wm-page-content columnwidth="10" name="page_content1"> 
+            <wm-button class="btn-default" caption="Button" type="button" margin="unset 0.5em" name="button2" on-click="Widgets.dialog1.open()"></wm-button> 
+            <wm-tabs name="tabs1"> 
+                <wm-tabpane name="tabpane1" content="Partial1"></wm-tabpane> 
+                <wm-tabpane name="tabpane2"></wm-tabpane> 
+                <wm-tabpane name="tabpane3"></wm-tabpane> 
+            </wm-tabs> 
+        </wm-page-content> 
+    </wm-content> 
+    <wm-footer content="footer" name="footer1"></wm-footer> 
+    <wm-view class="dialog-view" name="view1"> 
+        <wm-dialog dialogtype="design-dialog" modal="true" title="Information" iconclass="wi wi-file-text" name="dialog1"> 
+            <wm-dialogactions name="dialogactions1"> 
+                <wm-button class="btn-primary" caption="Close" on-click="closeDialog()" name="button1"></wm-button> 
+            </wm-dialogactions> 
+            <wm-table title="" dataset="bind:Variables.HrdbExecuteHQL_VacationDataWithAliasNames.dataSet" navigation="Basic" name="grid1" exportformat="EXCEL,CSV" exportdatasize="8"> 
+                <wm-table-column binding="empid" caption="Empid" type="string" edit-widget-type="text" show="true" readonly="false"></wm-table-column> 
+                <wm-table-column binding="startdate" caption="Startdate" type="string" edit-widget-type="text" show="true" readonly="false"></wm-table-column> 
+                <wm-table-column binding="status" caption="Status" type="string" edit-widget-type="text" show="true" readonly="false"></wm-table-column> 
+                <wm-table-column binding="enddate" caption="Enddate" type="string" edit-widget-type="text" show="true" readonly="false"></wm-table-column> 
+            </wm-table> 
+        </wm-dialog> 
+    </wm-view> 
+</wm-page>

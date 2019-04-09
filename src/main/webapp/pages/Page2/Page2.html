@@ -1,0 +1,123 @@
+<wm-page data-ng-controller="Page2PageController" pagetitle="Page 2" name="page1"> 
+    <wm-header content="header" name="header1"></wm-header> 
+    <wm-top-nav content="topnav" name="top_nav1"></wm-top-nav> 
+    <wm-content name="content1"> 
+        <wm-left-panel columnwidth="2" content="leftnav" name="left_panel1"></wm-left-panel> 
+        <wm-page-content columnwidth="10" name="page_content1"> 
+            <wm-label padding="unset 0.5em" name="label1"></wm-label> 
+            <wm-tabs name="tabs1"> 
+                <wm-tabpane name="tabpane1" title="Insert Query Required True" badgevalue="SQLServer" badgetype="success"> 
+                    <wm-form errormessage="" captionposition="top" title="Form" enctype="application/x-www-form-urlencoded" method="post" dataset="bind:Variables.Db123__ExecuteSV_InsertQuery.dataSet" captionalign="left" name="form1"> 
+                        <wm-layoutgrid columns="2" name="layoutgrid1"> 
+                            <wm-gridrow name="gridrow1"> 
+                                <wm-gridcolumn columnwidth="6" name="gridcolumn1"> 
+                                    <wm-form-field readonly="false" name="BIGDECCOL" displayname="Bigdeccol" key="BIGDECCOL" type="number" show="true" widget="number"></wm-form-field> 
+                                </wm-gridcolumn> 
+                                <wm-gridcolumn columnwidth="6" name="gridcolumn2"> 
+                                    <wm-form-field readonly="false" name="SHORTCOL" displayname="Shortcol" key="SHORTCOL" type="integer" show="true" widget="number"></wm-form-field> 
+                                </wm-gridcolumn> 
+                            </wm-gridrow> 
+                            <wm-gridrow name="gridrow2"> 
+                                <wm-gridcolumn columnwidth="6" name="gridcolumn3"> 
+                                    <wm-form-field readonly="false" name="BIGINTCOL" displayname="Bigintcol" key="BIGINTCOL" type="integer" show="true" widget="number"></wm-form-field> 
+                                </wm-gridcolumn> 
+                                <wm-gridcolumn columnwidth="6" name="gridcolumn4"> 
+                                    <wm-form-field readonly="false" name="STRINGCOL" displayname="Stringcol" key="STRINGCOL" type="string" show="true" widget="text"></wm-form-field> 
+                                </wm-gridcolumn> 
+                            </wm-gridrow> 
+                            <wm-gridrow name="gridrow3"> 
+                                <wm-gridcolumn columnwidth="6" name="gridcolumn5"> 
+                                    <wm-form-field readonly="false" name="DATECOL" displayname="Datecol" key="DATECOL" type="string" show="true" widget="date"></wm-form-field> 
+                                </wm-gridcolumn> 
+                                <wm-gridcolumn columnwidth="6" name="gridcolumn6"> 
+                                    <wm-form-field readonly="false" name="BYTECOL" displayname="Bytecol" key="BYTECOL" type="string" show="true" widget="number"></wm-form-field> 
+                                </wm-gridcolumn> 
+                            </wm-gridrow> 
+                            <wm-gridrow name="gridrow4"> 
+                                <wm-gridcolumn columnwidth="6" name="gridcolumn7"> 
+                                    <wm-form-field readonly="false" name="CLOBCOL" displayname="Clobcol" key="CLOBCOL" type="string" show="true" widget="text"></wm-form-field> 
+                                </wm-gridcolumn> 
+                                <wm-gridcolumn columnwidth="6" name="gridcolumn8"> 
+                                    <wm-form-field readonly="false" name="ASSIGNEDID" displayname="Assignedid" key="ASSIGNEDID" type="integer" show="true" widget="number"></wm-form-field> 
+                                </wm-gridcolumn> 
+                            </wm-gridrow> 
+                            <wm-gridrow name="gridrow5"> 
+                                <wm-gridcolumn columnwidth="6" name="gridcolumn9"> 
+                                    <wm-form-field readonly="false" name="CHARCOL" displayname="Charcol" key="CHARCOL" type="string" show="true" widget="text"></wm-form-field> 
+                                </wm-gridcolumn> 
+                                <wm-gridcolumn columnwidth="6" name="gridcolumn10"> 
+                                    <wm-form-field readonly="false" name="BOOLEANCOL" displayname="Booleancol" key="BOOLEANCOL" type="boolean" show="true" widget="checkbox"></wm-form-field> 
+                                </wm-gridcolumn> 
+                            </wm-gridrow> 
+                            <wm-gridrow name="gridrow6"> 
+                                <wm-gridcolumn columnwidth="6" name="gridcolumn11"> 
+                                    <wm-form-field readonly="false" name="LONGCOL" displayname="Longcol" key="LONGCOL" type="integer" show="true" widget="number"></wm-form-field> 
+                                </wm-gridcolumn> 
+                                <wm-gridcolumn columnwidth="6" name="gridcolumn12"> 
+                                    <wm-form-field readonly="false" name="FLOATCOL" displayname="Floatcol" key="FLOATCOL" type="number" show="true" widget="number"></wm-form-field> 
+                                </wm-gridcolumn> 
+                            </wm-gridrow> 
+                            <wm-gridrow name="gridrow7"> 
+                                <wm-gridcolumn columnwidth="6" name="gridcolumn13"> 
+                                    <wm-form-field readonly="false" name="TIMESTAMPCOL" displayname="Timestampcol" key="TIMESTAMPCOL" type="string" show="true" widget="timestamp"></wm-form-field> 
+                                </wm-gridcolumn> 
+                                <wm-gridcolumn columnwidth="6" name="gridcolumn14"> 
+                                    <wm-form-field readonly="false" name="INTCOL" displayname="Intcol" key="INTCOL" type="integer" show="true" widget="number"></wm-form-field> 
+                                </wm-gridcolumn> 
+                            </wm-gridrow> 
+                            <wm-gridrow name="gridrow8"> 
+                                <wm-gridcolumn columnwidth="6" name="gridcolumn15"> 
+                                    <wm-form-field readonly="false" name="DOUBLECOL" displayname="Doublecol" key="DOUBLECOL" type="number" show="true" widget="number"></wm-form-field> 
+                                </wm-gridcolumn> 
+                                <wm-gridcolumn columnwidth="6" name="gridcolumn16"> 
+                                    <wm-form-field readonly="false" name="TEXTCOL" displayname="Textcol" key="TEXTCOL" type="string" show="true" widget="text"></wm-form-field> 
+                                </wm-gridcolumn> 
+                            </wm-gridrow> 
+                            <wm-gridrow name="gridrow9"> 
+                                <wm-gridcolumn columnwidth="6" name="gridcolumn17"> 
+                                    <wm-form-field readonly="false" name="DATETIMECOL" displayname="Datetimecol" key="DATETIMECOL" type="string" show="true" widget="date"></wm-form-field> 
+                                </wm-gridcolumn> 
+                                <wm-gridcolumn columnwidth="6" name="gridcolumn18"> 
+                                    <wm-form-field readonly="false" name="TIMECOL" displayname="Timecol" key="TIMECOL" type="string" show="true" widget="time"></wm-form-field> 
+                                </wm-gridcolumn> 
+                            </wm-gridrow> 
+                        </wm-layoutgrid> 
+                        <wm-buttongroup horizontalalign="right" class="form-action col-md-12" name="buttongroup1"> 
+                            <wm-button caption="Reset" type="reset" class="btn-secondary" name="button1"></wm-button> 
+                            <wm-button caption="Cancel" type="button" class="btn-warning" name="button2"></wm-button> 
+                            <wm-button caption="Save" type="submit" class="btn-primary" name="button3"></wm-button> 
+                        </wm-buttongroup> 
+                    </wm-form> 
+                </wm-tabpane> 
+                <wm-tabpane name="tabpane2" title="HQL Query Using Alias Names"> 
+                    <wm-table title="" dataset="bind:Variables.Db123__ExecuteHQL_GetAllTypes.dataSet" navigation="Basic" name="grid1"> 
+                        <wm-table-column binding="textcol" caption="Textcol" pcdisplay="true" mobiledisplay="true"></wm-table-column> 
+                        <wm-table-column binding="datetimecol.columnMapper" caption="Datetimecol Column Mapper" pcdisplay="true" mobiledisplay="true"></wm-table-column> 
+                        <wm-table-column binding="datetimecol.sqlTypes" caption="Datetimecol Sql Types" pcdisplay="true" mobiledisplay="true"></wm-table-column> 
+                        <wm-table-column binding="timecol" caption="Timecol" pcdisplay="true" mobiledisplay="true"></wm-table-column> 
+                        <wm-table-column binding="doublecol" caption="Doublecol" pcdisplay="true" mobiledisplay="true"></wm-table-column> 
+                        <wm-table-column binding="timestampcol.columnMapper" caption="Timestampcol Column Mapper" pcdisplay="true" mobiledisplay="true"></wm-table-column> 
+                        <wm-table-column binding="timestampcol.sqlTypes" caption="Timestampcol Sql Types" pcdisplay="true" mobiledisplay="true"></wm-table-column> 
+                        <wm-table-column binding="blobcol" caption="Blobcol" pcdisplay="true" mobiledisplay="true"></wm-table-column> 
+                        <wm-table-column binding="booleancol" caption="Booleancol" pcdisplay="true" mobiledisplay="true"></wm-table-column> 
+                        <wm-table-column binding="longcol" caption="Longcol" pcdisplay="true" mobiledisplay="true"></wm-table-column> 
+                        <wm-table-column binding="floatcol" caption="Floatcol" pcdisplay="true" mobiledisplay="true"></wm-table-column> 
+                        <wm-table-column binding="bytecol" caption="Bytecol" pcdisplay="true" mobiledisplay="true"></wm-table-column> 
+                        <wm-table-column binding="clobcol" caption="Clobcol" pcdisplay="true" mobiledisplay="true"></wm-table-column> 
+                        <wm-table-column binding="assignedid" caption="Assignedid" pcdisplay="true" mobiledisplay="true"></wm-table-column> 
+                        <wm-table-column binding="charcol" caption="Charcol" pcdisplay="true" mobiledisplay="true"></wm-table-column> 
+                        <wm-table-column binding="stringcol" caption="Stringcol" pcdisplay="true" mobiledisplay="true"></wm-table-column> 
+                        <wm-table-column binding="datecol" caption="Datecol" pcdisplay="true" mobiledisplay="true"></wm-table-column> 
+                        <wm-table-column binding="bigdeccol" caption="Bigdeccol" pcdisplay="true" mobiledisplay="true"></wm-table-column> 
+                        <wm-table-column binding="shortcol" caption="Shortcol" pcdisplay="true" mobiledisplay="true"></wm-table-column> 
+                        <wm-table-column binding="bigintcol" caption="Bigintcol" pcdisplay="true" mobiledisplay="true"></wm-table-column> 
+                    </wm-table> 
+                </wm-tabpane> 
+                <wm-tabpane name="tabpane3" title="PopOver"> 
+                    <wm-popover popoverwidth="240" popoverheight="360" margin="unset 0.5em" name="popover1" caption="PopOver Data Rendering" content="PopOverPartialPage"></wm-popover> 
+                </wm-tabpane> 
+            </wm-tabs> 
+        </wm-page-content> 
+    </wm-content> 
+    <wm-footer content="footer" name="footer1"></wm-footer> 
+</wm-page>

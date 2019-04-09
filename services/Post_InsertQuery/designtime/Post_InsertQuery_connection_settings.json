@@ -1,0 +1,32 @@
+{
+  "endpointAddress" : "https://www.wavemakeronline.com/run-90t8nydg71/TestingAllProcedureScenarios/services/db123__/queryExecutor/queries/SV_InsertQuery",
+  "method" : "POST",
+  "requestBody" : "{\n\"TEXTCOL\": \"TSHCTR\",\n\"DATETIMECOL\": \"2016-11-16T01:01:01.000\",\n\"TIMECOL\": \"13:00:09\",\n\"INTCOL\": 547647,\n\"DOUBLECOL\": 57487,\n\"TIMESTAMPCOL\": \"2016-11-28T01:01:01.000\",\n\"BOOLEANCOL\": false,\n\"LONGCOL\": 674946,\n\"FLOATCOL\": 658.768,\n\"BYTECOL\": 67,\n\"CLOBCOL\": \"UBJYDT\",\n\"ASSIGNEDID\": 30,\t\t\t\n\"CHARCOL\": \"G\",\n\"STRINGCOL\": \"HCTHGST\",\n\"DATECOL\": \"2016-11-28\",\n\"BIGDECCOL\": 6965.9659,\n\"SHORTCOL\": 7876,\n\"BIGINTCOL\": 65963\n}",
+  "headers" : {
+    "Authorization" : [ "Basic YWRtaW46YWRtaW4=" ]
+  },
+  "queryParams" : { },
+  "sampleHttpResponseDetails" : {
+    "responseBody" : "{\"errors\":{\"error\":[{\"id\":null,\"messageKey\":\"com.wavemaker.runtime.data$DataIntegrityViolation\",\"message\":null,\"parameters\":[\"Violation of PRIMARY KEY constraint 'PK__DEFAULT __D5B54E2840EC83BC'. Cannot insert duplicate key in object 'dbo.DEFAULT VALUES'. The duplicate key value is (30).\"]}]}}",
+    "convertedResponse" : null,
+    "statusCode" : 500,
+    "headers" : {
+      "Server" : [ "Apache-Coyote/1.1" ],
+      "Set-Cookie" : [ "JSESSIONID=785D09B13DD9EA5763449EA246A33A7B; Path=/run-90t8nydg71/TestingAllProcedureScenarios; Secure" ],
+      "X-XSS-Protection" : [ "1" ],
+      "mode" : [ "block" ],
+      "Cache-Control" : [ "no-store" ],
+      "X-Frame-Options" : [ "SAMEORIGIN" ],
+      "Content-Type" : [ "application/json;charset=UTF-8" ],
+      "Content-Language" : [ "en-US" ],
+      "Vary" : [ "Accept-Encoding" ],
+      "Date" : [ "Tue, 07 Mar 2017 08:53:44 GMT" ],
+      "Connection" : [ "close" ]
+    }
+  },
+  "redirectEnabled" : true,
+  "proxy" : null,
+  "contentType" : "application/json",
+  "multiParamInfoList" : null,
+  "authDetails" : "{type=BASIC}"
+}
