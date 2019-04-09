@@ -91,6 +91,20 @@ public interface AcademicYearService {
      */
     AcademicYear update(@Valid AcademicYear academicYearInstance);
 
+
+    /**
+     * Partially updates the details of an existing AcademicYear. It updates only the
+     * fields of the existing AcademicYear which are passed in the academicYearInstancePatch.
+     *
+     * This method overrides the input field values using Server side or database managed properties defined on AcademicYear if any.
+     *
+     * @param academicyearId The id of the AcademicYear to be deleted; value cannot be null.
+     * @param academicYearInstancePatch The partial data of AcademicYear which is supposed to be updated; value cannot be null.
+     * @return The updated AcademicYear.
+     * @throws EntityNotFoundException if no AcademicYear is found with given input.
+     */
+    AcademicYear partialUpdate(String academicyearId, Map<String, Object> academicYearInstancePatch);
+
     /**
      * Deletes an existing AcademicYear with the given id.
      *

@@ -83,6 +83,20 @@ public interface Vstafac2Service {
      */
     Vstafac2 update(@Valid Vstafac2 vstafac2);
 
+
+    /**
+     * Partially updates the details of an existing Vstafac2. It updates only the
+     * fields of the existing Vstafac2 which are passed in the vstafac2Patch.
+     *
+     * This method overrides the input field values using Server side or database managed properties defined on Vstafac2 if any.
+     *
+     * @param vstafac2Id The id of the Vstafac2 to be deleted; value cannot be null.
+     * @param vstafac2Patch The partial data of Vstafac2 which is supposed to be updated; value cannot be null.
+     * @return The updated Vstafac2.
+     * @throws EntityNotFoundException if no Vstafac2 is found with given input.
+     */
+    Vstafac2 partialUpdate(Vstafac2Id vstafac2Id, Map<String, Object> vstafac2Patch);
+
     /**
      * Deletes an existing Vstafac2 with the given id.
      *

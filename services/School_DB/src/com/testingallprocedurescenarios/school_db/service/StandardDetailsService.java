@@ -91,6 +91,20 @@ public interface StandardDetailsService {
      */
     StandardDetails update(@Valid StandardDetails standardDetails);
 
+
+    /**
+     * Partially updates the details of an existing StandardDetails. It updates only the
+     * fields of the existing StandardDetails which are passed in the standardDetailsPatch.
+     *
+     * This method overrides the input field values using Server side or database managed properties defined on StandardDetails if any.
+     *
+     * @param standarddetailsId The id of the StandardDetails to be deleted; value cannot be null.
+     * @param standardDetailsPatch The partial data of StandardDetails which is supposed to be updated; value cannot be null.
+     * @return The updated StandardDetails.
+     * @throws EntityNotFoundException if no StandardDetails is found with given input.
+     */
+    StandardDetails partialUpdate(Integer standarddetailsId, Map<String, Object> standardDetailsPatch);
+
     /**
      * Deletes an existing StandardDetails with the given id.
      *

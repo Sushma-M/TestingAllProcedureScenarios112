@@ -90,6 +90,20 @@ public interface Db2alltypes1Service {
      */
     Db2alltypes1 update(@Valid Db2alltypes1 db2alltypes1);
 
+
+    /**
+     * Partially updates the details of an existing Db2alltypes1. It updates only the
+     * fields of the existing Db2alltypes1 which are passed in the db2alltypes1Patch.
+     *
+     * This method overrides the input field values using Server side or database managed properties defined on Db2alltypes1 if any.
+     *
+     * @param db2alltypes1Id The id of the Db2alltypes1 to be deleted; value cannot be null.
+     * @param db2alltypes1Patch The partial data of Db2alltypes1 which is supposed to be updated; value cannot be null.
+     * @return The updated Db2alltypes1.
+     * @throws EntityNotFoundException if no Db2alltypes1 is found with given input.
+     */
+    Db2alltypes1 partialUpdate(Integer db2alltypes1Id, Map<String, Object> db2alltypes1Patch);
+
     /**
      * Deletes an existing Db2alltypes1 with the given id.
      *

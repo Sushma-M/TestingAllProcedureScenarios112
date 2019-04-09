@@ -83,6 +83,20 @@ public interface VdeptService {
      */
     Vdept update(@Valid Vdept vdept);
 
+
+    /**
+     * Partially updates the details of an existing Vdept. It updates only the
+     * fields of the existing Vdept which are passed in the vdeptPatch.
+     *
+     * This method overrides the input field values using Server side or database managed properties defined on Vdept if any.
+     *
+     * @param vdeptId The id of the Vdept to be deleted; value cannot be null.
+     * @param vdeptPatch The partial data of Vdept which is supposed to be updated; value cannot be null.
+     * @return The updated Vdept.
+     * @throws EntityNotFoundException if no Vdept is found with given input.
+     */
+    Vdept partialUpdate(VdeptId vdeptId, Map<String, Object> vdeptPatch);
+
     /**
      * Deletes an existing Vdept with the given id.
      *

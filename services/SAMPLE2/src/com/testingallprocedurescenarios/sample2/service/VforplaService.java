@@ -83,6 +83,20 @@ public interface VforplaService {
      */
     Vforpla update(@Valid Vforpla vforpla);
 
+
+    /**
+     * Partially updates the details of an existing Vforpla. It updates only the
+     * fields of the existing Vforpla which are passed in the vforplaPatch.
+     *
+     * This method overrides the input field values using Server side or database managed properties defined on Vforpla if any.
+     *
+     * @param vforplaId The id of the Vforpla to be deleted; value cannot be null.
+     * @param vforplaPatch The partial data of Vforpla which is supposed to be updated; value cannot be null.
+     * @return The updated Vforpla.
+     * @throws EntityNotFoundException if no Vforpla is found with given input.
+     */
+    Vforpla partialUpdate(VforplaId vforplaId, Map<String, Object> vforplaPatch);
+
     /**
      * Deletes an existing Vforpla with the given id.
      *

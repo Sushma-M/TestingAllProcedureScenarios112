@@ -83,6 +83,20 @@ public interface VemplpService {
      */
     Vemplp update(@Valid Vemplp vemplp);
 
+
+    /**
+     * Partially updates the details of an existing Vemplp. It updates only the
+     * fields of the existing Vemplp which are passed in the vemplpPatch.
+     *
+     * This method overrides the input field values using Server side or database managed properties defined on Vemplp if any.
+     *
+     * @param vemplpId The id of the Vemplp to be deleted; value cannot be null.
+     * @param vemplpPatch The partial data of Vemplp which is supposed to be updated; value cannot be null.
+     * @return The updated Vemplp.
+     * @throws EntityNotFoundException if no Vemplp is found with given input.
+     */
+    Vemplp partialUpdate(VemplpId vemplpId, Map<String, Object> vemplpPatch);
+
     /**
      * Deletes an existing Vemplp with the given id.
      *

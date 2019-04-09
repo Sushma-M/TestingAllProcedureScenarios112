@@ -82,6 +82,20 @@ public interface DbtYpesService {
      */
     DbtYpes update(@Valid DbtYpes dbtYpes);
 
+
+    /**
+     * Partially updates the details of an existing DbtYpes. It updates only the
+     * fields of the existing DbtYpes which are passed in the dbtYpesPatch.
+     *
+     * This method overrides the input field values using Server side or database managed properties defined on DbtYpes if any.
+     *
+     * @param dbtypesId The id of the DbtYpes to be deleted; value cannot be null.
+     * @param dbtYpesPatch The partial data of DbtYpes which is supposed to be updated; value cannot be null.
+     * @return The updated DbtYpes.
+     * @throws EntityNotFoundException if no DbtYpes is found with given input.
+     */
+    DbtYpes partialUpdate(Integer dbtypesId, Map<String, Object> dbtYpesPatch);
+
     /**
      * Deletes an existing DbtYpes with the given id.
      *

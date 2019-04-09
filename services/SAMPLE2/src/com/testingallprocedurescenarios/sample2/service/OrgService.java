@@ -82,6 +82,20 @@ public interface OrgService {
      */
     Org update(@Valid Org org);
 
+
+    /**
+     * Partially updates the details of an existing Org. It updates only the
+     * fields of the existing Org which are passed in the orgPatch.
+     *
+     * This method overrides the input field values using Server side or database managed properties defined on Org if any.
+     *
+     * @param orgId The id of the Org to be deleted; value cannot be null.
+     * @param orgPatch The partial data of Org which is supposed to be updated; value cannot be null.
+     * @return The updated Org.
+     * @throws EntityNotFoundException if no Org is found with given input.
+     */
+    Org partialUpdate(Short orgId, Map<String, Object> orgPatch);
+
     /**
      * Deletes an existing Org with the given id.
      *

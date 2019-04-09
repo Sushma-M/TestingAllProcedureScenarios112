@@ -92,6 +92,20 @@ public interface CustomerService {
      */
     Customer update(@Valid Customer customer);
 
+
+    /**
+     * Partially updates the details of an existing Customer. It updates only the
+     * fields of the existing Customer which are passed in the customerPatch.
+     *
+     * This method overrides the input field values using Server side or database managed properties defined on Customer if any.
+     *
+     * @param customerId The id of the Customer to be deleted; value cannot be null.
+     * @param customerPatch The partial data of Customer which is supposed to be updated; value cannot be null.
+     * @return The updated Customer.
+     * @throws EntityNotFoundException if no Customer is found with given input.
+     */
+    Customer partialUpdate(BigInteger customerId, Map<String, Object> customerPatch);
+
     /**
      * Deletes an existing Customer with the given id.
      *

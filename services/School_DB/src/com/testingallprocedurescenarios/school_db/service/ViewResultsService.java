@@ -83,6 +83,20 @@ public interface ViewResultsService {
      */
     ViewResults update(@Valid ViewResults viewResults);
 
+
+    /**
+     * Partially updates the details of an existing ViewResults. It updates only the
+     * fields of the existing ViewResults which are passed in the viewResultsPatch.
+     *
+     * This method overrides the input field values using Server side or database managed properties defined on ViewResults if any.
+     *
+     * @param viewresultsId The id of the ViewResults to be deleted; value cannot be null.
+     * @param viewResultsPatch The partial data of ViewResults which is supposed to be updated; value cannot be null.
+     * @return The updated ViewResults.
+     * @throws EntityNotFoundException if no ViewResults is found with given input.
+     */
+    ViewResults partialUpdate(ViewResultsId viewresultsId, Map<String, Object> viewResultsPatch);
+
     /**
      * Deletes an existing ViewResults with the given id.
      *

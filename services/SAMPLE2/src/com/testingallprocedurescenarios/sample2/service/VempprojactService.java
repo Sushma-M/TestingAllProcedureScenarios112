@@ -83,6 +83,20 @@ public interface VempprojactService {
      */
     Vempprojact update(@Valid Vempprojact vempprojact);
 
+
+    /**
+     * Partially updates the details of an existing Vempprojact. It updates only the
+     * fields of the existing Vempprojact which are passed in the vempprojactPatch.
+     *
+     * This method overrides the input field values using Server side or database managed properties defined on Vempprojact if any.
+     *
+     * @param vempprojactId The id of the Vempprojact to be deleted; value cannot be null.
+     * @param vempprojactPatch The partial data of Vempprojact which is supposed to be updated; value cannot be null.
+     * @return The updated Vempprojact.
+     * @throws EntityNotFoundException if no Vempprojact is found with given input.
+     */
+    Vempprojact partialUpdate(VempprojactId vempprojactId, Map<String, Object> vempprojactPatch);
+
     /**
      * Deletes an existing Vempprojact with the given id.
      *

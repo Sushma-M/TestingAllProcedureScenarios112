@@ -82,6 +82,20 @@ public interface Table6Service {
      */
     Table6 update(@Valid Table6 table6);
 
+
+    /**
+     * Partially updates the details of an existing Table6. It updates only the
+     * fields of the existing Table6 which are passed in the table6Patch.
+     *
+     * This method overrides the input field values using Server side or database managed properties defined on Table6 if any.
+     *
+     * @param table6Id The id of the Table6 to be deleted; value cannot be null.
+     * @param table6Patch The partial data of Table6 which is supposed to be updated; value cannot be null.
+     * @return The updated Table6.
+     * @throws EntityNotFoundException if no Table6 is found with given input.
+     */
+    Table6 partialUpdate(Long table6Id, Map<String, Object> table6Patch);
+
     /**
      * Deletes an existing Table6 with the given id.
      *

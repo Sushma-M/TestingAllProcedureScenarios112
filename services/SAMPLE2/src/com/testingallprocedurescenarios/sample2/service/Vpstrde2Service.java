@@ -83,6 +83,20 @@ public interface Vpstrde2Service {
      */
     Vpstrde2 update(@Valid Vpstrde2 vpstrde2);
 
+
+    /**
+     * Partially updates the details of an existing Vpstrde2. It updates only the
+     * fields of the existing Vpstrde2 which are passed in the vpstrde2Patch.
+     *
+     * This method overrides the input field values using Server side or database managed properties defined on Vpstrde2 if any.
+     *
+     * @param vpstrde2Id The id of the Vpstrde2 to be deleted; value cannot be null.
+     * @param vpstrde2Patch The partial data of Vpstrde2 which is supposed to be updated; value cannot be null.
+     * @return The updated Vpstrde2.
+     * @throws EntityNotFoundException if no Vpstrde2 is found with given input.
+     */
+    Vpstrde2 partialUpdate(Vpstrde2Id vpstrde2Id, Map<String, Object> vpstrde2Patch);
+
     /**
      * Deletes an existing Vpstrde2 with the given id.
      *

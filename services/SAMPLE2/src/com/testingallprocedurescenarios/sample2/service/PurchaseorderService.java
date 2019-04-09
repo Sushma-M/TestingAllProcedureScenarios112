@@ -83,6 +83,20 @@ public interface PurchaseorderService {
      */
     Purchaseorder update(@Valid Purchaseorder purchaseorder);
 
+
+    /**
+     * Partially updates the details of an existing Purchaseorder. It updates only the
+     * fields of the existing Purchaseorder which are passed in the purchaseorderPatch.
+     *
+     * This method overrides the input field values using Server side or database managed properties defined on Purchaseorder if any.
+     *
+     * @param purchaseorderId The id of the Purchaseorder to be deleted; value cannot be null.
+     * @param purchaseorderPatch The partial data of Purchaseorder which is supposed to be updated; value cannot be null.
+     * @return The updated Purchaseorder.
+     * @throws EntityNotFoundException if no Purchaseorder is found with given input.
+     */
+    Purchaseorder partialUpdate(BigInteger purchaseorderId, Map<String, Object> purchaseorderPatch);
+
     /**
      * Deletes an existing Purchaseorder with the given id.
      *

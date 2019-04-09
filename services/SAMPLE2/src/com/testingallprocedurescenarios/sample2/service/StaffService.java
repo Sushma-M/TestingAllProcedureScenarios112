@@ -83,6 +83,20 @@ public interface StaffService {
      */
     Staff update(@Valid Staff staff);
 
+
+    /**
+     * Partially updates the details of an existing Staff. It updates only the
+     * fields of the existing Staff which are passed in the staffPatch.
+     *
+     * This method overrides the input field values using Server side or database managed properties defined on Staff if any.
+     *
+     * @param staffId The id of the Staff to be deleted; value cannot be null.
+     * @param staffPatch The partial data of Staff which is supposed to be updated; value cannot be null.
+     * @return The updated Staff.
+     * @throws EntityNotFoundException if no Staff is found with given input.
+     */
+    Staff partialUpdate(StaffId staffId, Map<String, Object> staffPatch);
+
     /**
      * Deletes an existing Staff with the given id.
      *

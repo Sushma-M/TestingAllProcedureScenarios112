@@ -1,1217 +1,1669 @@
 {
-  "name" : "WMSTUDIO",
-  "description" : null,
-  "packageName" : "com.testingallprocedurescenarios.wmstudio",
   "cascadeEnabled" : false,
+  "dataLockingOptions" : {
+    "versionColumnName" : "VERSION",
+    "lockingStrategy" : "NONE"
+  },
+  "description" : null,
   "draft" : false,
+  "name" : "WMSTUDIO",
+  "packageName" : "com.testingallprocedurescenarios.wmstudio",
   "tables" : [ {
-    "name" : "LOCATIONS",
-    "oldName" : "LOCATIONS",
-    "entityName" : "Locations",
-    "type" : "TABLE",
-    "schema" : "HR",
     "catalog" : null,
-    "filter" : null,
-    "ignoreRefreshAfterInsert" : false,
     "columns" : [ {
-      "name" : "LOCATION_ID",
-      "oldName" : "LOCATION_ID",
+      "columnValue" : {
+        "insertable" : true,
+        "updatable" : true,
+        "defaultValue" : null,
+        "type" : "user-defined"
+      },
+      "constraintList" : null,
       "fieldName" : "locationId",
-      "sqlType" : "number",
+      "foreignKey" : false,
+      "generatorType" : "assigned",
+      "generatorValue" : null,
+      "hidden" : false,
       "javaType" : "short",
       "length" : 22,
-      "scale" : 0,
-      "precision" : 4,
+      "name" : "LOCATION_ID",
       "nullable" : false,
-      "hidden" : false,
+      "oldName" : "LOCATION_ID",
+      "partOfAnyRelation" : false,
+      "partOfForeignKey" : false,
+      "partOfPrimaryKey" : true,
+      "partOfUniqueKey" : true,
+      "period" : false,
+      "precision" : 4,
+      "primaryKey" : true,
+      "scale" : 0,
+      "sequenceSchema" : null,
+      "sqlType" : "number",
+      "unique" : true
+    }, {
       "columnValue" : {
         "insertable" : true,
         "updatable" : true,
         "defaultValue" : null,
         "type" : "user-defined"
       },
-      "constraintList" : null
-    }, {
-      "name" : "STREET_ADDRESS",
-      "oldName" : "STREET_ADDRESS",
+      "constraintList" : null,
       "fieldName" : "streetAddress",
-      "sqlType" : "string",
+      "foreignKey" : false,
+      "generatorType" : "assigned",
+      "generatorValue" : null,
+      "hidden" : false,
       "javaType" : "string",
       "length" : 40,
-      "scale" : 0,
-      "precision" : 0,
+      "name" : "STREET_ADDRESS",
       "nullable" : true,
-      "hidden" : false,
+      "oldName" : "STREET_ADDRESS",
+      "partOfAnyRelation" : false,
+      "partOfForeignKey" : false,
+      "partOfPrimaryKey" : false,
+      "partOfUniqueKey" : false,
+      "period" : false,
+      "precision" : 0,
+      "primaryKey" : false,
+      "scale" : 0,
+      "sequenceSchema" : null,
+      "sqlType" : "string",
+      "unique" : false
+    }, {
       "columnValue" : {
         "insertable" : true,
         "updatable" : true,
         "defaultValue" : null,
         "type" : "user-defined"
       },
-      "constraintList" : null
-    }, {
-      "name" : "POSTAL_CODE",
-      "oldName" : "POSTAL_CODE",
+      "constraintList" : null,
       "fieldName" : "postalCode",
-      "sqlType" : "string",
+      "foreignKey" : false,
+      "generatorType" : "assigned",
+      "generatorValue" : null,
+      "hidden" : false,
       "javaType" : "string",
       "length" : 12,
-      "scale" : 0,
-      "precision" : 0,
+      "name" : "POSTAL_CODE",
       "nullable" : true,
-      "hidden" : false,
+      "oldName" : "POSTAL_CODE",
+      "partOfAnyRelation" : false,
+      "partOfForeignKey" : false,
+      "partOfPrimaryKey" : false,
+      "partOfUniqueKey" : false,
+      "period" : false,
+      "precision" : 0,
+      "primaryKey" : false,
+      "scale" : 0,
+      "sequenceSchema" : null,
+      "sqlType" : "string",
+      "unique" : false
+    }, {
       "columnValue" : {
         "insertable" : true,
         "updatable" : true,
         "defaultValue" : null,
         "type" : "user-defined"
       },
-      "constraintList" : null
-    }, {
-      "name" : "CITY",
-      "oldName" : "CITY",
+      "constraintList" : null,
       "fieldName" : "city",
-      "sqlType" : "string",
+      "foreignKey" : false,
+      "generatorType" : "assigned",
+      "generatorValue" : null,
+      "hidden" : false,
       "javaType" : "string",
       "length" : 30,
-      "scale" : 0,
-      "precision" : 0,
+      "name" : "CITY",
       "nullable" : false,
-      "hidden" : false,
+      "oldName" : "CITY",
+      "partOfAnyRelation" : false,
+      "partOfForeignKey" : false,
+      "partOfPrimaryKey" : false,
+      "partOfUniqueKey" : false,
+      "period" : false,
+      "precision" : 0,
+      "primaryKey" : false,
+      "scale" : 0,
+      "sequenceSchema" : null,
+      "sqlType" : "string",
+      "unique" : false
+    }, {
       "columnValue" : {
         "insertable" : true,
         "updatable" : true,
         "defaultValue" : null,
         "type" : "user-defined"
       },
-      "constraintList" : null
-    }, {
-      "name" : "STATE_PROVINCE",
-      "oldName" : "STATE_PROVINCE",
+      "constraintList" : null,
       "fieldName" : "stateProvince",
-      "sqlType" : "string",
+      "foreignKey" : false,
+      "generatorType" : "assigned",
+      "generatorValue" : null,
+      "hidden" : false,
       "javaType" : "string",
       "length" : 25,
-      "scale" : 0,
-      "precision" : 0,
+      "name" : "STATE_PROVINCE",
       "nullable" : true,
-      "hidden" : false,
+      "oldName" : "STATE_PROVINCE",
+      "partOfAnyRelation" : false,
+      "partOfForeignKey" : false,
+      "partOfPrimaryKey" : false,
+      "partOfUniqueKey" : false,
+      "period" : false,
+      "precision" : 0,
+      "primaryKey" : false,
+      "scale" : 0,
+      "sequenceSchema" : null,
+      "sqlType" : "string",
+      "unique" : false
+    }, {
       "columnValue" : {
         "insertable" : true,
         "updatable" : true,
         "defaultValue" : null,
         "type" : "user-defined"
       },
-      "constraintList" : null
-    }, {
-      "name" : "COUNTRY_ID",
-      "oldName" : "COUNTRY_ID",
+      "constraintList" : null,
       "fieldName" : "countryId",
-      "sqlType" : "string",
+      "foreignKey" : true,
+      "generatorType" : "assigned",
+      "generatorValue" : null,
+      "hidden" : false,
       "javaType" : "string",
       "length" : 2,
-      "scale" : 0,
-      "precision" : 0,
+      "name" : "COUNTRY_ID",
       "nullable" : true,
-      "hidden" : false,
-      "columnValue" : {
-        "insertable" : true,
-        "updatable" : true,
-        "defaultValue" : null,
-        "type" : "user-defined"
-      },
-      "constraintList" : null
+      "oldName" : "COUNTRY_ID",
+      "partOfAnyRelation" : true,
+      "partOfForeignKey" : true,
+      "partOfPrimaryKey" : false,
+      "partOfUniqueKey" : false,
+      "period" : false,
+      "precision" : 0,
+      "primaryKey" : false,
+      "scale" : 0,
+      "sequenceSchema" : null,
+      "sqlType" : "string",
+      "unique" : false
     } ],
+    "constraints" : [ {
+      "columns" : [ "CITY" ],
+      "composite" : false,
+      "name" : "LOC_CITY_NN",
+      "schemaName" : null,
+      "type" : "CHECK",
+      "virtual" : false
+    } ],
+    "entityName" : "Locations",
+    "filter" : null,
+    "fullyQualifiedName" : "com.testingallprocedurescenarios.wmstudio.Locations",
+    "ignoreRefreshAfterInsert" : false,
+    "name" : "LOCATIONS",
+    "oldName" : "LOCATIONS",
     "primaryKey" : {
-      "name" : "LOC_ID_PK",
-      "virtual" : false,
       "columns" : [ "LOCATION_ID" ],
+      "composite" : false,
       "generator" : {
         "generatorType" : "assigned",
         "generatorValue" : null,
         "schemaName" : null
       },
-      "composite" : false
+      "name" : "LOC_ID_PK",
+      "virtual" : false
     },
-    "temporals" : [ ],
     "relations" : [ {
-      "name" : "LOC_C_ID_FK",
-      "fieldName" : "countries",
       "cardinality" : "ManyToOne",
-      "sourceTable" : "LOCATIONS",
-      "targetTable" : "COUNTRIES",
+      "cascadeEnabled" : true,
+      "cascadeOptions" : {
+        "cascadeRemove" : "REMOVE",
+        "cascadeReplace" : false
+      },
+      "columnsUniqueKey" : false,
+      "composite" : false,
+      "fetchOptions" : {
+        "fetch" : true,
+        "columnsFilter" : [ ]
+      },
+      "fieldName" : "countries",
+      "ignored" : false,
       "mappings" : [ {
         "sourceColumn" : "COUNTRY_ID",
         "targetColumn" : "COUNTRY_ID"
       } ],
-      "ignored" : false,
-      "cascadeEnabled" : true,
-      "cascadeOptions" : {
-        "cascadeRemove" : "REMOVE",
-        "cascadeReplace" : false
-      },
-      "fetchOptions" : {
-        "fetch" : true,
-        "columnsFilter" : [ ]
-      },
+      "name" : "LOC_C_ID_FK",
       "parentFetchOptions" : {
         "fetch" : false,
         "columnsFilter" : [ ]
       },
       "primary" : true,
+      "selfRelation" : false,
+      "sourceColumnsNotUniqueKey" : true,
+      "sourceTable" : "LOCATIONS",
+      "targetColumnsUniqueKey" : false,
+      "targetTable" : "COUNTRIES",
+      "valid" : true,
       "virtual" : false
     } ],
-    "constraints" : [ {
-      "name" : "LOC_CITY_NN",
-      "schemaName" : null,
-      "type" : "CHECK",
-      "columns" : [ "CITY" ],
-      "virtual" : false,
-      "composite" : false
-    } ],
+    "schema" : "HR",
     "tableDataLockingOptions" : {
       "versionColumnName" : "VERSION",
       "lockingStrategy" : "NONE",
       "overrideStrategy" : "INHERIT"
-    }
+    },
+    "temporals" : [ ],
+    "type" : "TABLE"
   }, {
-    "name" : "DEPARTMENTS",
-    "oldName" : "DEPARTMENTS",
-    "entityName" : "Departments",
-    "type" : "TABLE",
-    "schema" : "HR",
     "catalog" : null,
-    "filter" : null,
-    "ignoreRefreshAfterInsert" : false,
     "columns" : [ {
-      "name" : "DEPARTMENT_ID",
-      "oldName" : "DEPARTMENT_ID",
-      "fieldName" : "departmentId",
-      "sqlType" : "number",
-      "javaType" : "short",
-      "length" : 22,
-      "scale" : 0,
-      "precision" : 4,
-      "nullable" : false,
-      "hidden" : false,
       "columnValue" : {
         "insertable" : true,
         "updatable" : true,
         "defaultValue" : null,
         "type" : "user-defined"
       },
-      "constraintList" : null
+      "constraintList" : null,
+      "fieldName" : "departmentId",
+      "foreignKey" : false,
+      "generatorType" : "assigned",
+      "generatorValue" : null,
+      "hidden" : false,
+      "javaType" : "short",
+      "length" : 22,
+      "name" : "DEPARTMENT_ID",
+      "nullable" : false,
+      "oldName" : "DEPARTMENT_ID",
+      "partOfAnyRelation" : false,
+      "partOfForeignKey" : false,
+      "partOfPrimaryKey" : true,
+      "partOfUniqueKey" : true,
+      "period" : false,
+      "precision" : 4,
+      "primaryKey" : true,
+      "scale" : 0,
+      "sequenceSchema" : null,
+      "sqlType" : "number",
+      "unique" : true
     }, {
-      "name" : "DEPARTMENT_NAME",
-      "oldName" : "DEPARTMENT_NAME",
+      "columnValue" : {
+        "insertable" : true,
+        "updatable" : true,
+        "defaultValue" : null,
+        "type" : "user-defined"
+      },
+      "constraintList" : null,
       "fieldName" : "departmentName",
-      "sqlType" : "string",
+      "foreignKey" : false,
+      "generatorType" : "assigned",
+      "generatorValue" : null,
+      "hidden" : false,
       "javaType" : "string",
       "length" : 30,
-      "scale" : 0,
-      "precision" : 0,
+      "name" : "DEPARTMENT_NAME",
       "nullable" : false,
-      "hidden" : false,
+      "oldName" : "DEPARTMENT_NAME",
+      "partOfAnyRelation" : false,
+      "partOfForeignKey" : false,
+      "partOfPrimaryKey" : false,
+      "partOfUniqueKey" : false,
+      "period" : false,
+      "precision" : 0,
+      "primaryKey" : false,
+      "scale" : 0,
+      "sequenceSchema" : null,
+      "sqlType" : "string",
+      "unique" : false
+    }, {
       "columnValue" : {
         "insertable" : true,
         "updatable" : true,
         "defaultValue" : null,
         "type" : "user-defined"
       },
-      "constraintList" : null
-    }, {
-      "name" : "MANAGER_ID",
-      "oldName" : "MANAGER_ID",
+      "constraintList" : null,
       "fieldName" : "managerId",
-      "sqlType" : "number",
+      "foreignKey" : true,
+      "generatorType" : "assigned",
+      "generatorValue" : null,
+      "hidden" : false,
       "javaType" : "integer",
       "length" : 22,
-      "scale" : 0,
-      "precision" : 6,
+      "name" : "MANAGER_ID",
       "nullable" : true,
-      "hidden" : false,
+      "oldName" : "MANAGER_ID",
+      "partOfAnyRelation" : true,
+      "partOfForeignKey" : true,
+      "partOfPrimaryKey" : false,
+      "partOfUniqueKey" : false,
+      "period" : false,
+      "precision" : 6,
+      "primaryKey" : false,
+      "scale" : 0,
+      "sequenceSchema" : null,
+      "sqlType" : "number",
+      "unique" : false
+    }, {
       "columnValue" : {
         "insertable" : true,
         "updatable" : true,
         "defaultValue" : null,
         "type" : "user-defined"
       },
-      "constraintList" : null
-    }, {
-      "name" : "LOCATION_ID",
-      "oldName" : "LOCATION_ID",
+      "constraintList" : null,
       "fieldName" : "locationId",
-      "sqlType" : "number",
+      "foreignKey" : true,
+      "generatorType" : "assigned",
+      "generatorValue" : null,
+      "hidden" : false,
       "javaType" : "short",
       "length" : 22,
-      "scale" : 0,
-      "precision" : 4,
+      "name" : "LOCATION_ID",
       "nullable" : true,
-      "hidden" : false,
-      "columnValue" : {
-        "insertable" : true,
-        "updatable" : true,
-        "defaultValue" : null,
-        "type" : "user-defined"
-      },
-      "constraintList" : null
+      "oldName" : "LOCATION_ID",
+      "partOfAnyRelation" : true,
+      "partOfForeignKey" : true,
+      "partOfPrimaryKey" : false,
+      "partOfUniqueKey" : false,
+      "period" : false,
+      "precision" : 4,
+      "primaryKey" : false,
+      "scale" : 0,
+      "sequenceSchema" : null,
+      "sqlType" : "number",
+      "unique" : false
     } ],
+    "constraints" : [ {
+      "columns" : [ "DEPARTMENT_NAME" ],
+      "composite" : false,
+      "name" : "DEPT_NAME_NN",
+      "schemaName" : null,
+      "type" : "CHECK",
+      "virtual" : false
+    } ],
+    "entityName" : "Departments",
+    "filter" : null,
+    "fullyQualifiedName" : "com.testingallprocedurescenarios.wmstudio.Departments",
+    "ignoreRefreshAfterInsert" : false,
+    "name" : "DEPARTMENTS",
+    "oldName" : "DEPARTMENTS",
     "primaryKey" : {
-      "name" : "DEPT_ID_PK",
-      "virtual" : false,
       "columns" : [ "DEPARTMENT_ID" ],
+      "composite" : false,
       "generator" : {
         "generatorType" : "assigned",
         "generatorValue" : null,
         "schemaName" : null
       },
-      "composite" : false
+      "name" : "DEPT_ID_PK",
+      "virtual" : false
     },
-    "temporals" : [ ],
     "relations" : [ {
-      "name" : "DEPT_LOC_FK",
-      "fieldName" : "locations",
       "cardinality" : "ManyToOne",
-      "sourceTable" : "DEPARTMENTS",
-      "targetTable" : "LOCATIONS",
+      "cascadeEnabled" : true,
+      "cascadeOptions" : {
+        "cascadeRemove" : "REMOVE",
+        "cascadeReplace" : false
+      },
+      "columnsUniqueKey" : false,
+      "composite" : false,
+      "fetchOptions" : {
+        "fetch" : true,
+        "columnsFilter" : [ ]
+      },
+      "fieldName" : "locations",
+      "ignored" : false,
       "mappings" : [ {
         "sourceColumn" : "LOCATION_ID",
         "targetColumn" : "LOCATION_ID"
       } ],
-      "ignored" : false,
-      "cascadeEnabled" : true,
-      "cascadeOptions" : {
-        "cascadeRemove" : "REMOVE",
-        "cascadeReplace" : false
-      },
-      "fetchOptions" : {
-        "fetch" : true,
-        "columnsFilter" : [ ]
-      },
+      "name" : "DEPT_LOC_FK",
       "parentFetchOptions" : {
         "fetch" : false,
         "columnsFilter" : [ ]
       },
       "primary" : true,
+      "selfRelation" : false,
+      "sourceColumnsNotUniqueKey" : true,
+      "sourceTable" : "DEPARTMENTS",
+      "targetColumnsUniqueKey" : false,
+      "targetTable" : "LOCATIONS",
+      "valid" : true,
       "virtual" : false
     }, {
-      "name" : "DEPT_MGR_FK",
-      "fieldName" : "employeesByManagerId",
       "cardinality" : "ManyToOne",
-      "sourceTable" : "DEPARTMENTS",
-      "targetTable" : "EMPLOYEES",
+      "cascadeEnabled" : true,
+      "cascadeOptions" : {
+        "cascadeRemove" : "REMOVE",
+        "cascadeReplace" : false
+      },
+      "columnsUniqueKey" : false,
+      "composite" : false,
+      "fetchOptions" : {
+        "fetch" : true,
+        "columnsFilter" : [ ]
+      },
+      "fieldName" : "employeesByManagerId",
+      "ignored" : false,
       "mappings" : [ {
         "sourceColumn" : "MANAGER_ID",
         "targetColumn" : "EMPLOYEE_ID"
       } ],
-      "ignored" : false,
-      "cascadeEnabled" : true,
-      "cascadeOptions" : {
-        "cascadeRemove" : "REMOVE",
-        "cascadeReplace" : false
-      },
-      "fetchOptions" : {
-        "fetch" : true,
-        "columnsFilter" : [ ]
-      },
+      "name" : "DEPT_MGR_FK",
       "parentFetchOptions" : {
         "fetch" : false,
         "columnsFilter" : [ ]
       },
       "primary" : true,
+      "selfRelation" : false,
+      "sourceColumnsNotUniqueKey" : true,
+      "sourceTable" : "DEPARTMENTS",
+      "targetColumnsUniqueKey" : false,
+      "targetTable" : "EMPLOYEES",
+      "valid" : true,
       "virtual" : false
     } ],
-    "constraints" : [ {
-      "name" : "DEPT_NAME_NN",
-      "schemaName" : null,
-      "type" : "CHECK",
-      "columns" : [ "DEPARTMENT_NAME" ],
-      "virtual" : false,
-      "composite" : false
-    } ],
+    "schema" : "HR",
     "tableDataLockingOptions" : {
       "versionColumnName" : "VERSION",
       "lockingStrategy" : "NONE",
       "overrideStrategy" : "INHERIT"
-    }
+    },
+    "temporals" : [ ],
+    "type" : "TABLE"
   }, {
-    "name" : "COUNTRIES",
-    "oldName" : "COUNTRIES",
-    "entityName" : "Countries",
-    "type" : "TABLE",
-    "schema" : "HR",
     "catalog" : null,
-    "filter" : null,
-    "ignoreRefreshAfterInsert" : false,
     "columns" : [ {
-      "name" : "COUNTRY_ID",
-      "oldName" : "COUNTRY_ID",
+      "columnValue" : {
+        "insertable" : true,
+        "updatable" : true,
+        "defaultValue" : null,
+        "type" : "user-defined"
+      },
+      "constraintList" : null,
       "fieldName" : "countryId",
-      "sqlType" : "string",
+      "foreignKey" : false,
+      "generatorType" : "assigned",
+      "generatorValue" : null,
+      "hidden" : false,
       "javaType" : "string",
       "length" : 2,
-      "scale" : 0,
-      "precision" : 0,
+      "name" : "COUNTRY_ID",
       "nullable" : false,
-      "hidden" : false,
+      "oldName" : "COUNTRY_ID",
+      "partOfAnyRelation" : false,
+      "partOfForeignKey" : false,
+      "partOfPrimaryKey" : true,
+      "partOfUniqueKey" : true,
+      "period" : false,
+      "precision" : 0,
+      "primaryKey" : true,
+      "scale" : 0,
+      "sequenceSchema" : null,
+      "sqlType" : "string",
+      "unique" : true
+    }, {
       "columnValue" : {
         "insertable" : true,
         "updatable" : true,
         "defaultValue" : null,
         "type" : "user-defined"
       },
-      "constraintList" : null
-    }, {
-      "name" : "COUNTRY_NAME",
-      "oldName" : "COUNTRY_NAME",
+      "constraintList" : null,
       "fieldName" : "countryName",
-      "sqlType" : "string",
+      "foreignKey" : false,
+      "generatorType" : "assigned",
+      "generatorValue" : null,
+      "hidden" : false,
       "javaType" : "string",
       "length" : 40,
-      "scale" : 0,
-      "precision" : 0,
+      "name" : "COUNTRY_NAME",
       "nullable" : true,
-      "hidden" : false,
+      "oldName" : "COUNTRY_NAME",
+      "partOfAnyRelation" : false,
+      "partOfForeignKey" : false,
+      "partOfPrimaryKey" : false,
+      "partOfUniqueKey" : false,
+      "period" : false,
+      "precision" : 0,
+      "primaryKey" : false,
+      "scale" : 0,
+      "sequenceSchema" : null,
+      "sqlType" : "string",
+      "unique" : false
+    }, {
       "columnValue" : {
         "insertable" : true,
         "updatable" : true,
         "defaultValue" : null,
         "type" : "user-defined"
       },
-      "constraintList" : null
-    }, {
-      "name" : "REGION_ID",
-      "oldName" : "REGION_ID",
+      "constraintList" : null,
       "fieldName" : "regionId",
-      "sqlType" : "number",
+      "foreignKey" : true,
+      "generatorType" : "assigned",
+      "generatorValue" : null,
+      "hidden" : false,
       "javaType" : "big_integer",
       "length" : 22,
-      "scale" : 0,
-      "precision" : 38,
+      "name" : "REGION_ID",
       "nullable" : true,
-      "hidden" : false,
-      "columnValue" : {
-        "insertable" : true,
-        "updatable" : true,
-        "defaultValue" : null,
-        "type" : "user-defined"
-      },
-      "constraintList" : null
+      "oldName" : "REGION_ID",
+      "partOfAnyRelation" : true,
+      "partOfForeignKey" : true,
+      "partOfPrimaryKey" : false,
+      "partOfUniqueKey" : false,
+      "period" : false,
+      "precision" : 38,
+      "primaryKey" : false,
+      "scale" : 0,
+      "sequenceSchema" : null,
+      "sqlType" : "number",
+      "unique" : false
     } ],
-    "primaryKey" : {
-      "name" : "COUNTRY_C_ID_PK",
-      "virtual" : false,
+    "constraints" : [ {
       "columns" : [ "COUNTRY_ID" ],
+      "composite" : false,
+      "name" : "COUNTRY_ID_NN",
+      "schemaName" : null,
+      "type" : "CHECK",
+      "virtual" : false
+    } ],
+    "entityName" : "Countries",
+    "filter" : null,
+    "fullyQualifiedName" : "com.testingallprocedurescenarios.wmstudio.Countries",
+    "ignoreRefreshAfterInsert" : false,
+    "name" : "COUNTRIES",
+    "oldName" : "COUNTRIES",
+    "primaryKey" : {
+      "columns" : [ "COUNTRY_ID" ],
+      "composite" : false,
       "generator" : {
         "generatorType" : "assigned",
         "generatorValue" : null,
         "schemaName" : null
       },
-      "composite" : false
+      "name" : "COUNTRY_C_ID_PK",
+      "virtual" : false
     },
-    "temporals" : [ ],
     "relations" : [ {
-      "name" : "COUNTR_REG_FK",
-      "fieldName" : "regions",
       "cardinality" : "ManyToOne",
-      "sourceTable" : "COUNTRIES",
-      "targetTable" : "REGIONS",
+      "cascadeEnabled" : true,
+      "cascadeOptions" : {
+        "cascadeRemove" : "REMOVE",
+        "cascadeReplace" : false
+      },
+      "columnsUniqueKey" : false,
+      "composite" : false,
+      "fetchOptions" : {
+        "fetch" : true,
+        "columnsFilter" : [ ]
+      },
+      "fieldName" : "regions",
+      "ignored" : false,
       "mappings" : [ {
         "sourceColumn" : "REGION_ID",
         "targetColumn" : "REGION_ID"
       } ],
-      "ignored" : false,
-      "cascadeEnabled" : true,
-      "cascadeOptions" : {
-        "cascadeRemove" : "REMOVE",
-        "cascadeReplace" : false
-      },
-      "fetchOptions" : {
-        "fetch" : true,
-        "columnsFilter" : [ ]
-      },
+      "name" : "COUNTR_REG_FK",
       "parentFetchOptions" : {
         "fetch" : false,
         "columnsFilter" : [ ]
       },
       "primary" : true,
+      "selfRelation" : false,
+      "sourceColumnsNotUniqueKey" : true,
+      "sourceTable" : "COUNTRIES",
+      "targetColumnsUniqueKey" : false,
+      "targetTable" : "REGIONS",
+      "valid" : true,
       "virtual" : false
     } ],
-    "constraints" : [ {
-      "name" : "COUNTRY_ID_NN",
-      "schemaName" : null,
-      "type" : "CHECK",
-      "columns" : [ "COUNTRY_ID" ],
-      "virtual" : false,
-      "composite" : false
-    } ],
+    "schema" : "HR",
     "tableDataLockingOptions" : {
       "versionColumnName" : "VERSION",
       "lockingStrategy" : "NONE",
       "overrideStrategy" : "INHERIT"
-    }
+    },
+    "temporals" : [ ],
+    "type" : "TABLE"
   }, {
-    "name" : "EMPLOYEES",
-    "oldName" : "EMPLOYEES",
-    "entityName" : "Employees",
-    "type" : "TABLE",
-    "schema" : "HR",
     "catalog" : null,
-    "filter" : null,
-    "ignoreRefreshAfterInsert" : false,
     "columns" : [ {
-      "name" : "EMPLOYEE_ID",
-      "oldName" : "EMPLOYEE_ID",
+      "columnValue" : {
+        "insertable" : true,
+        "updatable" : true,
+        "defaultValue" : null,
+        "type" : "user-defined"
+      },
+      "constraintList" : null,
       "fieldName" : "employeeId",
-      "sqlType" : "number",
+      "foreignKey" : false,
+      "generatorType" : "assigned",
+      "generatorValue" : null,
+      "hidden" : false,
       "javaType" : "integer",
       "length" : 22,
-      "scale" : 0,
+      "name" : "EMPLOYEE_ID",
+      "nullable" : false,
+      "oldName" : "EMPLOYEE_ID",
+      "partOfAnyRelation" : false,
+      "partOfForeignKey" : false,
+      "partOfPrimaryKey" : true,
+      "partOfUniqueKey" : true,
+      "period" : false,
       "precision" : 6,
-      "nullable" : false,
-      "hidden" : false,
+      "primaryKey" : true,
+      "scale" : 0,
+      "sequenceSchema" : null,
+      "sqlType" : "number",
+      "unique" : true
+    }, {
       "columnValue" : {
         "insertable" : true,
         "updatable" : true,
         "defaultValue" : null,
         "type" : "user-defined"
       },
-      "constraintList" : null
-    }, {
-      "name" : "FIRST_NAME",
-      "oldName" : "FIRST_NAME",
+      "constraintList" : null,
       "fieldName" : "firstName",
-      "sqlType" : "string",
+      "foreignKey" : false,
+      "generatorType" : "assigned",
+      "generatorValue" : null,
+      "hidden" : false,
       "javaType" : "string",
       "length" : 20,
-      "scale" : 0,
-      "precision" : 0,
+      "name" : "FIRST_NAME",
       "nullable" : true,
-      "hidden" : false,
+      "oldName" : "FIRST_NAME",
+      "partOfAnyRelation" : false,
+      "partOfForeignKey" : false,
+      "partOfPrimaryKey" : false,
+      "partOfUniqueKey" : false,
+      "period" : false,
+      "precision" : 0,
+      "primaryKey" : false,
+      "scale" : 0,
+      "sequenceSchema" : null,
+      "sqlType" : "string",
+      "unique" : false
+    }, {
       "columnValue" : {
         "insertable" : true,
         "updatable" : true,
         "defaultValue" : null,
         "type" : "user-defined"
       },
-      "constraintList" : null
-    }, {
-      "name" : "LAST_NAME",
-      "oldName" : "LAST_NAME",
+      "constraintList" : null,
       "fieldName" : "lastName",
-      "sqlType" : "string",
+      "foreignKey" : false,
+      "generatorType" : "assigned",
+      "generatorValue" : null,
+      "hidden" : false,
       "javaType" : "string",
       "length" : 25,
-      "scale" : 0,
-      "precision" : 0,
+      "name" : "LAST_NAME",
       "nullable" : false,
-      "hidden" : false,
+      "oldName" : "LAST_NAME",
+      "partOfAnyRelation" : false,
+      "partOfForeignKey" : false,
+      "partOfPrimaryKey" : false,
+      "partOfUniqueKey" : false,
+      "period" : false,
+      "precision" : 0,
+      "primaryKey" : false,
+      "scale" : 0,
+      "sequenceSchema" : null,
+      "sqlType" : "string",
+      "unique" : false
+    }, {
       "columnValue" : {
         "insertable" : true,
         "updatable" : true,
         "defaultValue" : null,
         "type" : "user-defined"
       },
-      "constraintList" : null
-    }, {
-      "name" : "EMAIL",
-      "oldName" : "EMAIL",
+      "constraintList" : null,
       "fieldName" : "email",
-      "sqlType" : "string",
+      "foreignKey" : false,
+      "generatorType" : "assigned",
+      "generatorValue" : null,
+      "hidden" : false,
       "javaType" : "string",
       "length" : 25,
-      "scale" : 0,
-      "precision" : 0,
+      "name" : "EMAIL",
       "nullable" : false,
-      "hidden" : false,
+      "oldName" : "EMAIL",
+      "partOfAnyRelation" : false,
+      "partOfForeignKey" : false,
+      "partOfPrimaryKey" : false,
+      "partOfUniqueKey" : true,
+      "period" : false,
+      "precision" : 0,
+      "primaryKey" : false,
+      "scale" : 0,
+      "sequenceSchema" : null,
+      "sqlType" : "string",
+      "unique" : true
+    }, {
       "columnValue" : {
         "insertable" : true,
         "updatable" : true,
         "defaultValue" : null,
         "type" : "user-defined"
       },
-      "constraintList" : null
-    }, {
-      "name" : "PHONE_NUMBER",
-      "oldName" : "PHONE_NUMBER",
+      "constraintList" : null,
       "fieldName" : "phoneNumber",
-      "sqlType" : "string",
+      "foreignKey" : false,
+      "generatorType" : "assigned",
+      "generatorValue" : null,
+      "hidden" : false,
       "javaType" : "string",
       "length" : 20,
-      "scale" : 0,
-      "precision" : 0,
+      "name" : "PHONE_NUMBER",
       "nullable" : true,
-      "hidden" : false,
+      "oldName" : "PHONE_NUMBER",
+      "partOfAnyRelation" : false,
+      "partOfForeignKey" : false,
+      "partOfPrimaryKey" : false,
+      "partOfUniqueKey" : false,
+      "period" : false,
+      "precision" : 0,
+      "primaryKey" : false,
+      "scale" : 0,
+      "sequenceSchema" : null,
+      "sqlType" : "string",
+      "unique" : false
+    }, {
       "columnValue" : {
         "insertable" : true,
         "updatable" : true,
         "defaultValue" : null,
         "type" : "user-defined"
       },
-      "constraintList" : null
-    }, {
-      "name" : "HIRE_DATE",
-      "oldName" : "HIRE_DATE",
+      "constraintList" : null,
       "fieldName" : "hireDate",
-      "sqlType" : "date",
+      "foreignKey" : false,
+      "generatorType" : "assigned",
+      "generatorValue" : null,
+      "hidden" : false,
       "javaType" : "datetime",
       "length" : 7,
-      "scale" : 0,
-      "precision" : 0,
+      "name" : "HIRE_DATE",
       "nullable" : false,
-      "hidden" : false,
+      "oldName" : "HIRE_DATE",
+      "partOfAnyRelation" : false,
+      "partOfForeignKey" : false,
+      "partOfPrimaryKey" : false,
+      "partOfUniqueKey" : false,
+      "period" : false,
+      "precision" : 0,
+      "primaryKey" : false,
+      "scale" : 0,
+      "sequenceSchema" : null,
+      "sqlType" : "date",
+      "unique" : false
+    }, {
       "columnValue" : {
         "insertable" : true,
         "updatable" : true,
         "defaultValue" : null,
         "type" : "user-defined"
       },
-      "constraintList" : null
-    }, {
-      "name" : "JOB_ID",
-      "oldName" : "JOB_ID",
+      "constraintList" : null,
       "fieldName" : "jobId",
-      "sqlType" : "string",
+      "foreignKey" : true,
+      "generatorType" : "assigned",
+      "generatorValue" : null,
+      "hidden" : false,
       "javaType" : "string",
       "length" : 10,
-      "scale" : 0,
-      "precision" : 0,
+      "name" : "JOB_ID",
       "nullable" : false,
-      "hidden" : false,
+      "oldName" : "JOB_ID",
+      "partOfAnyRelation" : true,
+      "partOfForeignKey" : true,
+      "partOfPrimaryKey" : false,
+      "partOfUniqueKey" : false,
+      "period" : false,
+      "precision" : 0,
+      "primaryKey" : false,
+      "scale" : 0,
+      "sequenceSchema" : null,
+      "sqlType" : "string",
+      "unique" : false
+    }, {
       "columnValue" : {
         "insertable" : true,
         "updatable" : true,
         "defaultValue" : null,
         "type" : "user-defined"
       },
-      "constraintList" : null
-    }, {
-      "name" : "SALARY",
-      "oldName" : "SALARY",
+      "constraintList" : null,
       "fieldName" : "salary",
-      "sqlType" : "number",
+      "foreignKey" : false,
+      "generatorType" : "assigned",
+      "generatorValue" : null,
+      "hidden" : false,
       "javaType" : "float",
       "length" : 22,
-      "scale" : 2,
+      "name" : "SALARY",
+      "nullable" : true,
+      "oldName" : "SALARY",
+      "partOfAnyRelation" : false,
+      "partOfForeignKey" : false,
+      "partOfPrimaryKey" : false,
+      "partOfUniqueKey" : false,
+      "period" : false,
       "precision" : 8,
-      "nullable" : true,
-      "hidden" : false,
+      "primaryKey" : false,
+      "scale" : 2,
+      "sequenceSchema" : null,
+      "sqlType" : "number",
+      "unique" : false
+    }, {
       "columnValue" : {
         "insertable" : true,
         "updatable" : true,
         "defaultValue" : null,
         "type" : "user-defined"
       },
-      "constraintList" : null
-    }, {
-      "name" : "COMMISSION_PCT",
-      "oldName" : "COMMISSION_PCT",
+      "constraintList" : null,
       "fieldName" : "commissionPct",
-      "sqlType" : "number",
+      "foreignKey" : false,
+      "generatorType" : "assigned",
+      "generatorValue" : null,
+      "hidden" : false,
       "javaType" : "float",
       "length" : 22,
-      "scale" : 2,
-      "precision" : 2,
+      "name" : "COMMISSION_PCT",
       "nullable" : true,
-      "hidden" : false,
+      "oldName" : "COMMISSION_PCT",
+      "partOfAnyRelation" : false,
+      "partOfForeignKey" : false,
+      "partOfPrimaryKey" : false,
+      "partOfUniqueKey" : false,
+      "period" : false,
+      "precision" : 2,
+      "primaryKey" : false,
+      "scale" : 2,
+      "sequenceSchema" : null,
+      "sqlType" : "number",
+      "unique" : false
+    }, {
       "columnValue" : {
         "insertable" : true,
         "updatable" : true,
         "defaultValue" : null,
         "type" : "user-defined"
       },
-      "constraintList" : null
-    }, {
-      "name" : "MANAGER_ID",
-      "oldName" : "MANAGER_ID",
+      "constraintList" : null,
       "fieldName" : "managerId",
-      "sqlType" : "number",
+      "foreignKey" : true,
+      "generatorType" : "assigned",
+      "generatorValue" : null,
+      "hidden" : false,
       "javaType" : "integer",
       "length" : 22,
-      "scale" : 0,
-      "precision" : 6,
+      "name" : "MANAGER_ID",
       "nullable" : true,
-      "hidden" : false,
+      "oldName" : "MANAGER_ID",
+      "partOfAnyRelation" : true,
+      "partOfForeignKey" : true,
+      "partOfPrimaryKey" : false,
+      "partOfUniqueKey" : false,
+      "period" : false,
+      "precision" : 6,
+      "primaryKey" : false,
+      "scale" : 0,
+      "sequenceSchema" : null,
+      "sqlType" : "number",
+      "unique" : false
+    }, {
       "columnValue" : {
         "insertable" : true,
         "updatable" : true,
         "defaultValue" : null,
         "type" : "user-defined"
       },
-      "constraintList" : null
-    }, {
-      "name" : "DEPARTMENT_ID",
-      "oldName" : "DEPARTMENT_ID",
+      "constraintList" : null,
       "fieldName" : "departmentId",
-      "sqlType" : "number",
+      "foreignKey" : true,
+      "generatorType" : "assigned",
+      "generatorValue" : null,
+      "hidden" : false,
       "javaType" : "short",
       "length" : 22,
-      "scale" : 0,
-      "precision" : 4,
+      "name" : "DEPARTMENT_ID",
       "nullable" : true,
-      "hidden" : false,
-      "columnValue" : {
-        "insertable" : true,
-        "updatable" : true,
-        "defaultValue" : null,
-        "type" : "user-defined"
-      },
-      "constraintList" : null
+      "oldName" : "DEPARTMENT_ID",
+      "partOfAnyRelation" : true,
+      "partOfForeignKey" : true,
+      "partOfPrimaryKey" : false,
+      "partOfUniqueKey" : false,
+      "period" : false,
+      "precision" : 4,
+      "primaryKey" : false,
+      "scale" : 0,
+      "sequenceSchema" : null,
+      "sqlType" : "number",
+      "unique" : false
     } ],
+    "constraints" : [ {
+      "columns" : [ "LAST_NAME" ],
+      "composite" : false,
+      "name" : "EMP_LAST_NAME_NN",
+      "schemaName" : null,
+      "type" : "CHECK",
+      "virtual" : false
+    }, {
+      "columns" : [ "EMAIL" ],
+      "composite" : false,
+      "name" : "EMP_EMAIL_NN",
+      "schemaName" : null,
+      "type" : "CHECK",
+      "virtual" : false
+    }, {
+      "columns" : [ "HIRE_DATE" ],
+      "composite" : false,
+      "name" : "EMP_HIRE_DATE_NN",
+      "schemaName" : null,
+      "type" : "CHECK",
+      "virtual" : false
+    }, {
+      "columns" : [ "JOB_ID" ],
+      "composite" : false,
+      "name" : "EMP_JOB_NN",
+      "schemaName" : null,
+      "type" : "CHECK",
+      "virtual" : false
+    }, {
+      "columns" : [ "SALARY" ],
+      "composite" : false,
+      "name" : "EMP_SALARY_MIN",
+      "schemaName" : null,
+      "type" : "CHECK",
+      "virtual" : false
+    }, {
+      "columns" : [ "EMAIL" ],
+      "composite" : false,
+      "name" : "EMP_EMAIL_UK",
+      "schemaName" : null,
+      "type" : "UNIQUE",
+      "virtual" : false
+    } ],
+    "entityName" : "Employees",
+    "filter" : null,
+    "fullyQualifiedName" : "com.testingallprocedurescenarios.wmstudio.Employees",
+    "ignoreRefreshAfterInsert" : false,
+    "name" : "EMPLOYEES",
+    "oldName" : "EMPLOYEES",
     "primaryKey" : {
-      "name" : "EMP_EMP_ID_PK",
-      "virtual" : false,
       "columns" : [ "EMPLOYEE_ID" ],
+      "composite" : false,
       "generator" : {
         "generatorType" : "assigned",
         "generatorValue" : null,
         "schemaName" : null
       },
-      "composite" : false
+      "name" : "EMP_EMP_ID_PK",
+      "virtual" : false
     },
-    "temporals" : [ ],
     "relations" : [ {
-      "name" : "EMP_MANAGER_FK",
-      "fieldName" : "employeesByManagerId",
       "cardinality" : "ManyToOne",
+      "cascadeEnabled" : true,
+      "cascadeOptions" : {
+        "cascadeRemove" : "REMOVE",
+        "cascadeReplace" : false
+      },
+      "columnsUniqueKey" : false,
+      "composite" : false,
+      "fetchOptions" : {
+        "fetch" : true,
+        "columnsFilter" : [ ]
+      },
+      "fieldName" : "departmentsByDepartmentId",
+      "ignored" : false,
+      "mappings" : [ {
+        "sourceColumn" : "DEPARTMENT_ID",
+        "targetColumn" : "DEPARTMENT_ID"
+      } ],
+      "name" : "EMP_DEPT_FK",
+      "parentFetchOptions" : {
+        "fetch" : false,
+        "columnsFilter" : [ ]
+      },
+      "primary" : true,
+      "selfRelation" : false,
+      "sourceColumnsNotUniqueKey" : true,
       "sourceTable" : "EMPLOYEES",
-      "targetTable" : "EMPLOYEES",
+      "targetColumnsUniqueKey" : false,
+      "targetTable" : "DEPARTMENTS",
+      "valid" : true,
+      "virtual" : false
+    }, {
+      "cardinality" : "ManyToOne",
+      "cascadeEnabled" : true,
+      "cascadeOptions" : {
+        "cascadeRemove" : "REMOVE",
+        "cascadeReplace" : false
+      },
+      "columnsUniqueKey" : false,
+      "composite" : false,
+      "fetchOptions" : {
+        "fetch" : true,
+        "columnsFilter" : [ ]
+      },
+      "fieldName" : "jobs",
+      "ignored" : false,
+      "mappings" : [ {
+        "sourceColumn" : "JOB_ID",
+        "targetColumn" : "JOB_ID"
+      } ],
+      "name" : "EMP_JOB_FK",
+      "parentFetchOptions" : {
+        "fetch" : false,
+        "columnsFilter" : [ ]
+      },
+      "primary" : true,
+      "selfRelation" : false,
+      "sourceColumnsNotUniqueKey" : true,
+      "sourceTable" : "EMPLOYEES",
+      "targetColumnsUniqueKey" : false,
+      "targetTable" : "JOBS",
+      "valid" : true,
+      "virtual" : false
+    }, {
+      "cardinality" : "ManyToOne",
+      "cascadeEnabled" : true,
+      "cascadeOptions" : {
+        "cascadeRemove" : "REMOVE",
+        "cascadeReplace" : false
+      },
+      "columnsUniqueKey" : false,
+      "composite" : false,
+      "fetchOptions" : {
+        "fetch" : true,
+        "columnsFilter" : [ ]
+      },
+      "fieldName" : "employeesByManagerId",
+      "ignored" : false,
       "mappings" : [ {
         "sourceColumn" : "MANAGER_ID",
         "targetColumn" : "EMPLOYEE_ID"
       } ],
-      "ignored" : false,
-      "cascadeEnabled" : true,
-      "cascadeOptions" : {
-        "cascadeRemove" : "REMOVE",
-        "cascadeReplace" : false
-      },
-      "fetchOptions" : {
-        "fetch" : true,
-        "columnsFilter" : [ ]
-      },
+      "name" : "EMP_MANAGER_FK",
       "parentFetchOptions" : {
         "fetch" : false,
         "columnsFilter" : [ ]
       },
       "primary" : true,
-      "virtual" : false
-    }, {
-      "name" : "EMP_JOB_FK",
-      "fieldName" : "jobs",
-      "cardinality" : "ManyToOne",
+      "selfRelation" : true,
+      "sourceColumnsNotUniqueKey" : true,
       "sourceTable" : "EMPLOYEES",
-      "targetTable" : "JOBS",
-      "mappings" : [ {
-        "sourceColumn" : "JOB_ID",
-        "targetColumn" : "JOB_ID"
-      } ],
-      "ignored" : false,
-      "cascadeEnabled" : true,
-      "cascadeOptions" : {
-        "cascadeRemove" : "REMOVE",
-        "cascadeReplace" : false
-      },
-      "fetchOptions" : {
-        "fetch" : true,
-        "columnsFilter" : [ ]
-      },
-      "parentFetchOptions" : {
-        "fetch" : false,
-        "columnsFilter" : [ ]
-      },
-      "primary" : true,
-      "virtual" : false
-    }, {
-      "name" : "EMP_DEPT_FK",
-      "fieldName" : "departmentsByDepartmentId",
-      "cardinality" : "ManyToOne",
-      "sourceTable" : "EMPLOYEES",
-      "targetTable" : "DEPARTMENTS",
-      "mappings" : [ {
-        "sourceColumn" : "DEPARTMENT_ID",
-        "targetColumn" : "DEPARTMENT_ID"
-      } ],
-      "ignored" : false,
-      "cascadeEnabled" : true,
-      "cascadeOptions" : {
-        "cascadeRemove" : "REMOVE",
-        "cascadeReplace" : false
-      },
-      "fetchOptions" : {
-        "fetch" : true,
-        "columnsFilter" : [ ]
-      },
-      "parentFetchOptions" : {
-        "fetch" : false,
-        "columnsFilter" : [ ]
-      },
-      "primary" : true,
+      "targetColumnsUniqueKey" : false,
+      "targetTable" : "EMPLOYEES",
+      "valid" : true,
       "virtual" : false
     } ],
-    "constraints" : [ {
-      "name" : "EMP_LAST_NAME_NN",
-      "schemaName" : null,
-      "type" : "CHECK",
-      "columns" : [ "LAST_NAME" ],
-      "virtual" : false,
-      "composite" : false
-    }, {
-      "name" : "EMP_EMAIL_NN",
-      "schemaName" : null,
-      "type" : "CHECK",
-      "columns" : [ "EMAIL" ],
-      "virtual" : false,
-      "composite" : false
-    }, {
-      "name" : "EMP_HIRE_DATE_NN",
-      "schemaName" : null,
-      "type" : "CHECK",
-      "columns" : [ "HIRE_DATE" ],
-      "virtual" : false,
-      "composite" : false
-    }, {
-      "name" : "EMP_JOB_NN",
-      "schemaName" : null,
-      "type" : "CHECK",
-      "columns" : [ "JOB_ID" ],
-      "virtual" : false,
-      "composite" : false
-    }, {
-      "name" : "EMP_SALARY_MIN",
-      "schemaName" : null,
-      "type" : "CHECK",
-      "columns" : [ "SALARY" ],
-      "virtual" : false,
-      "composite" : false
-    }, {
-      "name" : "EMP_EMAIL_UK",
-      "schemaName" : null,
-      "type" : "UNIQUE",
-      "columns" : [ "EMAIL" ],
-      "virtual" : false,
-      "composite" : false
-    } ],
+    "schema" : "HR",
     "tableDataLockingOptions" : {
       "versionColumnName" : "VERSION",
       "lockingStrategy" : "NONE",
       "overrideStrategy" : "INHERIT"
-    }
-  }, {
-    "name" : "REGIONS",
-    "oldName" : "REGIONS",
-    "entityName" : "Regions",
-    "type" : "TABLE",
-    "schema" : "HR",
-    "catalog" : null,
-    "filter" : null,
-    "ignoreRefreshAfterInsert" : false,
-    "columns" : [ {
-      "name" : "REGION_ID",
-      "oldName" : "REGION_ID",
-      "fieldName" : "regionId",
-      "sqlType" : "number",
-      "javaType" : "big_integer",
-      "length" : 22,
-      "scale" : 0,
-      "precision" : 38,
-      "nullable" : false,
-      "hidden" : false,
-      "columnValue" : {
-        "insertable" : true,
-        "updatable" : true,
-        "defaultValue" : null,
-        "type" : "user-defined"
-      },
-      "constraintList" : null
-    }, {
-      "name" : "REGION_NAME",
-      "oldName" : "REGION_NAME",
-      "fieldName" : "regionName",
-      "sqlType" : "string",
-      "javaType" : "string",
-      "length" : 25,
-      "scale" : 0,
-      "precision" : 0,
-      "nullable" : true,
-      "hidden" : false,
-      "columnValue" : {
-        "insertable" : true,
-        "updatable" : true,
-        "defaultValue" : null,
-        "type" : "user-defined"
-      },
-      "constraintList" : null
-    } ],
-    "primaryKey" : {
-      "name" : "REG_ID_PK",
-      "virtual" : false,
-      "columns" : [ "REGION_ID" ],
-      "generator" : {
-        "generatorType" : "assigned",
-        "generatorValue" : null,
-        "schemaName" : null
-      },
-      "composite" : false
     },
     "temporals" : [ ],
-    "relations" : [ ],
+    "type" : "TABLE"
+  }, {
+    "catalog" : null,
+    "columns" : [ {
+      "columnValue" : {
+        "insertable" : true,
+        "updatable" : true,
+        "defaultValue" : null,
+        "type" : "user-defined"
+      },
+      "constraintList" : null,
+      "fieldName" : "regionId",
+      "foreignKey" : false,
+      "generatorType" : "assigned",
+      "generatorValue" : null,
+      "hidden" : false,
+      "javaType" : "big_integer",
+      "length" : 22,
+      "name" : "REGION_ID",
+      "nullable" : false,
+      "oldName" : "REGION_ID",
+      "partOfAnyRelation" : false,
+      "partOfForeignKey" : false,
+      "partOfPrimaryKey" : true,
+      "partOfUniqueKey" : true,
+      "period" : false,
+      "precision" : 38,
+      "primaryKey" : true,
+      "scale" : 0,
+      "sequenceSchema" : null,
+      "sqlType" : "number",
+      "unique" : true
+    }, {
+      "columnValue" : {
+        "insertable" : true,
+        "updatable" : true,
+        "defaultValue" : null,
+        "type" : "user-defined"
+      },
+      "constraintList" : null,
+      "fieldName" : "regionName",
+      "foreignKey" : false,
+      "generatorType" : "assigned",
+      "generatorValue" : null,
+      "hidden" : false,
+      "javaType" : "string",
+      "length" : 25,
+      "name" : "REGION_NAME",
+      "nullable" : true,
+      "oldName" : "REGION_NAME",
+      "partOfAnyRelation" : false,
+      "partOfForeignKey" : false,
+      "partOfPrimaryKey" : false,
+      "partOfUniqueKey" : false,
+      "period" : false,
+      "precision" : 0,
+      "primaryKey" : false,
+      "scale" : 0,
+      "sequenceSchema" : null,
+      "sqlType" : "string",
+      "unique" : false
+    } ],
     "constraints" : [ {
+      "columns" : [ "REGION_ID" ],
+      "composite" : false,
       "name" : "REGION_ID_NN",
       "schemaName" : null,
       "type" : "CHECK",
-      "columns" : [ "REGION_ID" ],
-      "virtual" : false,
-      "composite" : false
+      "virtual" : false
     } ],
-    "tableDataLockingOptions" : {
-      "versionColumnName" : "VERSION",
-      "lockingStrategy" : "NONE",
-      "overrideStrategy" : "INHERIT"
-    }
-  }, {
-    "name" : "JOBS",
-    "oldName" : "JOBS",
-    "entityName" : "Jobs",
-    "type" : "TABLE",
-    "schema" : "HR",
-    "catalog" : null,
+    "entityName" : "Regions",
     "filter" : null,
+    "fullyQualifiedName" : "com.testingallprocedurescenarios.wmstudio.Regions",
     "ignoreRefreshAfterInsert" : false,
-    "columns" : [ {
-      "name" : "JOB_ID",
-      "oldName" : "JOB_ID",
-      "fieldName" : "jobId",
-      "sqlType" : "string",
-      "javaType" : "string",
-      "length" : 10,
-      "scale" : 0,
-      "precision" : 0,
-      "nullable" : false,
-      "hidden" : false,
-      "columnValue" : {
-        "insertable" : true,
-        "updatable" : true,
-        "defaultValue" : null,
-        "type" : "user-defined"
-      },
-      "constraintList" : null
-    }, {
-      "name" : "JOB_TITLE",
-      "oldName" : "JOB_TITLE",
-      "fieldName" : "jobTitle",
-      "sqlType" : "string",
-      "javaType" : "string",
-      "length" : 35,
-      "scale" : 0,
-      "precision" : 0,
-      "nullable" : false,
-      "hidden" : false,
-      "columnValue" : {
-        "insertable" : true,
-        "updatable" : true,
-        "defaultValue" : null,
-        "type" : "user-defined"
-      },
-      "constraintList" : null
-    }, {
-      "name" : "MIN_SALARY",
-      "oldName" : "MIN_SALARY",
-      "fieldName" : "minSalary",
-      "sqlType" : "number",
-      "javaType" : "integer",
-      "length" : 22,
-      "scale" : 0,
-      "precision" : 6,
-      "nullable" : true,
-      "hidden" : false,
-      "columnValue" : {
-        "insertable" : true,
-        "updatable" : true,
-        "defaultValue" : null,
-        "type" : "user-defined"
-      },
-      "constraintList" : null
-    }, {
-      "name" : "MAX_SALARY",
-      "oldName" : "MAX_SALARY",
-      "fieldName" : "maxSalary",
-      "sqlType" : "number",
-      "javaType" : "integer",
-      "length" : 22,
-      "scale" : 0,
-      "precision" : 6,
-      "nullable" : true,
-      "hidden" : false,
-      "columnValue" : {
-        "insertable" : true,
-        "updatable" : true,
-        "defaultValue" : null,
-        "type" : "user-defined"
-      },
-      "constraintList" : null
-    } ],
+    "name" : "REGIONS",
+    "oldName" : "REGIONS",
     "primaryKey" : {
-      "name" : "JOB_ID_PK",
-      "virtual" : false,
-      "columns" : [ "JOB_ID" ],
+      "columns" : [ "REGION_ID" ],
+      "composite" : false,
       "generator" : {
         "generatorType" : "assigned",
         "generatorValue" : null,
         "schemaName" : null
       },
-      "composite" : false
+      "name" : "REG_ID_PK",
+      "virtual" : false
+    },
+    "relations" : [ ],
+    "schema" : "HR",
+    "tableDataLockingOptions" : {
+      "versionColumnName" : "VERSION",
+      "lockingStrategy" : "NONE",
+      "overrideStrategy" : "INHERIT"
     },
     "temporals" : [ ],
-    "relations" : [ ],
+    "type" : "TABLE"
+  }, {
+    "catalog" : null,
+    "columns" : [ {
+      "columnValue" : {
+        "insertable" : true,
+        "updatable" : true,
+        "defaultValue" : null,
+        "type" : "user-defined"
+      },
+      "constraintList" : null,
+      "fieldName" : "jobId",
+      "foreignKey" : false,
+      "generatorType" : "assigned",
+      "generatorValue" : null,
+      "hidden" : false,
+      "javaType" : "string",
+      "length" : 10,
+      "name" : "JOB_ID",
+      "nullable" : false,
+      "oldName" : "JOB_ID",
+      "partOfAnyRelation" : false,
+      "partOfForeignKey" : false,
+      "partOfPrimaryKey" : true,
+      "partOfUniqueKey" : true,
+      "period" : false,
+      "precision" : 0,
+      "primaryKey" : true,
+      "scale" : 0,
+      "sequenceSchema" : null,
+      "sqlType" : "string",
+      "unique" : true
+    }, {
+      "columnValue" : {
+        "insertable" : true,
+        "updatable" : true,
+        "defaultValue" : null,
+        "type" : "user-defined"
+      },
+      "constraintList" : null,
+      "fieldName" : "jobTitle",
+      "foreignKey" : false,
+      "generatorType" : "assigned",
+      "generatorValue" : null,
+      "hidden" : false,
+      "javaType" : "string",
+      "length" : 35,
+      "name" : "JOB_TITLE",
+      "nullable" : false,
+      "oldName" : "JOB_TITLE",
+      "partOfAnyRelation" : false,
+      "partOfForeignKey" : false,
+      "partOfPrimaryKey" : false,
+      "partOfUniqueKey" : false,
+      "period" : false,
+      "precision" : 0,
+      "primaryKey" : false,
+      "scale" : 0,
+      "sequenceSchema" : null,
+      "sqlType" : "string",
+      "unique" : false
+    }, {
+      "columnValue" : {
+        "insertable" : true,
+        "updatable" : true,
+        "defaultValue" : null,
+        "type" : "user-defined"
+      },
+      "constraintList" : null,
+      "fieldName" : "minSalary",
+      "foreignKey" : false,
+      "generatorType" : "assigned",
+      "generatorValue" : null,
+      "hidden" : false,
+      "javaType" : "integer",
+      "length" : 22,
+      "name" : "MIN_SALARY",
+      "nullable" : true,
+      "oldName" : "MIN_SALARY",
+      "partOfAnyRelation" : false,
+      "partOfForeignKey" : false,
+      "partOfPrimaryKey" : false,
+      "partOfUniqueKey" : false,
+      "period" : false,
+      "precision" : 6,
+      "primaryKey" : false,
+      "scale" : 0,
+      "sequenceSchema" : null,
+      "sqlType" : "number",
+      "unique" : false
+    }, {
+      "columnValue" : {
+        "insertable" : true,
+        "updatable" : true,
+        "defaultValue" : null,
+        "type" : "user-defined"
+      },
+      "constraintList" : null,
+      "fieldName" : "maxSalary",
+      "foreignKey" : false,
+      "generatorType" : "assigned",
+      "generatorValue" : null,
+      "hidden" : false,
+      "javaType" : "integer",
+      "length" : 22,
+      "name" : "MAX_SALARY",
+      "nullable" : true,
+      "oldName" : "MAX_SALARY",
+      "partOfAnyRelation" : false,
+      "partOfForeignKey" : false,
+      "partOfPrimaryKey" : false,
+      "partOfUniqueKey" : false,
+      "period" : false,
+      "precision" : 6,
+      "primaryKey" : false,
+      "scale" : 0,
+      "sequenceSchema" : null,
+      "sqlType" : "number",
+      "unique" : false
+    } ],
     "constraints" : [ {
+      "columns" : [ "JOB_TITLE" ],
+      "composite" : false,
       "name" : "JOB_TITLE_NN",
       "schemaName" : null,
       "type" : "CHECK",
-      "columns" : [ "JOB_TITLE" ],
-      "virtual" : false,
-      "composite" : false
+      "virtual" : false
     } ],
-    "tableDataLockingOptions" : {
-      "versionColumnName" : "VERSION",
-      "lockingStrategy" : "NONE",
-      "overrideStrategy" : "INHERIT"
-    }
-  }, {
-    "name" : "JOB_HISTORY",
-    "oldName" : "JOB_HISTORY",
-    "entityName" : "JobHistory",
-    "type" : "TABLE",
-    "schema" : "HR",
-    "catalog" : null,
+    "entityName" : "Jobs",
     "filter" : null,
+    "fullyQualifiedName" : "com.testingallprocedurescenarios.wmstudio.Jobs",
     "ignoreRefreshAfterInsert" : false,
-    "columns" : [ {
-      "name" : "EMPLOYEE_ID",
-      "oldName" : "EMPLOYEE_ID",
-      "fieldName" : "employeeId",
-      "sqlType" : "number",
-      "javaType" : "integer",
-      "length" : 22,
-      "scale" : 0,
-      "precision" : 6,
-      "nullable" : false,
-      "hidden" : false,
-      "columnValue" : {
-        "insertable" : true,
-        "updatable" : true,
-        "defaultValue" : null,
-        "type" : "user-defined"
-      },
-      "constraintList" : null
-    }, {
-      "name" : "START_DATE",
-      "oldName" : "START_DATE",
-      "fieldName" : "startDate",
-      "sqlType" : "date",
-      "javaType" : "datetime",
-      "length" : 7,
-      "scale" : 0,
-      "precision" : 0,
-      "nullable" : false,
-      "hidden" : false,
-      "columnValue" : {
-        "insertable" : true,
-        "updatable" : true,
-        "defaultValue" : null,
-        "type" : "user-defined"
-      },
-      "constraintList" : null
-    }, {
-      "name" : "END_DATE",
-      "oldName" : "END_DATE",
-      "fieldName" : "endDate",
-      "sqlType" : "date",
-      "javaType" : "datetime",
-      "length" : 7,
-      "scale" : 0,
-      "precision" : 0,
-      "nullable" : false,
-      "hidden" : false,
-      "columnValue" : {
-        "insertable" : true,
-        "updatable" : true,
-        "defaultValue" : null,
-        "type" : "user-defined"
-      },
-      "constraintList" : null
-    }, {
-      "name" : "JOB_ID",
-      "oldName" : "JOB_ID",
-      "fieldName" : "jobId",
-      "sqlType" : "string",
-      "javaType" : "string",
-      "length" : 10,
-      "scale" : 0,
-      "precision" : 0,
-      "nullable" : false,
-      "hidden" : false,
-      "columnValue" : {
-        "insertable" : true,
-        "updatable" : true,
-        "defaultValue" : null,
-        "type" : "user-defined"
-      },
-      "constraintList" : null
-    }, {
-      "name" : "DEPARTMENT_ID",
-      "oldName" : "DEPARTMENT_ID",
-      "fieldName" : "departmentId",
-      "sqlType" : "number",
-      "javaType" : "short",
-      "length" : 22,
-      "scale" : 0,
-      "precision" : 4,
-      "nullable" : true,
-      "hidden" : false,
-      "columnValue" : {
-        "insertable" : true,
-        "updatable" : true,
-        "defaultValue" : null,
-        "type" : "user-defined"
-      },
-      "constraintList" : null
-    } ],
+    "name" : "JOBS",
+    "oldName" : "JOBS",
     "primaryKey" : {
-      "name" : "JHIST_EMP_ID_ST_DATE_PK",
-      "virtual" : false,
-      "columns" : [ "EMPLOYEE_ID", "START_DATE" ],
+      "columns" : [ "JOB_ID" ],
+      "composite" : false,
       "generator" : {
         "generatorType" : "assigned",
         "generatorValue" : null,
         "schemaName" : null
       },
-      "composite" : true
+      "name" : "JOB_ID_PK",
+      "virtual" : false
+    },
+    "relations" : [ ],
+    "schema" : "HR",
+    "tableDataLockingOptions" : {
+      "versionColumnName" : "VERSION",
+      "lockingStrategy" : "NONE",
+      "overrideStrategy" : "INHERIT"
     },
     "temporals" : [ ],
+    "type" : "TABLE"
+  }, {
+    "catalog" : null,
+    "columns" : [ {
+      "columnValue" : {
+        "insertable" : true,
+        "updatable" : true,
+        "defaultValue" : null,
+        "type" : "user-defined"
+      },
+      "constraintList" : null,
+      "fieldName" : "employeeId",
+      "foreignKey" : true,
+      "generatorType" : "assigned",
+      "generatorValue" : null,
+      "hidden" : false,
+      "javaType" : "integer",
+      "length" : 22,
+      "name" : "EMPLOYEE_ID",
+      "nullable" : false,
+      "oldName" : "EMPLOYEE_ID",
+      "partOfAnyRelation" : true,
+      "partOfForeignKey" : true,
+      "partOfPrimaryKey" : true,
+      "partOfUniqueKey" : false,
+      "period" : false,
+      "precision" : 6,
+      "primaryKey" : false,
+      "scale" : 0,
+      "sequenceSchema" : null,
+      "sqlType" : "number",
+      "unique" : false
+    }, {
+      "columnValue" : {
+        "insertable" : true,
+        "updatable" : true,
+        "defaultValue" : null,
+        "type" : "user-defined"
+      },
+      "constraintList" : null,
+      "fieldName" : "startDate",
+      "foreignKey" : false,
+      "generatorType" : "assigned",
+      "generatorValue" : null,
+      "hidden" : false,
+      "javaType" : "datetime",
+      "length" : 7,
+      "name" : "START_DATE",
+      "nullable" : false,
+      "oldName" : "START_DATE",
+      "partOfAnyRelation" : false,
+      "partOfForeignKey" : false,
+      "partOfPrimaryKey" : true,
+      "partOfUniqueKey" : false,
+      "period" : false,
+      "precision" : 0,
+      "primaryKey" : false,
+      "scale" : 0,
+      "sequenceSchema" : null,
+      "sqlType" : "date",
+      "unique" : false
+    }, {
+      "columnValue" : {
+        "insertable" : true,
+        "updatable" : true,
+        "defaultValue" : null,
+        "type" : "user-defined"
+      },
+      "constraintList" : null,
+      "fieldName" : "endDate",
+      "foreignKey" : false,
+      "generatorType" : "assigned",
+      "generatorValue" : null,
+      "hidden" : false,
+      "javaType" : "datetime",
+      "length" : 7,
+      "name" : "END_DATE",
+      "nullable" : false,
+      "oldName" : "END_DATE",
+      "partOfAnyRelation" : false,
+      "partOfForeignKey" : false,
+      "partOfPrimaryKey" : false,
+      "partOfUniqueKey" : false,
+      "period" : false,
+      "precision" : 0,
+      "primaryKey" : false,
+      "scale" : 0,
+      "sequenceSchema" : null,
+      "sqlType" : "date",
+      "unique" : false
+    }, {
+      "columnValue" : {
+        "insertable" : true,
+        "updatable" : true,
+        "defaultValue" : null,
+        "type" : "user-defined"
+      },
+      "constraintList" : null,
+      "fieldName" : "jobId",
+      "foreignKey" : true,
+      "generatorType" : "assigned",
+      "generatorValue" : null,
+      "hidden" : false,
+      "javaType" : "string",
+      "length" : 10,
+      "name" : "JOB_ID",
+      "nullable" : false,
+      "oldName" : "JOB_ID",
+      "partOfAnyRelation" : true,
+      "partOfForeignKey" : true,
+      "partOfPrimaryKey" : false,
+      "partOfUniqueKey" : false,
+      "period" : false,
+      "precision" : 0,
+      "primaryKey" : false,
+      "scale" : 0,
+      "sequenceSchema" : null,
+      "sqlType" : "string",
+      "unique" : false
+    }, {
+      "columnValue" : {
+        "insertable" : true,
+        "updatable" : true,
+        "defaultValue" : null,
+        "type" : "user-defined"
+      },
+      "constraintList" : null,
+      "fieldName" : "departmentId",
+      "foreignKey" : true,
+      "generatorType" : "assigned",
+      "generatorValue" : null,
+      "hidden" : false,
+      "javaType" : "short",
+      "length" : 22,
+      "name" : "DEPARTMENT_ID",
+      "nullable" : true,
+      "oldName" : "DEPARTMENT_ID",
+      "partOfAnyRelation" : true,
+      "partOfForeignKey" : true,
+      "partOfPrimaryKey" : false,
+      "partOfUniqueKey" : false,
+      "period" : false,
+      "precision" : 4,
+      "primaryKey" : false,
+      "scale" : 0,
+      "sequenceSchema" : null,
+      "sqlType" : "number",
+      "unique" : false
+    } ],
+    "constraints" : [ {
+      "columns" : [ "EMPLOYEE_ID" ],
+      "composite" : false,
+      "name" : "JHIST_EMPLOYEE_NN",
+      "schemaName" : null,
+      "type" : "CHECK",
+      "virtual" : false
+    }, {
+      "columns" : [ "START_DATE" ],
+      "composite" : false,
+      "name" : "JHIST_START_DATE_NN",
+      "schemaName" : null,
+      "type" : "CHECK",
+      "virtual" : false
+    }, {
+      "columns" : [ "END_DATE" ],
+      "composite" : false,
+      "name" : "JHIST_END_DATE_NN",
+      "schemaName" : null,
+      "type" : "CHECK",
+      "virtual" : false
+    }, {
+      "columns" : [ "JOB_ID" ],
+      "composite" : false,
+      "name" : "JHIST_JOB_NN",
+      "schemaName" : null,
+      "type" : "CHECK",
+      "virtual" : false
+    }, {
+      "columns" : [ "START_DATE", "END_DATE" ],
+      "composite" : true,
+      "name" : "JHIST_DATE_INTERVAL",
+      "schemaName" : null,
+      "type" : "CHECK",
+      "virtual" : false
+    } ],
+    "entityName" : "JobHistory",
+    "filter" : null,
+    "fullyQualifiedName" : "com.testingallprocedurescenarios.wmstudio.JobHistory",
+    "ignoreRefreshAfterInsert" : false,
+    "name" : "JOB_HISTORY",
+    "oldName" : "JOB_HISTORY",
+    "primaryKey" : {
+      "columns" : [ "EMPLOYEE_ID", "START_DATE" ],
+      "composite" : true,
+      "generator" : {
+        "generatorType" : "assigned",
+        "generatorValue" : null,
+        "schemaName" : null
+      },
+      "name" : "JHIST_EMP_ID_ST_DATE_PK",
+      "virtual" : false
+    },
     "relations" : [ {
-      "name" : "JHIST_DEPT_FK",
-      "fieldName" : "departments",
       "cardinality" : "ManyToOne",
-      "sourceTable" : "JOB_HISTORY",
-      "targetTable" : "DEPARTMENTS",
-      "mappings" : [ {
-        "sourceColumn" : "DEPARTMENT_ID",
-        "targetColumn" : "DEPARTMENT_ID"
-      } ],
-      "ignored" : false,
       "cascadeEnabled" : true,
       "cascadeOptions" : {
         "cascadeRemove" : "REMOVE",
         "cascadeReplace" : false
       },
+      "columnsUniqueKey" : false,
+      "composite" : false,
       "fetchOptions" : {
         "fetch" : true,
         "columnsFilter" : [ ]
       },
+      "fieldName" : "departments",
+      "ignored" : false,
+      "mappings" : [ {
+        "sourceColumn" : "DEPARTMENT_ID",
+        "targetColumn" : "DEPARTMENT_ID"
+      } ],
+      "name" : "JHIST_DEPT_FK",
       "parentFetchOptions" : {
         "fetch" : false,
         "columnsFilter" : [ ]
       },
       "primary" : true,
+      "selfRelation" : false,
+      "sourceColumnsNotUniqueKey" : true,
+      "sourceTable" : "JOB_HISTORY",
+      "targetColumnsUniqueKey" : false,
+      "targetTable" : "DEPARTMENTS",
+      "valid" : true,
       "virtual" : false
     }, {
-      "name" : "JHIST_EMP_FK",
-      "fieldName" : "employees",
       "cardinality" : "ManyToOne",
-      "sourceTable" : "JOB_HISTORY",
-      "targetTable" : "EMPLOYEES",
+      "cascadeEnabled" : true,
+      "cascadeOptions" : {
+        "cascadeRemove" : "REMOVE",
+        "cascadeReplace" : false
+      },
+      "columnsUniqueKey" : false,
+      "composite" : false,
+      "fetchOptions" : {
+        "fetch" : true,
+        "columnsFilter" : [ ]
+      },
+      "fieldName" : "employees",
+      "ignored" : false,
       "mappings" : [ {
         "sourceColumn" : "EMPLOYEE_ID",
         "targetColumn" : "EMPLOYEE_ID"
       } ],
-      "ignored" : false,
-      "cascadeEnabled" : true,
-      "cascadeOptions" : {
-        "cascadeRemove" : "REMOVE",
-        "cascadeReplace" : false
-      },
-      "fetchOptions" : {
-        "fetch" : true,
-        "columnsFilter" : [ ]
-      },
+      "name" : "JHIST_EMP_FK",
       "parentFetchOptions" : {
         "fetch" : false,
         "columnsFilter" : [ ]
       },
       "primary" : true,
+      "selfRelation" : false,
+      "sourceColumnsNotUniqueKey" : true,
+      "sourceTable" : "JOB_HISTORY",
+      "targetColumnsUniqueKey" : false,
+      "targetTable" : "EMPLOYEES",
+      "valid" : true,
       "virtual" : false
     }, {
-      "name" : "JHIST_JOB_FK",
-      "fieldName" : "jobs",
       "cardinality" : "ManyToOne",
-      "sourceTable" : "JOB_HISTORY",
-      "targetTable" : "JOBS",
+      "cascadeEnabled" : true,
+      "cascadeOptions" : {
+        "cascadeRemove" : "REMOVE",
+        "cascadeReplace" : false
+      },
+      "columnsUniqueKey" : false,
+      "composite" : false,
+      "fetchOptions" : {
+        "fetch" : true,
+        "columnsFilter" : [ ]
+      },
+      "fieldName" : "jobs",
+      "ignored" : false,
       "mappings" : [ {
         "sourceColumn" : "JOB_ID",
         "targetColumn" : "JOB_ID"
       } ],
-      "ignored" : false,
-      "cascadeEnabled" : true,
-      "cascadeOptions" : {
-        "cascadeRemove" : "REMOVE",
-        "cascadeReplace" : false
-      },
-      "fetchOptions" : {
-        "fetch" : true,
-        "columnsFilter" : [ ]
-      },
+      "name" : "JHIST_JOB_FK",
       "parentFetchOptions" : {
         "fetch" : false,
         "columnsFilter" : [ ]
       },
       "primary" : true,
+      "selfRelation" : false,
+      "sourceColumnsNotUniqueKey" : true,
+      "sourceTable" : "JOB_HISTORY",
+      "targetColumnsUniqueKey" : false,
+      "targetTable" : "JOBS",
+      "valid" : true,
       "virtual" : false
     } ],
-    "constraints" : [ {
-      "name" : "JHIST_EMPLOYEE_NN",
-      "schemaName" : null,
-      "type" : "CHECK",
-      "columns" : [ "EMPLOYEE_ID" ],
-      "virtual" : false,
-      "composite" : false
-    }, {
-      "name" : "JHIST_START_DATE_NN",
-      "schemaName" : null,
-      "type" : "CHECK",
-      "columns" : [ "START_DATE" ],
-      "virtual" : false,
-      "composite" : false
-    }, {
-      "name" : "JHIST_END_DATE_NN",
-      "schemaName" : null,
-      "type" : "CHECK",
-      "columns" : [ "END_DATE" ],
-      "virtual" : false,
-      "composite" : false
-    }, {
-      "name" : "JHIST_JOB_NN",
-      "schemaName" : null,
-      "type" : "CHECK",
-      "columns" : [ "JOB_ID" ],
-      "virtual" : false,
-      "composite" : false
-    }, {
-      "name" : "JHIST_DATE_INTERVAL",
-      "schemaName" : null,
-      "type" : "CHECK",
-      "columns" : [ "START_DATE", "END_DATE" ],
-      "virtual" : false,
-      "composite" : true
-    } ],
+    "schema" : "HR",
     "tableDataLockingOptions" : {
       "versionColumnName" : "VERSION",
       "lockingStrategy" : "NONE",
       "overrideStrategy" : "INHERIT"
-    }
-  } ],
-  "dataLockingOptions" : {
-    "versionColumnName" : "VERSION",
-    "lockingStrategy" : "NONE"
-  }
+    },
+    "temporals" : [ ],
+    "type" : "TABLE"
+  } ]
 }

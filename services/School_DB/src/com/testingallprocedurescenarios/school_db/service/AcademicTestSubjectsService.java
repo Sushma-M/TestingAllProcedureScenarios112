@@ -84,6 +84,20 @@ public interface AcademicTestSubjectsService {
      */
     AcademicTestSubjects update(@Valid AcademicTestSubjects academicTestSubjects);
 
+
+    /**
+     * Partially updates the details of an existing AcademicTestSubjects. It updates only the
+     * fields of the existing AcademicTestSubjects which are passed in the academicTestSubjectsPatch.
+     *
+     * This method overrides the input field values using Server side or database managed properties defined on AcademicTestSubjects if any.
+     *
+     * @param academictestsubjectsId The id of the AcademicTestSubjects to be deleted; value cannot be null.
+     * @param academicTestSubjectsPatch The partial data of AcademicTestSubjects which is supposed to be updated; value cannot be null.
+     * @return The updated AcademicTestSubjects.
+     * @throws EntityNotFoundException if no AcademicTestSubjects is found with given input.
+     */
+    AcademicTestSubjects partialUpdate(AcademicTestSubjectsId academictestsubjectsId, Map<String, Object> academicTestSubjectsPatch);
+
     /**
      * Deletes an existing AcademicTestSubjects with the given id.
      *

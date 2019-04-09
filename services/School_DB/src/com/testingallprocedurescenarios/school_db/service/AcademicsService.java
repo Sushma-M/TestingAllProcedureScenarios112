@@ -85,6 +85,20 @@ public interface AcademicsService {
      */
     Academics update(@Valid Academics academics);
 
+
+    /**
+     * Partially updates the details of an existing Academics. It updates only the
+     * fields of the existing Academics which are passed in the academicsPatch.
+     *
+     * This method overrides the input field values using Server side or database managed properties defined on Academics if any.
+     *
+     * @param academicsId The id of the Academics to be deleted; value cannot be null.
+     * @param academicsPatch The partial data of Academics which is supposed to be updated; value cannot be null.
+     * @return The updated Academics.
+     * @throws EntityNotFoundException if no Academics is found with given input.
+     */
+    Academics partialUpdate(AcademicsId academicsId, Map<String, Object> academicsPatch);
+
     /**
      * Deletes an existing Academics with the given id.
      *

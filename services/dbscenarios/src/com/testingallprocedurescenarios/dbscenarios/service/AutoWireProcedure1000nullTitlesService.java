@@ -82,6 +82,20 @@ public interface AutoWireProcedure1000nullTitlesService {
      */
     AutoWireProcedure1000nullTitles update(@Valid AutoWireProcedure1000nullTitles autoWireProcedure1000nullTitles);
 
+
+    /**
+     * Partially updates the details of an existing AutoWireProcedure1000nullTitles. It updates only the
+     * fields of the existing AutoWireProcedure1000nullTitles which are passed in the autoWireProcedure1000nullTitlesPatch.
+     *
+     * This method overrides the input field values using Server side or database managed properties defined on AutoWireProcedure1000nullTitles if any.
+     *
+     * @param autowireprocedure1000nulltitlesId The id of the AutoWireProcedure1000nullTitles to be deleted; value cannot be null.
+     * @param autoWireProcedure1000nullTitlesPatch The partial data of AutoWireProcedure1000nullTitles which is supposed to be updated; value cannot be null.
+     * @return The updated AutoWireProcedure1000nullTitles.
+     * @throws EntityNotFoundException if no AutoWireProcedure1000nullTitles is found with given input.
+     */
+    AutoWireProcedure1000nullTitles partialUpdate(Long autowireprocedure1000nulltitlesId, Map<String, Object> autoWireProcedure1000nullTitlesPatch);
+
     /**
      * Deletes an existing AutoWireProcedure1000nullTitles with the given id.
      *

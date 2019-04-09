@@ -32,6 +32,7 @@ import com.wavemaker.commons.wrapper.StringWrapper;
 import com.wavemaker.runtime.data.export.ExportOptions;
 import com.wavemaker.runtime.file.manager.ExportedFileManager;
 import com.wavemaker.runtime.file.model.Downloadable;
+import com.wavemaker.runtime.security.xss.XssDisable;
 import com.wavemaker.runtime.util.WMMultipartUtils;
 import com.wavemaker.tools.api.core.annotations.WMAccessVisibility;
 import com.wavemaker.tools.api.core.models.AccessSpecifier;
@@ -89,6 +90,7 @@ public class QueryExecutionController {
     @ApiOperation(value = "Returns downloadable file url for query HQL_MysqlAllTypesWithAlias")
     @RequestMapping(value = "/queries/HQL_MysqlAllTypesWithAlias/export", method = RequestMethod.POST)
     @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
+    @XssDisable
     public StringWrapper exportHQL_MysqlAllTypesWithAlias(@RequestBody ExportOptions exportOptions, Pageable pageable) {
         LOGGER.debug("Exporting named query: HQL_MysqlAllTypesWithAlias");
 
@@ -139,6 +141,7 @@ public class QueryExecutionController {
     @ApiOperation(value = "Returns downloadable file url for query SV_GetBelowPK10")
     @RequestMapping(value = "/queries/SV_GetBelowPK10/export", method = RequestMethod.POST)
     @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
+    @XssDisable
     public StringWrapper exportSV_GetBelowPK10(@RequestBody ExportOptions exportOptions, Pageable pageable) {
         LOGGER.debug("Exporting named query: SV_GetBelowPK10");
 
@@ -217,6 +220,7 @@ public class QueryExecutionController {
     @ApiOperation(value = "Returns downloadable file url for query SV_LoggedinUser")
     @RequestMapping(value = "/queries/SV_LoggedinUser/export", method = RequestMethod.POST)
     @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
+    @XssDisable
     public StringWrapper exportSV_LoggedinUser(@RequestBody ExportOptions exportOptions, Pageable pageable) {
         LOGGER.debug("Exporting named query: SV_LoggedinUser");
 
@@ -255,6 +259,7 @@ public class QueryExecutionController {
     @ApiOperation(value = "Returns downloadable file url for query SV_ByteDatetime")
     @RequestMapping(value = "/queries/SV_ByteDatetime/export", method = RequestMethod.POST)
     @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
+    @XssDisable
     public StringWrapper exportSV_ByteDatetime(@RequestBody ExportOptions exportOptions, Pageable pageable) {
         LOGGER.debug("Exporting named query: SV_ByteDatetime");
 
@@ -305,6 +310,7 @@ public class QueryExecutionController {
     @ApiOperation(value = "Returns downloadable file url for query SV_ALlTypesData1")
     @RequestMapping(value = "/queries/SV_ALlTypesData1/export", method = RequestMethod.POST)
     @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
+    @XssDisable
     public StringWrapper exportSV_ALlTypesData1(@RequestBody ExportOptions exportOptions, Pageable pageable) {
         LOGGER.debug("Exporting named query: SV_ALlTypesData1");
 
@@ -355,6 +361,7 @@ public class QueryExecutionController {
     @ApiOperation(value = "Returns downloadable file url for query SV_GetByDateCol")
     @RequestMapping(value = "/queries/SV_GetByDateCol/export", method = RequestMethod.POST)
     @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
+    @XssDisable
     public StringWrapper exportSV_GetByDateCol(@RequestParam(value = "datecol") Date datecol, @RequestBody ExportOptions exportOptions, Pageable pageable) {
         LOGGER.debug("Exporting named query: SV_GetByDateCol");
 
@@ -405,6 +412,7 @@ public class QueryExecutionController {
     @ApiOperation(value = "Returns downloadable file url for query SV_AllTypesData")
     @RequestMapping(value = "/queries/SV_AllTypesData/export", method = RequestMethod.POST)
     @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
+    @XssDisable
     public StringWrapper exportSV_AllTypesData(@RequestBody ExportOptions exportOptions, Pageable pageable) {
         LOGGER.debug("Exporting named query: SV_AllTypesData");
 

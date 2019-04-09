@@ -12,6 +12,7 @@ import org.springframework.orm.hibernate5.HibernateTemplate;
 import org.springframework.stereotype.Repository;
 
 import com.wavemaker.runtime.data.dao.WMGenericDaoImpl;
+import com.wavemaker.runtime.data.dao.query.types.wmql.WMQLTypeHelper;
 
 import com.testingallprocedurescenarios.sample2.Customer;
 
@@ -26,9 +27,19 @@ public class CustomerDao extends WMGenericDaoImpl<Customer, BigInteger> {
     @Qualifier("SAMPLE2Template")
     private HibernateTemplate template;
 
+    @Autowired
+    @Qualifier("SAMPLE2WMQLTypeHelper")
+    private WMQLTypeHelper wmqlTypeHelper;
+
 
     @Override
     public HibernateTemplate getTemplate() {
         return this.template;
     }
+
+    @Override
+    public WMQLTypeHelper getWMQLTypeHelper() {
+        return this.wmqlTypeHelper;
+    }
+
 }

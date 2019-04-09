@@ -25,6 +25,8 @@ import com.wavemaker.runtime.data.expression.QueryFilter;
 import com.wavemaker.runtime.data.model.AggregationInfo;
 import com.wavemaker.runtime.file.manager.ExportedFileManager;
 import com.wavemaker.runtime.file.model.Downloadable;
+import com.wavemaker.runtime.security.xss.XssDisable;
+import com.wavemaker.tools.api.core.annotations.MapTo;
 import com.wavemaker.tools.api.core.annotations.WMAccessVisibility;
 import com.wavemaker.tools.api.core.models.AccessSpecifier;
 import com.wordnik.swagger.annotations.Api;
@@ -119,6 +121,33 @@ public class Vastrde2Controller {
         return vastrde2Service.update(vastrde2);
     }
 
+	@ApiOperation(value = "Partially updates the  Vastrde2 instance associated with the given composite-id.")
+	@RequestMapping(value = "/composite-id", method = RequestMethod.PATCH)
+    @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
+    public Vastrde2 patchVastrde2(@RequestParam("dept1no") String dept1no, @RequestParam("dept1nam") String dept1nam, @RequestParam("emp1no") String emp1no, @RequestParam("emp1fn") String emp1fn, @RequestParam("emp1mi") Character emp1mi, @RequestParam("emp1ln") String emp1ln, @RequestParam("type2") Character type2, @RequestParam("dept2no") String dept2no, @RequestParam("dept2nam") String dept2nam, @RequestParam("emp2no") String emp2no, @RequestParam("emp2fn") String emp2fn, @RequestParam("emp2mi") Character emp2mi, @RequestParam("emp2ln") String emp2ln, @RequestBody @MapTo(Vastrde2.class) Map<String, Object> vastrde2Patch) {
+
+        Vastrde2Id vastrde2Id = new Vastrde2Id();
+        vastrde2Id.setDept1no(dept1no);
+        vastrde2Id.setDept1nam(dept1nam);
+        vastrde2Id.setEmp1no(emp1no);
+        vastrde2Id.setEmp1fn(emp1fn);
+        vastrde2Id.setEmp1mi(emp1mi);
+        vastrde2Id.setEmp1ln(emp1ln);
+        vastrde2Id.setType2(type2);
+        vastrde2Id.setDept2no(dept2no);
+        vastrde2Id.setDept2nam(dept2nam);
+        vastrde2Id.setEmp2no(emp2no);
+        vastrde2Id.setEmp2fn(emp2fn);
+        vastrde2Id.setEmp2mi(emp2mi);
+        vastrde2Id.setEmp2ln(emp2ln);
+        LOGGER.debug("Partially updating Vastrde2 with id: {}" , vastrde2Id);
+
+        Vastrde2 vastrde2 = vastrde2Service.partialUpdate(vastrde2Id, vastrde2Patch);
+        LOGGER.debug("Vastrde2 details after partial update: {}" , vastrde2);
+
+        return vastrde2;
+    }
+
 
     @ApiOperation(value = "Deletes the Vastrde2 instance associated with the given composite-id.")
     @RequestMapping(value = "/composite-id", method = RequestMethod.DELETE)
@@ -154,6 +183,7 @@ public class Vastrde2Controller {
     @ApiOperation(value = "Returns the list of Vastrde2 instances matching the search criteria.")
     @RequestMapping(value = "/search", method = RequestMethod.POST)
     @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
+    @XssDisable
     public Page<Vastrde2> searchVastrde2sByQueryFilters( Pageable pageable, @RequestBody QueryFilter[] queryFilters) {
         LOGGER.debug("Rendering Vastrde2s list by query filter:{}", (Object) queryFilters);
         return vastrde2Service.findAll(queryFilters, pageable);
@@ -170,6 +200,7 @@ public class Vastrde2Controller {
     @ApiOperation(value = "Returns the paginated list of Vastrde2 instances matching the optional query (q) request param. This API should be used only if the query string is too big to fit in GET request with request param. The request has to made in application/x-www-form-urlencoded format.")
     @RequestMapping(value="/filter", method = RequestMethod.POST, consumes= "application/x-www-form-urlencoded")
     @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
+    @XssDisable
     public Page<Vastrde2> filterVastrde2s(@ApiParam("conditions to filter the results") @RequestParam(value = "q", required = false) String query, Pageable pageable) {
         LOGGER.debug("Rendering Vastrde2s list by filter", query);
         return vastrde2Service.findAll(query, pageable);
@@ -178,6 +209,7 @@ public class Vastrde2Controller {
     @ApiOperation(value = "Returns downloadable file for the data matching the optional query (q) request param. If query string is too big to fit in GET request's query param, use POST method with application/x-www-form-urlencoded format.")
     @RequestMapping(value = "/export/{exportType}", method = {RequestMethod.GET,  RequestMethod.POST}, produces = "application/octet-stream")
     @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
+    @XssDisable
     public Downloadable exportVastrde2s(@PathVariable("exportType") ExportType exportType, @ApiParam("conditions to filter the results") @RequestParam(value = "q", required = false) String query, Pageable pageable) {
          return vastrde2Service.export(exportType, query, pageable);
     }
@@ -185,6 +217,7 @@ public class Vastrde2Controller {
     @ApiOperation(value = "Returns a URL to download a file for the data matching the optional query (q) request param and the required fields provided in the Export Options.") 
     @RequestMapping(value = "/export", method = {RequestMethod.POST}, consumes = "application/json")
     @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
+    @XssDisable
     public StringWrapper exportVastrde2sAndGetURL(@RequestBody DataExportOptions exportOptions, Pageable pageable) {
         String exportedFileName = exportOptions.getFileName();
         if(exportedFileName == null || exportedFileName.isEmpty()) {
@@ -198,6 +231,7 @@ public class Vastrde2Controller {
 	@ApiOperation(value = "Returns the total count of Vastrde2 instances matching the optional query (q) request param. If query string is too big to fit in GET request's query param, use POST method with application/x-www-form-urlencoded format.")
 	@RequestMapping(value = "/count", method = {RequestMethod.GET, RequestMethod.POST})
     @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
+	@XssDisable
 	public Long countVastrde2s( @ApiParam("conditions to filter the results") @RequestParam(value = "q", required = false) String query) {
 		LOGGER.debug("counting Vastrde2s");
 		return vastrde2Service.count(query);
@@ -206,6 +240,7 @@ public class Vastrde2Controller {
     @ApiOperation(value = "Returns aggregated result with given aggregation info")
 	@RequestMapping(value = "/aggregations", method = RequestMethod.POST)
     @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
+	@XssDisable
 	public Page<Map<String, Object>> getVastrde2AggregatedValues(@RequestBody AggregationInfo aggregationInfo, Pageable pageable) {
         LOGGER.debug("Fetching aggregated results for {}", aggregationInfo);
         return vastrde2Service.getAggregatedValues(aggregationInfo, pageable);

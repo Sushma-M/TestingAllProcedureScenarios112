@@ -26,6 +26,8 @@ import com.wavemaker.runtime.data.expression.QueryFilter;
 import com.wavemaker.runtime.data.model.AggregationInfo;
 import com.wavemaker.runtime.file.manager.ExportedFileManager;
 import com.wavemaker.runtime.file.model.Downloadable;
+import com.wavemaker.runtime.security.xss.XssDisable;
+import com.wavemaker.tools.api.core.annotations.MapTo;
 import com.wavemaker.tools.api.core.annotations.WMAccessVisibility;
 import com.wavemaker.tools.api.core.models.AccessSpecifier;
 import com.wordnik.swagger.annotations.Api;
@@ -116,6 +118,31 @@ public class Vstafac1Controller {
         return vstafac1Service.update(vstafac1);
     }
 
+	@ApiOperation(value = "Partially updates the  Vstafac1 instance associated with the given composite-id.")
+	@RequestMapping(value = "/composite-id", method = RequestMethod.PATCH)
+    @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
+    public Vstafac1 patchVstafac1(@RequestParam("projno") String projno, @RequestParam("actno") Short actno, @RequestParam("actdesc") String actdesc, @RequestParam("empno") Character empno, @RequestParam("firstnme") Character firstnme, @RequestParam("midinit") Character midinit, @RequestParam("lastname") Character lastname, @RequestParam("emptime") Float emptime, @RequestParam("stdate") Date stdate, @RequestParam("endate") Date endate, @RequestParam("type") Character type, @RequestBody @MapTo(Vstafac1.class) Map<String, Object> vstafac1Patch) {
+
+        Vstafac1Id vstafac1Id = new Vstafac1Id();
+        vstafac1Id.setProjno(projno);
+        vstafac1Id.setActno(actno);
+        vstafac1Id.setActdesc(actdesc);
+        vstafac1Id.setEmpno(empno);
+        vstafac1Id.setFirstnme(firstnme);
+        vstafac1Id.setMidinit(midinit);
+        vstafac1Id.setLastname(lastname);
+        vstafac1Id.setEmptime(emptime);
+        vstafac1Id.setStdate(stdate);
+        vstafac1Id.setEndate(endate);
+        vstafac1Id.setType(type);
+        LOGGER.debug("Partially updating Vstafac1 with id: {}" , vstafac1Id);
+
+        Vstafac1 vstafac1 = vstafac1Service.partialUpdate(vstafac1Id, vstafac1Patch);
+        LOGGER.debug("Vstafac1 details after partial update: {}" , vstafac1);
+
+        return vstafac1;
+    }
+
 
     @ApiOperation(value = "Deletes the Vstafac1 instance associated with the given composite-id.")
     @RequestMapping(value = "/composite-id", method = RequestMethod.DELETE)
@@ -149,6 +176,7 @@ public class Vstafac1Controller {
     @ApiOperation(value = "Returns the list of Vstafac1 instances matching the search criteria.")
     @RequestMapping(value = "/search", method = RequestMethod.POST)
     @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
+    @XssDisable
     public Page<Vstafac1> searchVstafac1sByQueryFilters( Pageable pageable, @RequestBody QueryFilter[] queryFilters) {
         LOGGER.debug("Rendering Vstafac1s list by query filter:{}", (Object) queryFilters);
         return vstafac1Service.findAll(queryFilters, pageable);
@@ -165,6 +193,7 @@ public class Vstafac1Controller {
     @ApiOperation(value = "Returns the paginated list of Vstafac1 instances matching the optional query (q) request param. This API should be used only if the query string is too big to fit in GET request with request param. The request has to made in application/x-www-form-urlencoded format.")
     @RequestMapping(value="/filter", method = RequestMethod.POST, consumes= "application/x-www-form-urlencoded")
     @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
+    @XssDisable
     public Page<Vstafac1> filterVstafac1s(@ApiParam("conditions to filter the results") @RequestParam(value = "q", required = false) String query, Pageable pageable) {
         LOGGER.debug("Rendering Vstafac1s list by filter", query);
         return vstafac1Service.findAll(query, pageable);
@@ -173,6 +202,7 @@ public class Vstafac1Controller {
     @ApiOperation(value = "Returns downloadable file for the data matching the optional query (q) request param. If query string is too big to fit in GET request's query param, use POST method with application/x-www-form-urlencoded format.")
     @RequestMapping(value = "/export/{exportType}", method = {RequestMethod.GET,  RequestMethod.POST}, produces = "application/octet-stream")
     @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
+    @XssDisable
     public Downloadable exportVstafac1s(@PathVariable("exportType") ExportType exportType, @ApiParam("conditions to filter the results") @RequestParam(value = "q", required = false) String query, Pageable pageable) {
          return vstafac1Service.export(exportType, query, pageable);
     }
@@ -180,6 +210,7 @@ public class Vstafac1Controller {
     @ApiOperation(value = "Returns a URL to download a file for the data matching the optional query (q) request param and the required fields provided in the Export Options.") 
     @RequestMapping(value = "/export", method = {RequestMethod.POST}, consumes = "application/json")
     @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
+    @XssDisable
     public StringWrapper exportVstafac1sAndGetURL(@RequestBody DataExportOptions exportOptions, Pageable pageable) {
         String exportedFileName = exportOptions.getFileName();
         if(exportedFileName == null || exportedFileName.isEmpty()) {
@@ -193,6 +224,7 @@ public class Vstafac1Controller {
 	@ApiOperation(value = "Returns the total count of Vstafac1 instances matching the optional query (q) request param. If query string is too big to fit in GET request's query param, use POST method with application/x-www-form-urlencoded format.")
 	@RequestMapping(value = "/count", method = {RequestMethod.GET, RequestMethod.POST})
     @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
+	@XssDisable
 	public Long countVstafac1s( @ApiParam("conditions to filter the results") @RequestParam(value = "q", required = false) String query) {
 		LOGGER.debug("counting Vstafac1s");
 		return vstafac1Service.count(query);
@@ -201,6 +233,7 @@ public class Vstafac1Controller {
     @ApiOperation(value = "Returns aggregated result with given aggregation info")
 	@RequestMapping(value = "/aggregations", method = RequestMethod.POST)
     @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
+	@XssDisable
 	public Page<Map<String, Object>> getVstafac1AggregatedValues(@RequestBody AggregationInfo aggregationInfo, Pageable pageable) {
         LOGGER.debug("Fetching aggregated results for {}", aggregationInfo);
         return vstafac1Service.getAggregatedValues(aggregationInfo, pageable);

@@ -85,6 +85,20 @@ public interface ProjactService {
      */
     Projact update(@Valid Projact projact);
 
+
+    /**
+     * Partially updates the details of an existing Projact. It updates only the
+     * fields of the existing Projact which are passed in the projactPatch.
+     *
+     * This method overrides the input field values using Server side or database managed properties defined on Projact if any.
+     *
+     * @param projactId The id of the Projact to be deleted; value cannot be null.
+     * @param projactPatch The partial data of Projact which is supposed to be updated; value cannot be null.
+     * @return The updated Projact.
+     * @throws EntityNotFoundException if no Projact is found with given input.
+     */
+    Projact partialUpdate(ProjactId projactId, Map<String, Object> projactPatch);
+
     /**
      * Deletes an existing Projact with the given id.
      *

@@ -26,6 +26,8 @@ import com.wavemaker.runtime.data.expression.QueryFilter;
 import com.wavemaker.runtime.data.model.AggregationInfo;
 import com.wavemaker.runtime.file.manager.ExportedFileManager;
 import com.wavemaker.runtime.file.model.Downloadable;
+import com.wavemaker.runtime.security.xss.XssDisable;
+import com.wavemaker.tools.api.core.annotations.MapTo;
 import com.wavemaker.tools.api.core.annotations.WMAccessVisibility;
 import com.wavemaker.tools.api.core.models.AccessSpecifier;
 import com.wordnik.swagger.annotations.Api;
@@ -102,6 +104,24 @@ public class SalesController {
         return salesService.update(salesInstance);
     }
 
+	@ApiOperation(value = "Partially updates the  Sales instance associated with the given composite-id.")
+	@RequestMapping(value = "/composite-id", method = RequestMethod.PATCH)
+    @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
+    public Sales patchSales(@RequestParam("salesDate") Date salesDate, @RequestParam("salesPerson") String salesPerson, @RequestParam("region") String region, @RequestParam("sales") Integer sales, @RequestBody @MapTo(Sales.class) Map<String, Object> salesInstancePatch) {
+
+        SalesId salesId = new SalesId();
+        salesId.setSalesDate(salesDate);
+        salesId.setSalesPerson(salesPerson);
+        salesId.setRegion(region);
+        salesId.setSales(sales);
+        LOGGER.debug("Partially updating Sales with id: {}" , salesId);
+
+        Sales salesInstance = salesService.partialUpdate(salesId, salesInstancePatch);
+        LOGGER.debug("Sales details after partial update: {}" , salesInstance);
+
+        return salesInstance;
+    }
+
 
     @ApiOperation(value = "Deletes the Sales instance associated with the given composite-id.")
     @RequestMapping(value = "/composite-id", method = RequestMethod.DELETE)
@@ -128,6 +148,7 @@ public class SalesController {
     @ApiOperation(value = "Returns the list of Sales instances matching the search criteria.")
     @RequestMapping(value = "/search", method = RequestMethod.POST)
     @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
+    @XssDisable
     public Page<Sales> searchSalesByQueryFilters( Pageable pageable, @RequestBody QueryFilter[] queryFilters) {
         LOGGER.debug("Rendering Sales list by query filter:{}", (Object) queryFilters);
         return salesService.findAll(queryFilters, pageable);
@@ -144,6 +165,7 @@ public class SalesController {
     @ApiOperation(value = "Returns the paginated list of Sales instances matching the optional query (q) request param. This API should be used only if the query string is too big to fit in GET request with request param. The request has to made in application/x-www-form-urlencoded format.")
     @RequestMapping(value="/filter", method = RequestMethod.POST, consumes= "application/x-www-form-urlencoded")
     @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
+    @XssDisable
     public Page<Sales> filterSales(@ApiParam("conditions to filter the results") @RequestParam(value = "q", required = false) String query, Pageable pageable) {
         LOGGER.debug("Rendering Sales list by filter", query);
         return salesService.findAll(query, pageable);
@@ -152,6 +174,7 @@ public class SalesController {
     @ApiOperation(value = "Returns downloadable file for the data matching the optional query (q) request param. If query string is too big to fit in GET request's query param, use POST method with application/x-www-form-urlencoded format.")
     @RequestMapping(value = "/export/{exportType}", method = {RequestMethod.GET,  RequestMethod.POST}, produces = "application/octet-stream")
     @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
+    @XssDisable
     public Downloadable exportSales(@PathVariable("exportType") ExportType exportType, @ApiParam("conditions to filter the results") @RequestParam(value = "q", required = false) String query, Pageable pageable) {
          return salesService.export(exportType, query, pageable);
     }
@@ -159,6 +182,7 @@ public class SalesController {
     @ApiOperation(value = "Returns a URL to download a file for the data matching the optional query (q) request param and the required fields provided in the Export Options.") 
     @RequestMapping(value = "/export", method = {RequestMethod.POST}, consumes = "application/json")
     @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
+    @XssDisable
     public StringWrapper exportSalesAndGetURL(@RequestBody DataExportOptions exportOptions, Pageable pageable) {
         String exportedFileName = exportOptions.getFileName();
         if(exportedFileName == null || exportedFileName.isEmpty()) {
@@ -172,6 +196,7 @@ public class SalesController {
 	@ApiOperation(value = "Returns the total count of Sales instances matching the optional query (q) request param. If query string is too big to fit in GET request's query param, use POST method with application/x-www-form-urlencoded format.")
 	@RequestMapping(value = "/count", method = {RequestMethod.GET, RequestMethod.POST})
     @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
+	@XssDisable
 	public Long countSales( @ApiParam("conditions to filter the results") @RequestParam(value = "q", required = false) String query) {
 		LOGGER.debug("counting Sales");
 		return salesService.count(query);
@@ -180,6 +205,7 @@ public class SalesController {
     @ApiOperation(value = "Returns aggregated result with given aggregation info")
 	@RequestMapping(value = "/aggregations", method = RequestMethod.POST)
     @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
+	@XssDisable
 	public Page<Map<String, Object>> getSalesAggregatedValues(@RequestBody AggregationInfo aggregationInfo, Pageable pageable) {
         LOGGER.debug("Fetching aggregated results for {}", aggregationInfo);
         return salesService.getAggregatedValues(aggregationInfo, pageable);

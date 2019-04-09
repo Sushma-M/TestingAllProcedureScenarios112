@@ -82,6 +82,20 @@ public interface Table9Service {
      */
     Table9 update(@Valid Table9 table9);
 
+
+    /**
+     * Partially updates the details of an existing Table9. It updates only the
+     * fields of the existing Table9 which are passed in the table9Patch.
+     *
+     * This method overrides the input field values using Server side or database managed properties defined on Table9 if any.
+     *
+     * @param table9Id The id of the Table9 to be deleted; value cannot be null.
+     * @param table9Patch The partial data of Table9 which is supposed to be updated; value cannot be null.
+     * @return The updated Table9.
+     * @throws EntityNotFoundException if no Table9 is found with given input.
+     */
+    Table9 partialUpdate(String table9Id, Map<String, Object> table9Patch);
+
     /**
      * Deletes an existing Table9 with the given id.
      *

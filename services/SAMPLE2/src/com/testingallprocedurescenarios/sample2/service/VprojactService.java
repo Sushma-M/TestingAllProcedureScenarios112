@@ -83,6 +83,20 @@ public interface VprojactService {
      */
     Vprojact update(@Valid Vprojact vprojact);
 
+
+    /**
+     * Partially updates the details of an existing Vprojact. It updates only the
+     * fields of the existing Vprojact which are passed in the vprojactPatch.
+     *
+     * This method overrides the input field values using Server side or database managed properties defined on Vprojact if any.
+     *
+     * @param vprojactId The id of the Vprojact to be deleted; value cannot be null.
+     * @param vprojactPatch The partial data of Vprojact which is supposed to be updated; value cannot be null.
+     * @return The updated Vprojact.
+     * @throws EntityNotFoundException if no Vprojact is found with given input.
+     */
+    Vprojact partialUpdate(VprojactId vprojactId, Map<String, Object> vprojactPatch);
+
     /**
      * Deletes an existing Vprojact with the given id.
      *

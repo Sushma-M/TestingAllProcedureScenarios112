@@ -83,6 +83,20 @@ public interface Vastrde2Service {
      */
     Vastrde2 update(@Valid Vastrde2 vastrde2);
 
+
+    /**
+     * Partially updates the details of an existing Vastrde2. It updates only the
+     * fields of the existing Vastrde2 which are passed in the vastrde2Patch.
+     *
+     * This method overrides the input field values using Server side or database managed properties defined on Vastrde2 if any.
+     *
+     * @param vastrde2Id The id of the Vastrde2 to be deleted; value cannot be null.
+     * @param vastrde2Patch The partial data of Vastrde2 which is supposed to be updated; value cannot be null.
+     * @return The updated Vastrde2.
+     * @throws EntityNotFoundException if no Vastrde2 is found with given input.
+     */
+    Vastrde2 partialUpdate(Vastrde2Id vastrde2Id, Map<String, Object> vastrde2Patch);
+
     /**
      * Deletes an existing Vastrde2 with the given id.
      *

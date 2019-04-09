@@ -83,6 +83,20 @@ public interface EmpPhotoService {
      */
     EmpPhoto update(@Valid EmpPhoto empPhoto);
 
+
+    /**
+     * Partially updates the details of an existing EmpPhoto. It updates only the
+     * fields of the existing EmpPhoto which are passed in the empPhotoPatch.
+     *
+     * This method overrides the input field values using Server side or database managed properties defined on EmpPhoto if any.
+     *
+     * @param empphotoId The id of the EmpPhoto to be deleted; value cannot be null.
+     * @param empPhotoPatch The partial data of EmpPhoto which is supposed to be updated; value cannot be null.
+     * @return The updated EmpPhoto.
+     * @throws EntityNotFoundException if no EmpPhoto is found with given input.
+     */
+    EmpPhoto partialUpdate(EmpPhotoId empphotoId, Map<String, Object> empPhotoPatch);
+
     /**
      * Deletes an existing EmpPhoto with the given id.
      *

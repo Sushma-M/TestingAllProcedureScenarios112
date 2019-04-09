@@ -83,6 +83,20 @@ public interface ProjectService {
      */
     Project update(@Valid Project project);
 
+
+    /**
+     * Partially updates the details of an existing Project. It updates only the
+     * fields of the existing Project which are passed in the projectPatch.
+     *
+     * This method overrides the input field values using Server side or database managed properties defined on Project if any.
+     *
+     * @param projectId The id of the Project to be deleted; value cannot be null.
+     * @param projectPatch The partial data of Project which is supposed to be updated; value cannot be null.
+     * @return The updated Project.
+     * @throws EntityNotFoundException if no Project is found with given input.
+     */
+    Project partialUpdate(String projectId, Map<String, Object> projectPatch);
+
     /**
      * Deletes an existing Project with the given id.
      *

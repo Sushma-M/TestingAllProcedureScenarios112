@@ -82,6 +82,20 @@ public interface CatalogService {
      */
     Catalog update(@Valid Catalog catalog);
 
+
+    /**
+     * Partially updates the details of an existing Catalog. It updates only the
+     * fields of the existing Catalog which are passed in the catalogPatch.
+     *
+     * This method overrides the input field values using Server side or database managed properties defined on Catalog if any.
+     *
+     * @param catalogId The id of the Catalog to be deleted; value cannot be null.
+     * @param catalogPatch The partial data of Catalog which is supposed to be updated; value cannot be null.
+     * @return The updated Catalog.
+     * @throws EntityNotFoundException if no Catalog is found with given input.
+     */
+    Catalog partialUpdate(String catalogId, Map<String, Object> catalogPatch);
+
     /**
      * Deletes an existing Catalog with the given id.
      *

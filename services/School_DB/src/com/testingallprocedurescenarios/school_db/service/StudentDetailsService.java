@@ -92,6 +92,20 @@ public interface StudentDetailsService {
      */
     StudentDetails update(@Valid StudentDetails studentDetails);
 
+
+    /**
+     * Partially updates the details of an existing StudentDetails. It updates only the
+     * fields of the existing StudentDetails which are passed in the studentDetailsPatch.
+     *
+     * This method overrides the input field values using Server side or database managed properties defined on StudentDetails if any.
+     *
+     * @param studentdetailsId The id of the StudentDetails to be deleted; value cannot be null.
+     * @param studentDetailsPatch The partial data of StudentDetails which is supposed to be updated; value cannot be null.
+     * @return The updated StudentDetails.
+     * @throws EntityNotFoundException if no StudentDetails is found with given input.
+     */
+    StudentDetails partialUpdate(Integer studentdetailsId, Map<String, Object> studentDetailsPatch);
+
     /**
      * Deletes an existing StudentDetails with the given id.
      *

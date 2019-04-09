@@ -83,6 +83,20 @@ public interface EmpmdcService {
      */
     Empmdc update(@Valid Empmdc empmdc);
 
+
+    /**
+     * Partially updates the details of an existing Empmdc. It updates only the
+     * fields of the existing Empmdc which are passed in the empmdcPatch.
+     *
+     * This method overrides the input field values using Server side or database managed properties defined on Empmdc if any.
+     *
+     * @param empmdcId The id of the Empmdc to be deleted; value cannot be null.
+     * @param empmdcPatch The partial data of Empmdc which is supposed to be updated; value cannot be null.
+     * @return The updated Empmdc.
+     * @throws EntityNotFoundException if no Empmdc is found with given input.
+     */
+    Empmdc partialUpdate(EmpmdcId empmdcId, Map<String, Object> empmdcPatch);
+
     /**
      * Deletes an existing Empmdc with the given id.
      *

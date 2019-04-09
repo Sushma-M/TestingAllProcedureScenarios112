@@ -83,6 +83,20 @@ public interface InTrayService {
      */
     InTray update(@Valid InTray inTray);
 
+
+    /**
+     * Partially updates the details of an existing InTray. It updates only the
+     * fields of the existing InTray which are passed in the inTrayPatch.
+     *
+     * This method overrides the input field values using Server side or database managed properties defined on InTray if any.
+     *
+     * @param intrayId The id of the InTray to be deleted; value cannot be null.
+     * @param inTrayPatch The partial data of InTray which is supposed to be updated; value cannot be null.
+     * @return The updated InTray.
+     * @throws EntityNotFoundException if no InTray is found with given input.
+     */
+    InTray partialUpdate(InTrayId intrayId, Map<String, Object> inTrayPatch);
+
     /**
      * Deletes an existing InTray with the given id.
      *

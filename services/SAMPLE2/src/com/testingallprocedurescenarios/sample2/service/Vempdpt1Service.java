@@ -83,6 +83,20 @@ public interface Vempdpt1Service {
      */
     Vempdpt1 update(@Valid Vempdpt1 vempdpt1);
 
+
+    /**
+     * Partially updates the details of an existing Vempdpt1. It updates only the
+     * fields of the existing Vempdpt1 which are passed in the vempdpt1Patch.
+     *
+     * This method overrides the input field values using Server side or database managed properties defined on Vempdpt1 if any.
+     *
+     * @param vempdpt1Id The id of the Vempdpt1 to be deleted; value cannot be null.
+     * @param vempdpt1Patch The partial data of Vempdpt1 which is supposed to be updated; value cannot be null.
+     * @return The updated Vempdpt1.
+     * @throws EntityNotFoundException if no Vempdpt1 is found with given input.
+     */
+    Vempdpt1 partialUpdate(Vempdpt1Id vempdpt1Id, Map<String, Object> vempdpt1Patch);
+
     /**
      * Deletes an existing Vempdpt1 with the given id.
      *

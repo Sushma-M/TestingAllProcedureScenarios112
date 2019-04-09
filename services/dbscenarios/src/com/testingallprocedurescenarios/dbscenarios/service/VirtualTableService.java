@@ -92,6 +92,20 @@ public interface VirtualTableService {
      */
     VirtualTable update(@Valid VirtualTable virtualTable);
 
+
+    /**
+     * Partially updates the details of an existing VirtualTable. It updates only the
+     * fields of the existing VirtualTable which are passed in the virtualTablePatch.
+     *
+     * This method overrides the input field values using Server side or database managed properties defined on VirtualTable if any.
+     *
+     * @param virtualtableId The id of the VirtualTable to be deleted; value cannot be null.
+     * @param virtualTablePatch The partial data of VirtualTable which is supposed to be updated; value cannot be null.
+     * @return The updated VirtualTable.
+     * @throws EntityNotFoundException if no VirtualTable is found with given input.
+     */
+    VirtualTable partialUpdate(String virtualtableId, Map<String, Object> virtualTablePatch);
+
     /**
      * Deletes an existing VirtualTable with the given id.
      *

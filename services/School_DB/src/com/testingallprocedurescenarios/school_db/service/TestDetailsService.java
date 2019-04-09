@@ -91,6 +91,20 @@ public interface TestDetailsService {
      */
     TestDetails update(@Valid TestDetails testDetails);
 
+
+    /**
+     * Partially updates the details of an existing TestDetails. It updates only the
+     * fields of the existing TestDetails which are passed in the testDetailsPatch.
+     *
+     * This method overrides the input field values using Server side or database managed properties defined on TestDetails if any.
+     *
+     * @param testdetailsId The id of the TestDetails to be deleted; value cannot be null.
+     * @param testDetailsPatch The partial data of TestDetails which is supposed to be updated; value cannot be null.
+     * @return The updated TestDetails.
+     * @throws EntityNotFoundException if no TestDetails is found with given input.
+     */
+    TestDetails partialUpdate(Integer testdetailsId, Map<String, Object> testDetailsPatch);
+
     /**
      * Deletes an existing TestDetails with the given id.
      *

@@ -25,6 +25,8 @@ import com.wavemaker.runtime.data.expression.QueryFilter;
 import com.wavemaker.runtime.data.model.AggregationInfo;
 import com.wavemaker.runtime.file.manager.ExportedFileManager;
 import com.wavemaker.runtime.file.model.Downloadable;
+import com.wavemaker.runtime.security.xss.XssDisable;
+import com.wavemaker.tools.api.core.annotations.MapTo;
 import com.wavemaker.tools.api.core.annotations.WMAccessVisibility;
 import com.wavemaker.tools.api.core.models.AccessSpecifier;
 import com.wordnik.swagger.annotations.Api;
@@ -117,6 +119,32 @@ public class Vpstrde2Controller {
         return vpstrde2Service.update(vpstrde2);
     }
 
+	@ApiOperation(value = "Partially updates the  Vpstrde2 instance associated with the given composite-id.")
+	@RequestMapping(value = "/composite-id", method = RequestMethod.PATCH)
+    @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
+    public Vpstrde2 patchVpstrde2(@RequestParam("proj1no") String proj1no, @RequestParam("proj1name") String proj1name, @RequestParam("resp1no") String resp1no, @RequestParam("resp1fn") String resp1fn, @RequestParam("resp1mi") Character resp1mi, @RequestParam("resp1ln") String resp1ln, @RequestParam("proj2no") String proj2no, @RequestParam("proj2name") String proj2name, @RequestParam("resp2no") String resp2no, @RequestParam("resp2fn") String resp2fn, @RequestParam("resp2mi") Character resp2mi, @RequestParam("resp2ln") String resp2ln, @RequestBody @MapTo(Vpstrde2.class) Map<String, Object> vpstrde2Patch) {
+
+        Vpstrde2Id vpstrde2Id = new Vpstrde2Id();
+        vpstrde2Id.setProj1no(proj1no);
+        vpstrde2Id.setProj1name(proj1name);
+        vpstrde2Id.setResp1no(resp1no);
+        vpstrde2Id.setResp1fn(resp1fn);
+        vpstrde2Id.setResp1mi(resp1mi);
+        vpstrde2Id.setResp1ln(resp1ln);
+        vpstrde2Id.setProj2no(proj2no);
+        vpstrde2Id.setProj2name(proj2name);
+        vpstrde2Id.setResp2no(resp2no);
+        vpstrde2Id.setResp2fn(resp2fn);
+        vpstrde2Id.setResp2mi(resp2mi);
+        vpstrde2Id.setResp2ln(resp2ln);
+        LOGGER.debug("Partially updating Vpstrde2 with id: {}" , vpstrde2Id);
+
+        Vpstrde2 vpstrde2 = vpstrde2Service.partialUpdate(vpstrde2Id, vpstrde2Patch);
+        LOGGER.debug("Vpstrde2 details after partial update: {}" , vpstrde2);
+
+        return vpstrde2;
+    }
+
 
     @ApiOperation(value = "Deletes the Vpstrde2 instance associated with the given composite-id.")
     @RequestMapping(value = "/composite-id", method = RequestMethod.DELETE)
@@ -151,6 +179,7 @@ public class Vpstrde2Controller {
     @ApiOperation(value = "Returns the list of Vpstrde2 instances matching the search criteria.")
     @RequestMapping(value = "/search", method = RequestMethod.POST)
     @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
+    @XssDisable
     public Page<Vpstrde2> searchVpstrde2sByQueryFilters( Pageable pageable, @RequestBody QueryFilter[] queryFilters) {
         LOGGER.debug("Rendering Vpstrde2s list by query filter:{}", (Object) queryFilters);
         return vpstrde2Service.findAll(queryFilters, pageable);
@@ -167,6 +196,7 @@ public class Vpstrde2Controller {
     @ApiOperation(value = "Returns the paginated list of Vpstrde2 instances matching the optional query (q) request param. This API should be used only if the query string is too big to fit in GET request with request param. The request has to made in application/x-www-form-urlencoded format.")
     @RequestMapping(value="/filter", method = RequestMethod.POST, consumes= "application/x-www-form-urlencoded")
     @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
+    @XssDisable
     public Page<Vpstrde2> filterVpstrde2s(@ApiParam("conditions to filter the results") @RequestParam(value = "q", required = false) String query, Pageable pageable) {
         LOGGER.debug("Rendering Vpstrde2s list by filter", query);
         return vpstrde2Service.findAll(query, pageable);
@@ -175,6 +205,7 @@ public class Vpstrde2Controller {
     @ApiOperation(value = "Returns downloadable file for the data matching the optional query (q) request param. If query string is too big to fit in GET request's query param, use POST method with application/x-www-form-urlencoded format.")
     @RequestMapping(value = "/export/{exportType}", method = {RequestMethod.GET,  RequestMethod.POST}, produces = "application/octet-stream")
     @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
+    @XssDisable
     public Downloadable exportVpstrde2s(@PathVariable("exportType") ExportType exportType, @ApiParam("conditions to filter the results") @RequestParam(value = "q", required = false) String query, Pageable pageable) {
          return vpstrde2Service.export(exportType, query, pageable);
     }
@@ -182,6 +213,7 @@ public class Vpstrde2Controller {
     @ApiOperation(value = "Returns a URL to download a file for the data matching the optional query (q) request param and the required fields provided in the Export Options.") 
     @RequestMapping(value = "/export", method = {RequestMethod.POST}, consumes = "application/json")
     @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
+    @XssDisable
     public StringWrapper exportVpstrde2sAndGetURL(@RequestBody DataExportOptions exportOptions, Pageable pageable) {
         String exportedFileName = exportOptions.getFileName();
         if(exportedFileName == null || exportedFileName.isEmpty()) {
@@ -195,6 +227,7 @@ public class Vpstrde2Controller {
 	@ApiOperation(value = "Returns the total count of Vpstrde2 instances matching the optional query (q) request param. If query string is too big to fit in GET request's query param, use POST method with application/x-www-form-urlencoded format.")
 	@RequestMapping(value = "/count", method = {RequestMethod.GET, RequestMethod.POST})
     @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
+	@XssDisable
 	public Long countVpstrde2s( @ApiParam("conditions to filter the results") @RequestParam(value = "q", required = false) String query) {
 		LOGGER.debug("counting Vpstrde2s");
 		return vpstrde2Service.count(query);
@@ -203,6 +236,7 @@ public class Vpstrde2Controller {
     @ApiOperation(value = "Returns aggregated result with given aggregation info")
 	@RequestMapping(value = "/aggregations", method = RequestMethod.POST)
     @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
+	@XssDisable
 	public Page<Map<String, Object>> getVpstrde2AggregatedValues(@RequestBody AggregationInfo aggregationInfo, Pageable pageable) {
         LOGGER.debug("Fetching aggregated results for {}", aggregationInfo);
         return vpstrde2Service.getAggregatedValues(aggregationInfo, pageable);

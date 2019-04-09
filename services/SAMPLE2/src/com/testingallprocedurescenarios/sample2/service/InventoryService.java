@@ -82,6 +82,20 @@ public interface InventoryService {
      */
     Inventory update(@Valid Inventory inventory);
 
+
+    /**
+     * Partially updates the details of an existing Inventory. It updates only the
+     * fields of the existing Inventory which are passed in the inventoryPatch.
+     *
+     * This method overrides the input field values using Server side or database managed properties defined on Inventory if any.
+     *
+     * @param inventoryId The id of the Inventory to be deleted; value cannot be null.
+     * @param inventoryPatch The partial data of Inventory which is supposed to be updated; value cannot be null.
+     * @return The updated Inventory.
+     * @throws EntityNotFoundException if no Inventory is found with given input.
+     */
+    Inventory partialUpdate(String inventoryId, Map<String, Object> inventoryPatch);
+
     /**
      * Deletes an existing Inventory with the given id.
      *

@@ -83,6 +83,20 @@ public interface VempService {
      */
     Vemp update(@Valid Vemp vemp);
 
+
+    /**
+     * Partially updates the details of an existing Vemp. It updates only the
+     * fields of the existing Vemp which are passed in the vempPatch.
+     *
+     * This method overrides the input field values using Server side or database managed properties defined on Vemp if any.
+     *
+     * @param vempId The id of the Vemp to be deleted; value cannot be null.
+     * @param vempPatch The partial data of Vemp which is supposed to be updated; value cannot be null.
+     * @return The updated Vemp.
+     * @throws EntityNotFoundException if no Vemp is found with given input.
+     */
+    Vemp partialUpdate(VempId vempId, Map<String, Object> vempPatch);
+
     /**
      * Deletes an existing Vemp with the given id.
      *

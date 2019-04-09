@@ -90,6 +90,20 @@ public interface UcService {
      */
     Uc update(@Valid Uc uc);
 
+
+    /**
+     * Partially updates the details of an existing Uc. It updates only the
+     * fields of the existing Uc which are passed in the ucPatch.
+     *
+     * This method overrides the input field values using Server side or database managed properties defined on Uc if any.
+     *
+     * @param ucId The id of the Uc to be deleted; value cannot be null.
+     * @param ucPatch The partial data of Uc which is supposed to be updated; value cannot be null.
+     * @return The updated Uc.
+     * @throws EntityNotFoundException if no Uc is found with given input.
+     */
+    Uc partialUpdate(Integer ucId, Map<String, Object> ucPatch);
+
     /**
      * Deletes an existing Uc with the given id.
      *

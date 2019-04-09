@@ -83,6 +83,20 @@ public interface Vdepmg1Service {
      */
     Vdepmg1 update(@Valid Vdepmg1 vdepmg1);
 
+
+    /**
+     * Partially updates the details of an existing Vdepmg1. It updates only the
+     * fields of the existing Vdepmg1 which are passed in the vdepmg1Patch.
+     *
+     * This method overrides the input field values using Server side or database managed properties defined on Vdepmg1 if any.
+     *
+     * @param vdepmg1Id The id of the Vdepmg1 to be deleted; value cannot be null.
+     * @param vdepmg1Patch The partial data of Vdepmg1 which is supposed to be updated; value cannot be null.
+     * @return The updated Vdepmg1.
+     * @throws EntityNotFoundException if no Vdepmg1 is found with given input.
+     */
+    Vdepmg1 partialUpdate(Vdepmg1Id vdepmg1Id, Map<String, Object> vdepmg1Patch);
+
     /**
      * Deletes an existing Vdepmg1 with the given id.
      *

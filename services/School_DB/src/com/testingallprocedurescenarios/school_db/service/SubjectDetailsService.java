@@ -91,6 +91,20 @@ public interface SubjectDetailsService {
      */
     SubjectDetails update(@Valid SubjectDetails subjectDetails);
 
+
+    /**
+     * Partially updates the details of an existing SubjectDetails. It updates only the
+     * fields of the existing SubjectDetails which are passed in the subjectDetailsPatch.
+     *
+     * This method overrides the input field values using Server side or database managed properties defined on SubjectDetails if any.
+     *
+     * @param subjectdetailsId The id of the SubjectDetails to be deleted; value cannot be null.
+     * @param subjectDetailsPatch The partial data of SubjectDetails which is supposed to be updated; value cannot be null.
+     * @return The updated SubjectDetails.
+     * @throws EntityNotFoundException if no SubjectDetails is found with given input.
+     */
+    SubjectDetails partialUpdate(Integer subjectdetailsId, Map<String, Object> subjectDetailsPatch);
+
     /**
      * Deletes an existing SubjectDetails with the given id.
      *

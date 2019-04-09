@@ -90,6 +90,20 @@ public interface StudentIdentificationService {
      */
     StudentIdentification update(@Valid StudentIdentification studentIdentification);
 
+
+    /**
+     * Partially updates the details of an existing StudentIdentification. It updates only the
+     * fields of the existing StudentIdentification which are passed in the studentIdentificationPatch.
+     *
+     * This method overrides the input field values using Server side or database managed properties defined on StudentIdentification if any.
+     *
+     * @param studentidentificationId The id of the StudentIdentification to be deleted; value cannot be null.
+     * @param studentIdentificationPatch The partial data of StudentIdentification which is supposed to be updated; value cannot be null.
+     * @return The updated StudentIdentification.
+     * @throws EntityNotFoundException if no StudentIdentification is found with given input.
+     */
+    StudentIdentification partialUpdate(Integer studentidentificationId, Map<String, Object> studentIdentificationPatch);
+
     /**
      * Deletes an existing StudentIdentification with the given id.
      *

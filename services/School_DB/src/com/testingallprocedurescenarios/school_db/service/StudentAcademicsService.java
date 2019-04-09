@@ -91,6 +91,20 @@ public interface StudentAcademicsService {
      */
     StudentAcademics update(@Valid StudentAcademics studentAcademics);
 
+
+    /**
+     * Partially updates the details of an existing StudentAcademics. It updates only the
+     * fields of the existing StudentAcademics which are passed in the studentAcademicsPatch.
+     *
+     * This method overrides the input field values using Server side or database managed properties defined on StudentAcademics if any.
+     *
+     * @param studentacademicsId The id of the StudentAcademics to be deleted; value cannot be null.
+     * @param studentAcademicsPatch The partial data of StudentAcademics which is supposed to be updated; value cannot be null.
+     * @return The updated StudentAcademics.
+     * @throws EntityNotFoundException if no StudentAcademics is found with given input.
+     */
+    StudentAcademics partialUpdate(StudentAcademicsId studentacademicsId, Map<String, Object> studentAcademicsPatch);
+
     /**
      * Deletes an existing StudentAcademics with the given id.
      *

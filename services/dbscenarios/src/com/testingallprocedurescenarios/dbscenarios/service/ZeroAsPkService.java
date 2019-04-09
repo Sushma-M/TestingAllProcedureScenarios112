@@ -82,6 +82,20 @@ public interface ZeroAsPkService {
      */
     ZeroAsPk update(@Valid ZeroAsPk zeroAsPk);
 
+
+    /**
+     * Partially updates the details of an existing ZeroAsPk. It updates only the
+     * fields of the existing ZeroAsPk which are passed in the zeroAsPkPatch.
+     *
+     * This method overrides the input field values using Server side or database managed properties defined on ZeroAsPk if any.
+     *
+     * @param zeroaspkId The id of the ZeroAsPk to be deleted; value cannot be null.
+     * @param zeroAsPkPatch The partial data of ZeroAsPk which is supposed to be updated; value cannot be null.
+     * @return The updated ZeroAsPk.
+     * @throws EntityNotFoundException if no ZeroAsPk is found with given input.
+     */
+    ZeroAsPk partialUpdate(Integer zeroaspkId, Map<String, Object> zeroAsPkPatch);
+
     /**
      * Deletes an existing ZeroAsPk with the given id.
      *

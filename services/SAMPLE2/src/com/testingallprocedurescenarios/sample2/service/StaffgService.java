@@ -82,6 +82,20 @@ public interface StaffgService {
      */
     Staffg update(@Valid Staffg staffg);
 
+
+    /**
+     * Partially updates the details of an existing Staffg. It updates only the
+     * fields of the existing Staffg which are passed in the staffgPatch.
+     *
+     * This method overrides the input field values using Server side or database managed properties defined on Staffg if any.
+     *
+     * @param staffgId The id of the Staffg to be deleted; value cannot be null.
+     * @param staffgPatch The partial data of Staffg which is supposed to be updated; value cannot be null.
+     * @return The updated Staffg.
+     * @throws EntityNotFoundException if no Staffg is found with given input.
+     */
+    Staffg partialUpdate(Short staffgId, Map<String, Object> staffgPatch);
+
     /**
      * Deletes an existing Staffg with the given id.
      *

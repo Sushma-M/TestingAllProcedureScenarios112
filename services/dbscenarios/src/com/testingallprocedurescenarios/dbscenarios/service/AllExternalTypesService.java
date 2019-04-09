@@ -82,6 +82,20 @@ public interface AllExternalTypesService {
      */
     AllExternalTypes update(@Valid AllExternalTypes allExternalTypes);
 
+
+    /**
+     * Partially updates the details of an existing AllExternalTypes. It updates only the
+     * fields of the existing AllExternalTypes which are passed in the allExternalTypesPatch.
+     *
+     * This method overrides the input field values using Server side or database managed properties defined on AllExternalTypes if any.
+     *
+     * @param allexternaltypesId The id of the AllExternalTypes to be deleted; value cannot be null.
+     * @param allExternalTypesPatch The partial data of AllExternalTypes which is supposed to be updated; value cannot be null.
+     * @return The updated AllExternalTypes.
+     * @throws EntityNotFoundException if no AllExternalTypes is found with given input.
+     */
+    AllExternalTypes partialUpdate(Integer allexternaltypesId, Map<String, Object> allExternalTypesPatch);
+
     /**
      * Deletes an existing AllExternalTypes with the given id.
      *

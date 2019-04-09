@@ -83,6 +83,20 @@ public interface ClSchedService {
      */
     ClSched update(@Valid ClSched clSched);
 
+
+    /**
+     * Partially updates the details of an existing ClSched. It updates only the
+     * fields of the existing ClSched which are passed in the clSchedPatch.
+     *
+     * This method overrides the input field values using Server side or database managed properties defined on ClSched if any.
+     *
+     * @param clschedId The id of the ClSched to be deleted; value cannot be null.
+     * @param clSchedPatch The partial data of ClSched which is supposed to be updated; value cannot be null.
+     * @return The updated ClSched.
+     * @throws EntityNotFoundException if no ClSched is found with given input.
+     */
+    ClSched partialUpdate(ClSchedId clschedId, Map<String, Object> clSchedPatch);
+
     /**
      * Deletes an existing ClSched with the given id.
      *

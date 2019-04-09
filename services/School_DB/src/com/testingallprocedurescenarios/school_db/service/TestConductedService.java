@@ -84,6 +84,20 @@ public interface TestConductedService {
      */
     TestConducted update(@Valid TestConducted testConducted);
 
+
+    /**
+     * Partially updates the details of an existing TestConducted. It updates only the
+     * fields of the existing TestConducted which are passed in the testConductedPatch.
+     *
+     * This method overrides the input field values using Server side or database managed properties defined on TestConducted if any.
+     *
+     * @param testconductedId The id of the TestConducted to be deleted; value cannot be null.
+     * @param testConductedPatch The partial data of TestConducted which is supposed to be updated; value cannot be null.
+     * @return The updated TestConducted.
+     * @throws EntityNotFoundException if no TestConducted is found with given input.
+     */
+    TestConducted partialUpdate(TestConductedId testconductedId, Map<String, Object> testConductedPatch);
+
     /**
      * Deletes an existing TestConducted with the given id.
      *

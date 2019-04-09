@@ -83,6 +83,20 @@ public interface ProductsupplierService {
      */
     Productsupplier update(@Valid Productsupplier productsupplier);
 
+
+    /**
+     * Partially updates the details of an existing Productsupplier. It updates only the
+     * fields of the existing Productsupplier which are passed in the productsupplierPatch.
+     *
+     * This method overrides the input field values using Server side or database managed properties defined on Productsupplier if any.
+     *
+     * @param productsupplierId The id of the Productsupplier to be deleted; value cannot be null.
+     * @param productsupplierPatch The partial data of Productsupplier which is supposed to be updated; value cannot be null.
+     * @return The updated Productsupplier.
+     * @throws EntityNotFoundException if no Productsupplier is found with given input.
+     */
+    Productsupplier partialUpdate(ProductsupplierId productsupplierId, Map<String, Object> productsupplierPatch);
+
     /**
      * Deletes an existing Productsupplier with the given id.
      *

@@ -25,6 +25,8 @@ import com.wavemaker.runtime.data.expression.QueryFilter;
 import com.wavemaker.runtime.data.model.AggregationInfo;
 import com.wavemaker.runtime.file.manager.ExportedFileManager;
 import com.wavemaker.runtime.file.model.Downloadable;
+import com.wavemaker.runtime.security.xss.XssDisable;
+import com.wavemaker.tools.api.core.annotations.MapTo;
 import com.wavemaker.tools.api.core.annotations.WMAccessVisibility;
 import com.wavemaker.tools.api.core.models.AccessSpecifier;
 import com.wordnik.swagger.annotations.Api;
@@ -89,6 +91,18 @@ public class UserLoginController {
 
         return userLogin;
     }
+    
+    @ApiOperation(value = "Partially updates the UserLogin instance associated with the given id.")
+    @RequestMapping(value = "/{id:.+}", method = RequestMethod.PATCH)
+    @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
+    public UserLogin patchUserLogin(@PathVariable("id") Integer id, @RequestBody @MapTo(UserLogin.class) Map<String, Object> userLoginPatch) {
+        LOGGER.debug("Partially updating UserLogin with id: {}" , id);
+
+        UserLogin userLogin = userLoginService.partialUpdate(id, userLoginPatch);
+        LOGGER.debug("UserLogin details after partial update: {}" , userLogin);
+
+        return userLogin;
+    }
 
     @ApiOperation(value = "Deletes the UserLogin instance associated with the given id.")
     @RequestMapping(value = "/{id:.+}", method = RequestMethod.DELETE)
@@ -108,6 +122,7 @@ public class UserLoginController {
     @ApiOperation(value = "Returns the list of UserLogin instances matching the search criteria.")
     @RequestMapping(value = "/search", method = RequestMethod.POST)
     @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
+    @XssDisable
     public Page<UserLogin> searchUserLoginsByQueryFilters( Pageable pageable, @RequestBody QueryFilter[] queryFilters) {
         LOGGER.debug("Rendering UserLogins list by query filter:{}", (Object) queryFilters);
         return userLoginService.findAll(queryFilters, pageable);
@@ -124,6 +139,7 @@ public class UserLoginController {
     @ApiOperation(value = "Returns the paginated list of UserLogin instances matching the optional query (q) request param. This API should be used only if the query string is too big to fit in GET request with request param. The request has to made in application/x-www-form-urlencoded format.")
     @RequestMapping(value="/filter", method = RequestMethod.POST, consumes= "application/x-www-form-urlencoded")
     @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
+    @XssDisable
     public Page<UserLogin> filterUserLogins(@ApiParam("conditions to filter the results") @RequestParam(value = "q", required = false) String query, Pageable pageable) {
         LOGGER.debug("Rendering UserLogins list by filter", query);
         return userLoginService.findAll(query, pageable);
@@ -132,6 +148,7 @@ public class UserLoginController {
     @ApiOperation(value = "Returns downloadable file for the data matching the optional query (q) request param. If query string is too big to fit in GET request's query param, use POST method with application/x-www-form-urlencoded format.")
     @RequestMapping(value = "/export/{exportType}", method = {RequestMethod.GET,  RequestMethod.POST}, produces = "application/octet-stream")
     @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
+    @XssDisable
     public Downloadable exportUserLogins(@PathVariable("exportType") ExportType exportType, @ApiParam("conditions to filter the results") @RequestParam(value = "q", required = false) String query, Pageable pageable) {
          return userLoginService.export(exportType, query, pageable);
     }
@@ -139,6 +156,7 @@ public class UserLoginController {
     @ApiOperation(value = "Returns a URL to download a file for the data matching the optional query (q) request param and the required fields provided in the Export Options.") 
     @RequestMapping(value = "/export", method = {RequestMethod.POST}, consumes = "application/json")
     @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
+    @XssDisable
     public StringWrapper exportUserLoginsAndGetURL(@RequestBody DataExportOptions exportOptions, Pageable pageable) {
         String exportedFileName = exportOptions.getFileName();
         if(exportedFileName == null || exportedFileName.isEmpty()) {
@@ -152,6 +170,7 @@ public class UserLoginController {
 	@ApiOperation(value = "Returns the total count of UserLogin instances matching the optional query (q) request param. If query string is too big to fit in GET request's query param, use POST method with application/x-www-form-urlencoded format.")
 	@RequestMapping(value = "/count", method = {RequestMethod.GET, RequestMethod.POST})
     @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
+	@XssDisable
 	public Long countUserLogins( @ApiParam("conditions to filter the results") @RequestParam(value = "q", required = false) String query) {
 		LOGGER.debug("counting UserLogins");
 		return userLoginService.count(query);
@@ -160,6 +179,7 @@ public class UserLoginController {
     @ApiOperation(value = "Returns aggregated result with given aggregation info")
 	@RequestMapping(value = "/aggregations", method = RequestMethod.POST)
     @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
+	@XssDisable
 	public Page<Map<String, Object>> getUserLoginAggregatedValues(@RequestBody AggregationInfo aggregationInfo, Pageable pageable) {
         LOGGER.debug("Fetching aggregated results for {}", aggregationInfo);
         return userLoginService.getAggregatedValues(aggregationInfo, pageable);

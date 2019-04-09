@@ -83,6 +83,20 @@ public interface Vprojre1Service {
      */
     Vprojre1 update(@Valid Vprojre1 vprojre1);
 
+
+    /**
+     * Partially updates the details of an existing Vprojre1. It updates only the
+     * fields of the existing Vprojre1 which are passed in the vprojre1Patch.
+     *
+     * This method overrides the input field values using Server side or database managed properties defined on Vprojre1 if any.
+     *
+     * @param vprojre1Id The id of the Vprojre1 to be deleted; value cannot be null.
+     * @param vprojre1Patch The partial data of Vprojre1 which is supposed to be updated; value cannot be null.
+     * @return The updated Vprojre1.
+     * @throws EntityNotFoundException if no Vprojre1 is found with given input.
+     */
+    Vprojre1 partialUpdate(Vprojre1Id vprojre1Id, Map<String, Object> vprojre1Patch);
+
     /**
      * Deletes an existing Vprojre1 with the given id.
      *

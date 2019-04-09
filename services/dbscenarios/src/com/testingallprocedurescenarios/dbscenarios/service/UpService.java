@@ -82,6 +82,20 @@ public interface UpService {
      */
     Up update(@Valid Up up);
 
+
+    /**
+     * Partially updates the details of an existing Up. It updates only the
+     * fields of the existing Up which are passed in the upPatch.
+     *
+     * This method overrides the input field values using Server side or database managed properties defined on Up if any.
+     *
+     * @param upId The id of the Up to be deleted; value cannot be null.
+     * @param upPatch The partial data of Up which is supposed to be updated; value cannot be null.
+     * @return The updated Up.
+     * @throws EntityNotFoundException if no Up is found with given input.
+     */
+    Up partialUpdate(Integer upId, Map<String, Object> upPatch);
+
     /**
      * Deletes an existing Up with the given id.
      *

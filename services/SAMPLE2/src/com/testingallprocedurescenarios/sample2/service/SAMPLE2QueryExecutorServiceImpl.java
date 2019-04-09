@@ -18,6 +18,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.wavemaker.commons.MessageResource;
 import com.wavemaker.runtime.data.dao.query.WMQueryExecutor;
 import com.wavemaker.runtime.data.exception.BlobContentNotFoundException;
 import com.wavemaker.runtime.data.exception.EntityNotFoundException;
@@ -53,7 +54,7 @@ public class SAMPLE2QueryExecutorServiceImpl implements SAMPLE2QueryExecutorServ
         SvGetAllTypesResponse _result =  queryExecutor.executeNamedQuery("SV_GetAllTypes", params, SvGetAllTypesResponse.class);
         if(_result.getBlobcol() == null) {
             LOGGER.debug("Blob content not exists for blobcol in query SV_GetAllTypes");
-            throw new BlobContentNotFoundException("Blob content not found for blobcol in query SV_GetAllTypes");
+            throw new BlobContentNotFoundException(MessageResource.create("com.wavemaker.runtime.blob.content.not.found"), "blobcol", "query", "SV_GetAllTypes");
         }
         return new ByteArrayInputStream(_result.getBlobcol());
     }
@@ -64,7 +65,7 @@ public class SAMPLE2QueryExecutorServiceImpl implements SAMPLE2QueryExecutorServ
         Map<String, Object> params = new HashMap<>(0);
 
 
-        QueryProcedureInput queryInput = new QueryProcedureInput("SV_GetAllTypes", params, SvGetAllTypesResponse.class);
+        QueryProcedureInput<SvGetAllTypesResponse> queryInput = new QueryProcedureInput<>("SV_GetAllTypes", params, SvGetAllTypesResponse.class);
 
         queryExecutor.exportNamedQueryData(queryInput, exportOptions, pageable, outputStream);
     }

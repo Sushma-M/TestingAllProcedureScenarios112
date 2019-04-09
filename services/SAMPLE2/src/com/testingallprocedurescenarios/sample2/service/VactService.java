@@ -83,6 +83,20 @@ public interface VactService {
      */
     Vact update(@Valid Vact vact);
 
+
+    /**
+     * Partially updates the details of an existing Vact. It updates only the
+     * fields of the existing Vact which are passed in the vactPatch.
+     *
+     * This method overrides the input field values using Server side or database managed properties defined on Vact if any.
+     *
+     * @param vactId The id of the Vact to be deleted; value cannot be null.
+     * @param vactPatch The partial data of Vact which is supposed to be updated; value cannot be null.
+     * @return The updated Vact.
+     * @throws EntityNotFoundException if no Vact is found with given input.
+     */
+    Vact partialUpdate(VactId vactId, Map<String, Object> vactPatch);
+
     /**
      * Deletes an existing Vact with the given id.
      *

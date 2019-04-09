@@ -82,6 +82,20 @@ public interface UserLoginService {
      */
     UserLogin update(@Valid UserLogin userLogin);
 
+
+    /**
+     * Partially updates the details of an existing UserLogin. It updates only the
+     * fields of the existing UserLogin which are passed in the userLoginPatch.
+     *
+     * This method overrides the input field values using Server side or database managed properties defined on UserLogin if any.
+     *
+     * @param userloginId The id of the UserLogin to be deleted; value cannot be null.
+     * @param userLoginPatch The partial data of UserLogin which is supposed to be updated; value cannot be null.
+     * @return The updated UserLogin.
+     * @throws EntityNotFoundException if no UserLogin is found with given input.
+     */
+    UserLogin partialUpdate(Integer userloginId, Map<String, Object> userLoginPatch);
+
     /**
      * Deletes an existing UserLogin with the given id.
      *

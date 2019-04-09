@@ -91,6 +91,20 @@ public interface ActService {
      */
     Act update(@Valid Act act);
 
+
+    /**
+     * Partially updates the details of an existing Act. It updates only the
+     * fields of the existing Act which are passed in the actPatch.
+     *
+     * This method overrides the input field values using Server side or database managed properties defined on Act if any.
+     *
+     * @param actId The id of the Act to be deleted; value cannot be null.
+     * @param actPatch The partial data of Act which is supposed to be updated; value cannot be null.
+     * @return The updated Act.
+     * @throws EntityNotFoundException if no Act is found with given input.
+     */
+    Act partialUpdate(Short actId, Map<String, Object> actPatch);
+
     /**
      * Deletes an existing Act with the given id.
      *

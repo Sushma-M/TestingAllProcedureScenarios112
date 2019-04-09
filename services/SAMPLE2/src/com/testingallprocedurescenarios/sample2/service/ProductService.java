@@ -82,6 +82,20 @@ public interface ProductService {
      */
     Product update(@Valid Product product);
 
+
+    /**
+     * Partially updates the details of an existing Product. It updates only the
+     * fields of the existing Product which are passed in the productPatch.
+     *
+     * This method overrides the input field values using Server side or database managed properties defined on Product if any.
+     *
+     * @param productId The id of the Product to be deleted; value cannot be null.
+     * @param productPatch The partial data of Product which is supposed to be updated; value cannot be null.
+     * @return The updated Product.
+     * @throws EntityNotFoundException if no Product is found with given input.
+     */
+    Product partialUpdate(String productId, Map<String, Object> productPatch);
+
     /**
      * Deletes an existing Product with the given id.
      *

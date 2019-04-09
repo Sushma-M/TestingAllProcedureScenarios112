@@ -83,6 +83,20 @@ public interface EmpprojactService {
      */
     Empprojact update(@Valid Empprojact empprojact);
 
+
+    /**
+     * Partially updates the details of an existing Empprojact. It updates only the
+     * fields of the existing Empprojact which are passed in the empprojactPatch.
+     *
+     * This method overrides the input field values using Server side or database managed properties defined on Empprojact if any.
+     *
+     * @param empprojactId The id of the Empprojact to be deleted; value cannot be null.
+     * @param empprojactPatch The partial data of Empprojact which is supposed to be updated; value cannot be null.
+     * @return The updated Empprojact.
+     * @throws EntityNotFoundException if no Empprojact is found with given input.
+     */
+    Empprojact partialUpdate(EmpprojactId empprojactId, Map<String, Object> empprojactPatch);
+
     /**
      * Deletes an existing Empprojact with the given id.
      *

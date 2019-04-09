@@ -82,6 +82,20 @@ public interface SuppliersService {
      */
     Suppliers update(@Valid Suppliers suppliers);
 
+
+    /**
+     * Partially updates the details of an existing Suppliers. It updates only the
+     * fields of the existing Suppliers which are passed in the suppliersPatch.
+     *
+     * This method overrides the input field values using Server side or database managed properties defined on Suppliers if any.
+     *
+     * @param suppliersId The id of the Suppliers to be deleted; value cannot be null.
+     * @param suppliersPatch The partial data of Suppliers which is supposed to be updated; value cannot be null.
+     * @return The updated Suppliers.
+     * @throws EntityNotFoundException if no Suppliers is found with given input.
+     */
+    Suppliers partialUpdate(String suppliersId, Map<String, Object> suppliersPatch);
+
     /**
      * Deletes an existing Suppliers with the given id.
      *

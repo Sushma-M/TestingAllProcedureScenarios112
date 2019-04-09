@@ -83,6 +83,20 @@ public interface ResultsService {
      */
     Results update(@Valid Results results);
 
+
+    /**
+     * Partially updates the details of an existing Results. It updates only the
+     * fields of the existing Results which are passed in the resultsPatch.
+     *
+     * This method overrides the input field values using Server side or database managed properties defined on Results if any.
+     *
+     * @param resultsId The id of the Results to be deleted; value cannot be null.
+     * @param resultsPatch The partial data of Results which is supposed to be updated; value cannot be null.
+     * @return The updated Results.
+     * @throws EntityNotFoundException if no Results is found with given input.
+     */
+    Results partialUpdate(ResultsId resultsId, Map<String, Object> resultsPatch);
+
     /**
      * Deletes an existing Results with the given id.
      *

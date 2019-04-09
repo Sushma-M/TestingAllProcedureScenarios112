@@ -83,6 +83,20 @@ public interface EmpResumeService {
      */
     EmpResume update(@Valid EmpResume empResume);
 
+
+    /**
+     * Partially updates the details of an existing EmpResume. It updates only the
+     * fields of the existing EmpResume which are passed in the empResumePatch.
+     *
+     * This method overrides the input field values using Server side or database managed properties defined on EmpResume if any.
+     *
+     * @param empresumeId The id of the EmpResume to be deleted; value cannot be null.
+     * @param empResumePatch The partial data of EmpResume which is supposed to be updated; value cannot be null.
+     * @return The updated EmpResume.
+     * @throws EntityNotFoundException if no EmpResume is found with given input.
+     */
+    EmpResume partialUpdate(EmpResumeId empresumeId, Map<String, Object> empResumePatch);
+
     /**
      * Deletes an existing EmpResume with the given id.
      *

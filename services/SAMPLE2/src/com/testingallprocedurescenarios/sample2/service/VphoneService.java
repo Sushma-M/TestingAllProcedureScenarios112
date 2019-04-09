@@ -83,6 +83,20 @@ public interface VphoneService {
      */
     Vphone update(@Valid Vphone vphone);
 
+
+    /**
+     * Partially updates the details of an existing Vphone. It updates only the
+     * fields of the existing Vphone which are passed in the vphonePatch.
+     *
+     * This method overrides the input field values using Server side or database managed properties defined on Vphone if any.
+     *
+     * @param vphoneId The id of the Vphone to be deleted; value cannot be null.
+     * @param vphonePatch The partial data of Vphone which is supposed to be updated; value cannot be null.
+     * @return The updated Vphone.
+     * @throws EntityNotFoundException if no Vphone is found with given input.
+     */
+    Vphone partialUpdate(VphoneId vphoneId, Map<String, Object> vphonePatch);
+
     /**
      * Deletes an existing Vphone with the given id.
      *

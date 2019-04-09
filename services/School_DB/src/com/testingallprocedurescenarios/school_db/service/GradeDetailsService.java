@@ -91,6 +91,20 @@ public interface GradeDetailsService {
      */
     GradeDetails update(@Valid GradeDetails gradeDetails);
 
+
+    /**
+     * Partially updates the details of an existing GradeDetails. It updates only the
+     * fields of the existing GradeDetails which are passed in the gradeDetailsPatch.
+     *
+     * This method overrides the input field values using Server side or database managed properties defined on GradeDetails if any.
+     *
+     * @param gradedetailsId The id of the GradeDetails to be deleted; value cannot be null.
+     * @param gradeDetailsPatch The partial data of GradeDetails which is supposed to be updated; value cannot be null.
+     * @return The updated GradeDetails.
+     * @throws EntityNotFoundException if no GradeDetails is found with given input.
+     */
+    GradeDetails partialUpdate(Integer gradedetailsId, Map<String, Object> gradeDetailsPatch);
+
     /**
      * Deletes an existing GradeDetails with the given id.
      *

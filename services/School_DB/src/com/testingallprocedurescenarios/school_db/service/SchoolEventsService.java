@@ -83,6 +83,20 @@ public interface SchoolEventsService {
      */
     SchoolEvents update(@Valid SchoolEvents schoolEvents);
 
+
+    /**
+     * Partially updates the details of an existing SchoolEvents. It updates only the
+     * fields of the existing SchoolEvents which are passed in the schoolEventsPatch.
+     *
+     * This method overrides the input field values using Server side or database managed properties defined on SchoolEvents if any.
+     *
+     * @param schooleventsId The id of the SchoolEvents to be deleted; value cannot be null.
+     * @param schoolEventsPatch The partial data of SchoolEvents which is supposed to be updated; value cannot be null.
+     * @return The updated SchoolEvents.
+     * @throws EntityNotFoundException if no SchoolEvents is found with given input.
+     */
+    SchoolEvents partialUpdate(SchoolEventsId schooleventsId, Map<String, Object> schoolEventsPatch);
+
     /**
      * Deletes an existing SchoolEvents with the given id.
      *

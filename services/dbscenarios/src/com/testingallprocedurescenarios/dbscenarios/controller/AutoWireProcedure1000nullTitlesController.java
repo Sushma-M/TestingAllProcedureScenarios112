@@ -25,6 +25,8 @@ import com.wavemaker.runtime.data.expression.QueryFilter;
 import com.wavemaker.runtime.data.model.AggregationInfo;
 import com.wavemaker.runtime.file.manager.ExportedFileManager;
 import com.wavemaker.runtime.file.model.Downloadable;
+import com.wavemaker.runtime.security.xss.XssDisable;
+import com.wavemaker.tools.api.core.annotations.MapTo;
 import com.wavemaker.tools.api.core.annotations.WMAccessVisibility;
 import com.wavemaker.tools.api.core.models.AccessSpecifier;
 import com.wordnik.swagger.annotations.Api;
@@ -89,6 +91,18 @@ public class AutoWireProcedure1000nullTitlesController {
 
         return autoWireProcedure1000nullTitles;
     }
+    
+    @ApiOperation(value = "Partially updates the AutoWireProcedure1000nullTitles instance associated with the given id.")
+    @RequestMapping(value = "/{id:.+}", method = RequestMethod.PATCH)
+    @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
+    public AutoWireProcedure1000nullTitles patchAutoWireProcedure1000nullTitles(@PathVariable("id") Long id, @RequestBody @MapTo(AutoWireProcedure1000nullTitles.class) Map<String, Object> autoWireProcedure1000nullTitlesPatch) {
+        LOGGER.debug("Partially updating AutoWireProcedure1000nullTitles with id: {}" , id);
+
+        AutoWireProcedure1000nullTitles autoWireProcedure1000nullTitles = autoWireProcedure1000nullTitlesService.partialUpdate(id, autoWireProcedure1000nullTitlesPatch);
+        LOGGER.debug("AutoWireProcedure1000nullTitles details after partial update: {}" , autoWireProcedure1000nullTitles);
+
+        return autoWireProcedure1000nullTitles;
+    }
 
     @ApiOperation(value = "Deletes the AutoWireProcedure1000nullTitles instance associated with the given id.")
     @RequestMapping(value = "/{id:.+}", method = RequestMethod.DELETE)
@@ -108,6 +122,7 @@ public class AutoWireProcedure1000nullTitlesController {
     @ApiOperation(value = "Returns the list of AutoWireProcedure1000nullTitles instances matching the search criteria.")
     @RequestMapping(value = "/search", method = RequestMethod.POST)
     @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
+    @XssDisable
     public Page<AutoWireProcedure1000nullTitles> searchAutoWireProcedure1000nullTitlesByQueryFilters( Pageable pageable, @RequestBody QueryFilter[] queryFilters) {
         LOGGER.debug("Rendering AutoWireProcedure1000nullTitles list by query filter:{}", (Object) queryFilters);
         return autoWireProcedure1000nullTitlesService.findAll(queryFilters, pageable);
@@ -124,6 +139,7 @@ public class AutoWireProcedure1000nullTitlesController {
     @ApiOperation(value = "Returns the paginated list of AutoWireProcedure1000nullTitles instances matching the optional query (q) request param. This API should be used only if the query string is too big to fit in GET request with request param. The request has to made in application/x-www-form-urlencoded format.")
     @RequestMapping(value="/filter", method = RequestMethod.POST, consumes= "application/x-www-form-urlencoded")
     @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
+    @XssDisable
     public Page<AutoWireProcedure1000nullTitles> filterAutoWireProcedure1000nullTitles(@ApiParam("conditions to filter the results") @RequestParam(value = "q", required = false) String query, Pageable pageable) {
         LOGGER.debug("Rendering AutoWireProcedure1000nullTitles list by filter", query);
         return autoWireProcedure1000nullTitlesService.findAll(query, pageable);
@@ -132,6 +148,7 @@ public class AutoWireProcedure1000nullTitlesController {
     @ApiOperation(value = "Returns downloadable file for the data matching the optional query (q) request param. If query string is too big to fit in GET request's query param, use POST method with application/x-www-form-urlencoded format.")
     @RequestMapping(value = "/export/{exportType}", method = {RequestMethod.GET,  RequestMethod.POST}, produces = "application/octet-stream")
     @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
+    @XssDisable
     public Downloadable exportAutoWireProcedure1000nullTitles(@PathVariable("exportType") ExportType exportType, @ApiParam("conditions to filter the results") @RequestParam(value = "q", required = false) String query, Pageable pageable) {
          return autoWireProcedure1000nullTitlesService.export(exportType, query, pageable);
     }
@@ -139,6 +156,7 @@ public class AutoWireProcedure1000nullTitlesController {
     @ApiOperation(value = "Returns a URL to download a file for the data matching the optional query (q) request param and the required fields provided in the Export Options.") 
     @RequestMapping(value = "/export", method = {RequestMethod.POST}, consumes = "application/json")
     @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
+    @XssDisable
     public StringWrapper exportAutoWireProcedure1000nullTitlesAndGetURL(@RequestBody DataExportOptions exportOptions, Pageable pageable) {
         String exportedFileName = exportOptions.getFileName();
         if(exportedFileName == null || exportedFileName.isEmpty()) {
@@ -152,6 +170,7 @@ public class AutoWireProcedure1000nullTitlesController {
 	@ApiOperation(value = "Returns the total count of AutoWireProcedure1000nullTitles instances matching the optional query (q) request param. If query string is too big to fit in GET request's query param, use POST method with application/x-www-form-urlencoded format.")
 	@RequestMapping(value = "/count", method = {RequestMethod.GET, RequestMethod.POST})
     @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
+	@XssDisable
 	public Long countAutoWireProcedure1000nullTitles( @ApiParam("conditions to filter the results") @RequestParam(value = "q", required = false) String query) {
 		LOGGER.debug("counting AutoWireProcedure1000nullTitles");
 		return autoWireProcedure1000nullTitlesService.count(query);
@@ -160,6 +179,7 @@ public class AutoWireProcedure1000nullTitlesController {
     @ApiOperation(value = "Returns aggregated result with given aggregation info")
 	@RequestMapping(value = "/aggregations", method = RequestMethod.POST)
     @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
+	@XssDisable
 	public Page<Map<String, Object>> getAutoWireProcedure1000nullTitlesAggregatedValues(@RequestBody AggregationInfo aggregationInfo, Pageable pageable) {
         LOGGER.debug("Fetching aggregated results for {}", aggregationInfo);
         return autoWireProcedure1000nullTitlesService.getAggregatedValues(aggregationInfo, pageable);
